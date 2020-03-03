@@ -21,10 +21,10 @@
 
 ### Real Estate and Urban Development
 
-- [Downtown Loft Development](http://example.com/)
+- [Downtown Loft Development](https://landlink.systems/macon-loft-developments)
 <img src="images/Macon+City+Limits+Parcels.png?raw=true"/>
 <img src="images/Spillover+Overlap+Dannenberg+and+Cotton+Ave.png?raw=true"/>
-- [Historic Home Investments](http://example.com/)
+- [Historic Home Investments](https://landlink.systems/historic-macon-foundation-bealls-hill)
 <img src="images/Neighborhoods+with+HMF+Prop+and+Values+16.png?raw=true"/>
 <img src="images/Zoning+Parcels+overlay.png?raw=true"/>
 
