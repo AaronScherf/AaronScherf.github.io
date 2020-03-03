@@ -12,6 +12,7 @@
 [Multidimensional Vulnerability Index Mapping](https://github.com/AaronScherf/Human_Mobility_Project/blob/master/code/Vulnerability_PCA.ipynb)
 
 <img src="https://github.com/AaronScherf/Human_Mobility_Project/blob/master/travel_time_proc.png"/>
+<img src ="https://github.com/AaronScherf/Human_Mobility_Project/blob/master/night_lights_aligned.png"/>
 
 ---
 [Fire Detection Drone Network Proposal](https://www.fire.ca.gov/)
@@ -24,6 +25,7 @@
 - [Downtown Loft Development](https://landlink.systems/macon-loft-developments)
 <img src="images/Macon+City+Limits+Parcels.png?raw=true"/>
 <img src="images/Spillover+Overlap+Dannenberg+and+Cotton+Ave.png?raw=true"/>
+
 - [Historic Home Investments](https://landlink.systems/historic-macon-foundation-bealls-hill)
 <img src="images/Neighborhoods+with+HMF+Prop+and+Values+16.png?raw=true"/>
 <img src="images/Zoning+Parcels+overlay.png?raw=true"/>
