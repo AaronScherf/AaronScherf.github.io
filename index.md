@@ -11,7 +11,7 @@
 ---
 [Multidimensional Vulnerability Index Mapping](https://github.com/AaronScherf/Human_Mobility_Project/blob/master/code/Vulnerability_PCA.ipynb)
 
-<img src="https://github.com/AaronScherf/Human_Mobility_Project/blob/master/travel_time_proc.png?raw=true"/>
+<img src="https://github.com/AaronScherf/Human_Mobility_Project/raw/master/night_lights_aligned.png"/>
 <img src ="https://github.com/AaronScherf/Human_Mobility_Project/blob/master/night_lights_aligned.png?raw=true"/>
 
 ---
