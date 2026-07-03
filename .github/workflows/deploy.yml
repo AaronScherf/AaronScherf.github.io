@@ -28,8 +28,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v6
       with:
-        sparse-checkout: hugoblox.yaml
+        sparse-checkout: |
+          hugoblox.yaml
         sparse-checkout-cone-mode: false
+          - id: check
+            run: echo "host=github-pages" >> "$GITHUB_OUTPUT"
 
     - name: Check deploy host
       id: check
@@ -60,9 +63,42 @@ jobs:
   # Build website using reusable workflow (always runs for CI)
   build:
     needs: config
-    if: github.repository_owner != 'HugoBlox'
-    uses: ./.github/workflows/build.yml
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+          with:
+            submodules: true  # Fetches your theme files
+            fetch-depth: 0
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '20'
+                cache: 'npm'
+
+            - name: Install Dependencies
+              run: |
+                if [ -f package.json ]; then
+                  npm ci
+                else
+                  npm init -y
+                  npm install --save-dev tailwindcss @tailwindcss/cli @tailwindcss/typography
+                fi
+
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v3
+              with:
+                hugo-version: 'latest'
+                extended: true  # Required for your Tailwind transformation error earlier
+
+            - name: Build Static Site
+              run: hugo --minify
+
+            - name: Upload Build Artifacts
+              uses: actions/upload-pages-artifact@v3
+              with:
+                path: ./public
 
   # Deploy website to GitHub Pages hosting (only if configured)
   deploy:
