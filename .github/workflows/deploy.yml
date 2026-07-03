@@ -1,13 +1,9 @@
 name: Deploy website to GitHub Pages
-
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -18,71 +14,62 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Check deployment configuration
   config:
     if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
     outputs:
       deploy-host: ${{ steps.check.outputs.host }}
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        sparse-checkout: |
-          hugoblox.yaml
-        sparse-checkout-cone-mode: false
-    - id: check
-      run: echo "host=github-pages" >> "$GITHUB_OUTPUT"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            hugoblox.yaml
+          sparse-checkout-cone-mode: false
+      - id: check
+        run: echo "host=github-pages" >> "$GITHUB_OUTPUT"
 
-  # Build website using reusable workflow (always runs for CI)
   build:
     needs: config
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-          with:
-            submodules: true  # Fetches your theme files
-            fetch-depth: 0
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
 
-            - name: Install Node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: '20'
-                cache: 'npm'
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
 
-            - name: Install Dependencies
-              run: |
-                if [ -f package.json ]; then
-                  npm ci
-                else
-                  npm init -y
-                  npm install --save-dev tailwindcss @tailwindcss/cli @tailwindcss/typography
-                fi
+      - name: Install Dependencies
+        run: |
+          npm install --no-audit --no-fund || (npm init -y && npm install --save-dev tailwindcss @tailwindcss/cli @tailwindcss/typography)
 
-            - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v3
-              with:
-                hugo-version: 'latest'
-                extended: true  # Required for your Tailwind transformation error earlier
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
 
-            - name: Build Static Site
-              run: hugo --minify
+      - name: Build Static Site
+        run: hugo --minify
 
-            - name: Upload Build Artifacts
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: ./public
+      - name: Upload Build Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
-  # Deploy website to GitHub Pages hosting (only if configured)
   deploy:
     needs: [config, build]
     runs-on: ubuntu-latest
-    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
