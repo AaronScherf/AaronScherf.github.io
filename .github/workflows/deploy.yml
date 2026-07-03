@@ -31,7 +31,7 @@ jobs:
         sparse-checkout: |
           hugoblox.yaml
         sparse-checkout-cone-mode: false
-          - id: check
+            id: check
             run: echo "host=github-pages" >> "$GITHUB_OUTPUT"
 
     - name: Check deploy host
