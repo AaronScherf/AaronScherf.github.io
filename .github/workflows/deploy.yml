@@ -58,9 +58,6 @@ jobs:
       - name: Build Static Site
         run: hugo --minify
 
-      - name: Fix Linux Folder Permissions
-        run: chmod -R 755 ./public
-
       - name: Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
@@ -76,3 +73,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          preview: true
+          token: ${{ github.token }}
