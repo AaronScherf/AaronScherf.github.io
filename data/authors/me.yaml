@@ -12,10 +12,10 @@ postnominals:
 #  - PhD
 #  - MIEEE
 status:
-  icon: "☕️"
+#  icon: "☕️"
 role: PhD Student at Columbia University
 bio: |
-  Temporary stand in for bio
+  Aaron (they/them) is a PhD student in Sustainable Development at Columbia University specializing in the applications of machine learning and econometrics to address climate and conflict shocks. Leveraging their background monitoring and evaluating international development projects in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data to advance causal inference in development economics. Their academic foundation includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with the US Agency for International Development (USAID), as well as a Fulbright Scholar conducting labor economics research in Germany.
 
 affiliations:
   - name: Columbia University
@@ -28,31 +28,24 @@ links:
   - icon: brands/x
     url: https://x.com/example
   - icon: brands/github
-    url: https://github.com/example
+    url: https://github.com/AaronScherf
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
+    url: www.linkedin.com/in/aaron-scherf
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
+    url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0009-0007-1044-3162
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
+  - Sustainable Agriculture
+  - Inclusive Finance
+  - Development Economics
+  - Machine Learning
+  - Applied Econometrics
+  - Remote Sensing
   - AI Ethics
 
 education:
-  - degree: MS Development Practice
-    institution: UC Berkeley
-    start: 2018-09-01
-    end: 2020-05-30
-    summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
   - degree: MS Computer Science
     institution: Georgia Institute of Technology
     start: 2020-09-01
@@ -61,33 +54,65 @@ education:
     institution: Indiana State University
     start: 2021-05-15
     end: 2024-05-31
+    summary: |
+      Thesis: Novel Omnibus Normality Test and Power Comparison with the Shapiro-Wilk
+    button:
+      text: Download dissertation
+      url: /Aaron_Scherf_Thesis_Omnibus_Normality_Test.pdf
+      icon: hero/arrow-down-tray
+  - degree: MS Development Practice
+    institution: University of California, Berkeley
+    start: 2018-08-15
+    end: 2020-05-30
+    summary: |
+      Thesis: Predicting the Yield of CIMMYT Wheat Genotypes via Remote Sensing and Machine Learning
+    button:
+      text: Download dissertation
+      url: /Scherf_Aaron_Thesis_Predicting_Yield_CIMMYT_with_GEE.pdf
+      icon: hero/arrow-down-tray
+  - degree: BA Economics and Finance
+    institution: Mercer University
+    start: 2013-08-15
+    end: 2017-05-15
+
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Monitoring and Evaluation Team Lead
+    org: USAID/Ukraine
+    start: 2024-01-10
+    end: 2025-07-15
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+      Led results tracking and accountability for over 50 development projects in wartime Ukraine.
+  - role: Program Design Officer
+    org: USAID/Colombia
+    start: 2022-02-15
+    end: 2024-01-10
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Led design and procurement of new development projects, including integration of gender and social inclusion efforts throughout 30 active programs.
+  - role: Program Officer
+    org: USAID/Washington
+    start: 2020-05-15
+    end: 2022-02-15
+    summary: |
+      Supported data analysis at global budget office, helped launch knowledge management office, served as Desk Officer for Sri Lanka and Honduras, and led LGBTQIA+ inclusion initiative.
+  - role: Visiting Fellow / Fulbright Scholar
+    org: Centre for European Economic Research (ZEW)
+    start: 2017-08-15
+    end: 2018-07-15
+    summary: |
+      Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
-  - name: Technical Skills
+  - name: Programming and Data Science
     items:
       - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
         level: 4
+      - label: Machine Learning
+        level: 4
+      - label: R
+        level: 3
+      - label: Java
+        level: 2
   - name: Research & Communication
     items:
       - label: Academic Writing
@@ -102,12 +127,19 @@ languages:
     level: 5
     label: Native
   - name: Spanish
-    level: 4
-    label: Fluent
+    level: 3
+    label: Intermediate
+  - name: German
+    level: 2
+    label: Beginner
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
+  - title: Donald M. Payne International Development Fellowship
+    # awarder: USAID
+    date: "2020-05-01"
+    summary: Graduate fellowship including internships in the US Congress and USAID/Southern Africa
     icon: hero/trophy
+  - title: Fulbright Scholar
+    date: "2017-05-15"
+    summary: Research fellowship with University of Heidelberg and Centre for European Economic Research
+
