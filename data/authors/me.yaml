@@ -68,7 +68,7 @@ education:
       Thesis: Predicting the Yield of CIMMYT Wheat Genotypes via Remote Sensing and Machine Learning
     button:
       text: Download dissertation
-      url: /Scherf_Aaron_Thesis_Predicting_Yield_CIMMYT_with_GEE.pdf
+      url: /uploads/Scherf_Aaron_Berkeley_Thesis.pdf
       icon: hero/arrow-down-tray
   - degree: BA Economics and Finance
     institution: Mercer University
@@ -103,7 +103,7 @@ experience:
       Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
-  - name: Programming and Data Science
+  - name: Computer Programming
     items:
       - label: Python
         level: 4
