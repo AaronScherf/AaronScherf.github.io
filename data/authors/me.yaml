@@ -15,7 +15,7 @@ status:
 #  icon: "☕️"
 role: PhD Student at Columbia University
 bio: |
-  Aaron (they/them) is a PhD student in Sustainable Development at Columbia University specializing in the applications of machine learning and econometrics to address climate and conflict shocks. Leveraging their background monitoring and evaluating international development projects in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data to advance causal inference in development economics. Their academic foundation includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with the US Agency for International Development (USAID), as well as a Fulbright Scholar conducting labor economics research in Germany.
+  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University. Leveraging their hands-on experience as a development professional in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data and machine learning to investigate climate and conflict shocks in vulnerable communities. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with USAID, as well as a Fulbright Scholar conducting labor economics research in Germany.
 
 affiliations:
   - name: Columbia University
@@ -27,10 +27,13 @@ links:
     label: E-mail Me
   - icon: brands/bluesky
     url: https://bsky.app/profile/aaronscherf.bsky.social
+    label: Follow me
   - icon: brands/github
     url: https://github.com/AaronScherf
+    label: Check my code
   - icon: brands/linkedin
     url: www.linkedin.com/in/aaron-scherf
+    label: Connect on LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
   - icon: academicons/orcid
