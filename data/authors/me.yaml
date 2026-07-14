@@ -13,7 +13,7 @@ postnominals:
 #  - MIEEE
 status:
 #  icon: "☕️"
-role: PhD Student at Columbia University
+role: PhD Student
 bio: |
   Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University. Leveraging their hands-on experience as a development professional in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data and machine learning to investigate climate and conflict shocks in vulnerable communities. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with USAID, as well as a Fulbright Scholar conducting labor economics research in Germany.
 
@@ -49,6 +49,9 @@ interests:
   - AI Ethics
 
 education:
+  - degree: PhD Sustainable Development
+    institution: Columbia University
+    start: 2026-08-15
   - degree: MS Computer Science
     institution: Georgia Institute of Technology
     start: 2020-09-01
