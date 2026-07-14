@@ -25,8 +25,8 @@ links:
   - icon: at-symbol
     url: mailto:as8288@columbia.edu
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/aaronscherf.bsky.social
   - icon: brands/github
     url: https://github.com/AaronScherf
   - icon: brands/linkedin
