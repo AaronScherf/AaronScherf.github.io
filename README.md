@@ -36,3 +36,9 @@ Ensure you have the **extended version** of Hugo installed on your machine (requ
    ```bash
    git clone --recurse-submodules [https://github.com/AaronScherf/AaronScherf.github.io.git](https://github.com/AaronScherf/AaronScherf.github.io.git)
    cd AaronScherf.github.io
+2. **Ensure node.js and TailCSS are installed properly** Use the npm install command
+   ```bash
+   npm install
+3. **Check site locally** Use hugo server to see if site builds on local machine
+   ```bash
+   hugo server
