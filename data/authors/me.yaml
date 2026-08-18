@@ -13,9 +13,9 @@ postnominals:
 #  - MIEEE
 status:
 #  icon: "☕️"
-role: PhD Student at Columbia University
+role: PhD Student
 bio: |
-  Aaron (they/them) is a PhD student in Sustainable Development at Columbia University specializing in the applications of machine learning and econometrics to address climate and conflict shocks. Leveraging their background monitoring and evaluating international development projects in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data to advance causal inference in development economics. Their academic foundation includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with the US Agency for International Development (USAID), as well as a Fulbright Scholar conducting labor economics research in Germany.
+  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University. Leveraging their hands-on experience as a development professional in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data and machine learning to investigate climate and conflict shocks in vulnerable communities. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with USAID, as well as a Fulbright Scholar conducting labor economics research in Germany.
 
 affiliations:
   - name: Columbia University
@@ -25,12 +25,15 @@ links:
   - icon: at-symbol
     url: mailto:as8288@columbia.edu
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/aaronscherf.bsky.social
+    label: Follow me
   - icon: brands/github
     url: https://github.com/AaronScherf
+    label: Check my code
   - icon: brands/linkedin
     url: www.linkedin.com/in/aaron-scherf
+    label: Connect on LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
   - icon: academicons/orcid
@@ -46,6 +49,9 @@ interests:
   - AI Ethics
 
 education:
+  - degree: PhD Sustainable Development
+    institution: Columbia University
+    start: 2026-08-15
   - degree: MS Computer Science
     institution: Georgia Institute of Technology
     start: 2020-09-01
@@ -58,7 +64,7 @@ education:
       Thesis: Novel Omnibus Normality Test and Power Comparison with the Shapiro-Wilk
     button:
       text: Download dissertation
-      url: /Aaron_Scherf_Thesis_Omnibus_Normality_Test.pdf
+      url: /uploads/Scherf_Aaron_ISU_Thesis.pdf
       icon: hero/arrow-down-tray
   - degree: MS Development Practice
     institution: University of California, Berkeley
@@ -68,7 +74,7 @@ education:
       Thesis: Predicting the Yield of CIMMYT Wheat Genotypes via Remote Sensing and Machine Learning
     button:
       text: Download dissertation
-      url: /Scherf_Aaron_Thesis_Predicting_Yield_CIMMYT_with_GEE.pdf
+      url: /uploads/Scherf_Aaron_Berkeley_Thesis.pdf
       icon: hero/arrow-down-tray
   - degree: BA Economics and Finance
     institution: Mercer University
@@ -103,7 +109,7 @@ experience:
       Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
-  - name: Programming and Data Science
+  - name: Computer Programming
     items:
       - label: Python
         level: 4
