@@ -98,6 +98,22 @@ sections:
   #   design:
   #     view: card
   - block: collection
+    id: projects
+    content:
+      title: Projects
+      subtitle: ''
+      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      filters:
+        folders:
+          - projects
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 2
+      show_date: false
+      show_read_time: false
+      show_read_more: false
+  - block: collection
     id: blog
     content:
       title: Blog

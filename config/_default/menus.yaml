@@ -20,12 +20,12 @@ main:
   - name: Experience
     url: /#experience
     weight: 20
+  - name: Projects
+    url: /#projects
+    weight: 22
   - name: Blog
     url: /#blog
     weight: 25
-  - name: Projects
-    url: projects/
-    weight: 30
   # TODO: re-enable once Courses has real content (see content/courses/)
   # - name: Courses
   #   url: courses/
