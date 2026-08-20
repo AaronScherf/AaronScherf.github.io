@@ -141,11 +141,17 @@ languages:
 
 awards:
   - title: Donald M. Payne International Development Fellowship
-    # awarder: USAID
-    date: "2020-05-01"
-    summary: Graduate fellowship including internships in the US Congress and USAID/Southern Africa
-    icon: hero/trophy
+    date: "2018-05-01"
+    summary: Graduate fellowship with USAID including internships in the US Congress and USAID/Southern Africa
+    # icon: hero/trophy
+  - title: Humanity in Action Senior Fellow
+    date: "2018-07-15"
+    summary: International human rights advocacy fellowship, with cohort experience in Amsterdam and project completed in Germany
   - title: Fulbright Scholar
     date: "2017-05-15"
     summary: Research fellowship with University of Heidelberg and Centre for European Economic Research
+  - title: Stamps Foundation Leadership Scholar
+    date: "2013-05-15"
+    summary: Undergraduate merit-based full-ride scholarship
+
 

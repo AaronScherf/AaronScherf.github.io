@@ -38,11 +38,11 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        My research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        My work is grounded in extensive field experience over five years as a USAID diplomat in Ukraine, Colombia, South Africa, and Washington designing and evaluating development programs. I bring that same rigor — building ML pipelines, designing monitoring frameworks, translating messy data into decisions — to organizations that need it.
 
-        Please reach out to collaborate 😃
+        Open to research collaborations and consulting engagements at the intersection of data science, geospatial analysis, and international development.
     design:
       columns: '1'
   - block: resume-experience
