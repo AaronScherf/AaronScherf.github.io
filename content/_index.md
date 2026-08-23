@@ -40,9 +40,15 @@ sections:
       text: |-
         My research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
 
-        My work is grounded in extensive field experience over five years as a USAID diplomat in Ukraine, Colombia, South Africa, and Washington designing and evaluating development programs. I bring that same rigor — building ML pipelines, designing monitoring frameworks, translating messy data into decisions — to organizations that need it.
+        That research is grounded in over five years as a USAID diplomat, including leading monitoring and evaluation for USAID/Ukraine's development portfolio through the war, and previously managing program design in Colombia. I bring that same field-tested rigor — building ML pipelines, designing evaluation frameworks, translating messy data into decisions under real operational constraints — to organizations that need it.
 
-        Open to research collaborations and consulting engagements at the intersection of data science, geospatial analysis, and international development.
+        **Areas of expertise:**
+        - USAID program design, monitoring & evaluation
+        - International development funding and budget allocation
+        - Ukraine donor coordination and wartime/reconstruction programming
+        - Geospatial and machine learning methods for climate and conflict risk analysis
+
+        Open to expert consultations and applied research collaborations at this intersection — reach out via [email](mailto:theaaronscherf@gmail.com).
     design:
       columns: '1'
   - block: resume-experience
@@ -56,7 +62,7 @@ sections:
       is_education_first: false
   - block: resume-skills
     content:
-      title: Skills & Hobbies
+      title: Skills
       username: me
   - block: resume-awards
     content:

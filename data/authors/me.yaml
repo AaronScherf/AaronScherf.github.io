@@ -15,7 +15,7 @@ status:
 #  icon: "☕️"
 role: PhD Student
 bio: |
-  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University. Leveraging their hands-on experience as a development professional in South Africa, Colombia and Ukraine, their research utilizes high-resolution geospatial data and machine learning to investigate climate and conflict shocks in vulnerable communities. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley. Previously, Aaron served for over five years as a diplomat with USAID, as well as a Fulbright Scholar conducting labor economics research in Germany.
+  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University, researching how high-resolution geospatial data and machine learning can help explain climate and conflict shocks in vulnerable communities. That work builds directly on over five years as a USAID diplomat — most recently leading monitoring and evaluation for USAID/Ukraine's development portfolio through the war, and previously managing program design in Colombia and program/budget analysis in Washington and South Africa — as well as a Fulbright Scholarship conducting labor economics research in Germany. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley.
 
 affiliations:
   - name: Columbia University
@@ -109,6 +109,16 @@ experience:
       Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
+  - name: Development & Policy
+    items:
+      - label: Program Design & Evaluation
+        level: 3
+      - label: Monitoring & Evaluation Frameworks
+        level: 3
+      - label: International Development Funding & Budget Analysis
+        level: 3
+      - label: Donor Coordination
+        level: 3
   - name: Computer Programming
     items:
       - label: Python
