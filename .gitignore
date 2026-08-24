@@ -46,6 +46,25 @@ pagefind/
 static/pagefind/
 
 # ============================================================================
+# Editors / IDEs
+# ============================================================================
+
+# JetBrains (WebStorm, GoLand, IntelliJ, etc.)
+.idea/
+
+# VS Code (keep extensions.json — it's a useful shared recommendation)
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
+
+# Visual Studio
+.vs/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================================
 # Operating System
 # ============================================================================
 

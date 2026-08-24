@@ -38,7 +38,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        My research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
+        My (TESTING!) research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
 
         That research is grounded in over five years as a USAID diplomat, including leading monitoring and evaluation for USAID/Ukraine's development portfolio through the war, and previously managing program design in Colombia. I bring that same field-tested rigor — building ML pipelines, designing evaluation frameworks, translating messy data into decisions under real operational constraints — to organizations that need it.
 
