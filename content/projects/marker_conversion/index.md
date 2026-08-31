@@ -3,6 +3,8 @@ title: Marker PDF Conversion
 date: 2026-08-19
 links:
   - type: site
+    icon: brands/github
+    label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/marker-conversion
 tags:
   - Python

@@ -3,6 +3,8 @@ title: RAG Analysis
 date: 2026-08-30
 links:
   - type: site
+    icon: brands/github
+    label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/marker-conversion/rag
 tags:
   - Python

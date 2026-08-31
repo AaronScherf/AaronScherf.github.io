@@ -3,6 +3,8 @@ title: Validating Remote Sensing and Machine Learning Approaches for CIMMYT Whea
 date: 2026-08-22
 links:
   - type: site
+    icon: brands/github
+    label: GitHub
     url: https://github.com/AaronScherf/wheat_yield_prediction_gee
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/wheat_yield_prediction_gee/master/reports/Aaron_M_Scherf_Final_Thesis.pdf

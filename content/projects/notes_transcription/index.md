@@ -3,6 +3,8 @@ title: Notes Transcription Pipeline
 date: 2026-08-27
 links:
   - type: site
+    icon: brands/github
+    label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/marker-conversion
 tags:
   - Python

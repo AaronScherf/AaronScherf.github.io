@@ -3,6 +3,8 @@ title: Novel Omnibus Normality Test
 date: 2026-08-22
 links:
   - type: site
+    icon: brands/github
+    label: GitHub
     url: https://github.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test/main/MATH_Final_Thesis.pdf
