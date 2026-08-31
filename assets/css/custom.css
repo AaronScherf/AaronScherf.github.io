@@ -1,0 +1,10 @@
+/* Site-level overrides, loaded after Hugo Blox's own CSS -- see site_head.html's
+   `fileExists "assets/css/custom.css"` hook. Prefer this over editing the theme
+   module directly, since module files get reset on `hugo mod` upgrades. */
+
+/* The "large" project/publication page link buttons (GitHub, PDF, etc.) render at
+   the same text-sm size as the small list-view variant -- easy to miss. Bumping
+   this also enlarges the icon next to it, since it's sized in em units. */
+.hb-attachment-link-large {
+  font-size: 1.125rem;
+}
