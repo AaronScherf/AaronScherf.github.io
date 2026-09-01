@@ -109,6 +109,7 @@ sections:
       title: Projects
       subtitle: ''
       text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      page_type: projects
       filters:
         folders:
           - projects
