@@ -10,7 +10,7 @@ tags:
   - Python
 ---
 
-**[Marker PDF Conversion](/projects/marker_conversion/)**, the pipeline that turns raw academic PDFs into LLM-ready Markdown, has moved well past its original textbook-only scope since it was first introduced.
+**[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)**, the pipeline that turns raw academic PDFs into LLM-ready Markdown, has moved well past its original textbook-only scope since it was first introduced.
 
 <!--more-->
 
@@ -21,4 +21,4 @@ Four concrete pieces of progress:
 - **A sibling tool for messier documents.** Textbooks are long but structured; problem sets, TA notes, and exams usually aren't — no table of contents, often short, and frequently mixing typed and handwritten content on the same page. A new local, GPU-free script handles these by routing each document to the cheapest tier its actual content supports: free local extraction when it's clean, targeted batched repair when only some pages are corrupted, and full vision-model transcription for handwritten or messy exports.
 - **Making "free" local text actually trustworthy.** Two problems turned up on closer inspection: one text-extraction library was silently dropping spaces between words that another handled correctly (swapped for free, no downside found across ~1,150 real pages checked), and plain text can't represent a lost superscript at all (`D^5` reads as bare `D5`). The second problem turned out to be more fixable than it first looked: the same library's structured text mode exposes enough font-size and position data to reconstruct most lost exponents and subscripts locally, for free, instead of only detecting the loss and re-sending the whole document to Gemini — validated against real, already-correct transcriptions sitting on hand, with every case checked matching. One real gap stayed open along the way (a square-root sign that silently extracts as an ordinary letter, invisible to every check built so far, because it doesn't look wrong) — a finding that's steering the next phase toward a downstream correction pass rather than an ever-growing list of bespoke detection rules.
 
-Full write-up, including the specific bugs found and how each approach was validated, is on the **[project page](/projects/marker_conversion/)**. Both tools now feed the same Academic Hub library, tagging their output with how it was produced so a downstream RAG pipeline can weight documents by provenance.
+Full write-up, including the specific bugs found and how each approach was validated, is on the **[project page](/projects/academic-hub/marker_conversion/)**. Both tools now feed the same Academic Hub library, tagging their output with how it was produced so a downstream RAG pipeline can weight documents by provenance.

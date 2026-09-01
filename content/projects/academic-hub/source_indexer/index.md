@@ -1,6 +1,7 @@
 ---
 title: Source Indexer
 date: 2026-08-30
+type: academic-hub-project
 links:
   - type: site
     icon: brands/github
@@ -24,6 +25,6 @@ A handful of quieter bugs came out of actually exercising this against the real,
 
 Real corpus state as of today: 30 healthy cards across one course, zero orphaned, zero untagged, and a 14-tag vocabulary (10 corpus-validated, 4 single-document fallbacks, confirmed correctly isolated from each other). The newest generalization came from a second, structurally different corpus entering the picture: a sibling project converting personal application essays and research notes reuses this entire subsystem unmodified except for two changes driven by that real second use case rather than speculative design — the document-type vocabulary a card gets classified into is now a parameter instead of a hardcoded academic set, and every query-side function takes a list of corpus roots instead of one, so a single search can span both corpora at once without two same-named courses in different corpora colliding.
 
-Still open: passage-level (not just file-level) embeddings are the recommended next step, since "which document is relevant" and "which specific paragraph answers this question" are genuinely different granularities — see **[RAG Analysis](/projects/rag_analysis/)** for how that distinction plays out once an actual tutoring agent needs to cite a specific passage rather than just point at a file.
+Still open: passage-level (not just file-level) embeddings are the recommended next step, since "which document is relevant" and "which specific paragraph answers this question" are genuinely different granularities — see **[RAG Analysis](/projects/academic-hub/rag_analysis/)** for how that distinction plays out once an actual tutoring agent needs to cite a specific passage rather than just point at a file.
 
-Part of **Academic Hub**, feeding directly into the retrieval used by **[RAG Analysis](/projects/rag_analysis/)**, and built on the same self-describing output produced by **[Marker PDF Conversion](/projects/marker_conversion/)** and **[Notes Transcription Pipeline](/projects/notes_transcription/)**.
+Part of **Academic Hub**, feeding directly into the retrieval used by **[RAG Analysis](/projects/academic-hub/rag_analysis/)**, and built on the same self-describing output produced by **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** and **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**.

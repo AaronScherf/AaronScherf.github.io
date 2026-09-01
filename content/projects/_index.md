@@ -10,6 +10,7 @@ sections:
       title: Selected Projects
       text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
       count: 12
+      page_type: projects
       filters:
         folders:
           - projects

@@ -18,7 +18,7 @@ The [full architecture is now public on GitHub](https://github.com/AaronScherf/a
 
 Two subprojects are furthest along:
 
-- **[Marker PDF Conversion](/projects/marker_conversion/)** is up and running: it spins up a temporary GPU virtual machine in Google Cloud, batch-converts dense textbook PDFs into clean Markdown with LaTeX-rendered formulae and separated figures, and tears the VM down as soon as it's finished to keep costs low.
-- **[RAG Analysis](/projects/rag_analysis/)** is still in the design stage. It's meant to be the piece that actually reads the Markdown Marker produces — answering direct questions and acting as a retrieval step other agents can call into — but the retrieval pipeline itself isn't built yet.
+- **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** is up and running: it spins up a temporary GPU virtual machine in Google Cloud, batch-converts dense textbook PDFs into clean Markdown with LaTeX-rendered formulae and separated figures, and tears the VM down as soon as it's finished to keep costs low.
+- **[RAG Analysis](/projects/academic-hub/rag_analysis/)** is still in the design stage. It's meant to be the piece that actually reads the Markdown Marker produces — answering direct questions and acting as a retrieval step other agents can call into — but the retrieval pipeline itself isn't built yet.
 
 The rest of the ecosystem — the academic-hub folder structure, secure secrets handling, and keeping every nested project a clean, independently pushable Git repo — is mostly scaffolding at this point, but it's the foundation everything else builds on. More to come as the RAG piece takes shape.
