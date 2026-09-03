@@ -15,11 +15,12 @@ Academic Hub is the broader knowledge network tying together everything below: c
 
 <!--more-->
 
-Four subprojects currently make up the hub, each documented on its own page:
+Five subprojects currently make up the hub, each documented on its own page:
 
 - **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** — turns dense, math-heavy textbooks into clean, LLM-ready Markdown using a GPU-rented pipeline built around chapter-aware chunking.
 - **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)** — the GPU-free sibling that handles short, messy academic material: TA notes, problem sets, exams, and handwritten scans.
 - **[Source Indexer](/projects/academic-hub/source_indexer/)** — turns the growing pile of converted documents into a searchable, tagged corpus with two-stage retrieval.
 - **[RAG Analysis](/projects/academic-hub/rag_analysis/)** — the grounded, citation-backed question-answering agent built on top of that retrieval layer.
+- **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** — an opt-in layer that generates an interactive Plotly visualization alongside a tutor answer, via a template library and a local, free LLM fallback.
 
-Browse all four, with more detail on how they fit together, on the **[Academic Hub subprojects page](/projects/academic-hub/)**.
+Browse all five, with more detail on how they fit together, on the **[Academic Hub subprojects page](/projects/academic-hub/)**.
