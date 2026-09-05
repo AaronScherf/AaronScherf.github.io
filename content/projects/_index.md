@@ -3,6 +3,13 @@ title: 'Projects'
 date: 2024-05-19
 type: landing
 
+# Hide the generic "share this page" tray (X/Facebook/WhatsApp/etc.) on every
+# project page -- the author bio at the bottom of each page already surfaces
+# the real social links (Bluesky, GitHub, etc.), so this redundant, unrelated
+# widget is just noise.
+cascade:
+  share: false
+
 # Page sections
 sections:
   - block: collection
