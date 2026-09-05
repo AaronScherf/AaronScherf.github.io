@@ -5,6 +5,14 @@ summary: ''
 date: 2022-10-24
 type: landing
 
+# Hide the generic "share this page" tray (X/Facebook/WhatsApp/etc.) site-wide
+# -- the author bio already surfaces the real social links (Bluesky, GitHub,
+# etc.), so this redundant, unrelated widget is just noise everywhere it
+# appears. Cascades from the site root to every page unless a page's own
+# frontmatter sets `share: true` to opt back in.
+cascade:
+  share: false
+
 sections:
   - block: resume-biography-3
     content:
