@@ -36,8 +36,11 @@ links:
     label: Connect on LinkedIn
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
-  - icon: academicons/orcid
-    url: https://orcid.org/0009-0007-1044-3162
+  # ORCID hidden until the profile actually has content -- an empty profile
+  # link is worse than no link, and it was also making the icon tray too wide
+  # on mobile. Re-enable once populated.
+  # - icon: academicons/orcid
+  #   url: https://orcid.org/0009-0007-1044-3162
 
 interests:
   - Sustainable Agriculture
