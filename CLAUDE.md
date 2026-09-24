@@ -50,3 +50,7 @@ The **homepage** (`content/_index.md`) is a single `type: landing` page built fr
 ## Publications auto-import
 
 `.github/workflows/import-publications.yml` watches for a `publications.bib` file at the repo root and, on push, runs the `academic` CLI to convert it into `content/publications/*/index.md` pages via an auto-generated PR. No `publications.bib` currently exists at the repo root, so this workflow is dormant — publication pages are currently hand-authored.
+
+## Multi-agent note
+
+This is a separate, public repo (not part of the private `ai-sandbox-master` monorepo's shared routing doc). If you're also using Gemini or Codex here: routine work (dependency bumps, running `pnpm build`, fixing CI drift between `build.yml`/`deploy.yml`) suits Codex; anything touching template structure, the placeholder sections, or config tradeoffs is a judgment call and should stay with Claude.
