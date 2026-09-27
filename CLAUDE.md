@@ -71,3 +71,10 @@ another session's work or force cleanup. One designated integrator combines
 completed branches sequentially. Drafting/revising content does not authorize
 publishing: pushes to main deploy the site. Act on publication authorization
 when already provided by the user.
+
+## Bug report intake
+
+For Gemini-prepared cases, follow [the bug handoff procedure](docs/BUG_HANDOFF.md).
+Review the evidence against the relevant full codebase, including callers and
+shared dependencies; treat the proposed cause as a hypothesis. Record your
+findings and validation against the original acceptance criteria.

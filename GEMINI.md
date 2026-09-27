@@ -31,6 +31,15 @@ That file's Multi-agent note defines the local division of responsibilities.
   Pushes to main deploy via GitHub Actions; publish only when the user's
   instructions cover it. Do not publish private source material or secrets.
 
+## Unexpected results and user corrections
+
+Follow [the bug-report and handoff procedure](docs/BUG_HANDOFF.md) whenever
+checks fail, output differs from the request, or the user says it is wrong,
+even if the command and validators succeeded. Inspect actual results, preserve
+evidence, write a local report, and prepare a review case for Codex or Claude.
+Do not dismiss feedback, silently repair the evidence, or claim an unperformed
+review. Normal editorial revisions remain within your role.
+
 ## Workspace ownership
 
 This is a separate Git repository. Use a dedicated gemini/<task> branch and
