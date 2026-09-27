@@ -51,30 +51,7 @@ The **homepage** (`content/_index.md`) is a single `type: landing` page built fr
 
 `.github/workflows/import-publications.yml` watches for a `publications.bib` file at the repo root and, on push, runs the `academic` CLI to convert it into `content/publications/*/index.md` pages via an auto-generated PR. No `publications.bib` currently exists at the repo root, so this workflow is dormant — publication pages are currently hand-authored.
 
-## Multi-agent note
+## Multi-agent routing
 
-This is a separate, public repository with its own Git history and deployment.
-The local roles follow the workspace convention:
-
-- Gemini in Antigravity defaults to documentation review and writing/revising
-  project pages and blog posts. Normal editorial choices belong to Gemini;
-  see GEMINI.md for the content workflow.
-- Codex handles routine code maintenance, dependency updates, build/CI
-  troubleshooting, and Git mechanics.
-- Claude handles architecture, code/security review, template/layout changes,
-  placeholder-section activation, and substantive configuration tradeoffs.
-
-All writing tasks use an owned branch/worktree of this repository, with one
-writer and a separate IDE window per worktree. Verify the repo root, branch,
-and status before editing/staging; stage explicit paths only. Never overwrite
-another session's work or force cleanup. One designated integrator combines
-completed branches sequentially. Drafting/revising content does not authorize
-publishing: pushes to main deploy the site. Act on publication authorization
-when already provided by the user.
-
-## Bug report intake
-
-For Gemini-prepared cases, follow [the bug handoff procedure](docs/BUG_HANDOFF.md).
-Review the evidence against the relevant full codebase, including callers and
-shared dependencies; treat the proposed cause as a hypothesis. Record your
-findings and validation against the original acceptance criteria.
+Read [the local routing and workspace rules](docs/AGENT_ROUTING.md).
+For reported failures, follow [reviewer responsibilities](docs/BUG_HANDOFF.md#reviewer-responsibilities).

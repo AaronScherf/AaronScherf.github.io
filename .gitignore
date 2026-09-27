@@ -88,4 +88,4 @@ Desktop.ini
 npm-debug.log*
 
 # Local agent bug reports and evidence; may contain private source data.
-/.agent-reports/
+**/.agent-reports/
