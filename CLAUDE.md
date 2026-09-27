@@ -53,4 +53,21 @@ The **homepage** (`content/_index.md`) is a single `type: landing` page built fr
 
 ## Multi-agent note
 
-This is a separate, public repo (not part of the private `ai-sandbox-master` monorepo's shared routing doc). If you're also using Gemini or Codex here: routine work (dependency bumps, running `pnpm build`, fixing CI drift between `build.yml`/`deploy.yml`) suits Codex; anything touching template structure, the placeholder sections, or config tradeoffs is a judgment call and should stay with Claude.
+This is a separate, public repository with its own Git history and deployment.
+The local roles follow the workspace convention:
+
+- Gemini in Antigravity defaults to documentation review and writing/revising
+  project pages and blog posts. Normal editorial choices belong to Gemini;
+  see GEMINI.md for the content workflow.
+- Codex handles routine code maintenance, dependency updates, build/CI
+  troubleshooting, and Git mechanics.
+- Claude handles architecture, code/security review, template/layout changes,
+  placeholder-section activation, and substantive configuration tradeoffs.
+
+All writing tasks use an owned branch/worktree of this repository, with one
+writer and a separate IDE window per worktree. Verify the repo root, branch,
+and status before editing/staging; stage explicit paths only. Never overwrite
+another session's work or force cleanup. One designated integrator combines
+completed branches sequentially. Drafting/revising content does not authorize
+publishing: pushes to main deploy the site. Act on publication authorization
+when already provided by the user.
