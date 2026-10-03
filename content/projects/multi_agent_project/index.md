@@ -9,13 +9,16 @@ links:
 tags:
   - LLM / RAG
   - Developer Tools
+image:
+  caption: 'Multi-agent development workflow and git worktree isolation architecture'
+  image_suggestion: "Diagram illustrating the multi-agent development workflow: showing task triage across Claude Code (architecture/judgment), Gemini Antigravity (pipeline operation, research synthesis, website editing), and OpenAI Codex (git mechanics, tests, boilerplate), mapped to isolated Git worktrees (.worktrees/claude-*, gemini-*, codex-*) feeding sequentially into main via a designated integrator."
 ---
 
 Three AI coding agents — Claude Code, Gemini (Antigravity), and OpenAI Codex — work the same monorepo behind Academic Hub and the AI Research Assistant. Rather than let task assignment be ad hoc, or let all three edit the same checkout at once, this project is the routing convention and git-isolation procedure that make three agents on one codebase a deliberate workflow instead of a liability.
 
 <!--more-->
 
-[image_suggestion: "Diagram illustrating the multi-agent development workflow: showing task triage across Claude Code (architecture/judgment), Gemini Antigravity (pipeline operation, research synthesis, website editing), and OpenAI Codex (git mechanics, tests, boilerplate), mapped to isolated Git worktrees (.worktrees/claude-*, gemini-*, codex-*) feeding sequentially into main via a designated integrator."]
+*Figure: Multi-agent routing triage across Claude Code, Gemini, and Codex with isolated git worktree integration.*
 
 The problem isn't capability, it's coordination. Each of the three tools is good at something different, and none of them share memory: a Claude Code session in this workspace carries cross-session context forward, while Gemini and Codex start cold every time. Left unmanaged, that difference doesn't matter — whichever tool is open just does the task, regardless of whether it's the right one for the job, and if two sessions happen to touch the same working directory at once, one can silently overwrite the other's files or git state.
 

@@ -11,13 +11,16 @@ tags:
   - Python
   - LLM / RAG
   - Hugging Face
+image:
+  caption: 'Notes transcription 3-tier cost routing and downstream ML verification architecture'
+  image_suggestion: "Diagram showing the 3-tier cost routing and downstream ML verification architecture: showing incoming messy notes routed through local PyMuPDF extraction (with font-baseline superscript/subscript reconstruction), targeted page repair, and full Gemini transcription, followed by the postprocess_notes.py verification pass (GPT-2 surprisal filter -> DistilBERT masked-LM check -> source PDF page image verification)."
 ---
 
 A cost-routed pipeline that turns short, unstructured academic PDFs — TA notes, problem sets, exams, and handwritten scans — into clean, LLM-ready Markdown, plus a downstream correction pass that catches the errors the routing itself can't see.
 
 <!--more-->
 
-[image_suggestion: "Diagram showing the 3-tier cost routing and downstream ML verification architecture: showing incoming messy notes routed through local PyMuPDF extraction (with font-baseline superscript/subscript reconstruction), targeted page repair, and full Gemini transcription, followed by the postprocess_notes.py verification pass (GPT-2 surprisal filter -> DistilBERT masked-LM check -> source PDF page image verification)."]
+*Figure: Three-tier cost routing and downstream ML verification pipeline.*
 
 Academic notes are a different problem from textbooks: no table of contents to anchor against, usually too short to need chapter-aware chunking, and frequently mixing typed and handwritten content on the same page — sometimes exported from apps (OneNote, Nebo, MyScript) whose internal page layout can split a single paragraph across a page boundary non-adjacently. `transcribe_notes.py` handles this with a three-tier router instead of always calling the API: a reliably-paginated, machine-generated document (LaTeX, Word) with clean local text gets extracted for free, zero API calls; if some of its pages are defective, only those pages are batched to Gemini for repair using the surrounding clean pages as context; and once a document's defect rate crosses a threshold, or it's a genuinely handwritten or messy export, it goes through full transcription instead — batched in one shot for reliably-paginated documents, or page-by-page with a small sliding window of already-transcribed pages as context for messy exports specifically, since resending the whole document on every call was confirmed to grow input tokens quadratically with page count on a real 25-page file. That routing decision leans conservative on purpose: OneNote's own local text extraction silently drops equation regions entirely rather than producing anything recognizably corrupted, so documents from known messy-export sources are routed straight to full transcription unconditionally rather than trusting a per-page cleanliness check that would confidently ship missing math with no warning. A cost comparison against dedicated OCR APIs (Mathpix, Mistral) confirmed the batching-plus-cheap-model design already beats their per-page rates, coming in around $0.0012–0.0013 per repaired page.
 

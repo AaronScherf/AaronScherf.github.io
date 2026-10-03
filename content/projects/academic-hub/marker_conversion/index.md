@@ -11,13 +11,16 @@ tags:
   - Python
   - Google Cloud Platform
   - LLM / RAG
+image:
+  caption: 'Marker PDF conversion pipeline: GCP GPU VM lifecycle and multimodal figure pass'
+  image_suggestion: "Architecture and data-flow diagram of the Marker PDF Conversion pipeline: illustrating the ephemeral GCP GPU VM lifecycle (creation, batch conversion with chapter boundary alignment, and teardown), followed by local execution of describe_images.py generating figure descriptions into enriched .rag.md files, alongside the pre-flight duplicate checking and OOM recovery ladder."
 ---
 
 A cost-optimized pipeline that turns dense, math-heavy textbooks into clean, LLM-ready Markdown using the open-source Marker model on rented GPU time — one half of a two-tool system that also handles short academic notes with a separate, GPU-free sibling (see **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**).
 
 <!--more-->
 
-[image_suggestion: "Architecture and data-flow diagram of the Marker PDF Conversion pipeline: illustrating the ephemeral GCP GPU VM lifecycle (creation, batch conversion with chapter boundary alignment, and teardown), followed by local execution of describe_images.py generating figure descriptions into enriched .rag.md files, alongside the pre-flight duplicate checking and OOM recovery ladder."]
+*Figure: Marker PDF conversion cloud lifecycle and multimodal enrichment pipeline.*
 
 A small local tool drives the textbook side of the pipeline: it spins up a GPU virtual machine in Google Cloud, uploads every PDF found in a given course's folder — batch composition follows the folder, not a hand-maintained filename list, so pointing the same tool at a different course directory is the only change needed to run it against a new course — and converts them all in one pass with the open-source Marker model, reusing the same loaded model across every book to keep runtime and cost down. An optional AI-assisted step reads each book's title page to automatically label the output files with the correct title, author, and year, and the converted Markdown and extracted images are copied back locally before the VM and its disk are torn down entirely: a Persistent Disk bills for its full size for as long as it exists, running or not, so for a pipeline used in occasional batches rather than continuously, deleting outright (and cheaply recreating it next time) beats paying to keep an idle disk around between runs.
 
