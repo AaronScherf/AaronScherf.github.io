@@ -8,6 +8,9 @@ tags:
   - Academic Hub
   - LLM / RAG
   - Python
+image:
+  caption: 'Academic Hub system architecture across code, data, and sandbox domains'
+  image_suggestion: "Architecture diagram showing Academic Hub's three-domain design: Git-managed code repositories, Rclone-synced Google Drive storage for raw textbook PDFs and handwritten notes, and the containerized Docker sandbox environment orchestrated by workspace_generator.sh with isolated .env credentials, showing data flowing into Marker PDF Conversion and RAG Analysis."
 ---
 
 For the past few months I've been building **Academic Hub**: an attempt to turn everything I read and write as a PhD student — textbooks, lecture notes, problem sets, old exams, journal articles, and my own research — into a single, AI-queryable knowledge ecosystem, instead of a pile of PDFs scattered across Drive, Paperpile, and a dozen local folders.
@@ -16,7 +19,7 @@ For the past few months I've been building **Academic Hub**: an attempt to turn 
 
 The [full architecture is now public on GitHub](https://github.com/AaronScherf/ai-sandbox-master). It's an orchestrator repository that scaffolds and syncs a containerized workspace across three domains: a Git-managed code ecosystem (this website, research project repos, conversion scripts), an Rclone-managed data ecosystem (raw textbooks and handwritten notes mirrored to Google Drive, kept out of version control), and a Docker sandbox where an AI assistant can work across both without ever touching credentials directly — API keys live in a git-ignored `.env` file, referenced by variable from the tracked `docker-compose.yml`. A single `workspace_generator.sh` script bootstraps the whole tree, pulls updates across every nested repo, and regenerates the documentation, all without ever overwriting existing files.
 
-[image_suggestion: "Architecture diagram showing Academic Hub's three-domain design: Git-managed code repositories, Rclone-synced Google Drive storage for raw textbook PDFs and handwritten notes, and the containerized Docker sandbox environment orchestrated by workspace_generator.sh with isolated .env credentials, showing data flowing into Marker PDF Conversion and RAG Analysis."]
+*Figure: Academic Hub system architecture across code, data, and sandbox domains.*
 
 Two subprojects are furthest along:
 
