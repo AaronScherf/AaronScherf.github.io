@@ -2,6 +2,9 @@
 title: Obsidian Git Sync
 date: 2026-09-21
 type: academic-hub-project
+image:
+  caption: 'Obsidian tablet interface with Excalidraw stylus customization and lightweight Fit GitHub API sync'
+  image_suggestion: "Screenshot of the Obsidian tablet interface displaying an Excalidraw handwritten lecture note with the customized, localized stylus popup menu and eraser tool, accompanied by an architectural diagram showing the lightweight Fit GitHub API sync between tablet and laptop with heavy PDFs isolated in academic_resources/."
 links:
   - type: site
     icon: brands/github
@@ -20,7 +23,7 @@ Keeps handwritten Excalidraw lecture notes in sync between a tablet and a laptop
 
 <!--more-->
 
-[image_suggestion: "Screenshot of the Obsidian tablet interface displaying an Excalidraw handwritten lecture note with the customized, localized stylus popup menu and eraser tool, accompanied by an architectural diagram showing the lightweight Fit GitHub API sync between tablet and laptop with heavy PDFs isolated in academic_resources/."]
+*Figure: Obsidian tablet interface featuring Excalidraw handwritten lecture notes and localized stylus tools, synchronized via lightweight Fit GitHub API architecture.*
 
 The objective is narrow on purpose: two Obsidian vaults, one on each device, agreeing on the same lightweight notes without either device ever downloading the gigabyte of source PDFs, textbooks, and lecture recordings that live alongside them in **Academic Hub**. `.excalidraw.md` notes, their embedded PNGs, and downstream processed Markdown should sync every time; anything heavy — PDFs, Office docs, and the auto-exported `.svg` renders of each drawing — should never leave the device it was created on. The approach so far is a repo split, not a single vault: `academic_notes/` was carved out as its own standalone git repo (private, on GitHub) nested inside the main portfolio repo, which gitignores it entirely, so the two histories never entangle. `academic_resources/` — course textbooks and recordings — was already living as a sibling folder one level up with the same "heavy subpaths gitignored" pattern; the current work is finishing the job by relocating the PDFs that had drifted into `academic_notes/` over time into that existing home, rather than inventing a third structure.
 

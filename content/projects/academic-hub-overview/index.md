@@ -1,6 +1,9 @@
 ---
 title: Academic Hub
 date: 2026-09-01
+image:
+  caption: 'Comprehensive architecture of the Academic Hub ecosystem across sources, pipelines, vault, and tutoring agents'
+  image_suggestion: "System overview diagram of the entire Academic Hub ecosystem: illustrating raw academic inputs (textbooks, handwritten notes, lecture videos) passing through ingestion pipelines into a standardized Markdown knowledge base, structured indexing cards, and the downstream AI tutoring agent suite with interactive visualizations and problem generation."
 links:
   - type: site
     icon: brands/github
@@ -15,7 +18,7 @@ Academic Hub is the broader knowledge network tying together everything below: c
 
 <!--more-->
 
-[image_suggestion: "System overview diagram of the entire Academic Hub ecosystem: illustrating raw academic inputs (textbooks, handwritten notes, lecture videos) passing through ingestion pipelines into a standardized Markdown knowledge base, structured indexing cards, and the downstream AI tutoring agent suite with interactive visualizations and problem generation."]
+*Figure: Academic Hub ecosystem architecture showing ingestion and processing pipelines connecting raw academic sources to the Markdown knowledge vault and downstream tutoring agent suite.*
 
 Six subprojects currently make up the hub, each documented on its own page:
 
