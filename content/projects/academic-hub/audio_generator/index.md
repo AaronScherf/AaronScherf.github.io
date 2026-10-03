@@ -2,6 +2,9 @@
 title: Audio Generator
 date: 2026-09-09
 type: academic-hub-project
+image:
+  caption: 'Audio Generator pipeline from LaTeX classification to multi-worker Piper TTS narration'
+  image_suggestion: "Pipeline diagram of the Audio Generator workflow: showing Markdown notes passing through LaTeX equation density classification (no-math / sparse / dense), parallel chunk dispatch to Gemini for speech translation, local multi-worker Piper TTS synthesis, and section-aware greedy batching into 10–20 minute MP3 podcast episodes."
 links:
   - type: site
     icon: brands/github
@@ -16,7 +19,7 @@ Converts a course's Markdown notes and converted textbooks into local MP3 narrat
 
 <!--more-->
 
-[image_suggestion: "Pipeline diagram of the Audio Generator workflow: showing Markdown notes passing through LaTeX equation density classification (no-math / sparse / dense), parallel chunk dispatch to Gemini for speech translation, local multi-worker Piper TTS synthesis, and section-aware greedy batching into 10–20 minute MP3 podcast episodes."]
+*Figure: Audio Generator pipeline from LaTeX equation classification to parallel Gemini speech translation and multi-worker Piper TTS episode batching.*
 
 For each discovered `.md` file — a student's own notes under `academic_notes/<course>/`, or a converted textbook under `academic_resources/<course>/.../processed_outputs/` — the pipeline strips code blocks and markdown syntax, converts LaTeX into narration-ready prose, synthesizes speech via Piper (fast, default) or Kokoro-ONNX (slower, higher quality), and writes the resulting MP3 as a sibling of the source file, in the same hub content repo a student's own sync tooling already watches. A SHA-256 content hash keyed to each source path means a re-run only regenerates audio for files that actually changed. The dense per-sentence timestamp citations **[Video Lecture Notes](/projects/academic-hub/video_notes/)** attaches to its synthesized notes are stripped before narration too, since a citation is only useful as a clickable link, not read aloud.
 

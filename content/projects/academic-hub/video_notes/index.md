@@ -2,6 +2,9 @@
 title: Video Lecture Notes
 date: 2026-09-06
 type: academic-hub-project
+image:
+  caption: 'Automated video lecture notes pipeline from YouTube audio extraction to local LLM synthesis'
+  image_suggestion: "Pipeline diagram of Video Lecture Notes generation: showing YouTube playlist download via yt-dlp, faster-whisper timestamped audio transcription, automatic series grouping (pattern match -> embedding clustering -> singletons), and local Ollama synthesis into Markdown notes with clickable timestamp links back to the source lectures."
 links:
   - type: site
     icon: brands/github
@@ -17,7 +20,7 @@ Turns a batch of YouTube lecture videos into synthesized Markdown notes indexed 
 
 <!--more-->
 
-[image_suggestion: "Pipeline diagram of Video Lecture Notes generation: showing YouTube playlist download via yt-dlp, faster-whisper timestamped audio transcription, automatic series grouping (pattern match -> embedding clustering -> singletons), and local Ollama synthesis into Markdown notes with clickable timestamp links back to the source lectures."]
+*Figure: Automated Video Lecture Notes pipeline showing audio extraction, faster-whisper transcription, 3-tier grouping, and local Ollama synthesis with timestamp citations.*
 
 The pipeline runs entirely locally before a single Gemini call ever happens: `yt-dlp` resolves per-video and per-playlist metadata and downloads each video's audio track, `faster-whisper` transcribes it on CPU into timestamped segments, and once every video in a batch is transcribed, a fully automatic three-tier grouping algorithm decides which videos belong together as one logical lecture series before anything gets synthesized. Grouping was deliberately built with no manual per-batch configuration at all — a playlist is trusted as one coherent series by default, subdivided only when a title pattern (`Lecture N`, `Part N`, `Week N`) actually detects two or more distinct series bundled into the same playlist; videos with no playlist context fall back to clustering by transcript-embedding similarity (also local, via Ollama), then singleton groups for whatever's left. Synthesis is one local Ollama call per group, prompted with every member video's transcript tagged by its own per-segment timestamp link, so a note spanning multiple lectures can still point back to the exact video and moment a concept came from.
 

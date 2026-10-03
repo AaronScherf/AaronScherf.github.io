@@ -2,6 +2,9 @@
 title: Problem Generation Sub-Agent
 date: 2026-09-06
 type: academic-hub-project
+image:
+  caption: 'Problem Generation Sub-Agent loop with dual-pool retrieval, split verification, and generated solution report'
+  image_suggestion: "Flowchart diagram of the Problem Generation Sub-Agent loop: illustrating dual-pool retrieval (student problem set style anchor + textbook content anchor), generation, independent two-line verification (TECHNIQUE and CORRECTNESS checks), and the bounded retry loop, paired with an example excerpt of a generated problem and LaTeX solution report."
 links:
   - type: site
     icon: brands/github
@@ -16,7 +19,7 @@ A peer of the **[Visualization Sub-Agent](/projects/academic-hub/visualization/)
 
 <!--more-->
 
-[image_suggestion: "Flowchart diagram of the Problem Generation Sub-Agent loop: illustrating dual-pool retrieval (student problem set style anchor + textbook content anchor), generation, independent two-line verification (TECHNIQUE and CORRECTNESS checks), and the bounded retry loop, paired with an example excerpt of a generated problem and LaTeX solution report."]
+*Figure: Problem Generation Sub-Agent architecture featuring dual-pool retrieval anchors, independent technique/correctness verification, and bounded retry loop.*
 
 Two separate retrieval pools get pulled per request: the student's own real problems on the topic as the style and difficulty anchor, and real textbook passages as the correctness anchor. An empty style pool returns nothing rather than generating an ungrounded problem; an empty content pool proceeds on style alone. Generation itself is a two-call loop — one call writes a new problem and solution in the retrieved style, explicitly not a copy of the examples; a second call hands the model back its own answer and asks it to verify correctness, now split into two independently-judged lines (`TECHNIQUE: YES/NO`, `CORRECTNESS: VALID/INVALID`) rather than one combined verdict, since a single verdict let a mathematically valid proof using the *wrong* requested technique slip through as `VALID`. A failure at either step feeds its exact reason into a retry, capped at 5 attempts. Integration is automatic: a regex intent check on the tutor's own question text routes matching questions here, falling straight through to ordinary Q&A if generation returns nothing.
 

@@ -10,13 +10,16 @@ links:
 tags:
   - Python
   - LLM / RAG
+image:
+  caption: 'Interactive RAG tutor terminal session answering with grounded citations'
+  image_suggestion: "Terminal screenshot of an interactive multi-turn session with the RAG tutor answering 'what is the spectral theorem', showing query reformulation from conversational context, diversified passage retrieval from both notes and textbooks, and the resulting explanation with inline theorem and page citations."
 ---
 
 A grounded question-answering agent that retrieves and cites real passages from the textbooks and notes produced by the Marker PDF Conversion and Notes Transcription pipelines — usable directly as a multi-turn chat, or as a stateless function other agents can call.
 
 <!--more-->
 
-[image_suggestion: "Terminal screenshot of an interactive multi-turn session with the RAG tutor answering 'what is the spectral theorem', showing query reformulation from conversational context, diversified passage retrieval from both notes and textbooks, and the resulting explanation with inline theorem and page citations."]
+*Figure: Grounded question-answering session with inline theorem and page citations.*
 
 The core of it is a single function, `answer_question()`, deliberately stateless per call: conversation history is an explicit input and output the caller owns, not internal session state. That one design choice is what lets it serve two different usage modes without two separate implementations — an interactive REPL that threads history across turns, and a plain callable a larger pipeline can invoke once and use the result from, the same way a study-plan agent might eventually hand it a course syllabus and ask for a grounded read on a topic. Inside a call: a follow-up question first gets condensed into a standalone, retrievable query using recent history (skipped entirely on the first turn), the reformulated question goes to the source indexer's existing passage-level search, a diversification step caps how many top-ranked passages can come from a single file so a comparative question actually pulls from multiple sources instead of one dominant document crowding out the rest, and generation is prompted to answer using *only* the retrieved excerpts — citing each one inline and saying so plainly when the excerpts don't cover the question, rather than filling the gap from general knowledge.
 

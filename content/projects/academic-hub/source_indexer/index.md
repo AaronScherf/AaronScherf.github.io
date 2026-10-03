@@ -11,13 +11,16 @@ tags:
   - Python
   - LLM / RAG
   - Vector Database
+image:
+  caption: 'Source indexer two-stage hierarchical search and tag mining architecture'
+  image_suggestion: "Diagram illustrating the two-stage search and index-card architecture: showing incoming queries evaluated against course-level centroid embeddings before drilling into per-file index cards, alongside the tag mining pipeline (holistic LLM candidate generation -> cosine similarity validation -> isolated single-document fallback tags)."
 ---
 
 The layer that turns a growing pile of converted textbooks, notes, and problem sets into a searchable corpus — per-file index cards, corpus-wide tag mining, and two-stage retrieval that other tools (like the RAG tutoring agent) build directly on top of.
 
 <!--more-->
 
-[image_suggestion: "Diagram illustrating the two-stage search and index-card architecture: showing incoming queries evaluated against course-level centroid embeddings before drilling into per-file index cards, alongside the tag mining pipeline (holistic LLM candidate generation -> cosine similarity validation -> isolated single-document fallback tags)."]
+*Figure: Two-stage hierarchical search and corpus tag validation architecture.*
 
 Given a query like "teach me about linear algebra," this is what ranks the most relevant files in the corpus — the source-selection layer underneath an interactive tutor, not the tutor itself. Every converted document gets a per-file index card keyed by a hash of the source PDF's own bytes (so a card survives the file being moved or renamed), plus a course-level rollup computed for free from existing card data — no extra LLM call needed just to know what a course, as a whole, is about. Search runs in two stages, course then file, so a query first narrows to the handful of relevant courses by cheap centroid similarity before spending anything on a finer-grained per-file comparison inside them. The indexer hooks directly into all three conversion pipelines, so a newly converted textbook, transcribed note, or described image gets indexed as a normal side effect of that pipeline running, not a separate step someone has to remember to run.
 

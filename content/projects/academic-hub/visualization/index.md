@@ -2,6 +2,9 @@
 title: Visualization Sub-Agent
 date: 2026-09-03
 type: academic-hub-project
+image:
+  caption: 'Interactive Plotly study report dashboard and multi-tier visualization code generation hierarchy'
+  image_suggestion: "Screenshot of an interactive Plotly visualization (e.g. eigenvalue transformation surface or gradient descent contours) embedded in a self-contained HTML study report alongside cited tutor explanations, with an inset diagram showing the multi-tier generation hierarchy (template match -> local coder LLM with subprocess sandbox and retry loop -> few-shot example store)."
 links:
   - type: site
     icon: brands/github
@@ -16,7 +19,7 @@ An opt-in layer on top of the tutoring agent that generates an interactive Plotl
 
 <!--more-->
 
-[image_suggestion: "Screenshot of an interactive Plotly visualization (e.g. eigenvalue transformation surface or gradient descent contours) embedded in a self-contained HTML study report alongside cited tutor explanations, with an inset diagram showing the multi-tier generation hierarchy (template match -> local coder LLM with subprocess sandbox and retry loop -> few-shot example store)."]
+*Figure: Interactive Plotly study dashboard featuring 3D eigenvalue landscape and gradient descent alongside the multi-tier generation hierarchy.*
 
 Two tiers, both free of any paid API call: a handful of hand-written Plotly templates (spectral decomposition, gradient descent, distribution shape, series convergence) matched by keyword against the question, and — only when nothing matches — a local `qwen2.5-coder:7b` model prompted to write its own Plotly script for the concept, extracted, executed in a subprocess, and cached. That second tier is the one that has to actually work for "any topic," since a handful of templates can never cover a full course's syllabus the way a working code-generation path can.
 
