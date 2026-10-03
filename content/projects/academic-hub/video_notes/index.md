@@ -6,7 +6,7 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/video_notes
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/generate_video_notes
 tags:
   - Python
   - LLM / RAG

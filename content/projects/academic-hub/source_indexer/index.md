@@ -6,7 +6,7 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/indexer
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/core/indexer
 tags:
   - Python
   - LLM / RAG
