@@ -15,6 +15,8 @@ AI Research Assistant is the effort to search for, download, transcribe, embed, 
 
 <!--more-->
 
+[image_suggestion: "Architecture overview diagram of the AI Research Assistant: showing automated literature discovery via OpenAlex and full-text retrieval waterfalls, parallel .docx research essay conversion, and the shared indexing and vector retrieval layer enabling cross-corpus research synthesis."]
+
 Three subprojects are shipped so far, each documented on its own page:
 
 - **[Journal Discovery Pipeline](/projects/ai-research-assistant/journal_discovery/)** — resolves a faculty name or research topic into full-text PDFs automatically, via OpenAlex, citation-based snowball sampling, and a five-tier open-access/EZProxy fetch chain, with a manual-download fallback and worklist for whatever a script can't reach on its own.

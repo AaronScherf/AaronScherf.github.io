@@ -15,6 +15,8 @@ Academic Hub is the broader knowledge network tying together everything below: c
 
 <!--more-->
 
+[image_suggestion: "System overview diagram of the entire Academic Hub ecosystem: illustrating raw academic inputs (textbooks, handwritten notes, lecture videos) passing through ingestion pipelines into a standardized Markdown knowledge base, structured indexing cards, and the downstream AI tutoring agent suite with interactive visualizations and problem generation."]
+
 Six subprojects currently make up the hub, each documented on its own page:
 
 - **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** — turns dense, math-heavy textbooks into clean, LLM-ready Markdown using a GPU-rented pipeline built around chapter-aware chunking.

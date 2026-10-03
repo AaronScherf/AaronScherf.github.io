@@ -15,6 +15,8 @@ tags:
 
 <!--more-->
 
+[image_suggestion: "Flowchart diagram illustrating the unattended batch execution and failure recovery system: showing pre-run duplicate detection branching to an async review queue, smallest-first queue scheduling, and the 3-step OOM escalation ladder (in-place retry -> VM resize -> human alert) backed by kernel log inspection and durable state logging."]
+
 Three concrete pieces of progress, all aimed at that same goal:
 
 - **A real corruption bug, found and fixed at the root, not just guarded against.** The pipeline's duplicate-book detection lets a book already converted for one course get reused for another instead of paying for a redundant multi-hour GPU conversion — but the mechanism it used to record that reuse turned out to collide with how the corpus-wide search index derives a book's identity. A plain index rebuild over a course holding one of these reused entries could silently evict the *original* course's own catalog entry from its own shard, confirmed live against real data. The stopgap at the time was a warning in the docs: don't run a rebuild near an affected course. The actual fix marks the reused entry with the identity of the book it's a copy of, and teaches the rebuild step to recognize that marker and skip past it instead of re-deriving an identity that collides with the original — covered by a new end-to-end test built specifically to fail without the fix, to make sure it stays fixed.

@@ -16,6 +16,8 @@ A PDF pipeline for academic journal articles that turned out to need almost no n
 
 <!--more-->
 
+[image_suggestion: "Workflow diagram of the Journal Article Transcription pipeline: showing recursive scanning of thematic article directories, publisher renderer detection (Apache FOP/XEP pagination checks), monograph page-count guardrails, and tiered transcription outputting structured Markdown into the federated research index."]
+
 Journal articles turned out to be the easy half: `transcribe_notes.py`'s existing tiered pipeline — free local extraction where the text layer is clean, hybrid repair, full vision transcription as the fallback — already did exactly what a short academic PDF needs, so the new converter just calls its `process_pdf()` unchanged, pointed at a different, recursively-walked folder (journal articles live under thematic subfolders that may nest further, unlike academic-hub's flat per-category PDF folders) with its own `journal_article` document type.
 
 One real, generalizable gap surfaced immediately: two of the first three real papers came from academic-publisher renderers (Apache FOP, XEP) the pagination-reliability check had never seen, routing genuinely clean PDFs to expensive page-by-page transcription for no reason — a two-line fix that benefits the notes pipeline too, not just this corpus. A user correction shaped the other real design decision here: the corpus had briefly held a 402-page monograph alongside genuine ~20-page papers, so anything over a page-count threshold is now flagged and skipped outright, never auto-escalated to the GPU/Marker pipeline — that stays reserved for files a human deliberately moves into Academic Hub's own folder, since it's the most expensive step in the whole project.

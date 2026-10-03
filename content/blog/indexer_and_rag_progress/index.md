@@ -15,6 +15,8 @@ Since the last update, the two subprojects that turn a pile of converted Markdow
 
 <!--more-->
 
+[image_suggestion: "Screenshot of an interactive RAG tutor terminal session answering 'what is the spectral theorem' with synthesized multi-source explanations and inline theorem/page citations, accompanied by an inset diagram showing the two-stage search hierarchy from course centroid embeddings down to passage-level chunk retrieval."]
+
 Four concrete pieces of progress:
 
 - **Per-file index cards and corpus-wide tagging.** Every converted document now gets an index card keyed by a hash of its own source PDF (so it survives being moved or renamed), plus course-level rollups computed for free from existing card data. Deciding *what* to tag a file with took a real redesign: the original approach — graph clustering over file-embedding similarity — was tried against the real corpus and rejected outright, since no similarity threshold from 0.78 to 0.90 produced a clean subject split. It was replaced with a one-shot holistic tag proposal followed by per-candidate empirical validation, which is what's running today, with a fallback-tagging safety net (and a fix for that fallback leaking onto unrelated files) so no document goes untagged. Real corpus state: 30 healthy index cards, 0 orphaned, 0 untagged, a 14-tag vocabulary.

@@ -14,6 +14,8 @@ tags:
 
 <!--more-->
 
+[image_suggestion: "Flowchart diagram illustrating the unified academic resource conversion pipeline: showing textbook PDFs processed via GPU Marker with chapter-aware chunking and folio tracking feeding into describe_images.py for multimodal figure descriptions, alongside the notes transcription router evaluating local PyMuPDF font baselines to reconstruct exponents and routing damaged pages to targeted Gemini repair."]
+
 Four concrete pieces of progress:
 
 - **Chapter-aware chunking and page tracking.** The textbook pipeline used to split books into fixed 150-page chunks with no idea what was at the boundary — a cut could land mid-table or mid-formula. Chunk boundaries now align to real chapter breaks, and every page is tagged with both its physical PDF page number and the book's own printed page number, so an author's own "see page 157" can actually be resolved. Validated across four structurally different books with zero duplicate internal anchors and 96–98% page-number coverage.

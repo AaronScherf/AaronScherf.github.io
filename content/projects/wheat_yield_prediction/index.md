@@ -18,6 +18,8 @@ My master's thesis for UC Berkeley's Master of Development Practice program (Spr
 
 <!--more-->
 
+[image_suggestion: "A figure comparing predicted vs observed wheat yields (scatter plots showing Random Forest R² ≈ 0.82 versus the linear mixed model BGLR R² ≈ 0.11–0.26), accompanied by a map or data pipeline diagram showing Google Earth Engine satellite environmental rasters and CIMMYT trial locations."]
+
 Crop breeding research is good at identifying which genetic crosses raise yield, but far weaker at predicting "which variety wins where" once a new environment lacks prior field trials — a gap that hits hardest in the low-income regions most exposed to climate change, where running additional trials is expensive. This thesis asks whether Google Earth Engine's free environmental data, paired with open-source machine learning tools, can substitute for costly manually collected trial data as a low-cost, reproducible alternative for out-of-sample yield prediction.
 
 The analysis combined CIMMYT international wheat trial yield and environment data with Earth Engine variables (soil moisture, vapor pressure, evapotranspiration, precipitation) and ICIS genotype pedigree data reduced to principal components. Four models were trained to predict yields on a holdout sample of fields: a Bayesian genotype-by-environment linear mixed model (BGLR) as the field's standard approach, and three machine learning alternatives — random forest, XGBoost, and a multi-layer perceptron — each run across combinations of environment data source (CIMMYT vs. Earth Engine) and with or without pedigree information.
