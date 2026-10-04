@@ -1,6 +1,9 @@
 ---
 title: Resume Manager
 date: 2026-09-09
+image:
+  caption: 'Resume Manager pipeline architecture from YAML parsing and scoped bullet-tailoring to bidirectional fact-checking'
+  image_suggestion: "Pipeline diagram of Resume Manager: showing the YAML master resume and target job description feeding into interactive Q&A guidance, scoped Ollama bullet-tailoring with anti-hallucination constraints, bidirectional fact-checking (detecting dropped metrics or invented facts), and final styled PDF rendering; accompanied by a side-by-side snippet comparing master bullets to tailored output."
 links:
   - type: site
     icon: brands/github
@@ -15,7 +18,7 @@ A local pipeline that turns one long-form master resume into a version tailored 
 
 <!--more-->
 
-[image_suggestion: "Pipeline diagram of Resume Manager: showing the YAML master resume and target job description feeding into interactive Q&A guidance, scoped Ollama bullet-tailoring with anti-hallucination constraints, bidirectional fact-checking (detecting dropped metrics or invented facts), and final styled PDF rendering; accompanied by a side-by-side snippet comparing master bullets to tailored output."]
+*Figure: Resume Manager pipeline architecture from YAML master extraction and interactive Q&A guidance to scoped LLM bullet tailoring, bidirectional fact-checking, and final PDF rendering.*
 
 The problem it's solving: a single static resume is a compromise for every job it's sent to, but hand-tailoring a new version for each application doesn't scale, and pasting a resume plus a job posting into a chatbot each time is slow and leaves no durable record of everything a resume could say. Resume Manager keeps one hand-maintained master file — a long-form record of every role, project, and metric — and generates a targeted version from it per application, on demand, entirely on local infrastructure.
 

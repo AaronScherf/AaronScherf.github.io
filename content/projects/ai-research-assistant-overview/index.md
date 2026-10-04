@@ -1,6 +1,9 @@
 ---
 title: AI Research Assistant
 date: 2026-09-01
+image:
+  caption: 'AI Research Assistant software ecosystem architecture across inputs, pipelines, and vector retrieval'
+  image_suggestion: "Architecture overview diagram of the AI Research Assistant: showing automated literature discovery via OpenAlex and full-text retrieval waterfalls, parallel .docx research essay conversion, and the shared indexing and vector retrieval layer enabling cross-corpus research synthesis."
 links:
   - type: site
     icon: brands/github
@@ -15,7 +18,7 @@ AI Research Assistant is the effort to search for, download, transcribe, embed, 
 
 <!--more-->
 
-[image_suggestion: "Architecture overview diagram of the AI Research Assistant: showing automated literature discovery via OpenAlex and full-text retrieval waterfalls, parallel .docx research essay conversion, and the shared indexing and vector retrieval layer enabling cross-corpus research synthesis."]
+*Figure: AI Research Assistant software ecosystem architecture connecting academic inputs through processing pipelines to the federated vector store and cross-corpus retrieval engine.*
 
 Three subprojects are shipped so far, each documented on its own page:
 
