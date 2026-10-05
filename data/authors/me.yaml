@@ -34,8 +34,12 @@ links:
   - icon: brands/linkedin
     url: www.linkedin.com/in/aaron-scherf
     label: Connect on LinkedIn
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
+  - icon: brands/medium
+    url: https://aaronscherf.medium.com
+    label: Read my thoughts
+  # Google Scholar hidden until profile actually has content
+  #  - icon: academicons/google-scholar
+  #    url: https://scholar.google.com/citations?hl=en&user=b9DIvs8AAAAJ
   # ORCID hidden until the profile actually has content -- an empty profile
   # link is worse than no link, and it was also making the icon tray too wide
   # on mobile. Re-enable once populated.
@@ -113,12 +117,12 @@ experience:
       Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
-  - name: Development & Policy
+  - name: International Development & Government Policy
     items:
       - label: Program Design & Evaluation
-        level: 3
+        level: 4
       - label: Monitoring & Evaluation Frameworks
-        level: 3
+        level: 4
       - label: International Development Funding & Budget Analysis
         level: 3
       - label: Donor Coordination
@@ -141,10 +145,12 @@ skills:
         level: 5
       - label: Conference Presentations
         level: 4
-      - label: Grant Proposals
-        level: 4
       - label: Training and Skills Workshops
         level: 4
+      - label: Analytical Report Writing
+        level: 4
+      - label: Grant Proposals
+        level: 3
 languages:
   - name: English
     level: 5
