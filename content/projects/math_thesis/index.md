@@ -8,6 +8,8 @@ links:
     url: https://github.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test/main/MATH_Final_Thesis.pdf
+image:
+  caption: 'Statistical power comparison of the PGLS omnibus test against the Shapiro-Wilk test across t-, chi-square, gamma, and generalized Pareto distributions'
 tags:
   - Statistics
   - R
@@ -18,7 +20,7 @@ My master's thesis in mathematics at Indiana State University, advised by Dr. Ma
 
 <!--more-->
 
-[image_suggestion: "Statistical comparison plot from the thesis simulation results: showing power curves comparing the PGLS omnibus test against the Shapiro-Wilk test across t-, chi-square, gamma, and generalized Pareto distributions at sample size n = 20, illustrating PGLS performance in near-normal regimes."]
+*Figure: Simulated statistical power curves ($10,000$ iterations, $n = 20$) comparing the PGLS omnibus test against the Shapiro-Wilk test across $t$-, $\chi^2$-, Gamma-, and Generalized Pareto distributions.*
 
 The Shapiro-Wilk test is the default choice for normality testing in most applied statistics, but it is only approximately omnibus — its power depends on assumptions about a sample's skew and kurtosis, and it struggles most on distributions that are nearly normal with a small amount of skew or kurtosis introduced. This thesis develops an alternative: an empirical process that standardizes and orders a sample, applies the probability integral transform, and subtracts the expected value of each order statistic to produce a zero-mean vector. Samples drawn from a normal distribution fluctuate randomly around zero under this transform, while non-normal samples show systematic, distribution-specific departures — the signal the new test is built to detect.
 

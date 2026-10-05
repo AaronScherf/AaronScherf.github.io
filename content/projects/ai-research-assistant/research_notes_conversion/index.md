@@ -7,6 +7,8 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+image:
+  caption: 'Research Notes Conversion and cross-corpus federation architecture from Word .docx documents to federated vector search'
 tags:
   - Python
   - LLM / RAG
@@ -17,7 +19,7 @@ A lightweight `.docx`-to-Markdown converter for PhD-application essays and loose
 
 <!--more-->
 
-[image_suggestion: "Diagram illustrating the Research Notes Conversion and federation architecture: showing Word .docx documents converted via mammoth into structured Markdown with paragraph-level citation tags (¶N), indexed with custom document types, and federated alongside Academic Hub courses in unified cross-corpus queries."]
+*Figure: Research Notes Conversion architecture showing Mammoth .docx parsing, paragraph-level citation tags (¶N), document classification, and cross-corpus vector federation.*
 
 Unlike the PDF pipelines this project started with, a `.docx` already carries its own structure — headings, bold/italic runs, lists — in the file format itself, so there's no OCR problem to solve and no GPU needed: `mammoth` reads that structure directly into Markdown, entirely locally. The one real wrinkle was cosmetic but corpus-wide: `mammoth`'s writer defensively backslash-escapes ordinary punctuation everywhere in the text, not just where it would actually be ambiguous, so "well-known" and "the U.S." came out as `well\-known`/`U\.S\.` across every converted file. Confirmed safe to invert unconditionally — none of the essays have a real paragraph starting with a literal `1.` or `-`, the one case the escaping exists to protect against — and reversing it was a five-line regex, not a rewrite.
 

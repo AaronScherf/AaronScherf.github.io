@@ -7,6 +7,8 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/postprocess_notes
+image:
+  caption: 'Notes Post-Processing pipeline with multi-stage structural filtering, local NLP surprisal scoring, and visual ground-truth verification'
 tags:
   - Python
   - Hugging Face
@@ -18,7 +20,7 @@ A downstream machine-learning verification and anomaly-detection pass over alrea
 
 <!--more-->
 
-[image_suggestion: "System diagram of the Notes Post-Processing pipeline: showing candidate generation from local Markdown notes via structural filters, two-stage local Hugging Face NLP scoring (causal GPT-2 surprisal filtering followed by bidirectional DistilBERT masked-LM confirmation), and final visual ground-truth verification against cropped source PDF page images via Gemini."]
+*Figure: Notes Post-Processing pipeline showing candidate generation via structural filters, two-stage local Hugging Face NLP scoring (causal GPT-2 surprisal and bidirectional DistilBERT masked-LM), and final visual ground-truth verification against cropped source PDF page images via Gemini.*
 
 The **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)** uses a three-tier cost router to avoid burning paid vision API calls on clean documents: files with a healthy digital text layer are extracted locally for free via `PyMuPDF`. But "clean-looking" text can conceal subtle, catastrophic extraction corruptions that rule-based regexes are blind to.
 

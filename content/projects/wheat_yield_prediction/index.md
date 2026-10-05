@@ -8,6 +8,8 @@ links:
     url: https://github.com/AaronScherf/wheat_yield_prediction_gee
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/wheat_yield_prediction_gee/master/reports/Aaron_M_Scherf_Final_Thesis.pdf
+image:
+  caption: 'Predicted vs observed wheat yields comparing Random Forest and BGLR alongside Google Earth Engine satellite environmental rasters and CIMMYT trial locations'
 tags:
   - Python
   - Machine Learning
@@ -18,7 +20,7 @@ My master's thesis for UC Berkeley's Master of Development Practice program (Spr
 
 <!--more-->
 
-[image_suggestion: "A figure comparing predicted vs observed wheat yields (scatter plots showing Random Forest R² ≈ 0.82 versus the linear mixed model BGLR R² ≈ 0.11–0.26), accompanied by a map or data pipeline diagram showing Google Earth Engine satellite environmental rasters and CIMMYT trial locations."]
+*Figure: Predicted vs observed wheat yields comparing Random Forest ($R^2 \approx 0.82$) and BGLR ($R^2 \approx 0.11\text{–}0.26$) alongside Google Earth Engine satellite environmental rasters and CIMMYT trial locations.*
 
 Crop breeding research is good at identifying which genetic crosses raise yield, but far weaker at predicting "which variety wins where" once a new environment lacks prior field trials — a gap that hits hardest in the low-income regions most exposed to climate change, where running additional trials is expensive. This thesis asks whether Google Earth Engine's free environmental data, paired with open-source machine learning tools, can substitute for costly manually collected trial data as a low-cost, reproducible alternative for out-of-sample yield prediction.
 

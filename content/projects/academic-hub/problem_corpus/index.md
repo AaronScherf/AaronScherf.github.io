@@ -7,6 +7,8 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/problem_corpus
+image:
+  caption: 'Problem Corpus Extraction pipeline from regex boundary detection to parallel Gemini Flash-Lite parsing and content-hash serialization'
 tags:
   - Python
   - LLM / RAG
@@ -16,7 +18,7 @@ Extracts a structured, persistent bank of practice problems — topic tag, probl
 
 <!--more-->
 
-[image_suggestion: "Pipeline flowchart of the Problem Corpus Extraction tool: showing ingestion of problem set Markdown and textbook files, regex problem-boundary detection in boundaries.py, parallel Gemini Flash-Lite extraction of problem statements and student solution blocks, adaptive rate-limit backoff handling 429 delays, and incremental serialization into .problem_corpus/<course>.json."]
+*Figure: Problem Corpus Extraction pipeline showing regex problem-boundary detection in boundaries.py, parallel Gemini Flash-Lite extraction of problem statements and student solution blocks, adaptive rate-limit backoff handling 429 delays, and incremental serialization.*
 
 The **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)** needs real examples of course problems to anchor both difficulty and style, but course material doesn't arrive as a pre-packaged question bank. Practice problems sit embedded inside multi-page PDF problem sets, converted textbooks, and recitation slides, mixed together with headers, formatting debris, and unverified student notes. `problem_corpus` is the offline extraction tool that walks an indexed course corpus and turns those raw documents into a structured, persistent JSON bank (`<root>/.problem_corpus/<course>.json`).
 
