@@ -15,7 +15,7 @@ status:
 #  icon: "☕️"
 role: PhD Student
 bio: |
-  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University, researching how high-resolution geospatial data and machine learning can help improve adaptation at the nexus of climate change, conflict, and disasters. Their research builds directly on over five years experience as a diplomat with the US Agency for International Development (USAID), including on development monitoring and evaluation in Ukraine during the war, program design in Colombia, and budget analysis in Washington, DC. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley.
+  Aaron (they/them) is a first-year PhD student in Sustainable Development at Columbia University, researching how high-resolution geospatial data and machine learning can help improve adaptation at the nexus of climate change, conflict, and disasters. Their research builds directly on over five years experience as a diplomat with the US Agency for International Development (USAID), including on development monitoring and evaluation in Ukraine during the war, program design in Colombia, and budget analysis in Washington. Their academic background includes an MS in Computer Science from Georgia Tech, an MS in Mathematics from Indiana State University, and an MS in Development Practice from UC Berkeley.
 
 affiliations:
   - name: Columbia University
@@ -23,7 +23,7 @@ affiliations:
 
 links:
   - icon: envelope
-    url: mailto:as8288@columbia.edu
+    url: mailto:theaaronscherf@gmail.com
     label: E-mail Me
   - icon: brands/bluesky
     url: https://bsky.app/profile/aaronscherf.bsky.social
@@ -50,6 +50,7 @@ interests:
   - Applied Econometrics
   - Remote Sensing
   - AI Ethics
+  - Pedagogy and Skills Development
 
 education:
   - degree: PhD Sustainable Development
@@ -126,10 +127,12 @@ skills:
     items:
       - label: Python
         level: 4
-      - label: Machine Learning
-        level: 4
       - label: R
+        level: 4
+      - label: Stata
         level: 3
+      - label: Javascript
+        level: 2
       - label: Java
         level: 2
   - name: Research & Communication
@@ -140,7 +143,8 @@ skills:
         level: 4
       - label: Grant Proposals
         level: 4
-
+      - label: Training and Skills Workshops
+        level: 4
 languages:
   - name: English
     level: 5
@@ -151,6 +155,9 @@ languages:
   - name: German
     level: 2
     label: Beginner
+  - name: Ukrainian
+    level: 1
+    label: Basic
 
 awards:
   - title: Donald M. Payne International Development Fellowship
@@ -165,6 +172,6 @@ awards:
     summary: Research fellowship with University of Heidelberg and Centre for European Economic Research
   - title: Stamps Foundation Leadership Scholar
     date: "2013-05-15"
-    summary: Undergraduate merit-based full-ride scholarship
+    summary: Undergraduate academic scholarship with travel stipend
 
 

@@ -48,15 +48,15 @@ sections:
       text: |-
         My research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
 
-        That research is grounded in over five years as a USAID diplomat, including leading monitoring and evaluation for USAID/Ukraine's development portfolio through the war, and previously managing program design in Colombia. I bring that same field-tested rigor — building ML pipelines, designing evaluation frameworks, translating messy data into decisions under real operational constraints — to organizations that need it.
+        My passion for these topics is grounded in my experience serving as a diplomat with USAID, including particularly my work on monitoring and evaluation for USAID's portfolio in wartime Ukraine and development program design in Colombia. I bring that same field-tested rigor to all of my work, including building open-source tools for data analysis, designing monitoring and evaluation frameworks, and interpreting data gathered under extreme operational constraints from conflicts and disasters.
 
         **Areas of expertise:**
-        - USAID program design, monitoring & evaluation
+        - International development program design, monitoring and evaluation
         - International development funding and budget allocation
-        - Ukraine donor coordination and wartime/reconstruction programming
+        - Development donor coordination, particularly for conflict resilience and disaster response
         - Geospatial and machine learning methods for climate and conflict risk analysis
 
-        Open to expert consultations and applied research collaborations at this intersection — reach out via [email](mailto:theaaronscherf@gmail.com).
+        Open to expert consultations and applied research collaborations at this intersection. Reach out via [email](mailto:theaaronscherf@gmail.com).
     design:
       columns: '1'
   - block: resume-experience
