@@ -7,13 +7,16 @@ authors:
 tags:
   - Academic Hub
   - Python
+image:
+  caption: 'Academic Hub repository split and codebase modularization architecture'
+  image_suggestion: "A two-panel diagram or directory comparison: Panel A showing the repository split between academic_resources (holding gigabytes of source PDFs and video recordings) and academic_notes (lightweight markdown/Excalidraw synced via Fit to the tablet); Panel B showing the codebase refactor of academic-rag-model from 15 flat subproject directories into clean role-based packages (pipelines/, discovery/, agent/, core/)."
 ---
 
 Most updates here are about a specific subproject shipping something new. This one is about the plumbing underneath all of them.
 
 <!--more-->
 
-[image_suggestion: "A two-panel diagram or directory comparison: Panel A showing the repository split between academic_resources (holding gigabytes of source PDFs and video recordings) and academic_notes (lightweight markdown/Excalidraw synced via Fit to the tablet); Panel B showing the codebase refactor of academic-rag-model from 15 flat subproject directories into clean role-based packages (pipelines/, discovery/, agent/, core/)."]
+*Figure: Academic Hub repository split and codebase refactoring architecture.*
 
 **Splitting heavy files out of the synced notes vault.** `academic_notes/` is a private Obsidian vault, synced between a tablet and a laptop through [Fit](/projects/academic-hub/obsidian_git_sync/), a plugin that talks to the GitHub API directly instead of driving a local git client. That sync has to stay fast and small on a tablet, but over time PDFs and course recordings — things that get *read*, not edited — had drifted into the vault alongside the handwritten Excalidraw notes that actually need two-way sync. The fix was a repo split, not a bigger ignore list: `academic_resources/` now holds every textbook, recording, and course PDF as its own sibling location, and `academic_notes/` stays a lightweight vault of Markdown and embedded drawings only. The tablet's sync now never has to move more than a few megabytes on any given sync, no matter how many gigabytes of source material live alongside it.
 

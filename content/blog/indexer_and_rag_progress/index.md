@@ -9,13 +9,16 @@ tags:
   - LLM / RAG
   - Python
   - Vector Database
+image:
+  caption: 'Academic Hub indexing and grounded RAG tutor query session'
+  image_suggestion: "Screenshot of an interactive RAG tutor terminal session answering 'what is the spectral theorem' with synthesized multi-source explanations and inline theorem/page citations, accompanied by an inset diagram showing the two-stage search hierarchy from course centroid embeddings down to passage-level chunk retrieval."
 ---
 
 Since the last update, the two subprojects that turn a pile of converted Markdown into something actually queryable — **[Source Indexer](/projects/academic-hub/source_indexer/)** and **[RAG Analysis](/projects/academic-hub/rag_analysis/)** — have both gone from design sketches to real, validated systems running against the corpus.
 
 <!--more-->
 
-[image_suggestion: "Screenshot of an interactive RAG tutor terminal session answering 'what is the spectral theorem' with synthesized multi-source explanations and inline theorem/page citations, accompanied by an inset diagram showing the two-stage search hierarchy from course centroid embeddings down to passage-level chunk retrieval."]
+*Figure: Grounded RAG tutor query session with citation synthesis and two-stage retrieval hierarchy.*
 
 Four concrete pieces of progress:
 

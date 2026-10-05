@@ -9,13 +9,16 @@ tags:
   - LLM / RAG
   - Python
   - Google Cloud Platform
+image:
+  caption: 'Marker PDF unattended batch execution and automatic OOM recovery ladder'
+  image_suggestion: "Flowchart diagram illustrating the unattended batch execution and failure recovery system: showing pre-run duplicate detection branching to an async review queue, smallest-first queue scheduling, and the 3-step OOM escalation ladder (in-place retry -> VM resize -> human alert) backed by kernel log inspection and durable state logging."
 ---
 
 **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** has always done the actual conversion work unattended — spin up a GPU VM, convert every book in a course folder, tear the VM down. What it hasn't been able to do, until now, is run a *whole session* unattended: someone still had to sit through every duplicate-book prompt, every pre-run cost check, and manually intervene the moment a book turned out to be too large for the machine's memory.
 
 <!--more-->
 
-[image_suggestion: "Flowchart diagram illustrating the unattended batch execution and failure recovery system: showing pre-run duplicate detection branching to an async review queue, smallest-first queue scheduling, and the 3-step OOM escalation ladder (in-place retry -> VM resize -> human alert) backed by kernel log inspection and durable state logging."]
+*Figure: Unattended batch execution flowchart with duplicate filtering and OOM recovery ladder.*
 
 Three concrete pieces of progress, all aimed at that same goal:
 

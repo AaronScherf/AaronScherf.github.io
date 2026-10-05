@@ -8,13 +8,16 @@ tags:
   - Academic Hub
   - LLM / RAG
   - Python
+image:
+  caption: 'Unified academic resource conversion pipeline: Marker PDF and notes transcription'
+  image_suggestion: "Flowchart diagram illustrating the unified academic resource conversion pipeline: showing textbook PDFs processed via GPU Marker with chapter-aware chunking and folio tracking feeding into describe_images.py for multimodal figure descriptions, alongside the notes transcription router evaluating local PyMuPDF font baselines to reconstruct exponents and routing damaged pages to targeted Gemini repair."
 ---
 
 **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)**, the pipeline that turns raw academic PDFs into LLM-ready Markdown, has moved well past its original textbook-only scope since it was first introduced.
 
 <!--more-->
 
-[image_suggestion: "Flowchart diagram illustrating the unified academic resource conversion pipeline: showing textbook PDFs processed via GPU Marker with chapter-aware chunking and folio tracking feeding into describe_images.py for multimodal figure descriptions, alongside the notes transcription router evaluating local PyMuPDF font baselines to reconstruct exponents and routing damaged pages to targeted Gemini repair."]
+*Figure: Unified academic resource conversion pipeline with folio tracking and notes transcription router.*
 
 Four concrete pieces of progress:
 

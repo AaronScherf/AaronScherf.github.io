@@ -7,13 +7,16 @@ authors:
 tags:
   - Hugo Blox
   - Claude Code
+image:
+  caption: 'Managing HugoBlox personal site with Claude Code in the CLI'
+  image_suggestion: "Split screenshot showing the Claude Code CLI terminal session inspecting markdown diffs and editing HugoBlox site structure on the left, alongside the live browser preview of the personal portfolio site and the GitHub Actions deployment workflow on the right."
 ---
 
 This site runs on **Hugo**, a static site generator, using the open-source **HugoBlox** "Academic CV" template. Everything you're reading — my bio, experience, projects, and this post — is a plain Markdown file with a bit of YAML front matter controlling how it's displayed. There's no database and no CMS login; I edit files directly in the repository, and GitHub Actions rebuilds and redeploys the site automatically every time I push to `main`.
 
 <!--more-->
 
-[image_suggestion: "Split screenshot showing the Claude Code CLI terminal session inspecting markdown diffs and editing HugoBlox site structure on the left, alongside the live browser preview of the personal portfolio site and the GitHub Actions deployment workflow on the right."]
+*Figure: Collaborative site management workflow with Claude Code and HugoBlox.*
 
 Lately I've been doing a lot of that editing with **Claude Code**, working directly in the repository rather than through a hosted CMS. It reads the site's structure, makes the same kind of edits I would — adding a project page, hiding placeholder content, restructuring navigation, adjusting a grid layout — and hands off a normal git commit for me to review and push.
 
