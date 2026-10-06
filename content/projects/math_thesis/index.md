@@ -20,8 +20,6 @@ My master's thesis in mathematics at Indiana State University, advised by Dr. Ma
 
 <!--more-->
 
-*Figure: Simulated statistical power curves ($10,000$ iterations, $n = 20$) comparing the PGLS omnibus test against the Shapiro-Wilk test across $t$-, $\chi^2$-, Gamma-, and GPD $L$-skew distributions (matching Figures 5–8 from the thesis).*
-
 The Shapiro-Wilk test is the default choice for normality testing in most applied statistics, but it is only approximately omnibus — its power depends on assumptions about a sample's skew and kurtosis, and it struggles most on distributions that are nearly normal with a small amount of skew or kurtosis introduced. This thesis develops an alternative: an empirical process that standardizes and orders a sample, applies the probability integral transform, and subtracts the expected value of each order statistic to produce a zero-mean vector. Samples drawn from a normal distribution fluctuate randomly around zero under this transform, while non-normal samples show systematic, distribution-specific departures — the signal the new test is built to detect.
 
 To turn that signal into a hypothesis test, the thesis models the departures with a penalized generalized least squares (PGLS) regression, using a penalty term motivated by smoothing splines to separate systematic departure from noise. The design matrix is built from the eigenvectors of the sample's covariance matrix, chosen because they point in the directions of maximal deviation from zero and are most informative precisely for near-normal samples where Shapiro-Wilk is weakest. A test statistic is then derived from the resulting PGLS coefficients.

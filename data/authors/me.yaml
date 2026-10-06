@@ -32,7 +32,7 @@ links:
     url: https://github.com/AaronScherf
     label: Check my code
   - icon: brands/linkedin
-    url: www.linkedin.com/in/aaron-scherf
+    url: https://www.linkedin.com/in/aaron-scherf
     label: Connect on LinkedIn
   - icon: brands/medium
     url: https://aaronscherf.medium.com
@@ -71,7 +71,7 @@ education:
     summary: |
       Thesis: Novel Omnibus Normality Test and Power Comparison with the Shapiro-Wilk
     button:
-      text: Download dissertation
+      text: Download thesis
       url: /uploads/Scherf_Aaron_ISU_Thesis.pdf
       icon: hero/arrow-down-tray
   - degree: MS Development Practice
@@ -81,7 +81,7 @@ education:
     summary: |
       Thesis: Predicting the Yield of CIMMYT Wheat Genotypes via Remote Sensing and Machine Learning
     button:
-      text: Download dissertation
+      text: Download thesis
       url: /uploads/Scherf_Aaron_Berkeley_Thesis.pdf
       icon: hero/arrow-down-tray
   - degree: BA Economics and Finance
