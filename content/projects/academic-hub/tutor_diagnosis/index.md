@@ -4,7 +4,7 @@ date: 2026-09-28
 type: academic-hub-project
 image:
   caption: 'Problem-Set Tutor Diagnosis and Hint Generator architecture with 3-axis grading and adversarial verification'
-  image_suggestion: "System diagram of the Problem-Set Tutor Diagnosis and Hint Generator: illustrating the /hint pipeline extracting unsolved homework questions and generating non-spoiler direction sketches with negative constraints; the /draft workflow evaluating attempts against a 3-axis rubric (Correctness, Rigor, Course-Fit) with cognitive gap tags; and the /verify adversarial cross-check with persistent logging to .session_log/<course>.jsonl."
+  image_suggestion: "Simple study flow showing a course-based hint, an independent answer check, and constructive feedback that explains a gap between a student's reasoning and the reference answer."
 links:
   - type: site
     icon: brands/github
@@ -24,14 +24,14 @@ An interactive extension to the **[RAG Analysis](/projects/academic-hub/rag_anal
 
 Standard LLMs fail at authentic tutoring for a fundamental reason: they have no pedagogical model. Hand ChatGPT or Claude a homework question, and it immediately outputs a full, worked proof or final answer. For a graduate student working through advanced microeconomics or econometrics, that blithely short-circuits the cognitive struggle essential for mastering the material.
 
-The motivation for this tool came from auditing real coursework files in `academic_notes/{econometrics,microecon}/problem_sets/`. That audit surfaced a clear pattern in how human mathematical reasoning actually progresses:
-- In microeconomics, `homework_1_solutions_notes.md` preserves annotated stages: `[First Attempt]`, `[Wait, what if...]`, and `[Corrected with proper induction]` — a record of where initial intuition failed before self-correcting.
-- In econometrics, `problem_set_1_gemini_solutions.md` deliberately juxtaposes a `[Naive Gemini]` subtly flawed proof next to a `[Correct Gemini]` proof with a "Where the Flaw Lies" section to manufacture contrast cases.
+The motivation for this tool came from auditing my own coursework in microeconomics and econometrics. That audit surfaced a clear pattern in how human mathematical reasoning actually progresses:
+- In microeconomics, one set of notes preserves annotated stages: `[First Attempt]`, `[Wait, what if...]`, and `[Corrected with proper induction]` — a record of where initial intuition failed before self-correcting.
+- In econometrics, another set of notes places a subtly flawed proof next to a corrected proof with a "Where the Flaw Lies" section to create useful examples for comparison.
 
 In both courses, capturing, diagnosing, and learning from personal reasoning errors was the highest-value signal available. `tutor_diagnosis.py` builds this loop directly into the `rag_agent.py` interactive REPL across four core capabilities:
 
 ### 1. `/hint <file> <question-ref>` — Guidance Without Giving Away the Answer
-Before a student has an attempt to grade, they often need a nudge to get unstuck. Rather than requiring manual question copy-pasting, `problem_set_parser.py` cleanly extracts a single problem statement from fresh, unsolved problem-set files (e.g. `homework_3.md Question 1`) using section boundary regexes.
+Before a student has an attempt to grade, they often need a nudge to get unstuck. Rather than requiring manual question copy-pasting, `problem_set_parser.py` cleanly extracts a single problem statement from a fresh, unsolved assignment using section boundary patterns.
 
 The extracted question retrieves relevant textbook and lecture passages through `retrieve_passages()`. Generation is governed by `_HINT_PROMPT_TEMPLATE`, which enforces strict negative constraints:
 > *"Give them a motivating sketch of the right technique or theorem to reach for -- enough to get them unstuck and pointed in the right direction. Do NOT state the final answer, a verdict (e.g. True/False), or a worked derivation. If you find yourself about to write out the conclusion, stop and describe the approach instead."*
@@ -54,14 +54,20 @@ Grounding an answer in retrieved excerpts does not guarantee a flawless proof �
 Crucially, the verifier is *not* shown the tutor's prior answer or retrieved excerpts, preventing it from rationalizing or echoing earlier mistakes. Both solutions are printed side by side for the student to compare. The system intentionally avoids auto-adjudication, leaving the student as the final judge and avoiding brittle multi-LLM consensus loops.
 
 ### 4. `/summarize [unit]` & Persistent Gap Memory
-Every REPL action appends a structured `Event` to an append-only JSONL log at `.session_log/<course>.jsonl` (gitignored, private). When reviewing a problem set, `/summarize` aggregates logged events to synthesize a "What we learned" / "What to focus on" retrospective, alongside **computed** (not model-generated) rubric score averages across all draft attempts.
+Every REPL action appends a structured `Event` to a private local log. When reviewing a problem set, `/summarize` aggregates logged events to synthesize a "What we learned" / "What to focus on" retrospective, alongside **computed** (not model-generated) rubric score averages across all draft attempts.
 
 In subsequent study sessions, `answer_question()` loads recent gap tags and proactively injects them into its answer prompt — alerting the student if a new question touches a conceptual blind spot diagnosed in previous problem sets.
+
+## Testing and Ongoing Development
 
 ### Real-Corpus Validation
 The system was validated live against real coursework in the Academic Hub repository:
 - **Diagnostic Precision**: A deliberately flawed econometrics attempt asserting "residuals are always positive" was correctly scored 0/5 across all three axes and produced the precise gap tag `fundamental-property-misunderstanding`.
-- **Non-Spoiler Nudges**: A live test on `homework_3.md` Question 1 (incomplete preference relations) produced a motivating counterexample sketch exploring broken transitivity chains without stating a verdict or writing out the derivation.
+- **Non-Spoiler Nudges**: A live test on an incomplete-preferences question produced a motivating counterexample sketch exploring broken transitivity chains without stating a verdict or writing out the derivation.
 - **Independent Divergence**: `/verify` generated an independent proof that surfaced an intercept-term caveat omitted by the tutor model's initial grounded response, confirming the verifier does not echo prior reasoning.
+
+## Ongoing Development
+
+The tutor remains a study aid under development. It does not automatically decide whether its answer or an independent check is correct, so students should compare the reasoning and source material.
 
 Part of **Academic Hub**, bridging **[RAG Analysis](/projects/academic-hub/rag_analysis/)**, **[Source Indexer](/projects/academic-hub/source_indexer/)**, and **[Problem Generation](/projects/academic-hub/problem_generation/)** into an end-to-end study system.

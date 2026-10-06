@@ -16,15 +16,31 @@ image:
   image_suggestion: "Architecture and data-flow diagram of the Marker PDF Conversion pipeline: illustrating the ephemeral GCP GPU VM lifecycle (creation, batch conversion with chapter boundary alignment, and teardown), followed by local execution of describe_images.py generating figure descriptions into enriched .rag.md files, alongside the pre-flight duplicate checking and OOM recovery ladder."
 ---
 
+**In plain language:** This tool converts textbook PDFs into searchable text while keeping equations, diagrams, and page references usable. It runs the expensive conversion on a temporary cloud GPU, then removes the machine when the job is done.
+
 A cost-optimized pipeline that turns dense, math-heavy textbooks into clean, LLM-ready Markdown using the open-source Marker model on rented GPU time — one half of a two-tool system that also handles short academic notes with a separate, GPU-free sibling (see **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**).
 
 <!--more-->
 
 *Figure: Marker PDF conversion cloud lifecycle and multimodal enrichment pipeline.*
 
+## Testing
+
+The chapter-aware conversion was checked against four structurally different books. It produced no duplicate internal anchors, and printed-page labels were recovered for 96?98% of pages. These checks cover a small sample, not every possible book layout.
+
+Figure descriptions are generated in a separate pass and saved alongside derived text, leaving the original conversion unchanged. In a five-book run, 764 of 793 candidate images received descriptions; 29 were skipped as decorative. Spot checks found useful, specific descriptions, though this is not a guarantee for every image.
+
+## Ongoing Development
+
+Automated tests also cover duplicate detection and reindexing, including a corruption bug found when reusing an already-converted book. High-confidence matches are skipped into a review queue; less certain matches still require a decision. These safeguards reduce interruption, but their value in large live batches remains under observation.
+
+The memory-recovery ladder is implemented and tested: retry after a reset, move to a larger machine if a confirmed memory failure repeats, then ask for help if that also fails. Durable state preserves what has already been tried. This describes the recovery policy and its tests, not a claim that every failure mode has been proven in production.
+
 A small local tool drives the textbook side of the pipeline: it spins up a GPU virtual machine in Google Cloud, uploads every PDF found in a given course's folder — batch composition follows the folder, not a hand-maintained filename list, so pointing the same tool at a different course directory is the only change needed to run it against a new course — and converts them all in one pass with the open-source Marker model, reusing the same loaded model across every book to keep runtime and cost down. An optional AI-assisted step reads each book's title page to automatically label the output files with the correct title, author, and year, and the converted Markdown and extracted images are copied back locally before the VM and its disk are torn down entirely: a Persistent Disk bills for its full size for as long as it exists, running or not, so for a pipeline used in occasional batches rather than continuously, deleting outright (and cheaply recreating it next time) beats paying to keep an idle disk around between runs.
 
 That automation turned out to be more fragile than reproducible: its provisioning script pins OS-level dependencies for repeatability, but the Deep Learning VM image it boots from floats to whatever Google most recently publishes under that image family rather than staying fixed. A new image build shipped a newer NVIDIA Container Toolkit preinstalled than the script's pinned version expected, and apt refuses to downgrade an already-installed package to satisfy an exact-version dependency — provisioning failed outright with a cryptic "held broken packages" error, reproduced cleanly on a second from-scratch VM to rule out one-off disk corruption before trusting the diagnosis. The fix wasn't another pin, since that just delays the same break until the next image update (plausibly every few weeks); the toolkit install now resolves unpinned instead, so apt upgrades the preinstalled version to match automatically rather than conflicting with it, self-healing against whatever image build shows up next instead of needing a manual version bump on a recurring basis.
+
+### Conversion and Figure Processing Details
 
 That pipeline used to split every book into fixed 150-page chunks with no awareness of what was at the boundary — a cut could silently land mid-table or mid-formula, and there was no way to resolve an author's own "see page 157" cross-reference against the converted text. It's since been rebuilt around a chapter-index abstraction, sourced from the PDF's embedded outline when it's genuinely chapter-granular or bootstrapped from the printed table of contents when it isn't, so chunk boundaries align to real chapter breaks instead of a fixed page count; any span that still can't be chapter-aligned falls back to a live safety probe that shifts the cut away from anything that looks like a mid-table or mid-formula split. Every page also gets tagged with both its physical PDF page number and, where derivable, the book's own printed folio number. Validated across four structurally different books (born-digital with real links, born-digital with a table-style table of contents, and fully scanned with no embedded structure at all): zero duplicate internal anchors — a real bug in the old chunked output — and 96–98% folio-tag coverage once the three separate root causes behind an initial 0% run were tracked down and fixed.
 

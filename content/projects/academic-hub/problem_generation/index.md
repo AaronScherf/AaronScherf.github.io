@@ -15,6 +15,8 @@ tags:
   - LLM / RAG
 ---
 
+**In plain language:** This tool creates extra practice questions and worked solutions using examples from a student's course materials as a guide. It checks the generated solution too, though that check can miss errors, so students should review the work before relying on it.
+
 A peer of the **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** that generates a new practice problem plus a worked solution for a topic — styled after the student's own problem sets, grounded in their own textbooks, and checked by a second self-verification call before anything is returned — the moment a question sounds like a request for practice rather than an explanation.
 
 <!--more-->

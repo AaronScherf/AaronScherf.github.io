@@ -14,6 +14,8 @@ tags:
   - LLM / RAG
 ---
 
+**In plain language:** This tool takes a detailed master resume and prepares a version for a specific job posting. It can rewrite selected bullet points while keeping names, dates, and other facts tied to the master file; you still review the final wording before using it.
+
 A local pipeline that turns one long-form master resume into a version tailored to a specific job description — structured extraction, selective rewriting, and fact-checking, with a styled PDF as the final output. Three real design revisions in one day, each driven by a bug found running it against my actual resume, landed on a surprising conclusion: the harder of the pipeline's two stages didn't need a local LLM at all.
 
 <!--more-->
