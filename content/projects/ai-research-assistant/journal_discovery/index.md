@@ -9,11 +9,28 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/discovery/discover_journal_articles
+  - type: site
+    icon: brands/github
+    label: 'Status: Journal Discovery'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-09-01-journal-discovery-status.md
 tags:
   - Python
   - Hugging Face
   - LLM / RAG
+params:
+  subproject:
+    id: discover_journal_articles
+    package: discovery/discover_journal_articles
+    code_paths:
+      - ai-sandbox/academic-rag-model/discovery/discover_journal_articles
+    readme_path: ai-sandbox/academic-rag-model/discovery/discover_journal_articles/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-09-01-journal-discovery-status.md
+        role: current
+        lifecycle_ids:
+          - journal-discovery
+    members: []
 ---
 
 The discovery step for **[Journal Article Transcription](/projects/ai-research-assistant/journal_article_transcription/)**: it finds papers related to a person or topic, checks open-access sources, and leaves other papers for the researcher to access through their library.

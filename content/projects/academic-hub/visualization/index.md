@@ -10,9 +10,28 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/viz
+  - type: site
+    icon: brands/github
+    label: 'Status: Visualization Agent'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/viz/2026-09-02-visualization-agent-status.md
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: visualization
+    package: agent/viz
+    code_paths:
+      - ai-sandbox/academic-rag-model/agent/viz
+    readme_path: ai-sandbox/academic-rag-model/agent/viz/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/viz/2026-09-02-visualization-agent-status.md
+        role: current
+        lifecycle_ids:
+          - visualization
+          - viz-example-store
+          - viz-ollama-retry
+    members: []
 ---
 
 An opt-in layer on top of the tutoring agent that generates an interactive Plotly visualization for a question's concept — a keyword-matched template library first, a local Ollama model as a free fallback for everything else, so a student gets a plot to manipulate alongside a cited text answer.

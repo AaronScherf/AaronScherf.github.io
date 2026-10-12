@@ -10,9 +10,26 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/problem_gen
+  - type: site
+    icon: brands/github
+    label: 'Status: Problem Generation'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_gen/2026-09-05-problem-generation-status.md
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: problem_generation
+    package: agent/problem_gen
+    code_paths:
+      - ai-sandbox/academic-rag-model/agent/problem_gen
+    readme_path: ai-sandbox/academic-rag-model/agent/problem_gen/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/problem_gen/2026-09-05-problem-generation-status.md
+        role: current
+        lifecycle_ids:
+          - problem-generation
+    members: []
 ---
 
 **In plain language:** This tool creates extra practice questions and worked solutions using examples from a student's course materials as a guide. It checks the generated solution too, though that check can miss errors, so students should review the work before relying on it.

@@ -9,9 +9,34 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/resume_manager
+  - type: site
+    icon: brands/github
+    label: 'Status: Resume Manager'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/resume_manager/2026-09-09-resume-manager-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Resume Manager Tailoring Guidance'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/resume_manager/2026-09-28-resume-manager-tailoring-guidance-status.md
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: resume_manager
+    package: resume_manager
+    code_paths:
+      - ai-sandbox/academic-rag-model/resume_manager
+    readme_path: ai-sandbox/academic-rag-model/resume_manager/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/resume_manager/2026-09-09-resume-manager-status.md
+        role: current
+        lifecycle_ids:
+          - resume-manager
+      - path: ai-sandbox/academic-rag-model/docs/status/resume_manager/2026-09-28-resume-manager-tailoring-guidance-status.md
+        role: current
+        lifecycle_ids:
+          - resume-tailoring
+    members: []
 ---
 
 **In plain language:** This tool takes a detailed master resume and prepares a version for a specific job posting. It can rewrite selected bullet points while keeping names, dates, and other facts tied to the master file; you still review the final wording before using it.

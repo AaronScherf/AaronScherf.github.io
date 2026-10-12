@@ -7,6 +7,10 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/postprocess_notes
+  - type: site
+    icon: brands/github
+    label: 'Status: Notes Postprocessing'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/postprocess_notes/2026-08-27-notes-postprocessing-status.md
 image:
   caption: 'Notes Post-Processing pipeline with multi-stage structural filtering, local NLP surprisal scoring, and visual ground-truth verification'
 tags:
@@ -14,6 +18,19 @@ tags:
   - Hugging Face
   - LLM / RAG
   - Machine Learning
+params:
+  subproject:
+    id: postprocess_notes
+    package: pipelines/postprocess_notes
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/postprocess_notes
+    readme_path: null
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/postprocess_notes/2026-08-27-notes-postprocessing-status.md
+        role: current
+        lifecycle_ids:
+          - notes-postprocessing
+    members: []
 ---
 
 A downstream machine-learning verification and anomaly-detection pass over already-transcribed Markdown notes, catching silent character corruptions on pages that bypassed vision OCR models because their text layer appeared cleanly extracted.

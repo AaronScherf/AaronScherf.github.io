@@ -6,7 +6,11 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/transcribe_notes
+  - type: site
+    icon: brands/github
+    label: 'Status: Notes Transcription'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/transcribe_notes/2026-08-24-notes-transcription-status.md
 tags:
   - Python
   - LLM / RAG
@@ -14,6 +18,19 @@ tags:
 image:
   caption: 'Notes transcription 3-tier cost routing and downstream ML verification architecture'
   image_suggestion: "Diagram showing the 3-tier cost routing and downstream ML verification architecture: showing incoming messy notes routed through local PyMuPDF extraction (with font-baseline superscript/subscript reconstruction), targeted page repair, and full Gemini transcription, followed by the postprocess_notes.py verification pass (GPT-2 surprisal filter -> DistilBERT masked-LM check -> source PDF page image verification)."
+params:
+  subproject:
+    id: transcribe_notes
+    package: pipelines/transcribe_notes
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/transcribe_notes
+    readme_path: ai-sandbox/academic-rag-model/pipelines/transcribe_notes/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/transcribe_notes/2026-08-24-notes-transcription-status.md
+        role: current
+        lifecycle_ids:
+          - notes-transcription
+    members: []
 ---
 
 **In plain language:** This tool turns course materials — including typed notes, problem sets, exams, and handwriting — into searchable text for study tools. It extracts clean pages locally and uses AI transcription for pages that are difficult to read.

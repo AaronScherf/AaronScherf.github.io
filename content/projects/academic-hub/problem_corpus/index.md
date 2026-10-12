@@ -7,11 +7,28 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/problem_corpus
+  - type: site
+    icon: brands/github
+    label: 'Status: Problem Corpus Extraction'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_corpus/2026-09-06-problem-corpus-extraction-status.md
 image:
   caption: 'Problem Corpus Extraction pipeline from regex boundary detection to parallel Gemini Flash-Lite parsing and content-hash serialization'
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: problem_corpus
+    package: agent/problem_corpus
+    code_paths:
+      - ai-sandbox/academic-rag-model/agent/problem_corpus
+    readme_path: ai-sandbox/academic-rag-model/agent/problem_corpus/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/problem_corpus/2026-09-06-problem-corpus-extraction-status.md
+        role: current
+        lifecycle_ids:
+          - problem-corpus
+    members: []
 ---
 
 Extracts a structured, persistent bank of practice problems — topic tag, problem statement, verbatim solution text if present, course, and honest provenance metadata — from course problem sets, textbooks, and recitation slides, providing the foundational dataset for practice problem generation.

@@ -7,12 +7,37 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/rag
+  - type: site
+    icon: brands/github
+    label: 'Status: Rag Agent'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-08-30-rag-agent-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Question Resolver'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-10-03-question-resolver-status.md
 tags:
   - Python
   - LLM / RAG
 image:
   caption: 'Interactive RAG tutor terminal session answering with grounded citations'
   image_suggestion: "Terminal screenshot of an interactive multi-turn session with the RAG tutor answering 'what is the spectral theorem', showing query reformulation from conversational context, diversified passage retrieval from both notes and textbooks, and the resulting explanation with inline theorem and page citations."
+params:
+  subproject:
+    id: rag
+    package: agent/rag
+    code_paths:
+      - ai-sandbox/academic-rag-model/agent/rag
+    readme_path: ai-sandbox/academic-rag-model/agent/rag/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-08-30-rag-agent-status.md
+        role: current
+        lifecycle_ids:
+          - rag-agent
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-10-03-question-resolver-status.md
+        role: current
+        lifecycle_ids:
+          - question-resolver
+    members: []
 ---
 
 A grounded question-answering agent that retrieves and cites real passages from the textbooks and notes produced by the Marker PDF Conversion and Notes Transcription pipelines — usable directly as a multi-turn chat, or as a stateless function other agents can call.

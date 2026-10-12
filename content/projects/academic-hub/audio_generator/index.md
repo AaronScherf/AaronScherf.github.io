@@ -10,9 +10,26 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/audio_generator
+  - type: site
+    icon: brands/github
+    label: 'Status: Audio Generator'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/audio_generator/2026-09-09-audio-generator-status.md
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: audio_generator
+    package: audio_generator
+    code_paths:
+      - ai-sandbox/academic-rag-model/audio_generator
+    readme_path: ai-sandbox/academic-rag-model/audio_generator/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/audio_generator/2026-09-09-audio-generator-status.md
+        role: current
+        lifecycle_ids:
+          - audio-generator
+    members: []
 ---
 
 Converts a course's Markdown notes and converted textbooks into local MP3 narration for commute and exercise listening — discovery, cleaning, and TTS synthesis all run offline on CPU, with one narrow exception: turning dense LaTeX into speakable prose is handed to a tiered Gemini API call, the one step regex and a local model both proved unequal to.

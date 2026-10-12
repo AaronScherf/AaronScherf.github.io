@@ -9,10 +9,27 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/convert_journal_articles
+  - type: site
+    icon: brands/github
+    label: 'Status: Journal Article Transcription'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/convert_journal_articles/2026-09-01-journal-article-transcription-status.md
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: convert_journal_articles
+    package: pipelines/convert_journal_articles
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/convert_journal_articles
+    readme_path: ai-sandbox/academic-rag-model/pipelines/convert_journal_articles/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/convert_journal_articles/2026-09-01-journal-article-transcription-status.md
+        role: current
+        lifecycle_ids:
+          - journal-transcription
+    members: []
 ---
 
 A PDF pipeline for academic journal articles that turned out to need almost no new code at all, reusing the **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**'s tiered cost-routing wholesale — paired with **[Research Notes Conversion](/projects/ai-research-assistant/research_notes_conversion/)** as one of the two source corpora feeding **AI Research Assistant**.

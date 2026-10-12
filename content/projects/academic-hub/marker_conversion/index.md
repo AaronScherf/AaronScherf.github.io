@@ -6,7 +6,19 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/convert_textbook
+  - type: site
+    icon: brands/github
+    label: 'Status: Textbook Conversion'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-09-10-textbook-conversion-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Chapter Aware Chunking'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-08-22-chapter-aware-chunking-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Image Description'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-08-23-image-description-status.md
 tags:
   - Python
   - Google Cloud Platform
@@ -14,6 +26,27 @@ tags:
 image:
   caption: 'Marker PDF conversion pipeline: GCP GPU VM lifecycle and multimodal figure pass'
   image_suggestion: "Architecture and data-flow diagram of the Marker PDF Conversion pipeline: illustrating the ephemeral GCP GPU VM lifecycle (creation, batch conversion with chapter boundary alignment, and teardown), followed by local execution of describe_images.py generating figure descriptions into enriched .rag.md files, alongside the pre-flight duplicate checking and OOM recovery ladder."
+params:
+  subproject:
+    id: convert_textbook
+    package: pipelines/convert_textbook
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/convert_textbook
+    readme_path: ai-sandbox/academic-rag-model/pipelines/convert_textbook/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-09-10-textbook-conversion-status.md
+        role: current
+        lifecycle_ids:
+          - textbook-conversion
+      - path: ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-08-22-chapter-aware-chunking-status.md
+        role: current
+        lifecycle_ids:
+          - chapter-chunking
+      - path: ai-sandbox/academic-rag-model/docs/status/convert_textbook/2026-08-23-image-description-status.md
+        role: current
+        lifecycle_ids:
+          - image-description
+    members: []
 ---
 
 **In plain language:** This tool converts textbook PDFs into searchable text while keeping equations, diagrams, and page references usable. It runs the expensive conversion on a temporary cloud GPU, then removes the machine when the job is done.

@@ -10,10 +10,31 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/rag
+  - type: site
+    icon: brands/github
+    label: Source code
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/rag/tutor_diagnosis.py
+  - type: site
+    icon: brands/github
+    label: 'Status: Tutor Diagnosis'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-09-27-tutor-diagnosis-status.md
 tags:
   - Python
   - LLM / RAG
   - EdTech
+params:
+  subproject:
+    id: tutor_diagnosis
+    package: agent/rag (tutor diagnosis)
+    code_paths:
+      - ai-sandbox/academic-rag-model/agent/rag/tutor_diagnosis.py
+    readme_path: ai-sandbox/academic-rag-model/agent/rag/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-09-27-tutor-diagnosis-status.md
+        role: current
+        lifecycle_ids:
+          - tutor-diagnosis
+    members: []
 ---
 
 An interactive extension to the **[RAG Analysis](/projects/academic-hub/rag_analysis/)** tutoring agent designed specifically for problem sets — extracting fresh homework questions, generating motivating direction sketches without giving away the final derivation, diagnosing student drafts against a 3-axis grading rubric, and tracking cognitive gaps over time in a persistent session log.

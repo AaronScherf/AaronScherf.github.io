@@ -6,13 +6,30 @@ links:
   - type: site
     icon: brands/github
     label: GitHub
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/convert_essays
+  - type: site
+    icon: brands/github
+    label: 'Status: Research Notes Conversion'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/convert_essays/2026-09-01-research-notes-conversion-status.md
 image:
   caption: 'Research Notes Conversion and cross-corpus federation architecture from Word .docx documents to federated vector search'
 tags:
   - Python
   - LLM / RAG
   - Vector Database
+params:
+  subproject:
+    id: convert_essays
+    package: pipelines/convert_essays
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/convert_essays
+    readme_path: ai-sandbox/academic-rag-model/pipelines/convert_essays/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/convert_essays/2026-09-01-research-notes-conversion-status.md
+        role: current
+        lifecycle_ids:
+          - research-notes-conversion
+    members: []
 ---
 
 A lightweight `.docx`-to-Markdown converter for PhD-application essays and loose research notes, proving the **[Source Indexer](/projects/academic-hub/source_indexer/)**'s design generalizes well past the one corpus it was originally built for — paired with **[Journal Article Transcription](/projects/ai-research-assistant/journal_article_transcription/)** as one of the two source corpora feeding **AI Research Assistant**.

@@ -12,6 +12,17 @@ links:
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: research_overview
+    package: null
+    code_paths: []
+    readme_path: null
+    status_docs: []
+    members:
+      - convert_essays
+      - convert_journal_articles
+      - discover_journal_articles
 ---
 
 AI Research Assistant is the effort to search for, download, transcribe, embed, index, and analyze journal articles and personal research material — building a second, parallel knowledge corpus alongside Academic Hub, on the same source-indexing and retrieval infrastructure.

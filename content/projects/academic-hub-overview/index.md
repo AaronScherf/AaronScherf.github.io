@@ -12,6 +12,33 @@ links:
 tags:
   - Python
   - LLM / RAG
+params:
+  subproject:
+    id: academic_hub_overview
+    package: null
+    code_paths: []
+    readme_path: null
+    status_docs: []
+    members:
+      - source_indexer
+      - transcribe_notes
+      - convert_textbook
+      - postprocess_notes
+      - generate_video_notes
+      - rag
+      - tutor_diagnosis
+      - socratic_tutor
+      - visualization
+      - problem_generation
+      - problem_corpus
+      - study_guide
+      - summary_enhancement
+      - audio_generator
+      - corpus_health
+      - project_steering
+      - guided_solutions
+      - obsidian_git_sync
+      - concept_graph
 ---
 
 Academic Hub is the broader knowledge network tying together everything below: converting dense textbooks and messy academic notes into clean Markdown, indexing and tagging the growing corpus, and serving grounded, cited answers back through a tutoring agent — one pipeline turning years of raw coursework into a queryable, AI-tutored knowledge base.

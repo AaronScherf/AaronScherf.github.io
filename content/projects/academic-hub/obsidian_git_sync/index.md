@@ -14,9 +14,30 @@ links:
     icon: brands/github
     label: Follow-up notes
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/2026-09-26-obsidian-git-sync-status.md
+  - type: site
+    icon: brands/github
+    label: Source configuration
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/.obsidian
 tags:
   - Git
   - JavaScript
+params:
+  subproject:
+    id: obsidian_git_sync
+    package: obsidian_git_sync (configuration)
+    code_paths:
+      - ai-sandbox/.obsidian
+    readme_path: null
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/2026-09-21-obsidian-git-sync-status.md
+        role: historical
+        lifecycle_ids:
+          - obsidian-sync
+      - path: ai-sandbox/academic-rag-model/docs/status/2026-09-26-obsidian-git-sync-status.md
+        role: current
+        lifecycle_ids:
+          - obsidian-sync
+    members: []
 ---
 
 Keeps handwritten Excalidraw lecture notes in sync between a tablet and a laptop through plain Obsidian + GitHub, with course PDFs and textbooks deliberately kept out of the loop so the tablet's git client never has to move more than a few megabytes of Markdown.

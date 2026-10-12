@@ -7,6 +7,18 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/core/indexer
+  - type: site
+    icon: brands/github
+    label: 'Status: Source Indexer'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/indexer/2026-08-29-source-indexer-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Passage Embeddings'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/indexer/2026-08-29-passage-embeddings-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Cross Offering Linkage'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/indexer/2026-10-03-cross-offering-linkage-status.md
 tags:
   - Python
   - LLM / RAG
@@ -14,6 +26,27 @@ tags:
 image:
   caption: 'Source indexer two-stage hierarchical search and tag mining architecture'
   image_suggestion: "Diagram illustrating the two-stage search and index-card architecture: showing incoming queries evaluated against course-level centroid embeddings before drilling into per-file index cards, alongside the tag mining pipeline (holistic LLM candidate generation -> cosine similarity validation -> isolated single-document fallback tags)."
+params:
+  subproject:
+    id: source_indexer
+    package: core/indexer
+    code_paths:
+      - ai-sandbox/academic-rag-model/core/indexer
+    readme_path: ai-sandbox/academic-rag-model/core/indexer/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/indexer/2026-08-29-source-indexer-status.md
+        role: current
+        lifecycle_ids:
+          - source-indexer-core
+      - path: ai-sandbox/academic-rag-model/docs/status/indexer/2026-08-29-passage-embeddings-status.md
+        role: current
+        lifecycle_ids:
+          - passage-embeddings
+      - path: ai-sandbox/academic-rag-model/docs/status/indexer/2026-10-03-cross-offering-linkage-status.md
+        role: current
+        lifecycle_ids:
+          - cross-offering-linkage
+    members: []
 ---
 
 The layer that turns a growing pile of converted textbooks, notes, and problem sets into a searchable corpus — per-file index cards, corpus-wide tag mining, and two-stage retrieval that other tools (like the RAG tutoring agent) build directly on top of.

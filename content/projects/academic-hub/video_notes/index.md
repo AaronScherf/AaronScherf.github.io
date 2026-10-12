@@ -10,10 +10,27 @@ links:
     icon: brands/github
     label: GitHub
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/pipelines/generate_video_notes
+  - type: site
+    icon: brands/github
+    label: 'Status: Video Lecture Notes'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/generate_video_notes/2026-09-06-video-lecture-notes-status.md
 tags:
   - Python
   - LLM / RAG
   - Hugging Face
+params:
+  subproject:
+    id: generate_video_notes
+    package: pipelines/generate_video_notes
+    code_paths:
+      - ai-sandbox/academic-rag-model/pipelines/generate_video_notes
+    readme_path: ai-sandbox/academic-rag-model/pipelines/generate_video_notes/README.md
+    status_docs:
+      - path: ai-sandbox/academic-rag-model/docs/status/generate_video_notes/2026-09-06-video-lecture-notes-status.md
+        role: current
+        lifecycle_ids:
+          - video-notes
+    members: []
 ---
 
 Turns a batch of YouTube lecture videos into synthesized Markdown notes indexed alongside the rest of the corpus — local audio download, local transcription, local Ollama synthesis, with no paid API call anywhere except the existing indexer's own per-document classification step.
