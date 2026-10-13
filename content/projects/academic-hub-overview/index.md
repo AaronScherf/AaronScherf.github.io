@@ -3,7 +3,6 @@ title: Academic Hub
 date: 2026-09-01
 image:
   caption: 'Comprehensive architecture of the Academic Hub ecosystem across sources, pipelines, vault, and tutoring agents'
-  image_suggestion: "System overview diagram of the entire Academic Hub ecosystem: illustrating raw academic inputs (textbooks, handwritten notes, lecture videos) passing through ingestion pipelines into a standardized Markdown knowledge base, structured indexing cards, and the downstream AI tutoring agent suite with interactive visualizations and problem generation."
 links:
   - type: site
     icon: brands/github
@@ -45,8 +44,6 @@ Academic Hub is the broader knowledge network tying together everything below: c
 
 <!--more-->
 
-*Figure: Academic Hub ecosystem architecture showing ingestion and processing pipelines connecting raw academic sources to the Markdown knowledge vault and downstream tutoring agent suite.*
-
 The hub spans conversion, indexing, study workflows, tutoring, and corpus maintenance. The established project pages include:
 
 - **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** — turns dense, math-heavy textbooks into clean, LLM-ready Markdown using a GPU-rented pipeline built around chapter-aware chunking.
@@ -62,6 +59,6 @@ The hub spans conversion, indexing, study workflows, tutoring, and corpus mainte
 - **[Audio Generator](/projects/academic-hub/audio_generator/)** — narrates course notes into listenable podcast-length MP3 episodes with LaTeX density routing and multi-worker Piper TTS.
 - **[Video Lecture Notes](/projects/academic-hub/video_notes/)** — transcribes and synthesizes YouTube lecture playlists into structured Markdown notes with clickable timestamp citations.
 
-The next set of pages is drafted for review: Socratic Tutor, Study Guide Pipeline, Summary Enhancement, Corpus Health, Project Steering, Guided Solutions, and Concept Graph. They represent different levels of maturity, from an operational study workflow to tested tools with bounded live runs; each draft states its own evidence and limits.
+The hub also includes [Socratic Tutor](/projects/academic-hub/socratic_tutor/), [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/), [Summary Enhancement](/projects/academic-hub/summary_enhancement/), [Corpus Health](/projects/academic-hub/corpus_health/), [Project Steering](/projects/academic-hub/project_steering/), [Guided Solutions](/projects/academic-hub/guided_solutions/), and [Concept Graph](/projects/academic-hub/concept_graph/). These cover different stages of the work, from study workflows used on course material to tools with a narrower test or live-run record. Each page describes its evidence and remaining limits.
 
 Browse the **[Academic Hub subprojects page](/projects/academic-hub/)** for the current published set.

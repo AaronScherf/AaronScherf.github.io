@@ -9,7 +9,6 @@ tags:
   - Productivity
 image:
   caption: 'Handwritten academic notes connected to a searchable library of course resources'
-  image_suggestion: "Diagram showing a tablet note linked into a larger searchable academic library, with a visible SVG export step for handwriting transcription."
 ---
 
 I take many of my academic notes by hand. Diagrams, equations, and quick annotations are often easier to draw than type, but handwritten pages are hard to search and connect to related material later.

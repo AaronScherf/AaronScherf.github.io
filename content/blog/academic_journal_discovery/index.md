@@ -10,7 +10,6 @@ tags:
   - Python
 image:
   caption: 'Research topics leading to relevant papers and a searchable research library'
-  image_suggestion: "Diagram showing a research topic leading to paper metadata, relevance review, open-access sources, and a human handoff for papers that need normal library access."
 ---
 
 Starting a literature review often means finding candidate papers, deciding which ones matter, and tracking down the full text. I built the [Journal Discovery Pipeline](/projects/ai-research-assistant/journal_discovery/) to help organize those steps and add selected papers to a searchable research library.

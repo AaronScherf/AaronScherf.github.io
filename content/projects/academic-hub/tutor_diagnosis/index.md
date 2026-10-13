@@ -4,7 +4,6 @@ date: 2026-09-28
 type: academic-hub-project
 image:
   caption: 'Problem-Set Tutor Diagnosis and Hint Generator architecture with 3-axis grading and adversarial verification'
-  image_suggestion: "Simple study flow showing a course-based hint, an independent answer check, and constructive feedback that explains a gap between a student's reasoning and the reference answer."
 links:
   - type: site
     icon: brands/github
@@ -40,8 +39,6 @@ params:
 An interactive extension to the **[RAG Analysis](/projects/academic-hub/rag_analysis/)** tutoring agent designed specifically for problem sets — extracting fresh homework questions, generating motivating direction sketches without giving away the final derivation, diagnosing student drafts against a 3-axis grading rubric, and tracking cognitive gaps over time in a persistent session log.
 
 <!--more-->
-
-*Figure: Problem-Set Tutor Diagnosis and Hint Generator workflow showing non-spoiler hint extraction, 3-axis draft evaluation, adversarial verification, and persistent session logging.*
 
 Standard LLMs fail at authentic tutoring for a fundamental reason: they have no pedagogical model. Hand ChatGPT or Claude a homework question, and it immediately outputs a full, worked proof or final answer. For a graduate student working through advanced microeconomics or econometrics, that blithely short-circuits the cognitive struggle essential for mastering the material.
 

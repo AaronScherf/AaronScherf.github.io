@@ -4,7 +4,6 @@ date: 2026-09-21
 type: academic-hub-project
 image:
   caption: 'Obsidian tablet interface with Excalidraw stylus customization and lightweight Fit GitHub API sync'
-  image_suggestion: "Screenshot of the Obsidian tablet interface displaying an Excalidraw handwritten lecture note with the customized, localized stylus popup menu and eraser tool, accompanied by an architectural diagram showing lightweight Fit GitHub API sync between tablet and laptop while large source files stay in a separate archive."
 links:
   - type: site
     icon: brands/github
@@ -43,8 +42,6 @@ params:
 Keeps handwritten Excalidraw lecture notes in sync between a tablet and a laptop through plain Obsidian + GitHub, with course PDFs and textbooks deliberately kept out of the loop so the tablet's git client never has to move more than a few megabytes of Markdown.
 
 <!--more-->
-
-*Figure: Obsidian tablet interface featuring Excalidraw handwritten lecture notes and localized stylus tools, synchronized via lightweight Fit GitHub API architecture.*
 
 The objective is narrow on purpose: two Obsidian vaults, one on each device, agreeing on the same lightweight notes without either device ever downloading the gigabyte of source PDFs, textbooks, and lecture recordings that live alongside them in **Academic Hub**. `.excalidraw.md` notes, their embedded PNGs, and downstream processed Markdown should sync every time; anything heavy — PDFs, Office docs, and the auto-exported `.svg` renders of each drawing — should never leave the device it was created on. The lightweight vault has its own private GitHub repository, separate from the portfolio and from a larger archive for course materials. That keeps the two histories apart and means the tablet only downloads the notes it needs.
 

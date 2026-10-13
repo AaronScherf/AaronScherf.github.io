@@ -9,7 +9,6 @@ tags:
   - Python
 image:
   caption: 'Academic books and notes being converted into searchable text'
-  image_suggestion: "Flow showing academic PDFs becoming searchable text, with separate paths for structured books and handwritten notes."
 ---
 
 The [Academic Hub conversion tools](/projects/academic-hub/marker_conversion/) turn books and class documents into text that can be searched alongside my notes. Textbooks and handwritten or mixed-format documents need different approaches, so the project now has a tool for each.

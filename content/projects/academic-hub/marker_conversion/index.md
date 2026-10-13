@@ -25,7 +25,6 @@ tags:
   - LLM / RAG
 image:
   caption: 'Marker PDF conversion pipeline: GCP GPU VM lifecycle and multimodal figure pass'
-  image_suggestion: "Architecture and data-flow diagram of the Marker PDF Conversion pipeline: illustrating the ephemeral GCP GPU VM lifecycle (creation, batch conversion with chapter boundary alignment, and teardown), followed by local execution of describe_images.py generating figure descriptions into enriched .rag.md files, alongside the pre-flight duplicate checking and OOM recovery ladder."
 params:
   subproject:
     id: convert_textbook
@@ -54,8 +53,6 @@ params:
 A cost-optimized pipeline that turns dense, math-heavy textbooks into clean, LLM-ready Markdown using the open-source Marker model on rented GPU time — one half of a two-tool system that also handles short academic notes with a separate, GPU-free sibling (see **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**).
 
 <!--more-->
-
-*Figure: Marker PDF conversion cloud lifecycle and multimodal enrichment pipeline.*
 
 ## Testing
 

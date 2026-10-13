@@ -25,7 +25,6 @@ tags:
   - Vector Database
 image:
   caption: 'Source indexer two-stage hierarchical search and tag mining architecture'
-  image_suggestion: "Diagram illustrating the two-stage search and index-card architecture: showing incoming queries evaluated against course-level centroid embeddings before drilling into per-file index cards, alongside the tag mining pipeline (holistic LLM candidate generation -> cosine similarity validation -> isolated single-document fallback tags)."
 params:
   subproject:
     id: source_indexer
@@ -54,8 +53,6 @@ The layer that turns a growing pile of converted textbooks, notes, and problem s
 **In plain language:** This tool organizes converted course materials and helps find the documents most relevant to a question.
 
 <!--more-->
-
-*Figure: Two-stage hierarchical search and corpus tag validation architecture.*
 
 ## Passage retrieval and related material
 

@@ -1,7 +1,7 @@
 ---
 title: Summary Enhancement
 date: 2026-10-11
-draft: true
+draft: false
 type: academic-hub-project
 links:
   - type: site

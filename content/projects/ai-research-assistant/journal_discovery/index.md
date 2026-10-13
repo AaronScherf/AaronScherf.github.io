@@ -4,7 +4,6 @@ date: 2026-09-02
 type: ai-research-assistant-project
 image:
   caption: 'Journal discovery system architecture from OpenAlex query and relevance scoring to 5-tier download waterfall'
-  image_suggestion: "Flowchart diagram illustrating the Journal Discovery pipeline: showing faculty/topic input and snowball citation expansion via OpenAlex, offline sentence-transformers semantic relevance scoring, the five-tier full-text access chain (Unpaywall -> Semantic Scholar -> CORE -> arXiv -> EZProxy), and the human-in-the-loop manual download worklist."
 links:
   - type: site
     icon: brands/github
@@ -38,8 +37,6 @@ The discovery step for **[Journal Article Transcription](/projects/ai-research-a
 **In plain language:** This tool helps find papers related to a research topic and organize papers you can access into a searchable library.
 
 <!--more-->
-
-*Figure: Journal Discovery system architecture from OpenAlex query and semantic relevance scoring to the 5-tier full-text download waterfall and manual download fallback.*
 
 Two ways in: a faculty name (`--faculty "Daniel Björkegren"`) or a free-text topic (`--topic "climate shock adaptation"`), either repeatable and combinable in one run. Every candidate OpenAlex returns is scored locally first — a `sentence-transformers` embedding of a `--relevance-prompt` you write, compared against each candidate's own abstract — before any network access is even attempted, so a `--relevance-threshold` and a `--max-results` ceiling bound both the *quality* and the *volume* of what gets pulled, entirely offline and at zero LLM API cost. A live faculty-seeded run found and scored one applied economist's entire relevant OpenAlex-indexed output this way: 19 genuine papers surfaced above threshold, no manual trawling of his publication list required.
 

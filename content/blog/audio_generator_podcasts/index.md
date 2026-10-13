@@ -11,7 +11,6 @@ tags:
   - LLM / RAG
 image:
   caption: 'Audio Generator pipeline from LaTeX density classification and parallel Gemini conversational translation to multi-worker Piper TTS episode batching'
-  image_suggestion: "Technical architecture and data-flow diagram for an audio generation system: showing Markdown notes passing through LaTeX formula density classification, parallel thread-pool dispatch to Gemini for conversational translation, section-aware greedy batching (calibrated at 969 chars/min), and offline synthesis via 3 concurrent Piper TTS workers into MP3 podcast episodes."
 ---
 
 Graduate school generates an overwhelming volume of reading. Between textbook chapters, professor lecture transcripts, and teaching assistant review notes, there are always dozens of pages left unread. 
@@ -19,8 +18,6 @@ Graduate school generates an overwhelming volume of reading. Between textbook ch
 Naturally, you look for ways to reclaim dead time: walking the dog, commuting on the subway, washing dishes, or running on the treadmill. But if you try to throw technical academic notes into standard text-to-speech (TTS) apps (like Speechify or Voice Dream), the experience collapses the moment it hits an equation.
 
 <!--more-->
-
-*Figure: Audio Generator pipeline from LaTeX density classification and parallel Gemini conversational translation to multi-worker Piper TTS episode batching.*
 
 A standard screen reader encounters $\frac{\partial^2 f}{\partial x_i \partial x_j}$ and reads it out verbatim: *"backslash frac open-curly-brace backslash partial squared f close-curly-brace open-curly-brace backslash partial x sub i backslash partial x sub j close-curly-brace."* Within two minutes, you are listening to unpronounceable syntax soup.
 

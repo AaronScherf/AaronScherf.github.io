@@ -9,7 +9,6 @@ tags:
   - Python
 image:
   caption: 'A lightweight notes library and a better organized academic resource toolkit'
-  image_suggestion: "Two-panel diagram showing a lightweight notes collection syncing separately from large reference files, and software components grouped by their roles."
 ---
 
 Not every useful improvement adds a visible feature. Some make the tools easier to maintain or keep the notes workflow responsive.

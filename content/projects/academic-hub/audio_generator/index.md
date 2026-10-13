@@ -4,7 +4,6 @@ date: 2026-09-09
 type: academic-hub-project
 image:
   caption: 'Audio Generator pipeline from LaTeX classification to multi-worker Piper TTS narration'
-  image_suggestion: "Pipeline diagram of the Audio Generator workflow: showing Markdown notes passing through LaTeX equation density classification (no-math / sparse / dense), parallel chunk dispatch to Gemini for speech translation, local multi-worker Piper TTS synthesis, and section-aware greedy batching into 10–20 minute MP3 podcast episodes."
 links:
   - type: site
     icon: brands/github
@@ -35,8 +34,6 @@ params:
 Converts a course's Markdown notes and converted textbooks into local MP3 narration for commute and exercise listening — discovery, cleaning, and TTS synthesis all run offline on CPU, with one narrow exception: turning dense LaTeX into speakable prose is handed to a tiered Gemini API call, the one step regex and a local model both proved unequal to.
 
 <!--more-->
-
-*Figure: Audio Generator pipeline from LaTeX equation classification to parallel Gemini speech translation and multi-worker Piper TTS episode batching.*
 
 For each discovered Markdown file — a student's own course notes or a converted textbook — the pipeline strips code blocks and Markdown syntax, converts LaTeX into narration-ready prose, synthesizes speech via Piper (fast, default) or Kokoro-ONNX (slower, higher quality), and writes the resulting MP3 beside its source. A SHA-256 content hash keyed to each source path means a re-run only regenerates audio for files that actually changed. The dense per-sentence timestamp citations **[Video Lecture Notes](/projects/academic-hub/video_notes/)** attaches to its synthesized notes are stripped before narration too, since a citation is only useful as a clickable link, not read aloud.
 

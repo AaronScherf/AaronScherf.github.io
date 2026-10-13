@@ -9,7 +9,6 @@ tags:
   - Python
 image:
   caption: 'Academic resources organized for search and source-linked answers'
-  image_suggestion: "Diagram showing converted academic documents being organized into a searchable library and used to answer a question with source references."
 ---
 
 Once books and notes have been converted to text, the next challenge is finding the right material and showing where an answer came from. The [Source Indexer](/projects/academic-hub/source_indexer/) organizes the documents; [RAG Analysis](/projects/academic-hub/rag_analysis/) searches their passages to help answer questions.

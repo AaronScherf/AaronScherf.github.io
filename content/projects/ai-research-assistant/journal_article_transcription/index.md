@@ -4,7 +4,6 @@ date: 2026-09-01
 type: ai-research-assistant-project
 image:
   caption: 'Journal article transcription pipeline architecture with renderer checks and tiered routing'
-  image_suggestion: "Workflow diagram of the Journal Article Transcription pipeline: showing recursive scanning of thematic article directories, publisher renderer detection (Apache FOP/XEP pagination checks), monograph page-count guardrails, and tiered transcription outputting structured Markdown into the federated research index."
 links:
   - type: site
     icon: brands/github
@@ -35,8 +34,6 @@ params:
 A PDF pipeline for academic journal articles that turned out to need almost no new code at all, reusing the **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**'s tiered cost-routing wholesale — paired with **[Research Notes Conversion](/projects/ai-research-assistant/research_notes_conversion/)** as one of the two source corpora feeding **AI Research Assistant**.
 
 <!--more-->
-
-*Figure: Journal Article Transcription pipeline workflow featuring recursive directory scanning, publisher pagination checks, monograph guardrails, and tiered extraction routing.*
 
 Journal articles turned out to be the easy half: `transcribe_notes.py`'s existing tiered pipeline — free local extraction where the text layer is clean, hybrid repair, full vision transcription as the fallback — already did exactly what a short academic PDF needs, so the new converter just calls its `process_pdf()` unchanged, pointed at a different, recursively-walked folder (journal articles live under thematic subfolders that may nest further, unlike academic-hub's flat per-category PDF folders) with its own `journal_article` document type.
 
