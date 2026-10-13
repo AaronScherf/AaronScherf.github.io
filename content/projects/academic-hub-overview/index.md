@@ -47,7 +47,7 @@ Academic Hub is the broader knowledge network tying together everything below: c
 
 *Figure: Academic Hub ecosystem architecture showing ingestion and processing pipelines connecting raw academic sources to the Markdown knowledge vault and downstream tutoring agent suite.*
 
-Twelve subprojects currently make up the hub across conversion, indexing, and tutoring layers:
+The hub spans conversion, indexing, study workflows, tutoring, and corpus maintenance. The established project pages include:
 
 - **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** — turns dense, math-heavy textbooks into clean, LLM-ready Markdown using a GPU-rented pipeline built around chapter-aware chunking.
 - **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)** — the GPU-free sibling that handles short, messy academic material: TA notes, problem sets, exams, and handwritten scans with 3-tier cost routing.
@@ -62,4 +62,6 @@ Twelve subprojects currently make up the hub across conversion, indexing, and tu
 - **[Audio Generator](/projects/academic-hub/audio_generator/)** — narrates course notes into listenable podcast-length MP3 episodes with LaTeX density routing and multi-worker Piper TTS.
 - **[Video Lecture Notes](/projects/academic-hub/video_notes/)** — transcribes and synthesizes YouTube lecture playlists into structured Markdown notes with clickable timestamp citations.
 
-Browse all twelve subprojects on the **[Academic Hub subprojects page](/projects/academic-hub/)**.
+The next set of pages is drafted for review: Socratic Tutor, Study Guide Pipeline, Summary Enhancement, Corpus Health, Project Steering, Guided Solutions, and Concept Graph. They represent different levels of maturity, from an operational study workflow to tested tools with bounded live runs; each draft states its own evidence and limits.
+
+Browse the **[Academic Hub subprojects page](/projects/academic-hub/)** for the current published set.
