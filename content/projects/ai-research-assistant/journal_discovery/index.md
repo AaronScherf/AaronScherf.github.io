@@ -11,8 +11,12 @@ links:
     url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/discovery/discover_journal_articles
   - type: site
     icon: brands/github
-    label: 'Status: Journal Discovery'
+    label: 'Status: Journal Discovery (original build)'
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-09-01-journal-discovery-status.md
+  - type: site
+    icon: brands/github
+    label: 'Status: Journal Discovery (reliability, classification, validation)'
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-10-15-reliability-classification-and-validation-status.md
 tags:
   - Python
   - Hugging Face
@@ -26,6 +30,10 @@ params:
     readme_path: ai-sandbox/academic-rag-model/discovery/discover_journal_articles/README.md
     status_docs:
       - path: ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-09-01-journal-discovery-status.md
+        role: historical
+        lifecycle_ids:
+          - journal-discovery
+      - path: ai-sandbox/academic-rag-model/docs/status/discover_journal_articles/2026-10-15-reliability-classification-and-validation-status.md
         role: current
         lifecycle_ids:
           - journal-discovery
@@ -57,6 +65,10 @@ The access route for institutional subscriptions remains limited. If a scripted 
 A gap stayed open even after all of the above worked: a `.meta.json` sidecar is written once, from OpenAlex data, before the full text even exists — nothing ever checked it, or the folder a paper landed in, against what the paper actually turned out to say once converted. A new automatic pass closes it, chained onto the end of the reconciliation step above rather than left as a separate command to remember, since it costs nothing beyond one free OpenAlex lookup per paper. Folder placement and tag-frontmatter sync get corrected outright, since both have a mechanically derivable right answer; a title or author list that no longer matches the converted text gets flagged into a worklist for a human instead, since there's no safe automatic replacement for either. The first live run against the real corpus caught two more real bugs before it could be trusted: a missing `.env`-loading call meant the whole thing silently no-opped despite valid credentials, and a DOI-presence check flagged 14 of 17 real papers as mismatched — root-caused by reading one flagged paper's actual text directly, which showed its own DOI never appears in its body at all, only *other* papers' DOIs, in its reference list. Real academic papers routinely don't self-print their own DOI; the check was removed rather than patched, since no reliable identity signal was going to come from data that's usually just absent. A clean re-run after both fixes: 17 papers checked, 0 folder corrections needed, 0 tag syncs needed, 0 flags — a genuinely clean corpus, not an audit that found nothing because it was broken.
 
 A fourth open-access service, CORE, was added after a live API test. Two open-access files were retrieved using its documented API download route and a standard User-Agent header. This result applies to CORE-hosted files only; it does not provide a way around publisher access challenges.
+
+A later reliability pass hardened the fetch loop itself: `Retry-After` parsing now clamps negative/NaN values instead of trusting them outright, PDF validation catches a pathological case where a corrupted page tree silently resolves to zero pages rather than raising, every PDF write goes through a temp-file-plus-rename so a crash mid-download can't leave a half-written file on disk, and a per-run time budget (default 15 minutes) is checked within each paper's own access-tier chain, not just between papers. A companion classification mode closes a gap where a paper's folder and topic tags were only ever set once, from OpenAlex data, before full text existed: `topic_proposals.py` builds a read-only ledger proposing corrections against the paper's actual converted content, and nothing changes automatically -- a human reviews and explicitly resolves or rejects each one.
+
+A live validation run against the real vault -- both a multi-keyword topic query ("disaster resilience, response, recovery," "3R disaster framework," "disaster relief") and an author-name query (Donald Rubin, scored against a relevance prompt naming his actual research area rather than matching on name alone) -- confirmed relevance scoring and folder routing hold up in practice: every accepted paper in both runs was genuinely on-topic, and the one fetched Rubin paper was co-authored by Rubin himself. The run also surfaced one real bug: a multi-word topic phrase containing a comma broke OpenAlex's own filter syntax (commas are its filter separator), fixed by quoting the value.
 
 One real gap surfaced only once converted papers were checked directly, not designed for up front: the transcription prompt says nothing about how to handle charts or plots, so a data table converts losslessly but a scatter plot or time series gets only a bracketed caption — axis labels and variable names, no underlying values. Most quantitative results in these papers also show up in a table or in-text statistic, so the loss is real but partial; left open rather than fixed, and marked as the next thing to solve once the discovery-tier work above settles, per direct user decision.
 
