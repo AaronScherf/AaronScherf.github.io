@@ -21,6 +21,10 @@ links:
     label: Drafting and seed-run status
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-10-concept-graph-pipeline-status.md
   - type: site
+    icon: brands/github
+    label: Reviewer proposals status (historical)
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-14-concept-graph-proposals-status.md
+  - type: site
     icon: globe
     label: Live concept graph
     url: https://aaronscherf.github.io/microecon-concept-graph/
