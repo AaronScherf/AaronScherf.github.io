@@ -1,7 +1,8 @@
 ---
 title: "Finding Academic Papers for a Research Library"
-summary: "A research tool that finds relevant papers, checks open-access sources, and leaves restricted downloads for the researcher's normal library access."
+summary: "How I find candidate papers, narrow them to a research question, and keep track of the full text I still need to obtain."
 date: 2026-09-12
+lastmod: 2026-10-15
 authors:
   - me
 tags:
@@ -16,10 +17,12 @@ Starting a literature review often means finding candidate papers, deciding whic
 
 <!--more-->
 
-The tool starts with a researcher or a topic, then finds candidate papers through OpenAlex, an academic works catalog. It ranks candidates against a research description on my computer, so I can narrow the list before deciding what to read. It can also suggest newer papers that cite work already in the library; I review those suggestions before anything is added.
+The tool starts with a researcher or a topic, then finds candidate papers through OpenAlex, a catalog of academic publications. It compares them with a description of what I'm looking for, so I can narrow the list before deciding what to read. That comparison runs on my computer. It can also suggest newer papers that cite work already in the library; I review those suggestions before anything is downloaded.
 
-For full text, the pipeline checks open-access services and repositories. It can also use an institutionally authorized access route where that is available. If a publisher prevents an automated request, the software stops and leaves the paper for me to open through my usual authenticated browser. It does not try to defeat that restriction. In an early trial, the automatic route obtained 3 of 19 papers; the rest needed a person to retrieve them.
+For full text, the tool checks services that provide freely available copies of papers. It can also try my university's library access where that is available. If a publisher blocks the automated request, the paper goes on a list for me to open through my usual library login. In an early trial, the automatic route obtained 3 of 19 papers; the rest needed a person to retrieve them.
 
-After the papers are available, other parts of the research assistant convert and index them alongside course materials. That makes it possible to search across a focused collection rather than rely on abstracts alone.
+After the papers are available, separate conversion and search tools add their text to the research library. I can then search the papers alongside course materials, with access to more than their abstracts.
 
-This is a way to organize discovery and reading, not a promise that every paper can be fetched automatically. The [project page](/projects/ai-research-assistant/journal_discovery/) explains the sources, access boundaries, tests, and remaining work.
+*Update, October 15, 2026:* A later trial searched for papers about disaster resilience, response, and recovery. Fifteen candidates passed the relevance filter, and a review found all fifteen on topic. Seven downloaded automatically; the other eight were left for manual access. That is a useful distinction in practice: finding a relevant paper and obtaining its full text are separate steps.
+
+The [project page](/projects/ai-research-assistant/journal_discovery/) describes the search sources, results, and remaining work.

@@ -1,7 +1,8 @@
 ---
 title: Tidying Up Academic Hub's Plumbing
-summary: "Two behind-the-scenes changes make the academic resource library easier to sync and the software easier to navigate."
+summary: "Keeping textbooks out of tablet sync and grouping related software tools make Academic Hub easier to maintain."
 date: 2026-10-03
+lastmod: 2026-10-15
 authors:
   - me
 tags:
@@ -11,12 +12,12 @@ image:
   caption: 'A lightweight notes library and a better organized academic resource toolkit'
 ---
 
-Not every useful improvement adds a visible feature. Some make the tools easier to maintain or keep the notes workflow responsive.
+Two recent changes to Academic Hub were about making the everyday work easier: keeping notes in sync and finding my way around the software.
 
 <!--more-->
 
-I separated large reference files from the handwritten notes that need to sync between devices. The tablet now syncs the working notes and drawings without carrying the full archive along with them.
+I separated large reference files from the handwritten notes that need to sync between devices. Before that, PDFs had slipped into the notes' saved history, so downloading the notes also brought along old copies of large files. The cleanup removed those files from the history, and the source documents moved to a separate archive. The tablet now syncs the working notes and drawings without carrying that archive along with them.
 
-I also reorganized the Academic Hub code so related tools sit together by what they do. This makes it easier to see how document conversion, discovery, shared utilities, and tutoring fit into the larger project.
+I also grouped the software tools by what they do: converting documents, finding papers, helping with study, or providing functions the other tools share. That gives me a clearer place to look when I need to change something.
 
-The codebase change was a mechanical reorganization, with no intended change to tool behavior. The full automated test suite passed after the move. The [Obsidian sync page](/projects/academic-hub/obsidian_git_sync/) and related project pages describe the technical details and ongoing maintenance.
+The reorganization was intended to preserve how the tools work. The full automated test suite passed after the move. The [Obsidian sync page](/projects/academic-hub/obsidian_git_sync/) describes the sync setup, and the [Academic Hub overview](/projects/academic-hub-overview/) shows how the tools fit together.
