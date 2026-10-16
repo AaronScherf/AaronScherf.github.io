@@ -1,7 +1,8 @@
 ---
 title: Introducing Academic Hub
-summary: An overview of Academic Hub — the knowledge ecosystem I'm building to unify my textbooks, notes, and research — plus progress on its Marker PDF Conversion and RAG Analysis subprojects.
+summary: "The original August 2026 introduction: connecting scattered course materials, beginning with textbook conversion and plans for sourced answers."
 date: 2026-08-18
+lastmod: 2026-10-16
 authors:
   - me
 tags:
@@ -9,18 +10,21 @@ tags:
   - LLM / RAG
   - Python
 image:
-  caption: 'Academic Hub system architecture across code, data, and sandbox domains'
+  caption: "The early Academic Hub plan connects source materials, conversion, and study tools."
 ---
 
-For the past few months I've been building **Academic Hub**: an attempt to turn everything I read and write as a PhD student — textbooks, lecture notes, problem sets, old exams, journal articles, and my own research — into a single, AI-queryable knowledge ecosystem, instead of a pile of PDFs scattered across Drive, Paperpile, and a dozen local folders.
+I started Academic Hub to connect the materials I use as a PhD student: textbooks, lecture notes, problem sets, old exams, and research. The goal was more specific than collecting files in one place. I wanted a question in my notes to lead to the relevant textbook explanation, with enough of a source trail to return to the original argument.
 
 <!--more-->
 
-The [full architecture is now public on GitHub](https://github.com/AaronScherf/ai-sandbox-master). It's an orchestrator repository that scaffolds and syncs a containerized workspace across three domains: a Git-managed code ecosystem (this website, research project repos, conversion scripts), an Rclone-managed data ecosystem (raw textbooks and handwritten notes mirrored to Google Drive, kept out of version control), and a Docker sandbox where an AI assistant can work across both without ever touching credentials directly — API keys live in a git-ignored `.env` file, referenced by variable from the tracked `docker-compose.yml`. A single `workspace_generator.sh` script bootstraps the whole tree, pulls updates across every nested repo, and regenerates the documentation, all without ever overwriting existing files.
+Textbook conversion was the first working part of that plan. A temporary cloud machine could turn dense PDFs into text with mathematical notation and separate figures, then shut down after the batch. The intended next step was a search-and-answer tool that could use those converted passages, rather than ask a model to answer without the course materials.
 
-Two subprojects are furthest along:
+[[Insert Image: Create a simple historical project sketch labelled "August 2026". Show scattered textbooks and notes feeding the working textbook converter, then a clearly marked "Planned: search and sourced answers" stage. Use generic documents, three large labels, and no present-day inventory or private materials. Suggested caption: "The first working tool and the study workflow it was meant to support." Suggested alt text: "The August 2026 plan shows textbook conversion working and source-based question answering still planned." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-- **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** is up and running: it spins up a temporary GPU virtual machine in Google Cloud, batch-converts dense textbook PDFs into clean Markdown with LaTeX-rendered formulae and separated figures, and tears the VM down as soon as it's finished to keep costs low.
-- **[RAG Analysis](/projects/academic-hub/rag_analysis/)** is still in the design stage. It's meant to be the piece that actually reads the Markdown Marker produces — answering direct questions and acting as a retrieval step other agents can call into — but the retrieval pipeline itself isn't built yet.
+*Historical note: this introduction describes August 2026. The [current Academic Hub overview](/projects/academic-hub-overview/) explains what was built afterward and where the limits remain.*
 
-The rest of the ecosystem — the academic-hub folder structure, secure secrets handling, and keeping every nested project a clean, independently pushable Git repo — is mostly scaffolding at this point, but it's the foundation everything else builds on. More to come as the RAG piece takes shape.
+At this stage, [Marker PDF Conversion](/projects/academic-hub/marker_conversion/) was running, while [RAG Analysis](/projects/academic-hub/rag_analysis/) was still a design. Its planned role was to find material for direct questions and make that search available to other study tools. Those project links now lead to their current descriptions.
+
+The supporting workspace kept code and bulky source materials separate, so the scripts and this website could be versioned without putting the whole reading collection into their repositories. That organization mattered as a foundation, but it was not yet a complete tutoring system.
+
+The [workspace repository](https://github.com/AaronScherf/ai-sandbox-master) contains the technical structure. This post records the starting point: conversion was useful on its own, and connecting it to searchable explanations was the next piece to build.

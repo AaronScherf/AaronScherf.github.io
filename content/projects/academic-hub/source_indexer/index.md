@@ -1,6 +1,8 @@
 ---
 title: Source Indexer
 date: 2026-08-30
+lastmod: 2026-10-16
+summary: "Find relevant course documents and passages, with references that study tools can use and readers can inspect."
 type: academic-hub-project
 links:
   - type: site
@@ -24,7 +26,7 @@ tags:
   - LLM / RAG
   - Vector Database
 image:
-  caption: 'Source indexer two-stage hierarchical search and tag mining architecture'
+  caption: "Search narrows a question to relevant documents and then to referenced passages."
 params:
   subproject:
     id: source_indexer
@@ -48,30 +50,24 @@ params:
     members: []
 ---
 
-The layer that turns a growing pile of converted textbooks, notes, and problem sets into a searchable corpus — per-file index cards, corpus-wide tag mining, and two-stage retrieval that other tools (like the RAG tutoring agent) build directly on top of.
-
-**In plain language:** This tool organizes converted course materials and helps find the documents most relevant to a question.
+A question about eigenvalues might belong with a textbook proof, a lecture explanation, or an exercise I have already attempted. Source Indexer searches converted course materials in two stages: first finding promising documents, then locating passages inside them. The result includes a heading, page, or paragraph reference so I can continue reading where the match came from.
 
 <!--more-->
 
-## Passage retrieval and related material
+The search catalog has a record for each document, much like a library card with a summary and subject labels. Its identity comes from the source file's contents rather than its filename, so renaming a PDF does not have to create a new document. Course-level summaries narrow the search before it compares individual files, keeping a large collection usable without treating every page as an equally likely starting point.
 
-The indexer now also chunks documents into citable passages and embeds those chunks. Search can narrow by file and then rank passages with heading, page, or paragraph references. The passage-level status record reports real chunking of Math Camp and microeconomics material; tuning chunk sizes for different kinds of prose remains open. RAG Analysis uses this passage search to ground its answers.
+[[Insert Image: Follow an illustrative question, "Where do my notes explain eigenvalues?", through a course catalog, two document cards, and one highlighted passage with a readable page reference. Use invented document names and text, with large labels "Course", "Document", and "Passage". Do not fabricate a screenshot or actual search result. Suggested caption: "Find the document, then the passage worth reading." Suggested alt text: "An illustrative question narrows from course records to documents and a source-referenced passage." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-Cross-offering linkage connects material from prior course offerings to current notes and problem sets, with a review tier for uncertain matches. A separate subset linker recognizes when a handwriting-only Excalidraw note is contained in a slide-plus-handwriting version of the same lecture, so search can avoid showing both when the superset is already present. These links depend on actual indexed sources and review decisions; they are not a claim that every note in the corpus is linked. Corpus Health has a narrowly scoped, owner-accepted adapter to repair missing or stale passage chunks for one exact index card, followed by an audit; broader automated index repairs remain blocked.
+## Give other study tools something to read
 
-Given a query like "teach me about linear algebra," this is what ranks the most relevant files in the corpus — the source-selection layer underneath an interactive tutor, not the tutor itself. Every converted document gets a per-file index card keyed by a hash of the source PDF's own bytes (so a card survives the file being moved or renamed), plus a course-level rollup computed for free from existing card data — no extra LLM call needed just to know what a course, as a whole, is about. Search runs in two stages, course then file, so a query first narrows to the handful of relevant courses by cheap centroid similarity before spending anything on a finer-grained per-file comparison inside them. The indexer hooks directly into the conversion pipelines, so a newly converted textbook, transcribed note, or described image gets indexed as a normal side effect of that pipeline running, not a separate step someone has to remember to run.
+Conversion tools register their outputs with the indexer. Search uses summaries, subject labels, and numerical representations of meaning to rank related material, then returns excerpts from selected documents. PDF-derived passages can carry page references; Word-derived notes without page markers can use headings or numbered paragraphs instead.
 
-## Testing
+[RAG Analysis](/projects/academic-hub/rag_analysis/) uses those passages to draft an answer. The indexer supplies material, not the answer's reasoning, and a relevant-looking passage does not establish that the resulting explanation is correct. The same search infrastructure also supports research notes and journal articles, keeping their collection identities distinct from course materials.
 
-Deciding what to *tag* a file with turned out to be harder than indexing it. The original design mined tags via graph clustering — connected components over a similarity graph of file embeddings — and it didn't survive contact with real data: no similarity threshold, swept from 0.78 to 0.90, produced anything close to a clean subject split, since transitive clustering just merges unrelated subjects together once two files share enough incidental overlap. It was replaced with a one-shot holistic proposal (one LLM call sees the whole corpus and proposes candidate tags) followed by per-candidate empirical validation against real cosine similarity, which is what's actually running today. That redesign immediately surfaced a second real gap: two of twenty-four real cards came back with zero tags, because a genuinely unique document (the one syllabus in the corpus) can never clear a bar calibrated for tags that need multiple real matches. A per-file fallback tag, minted just for that one document, fixed the coverage gap — but the fallback tags then leaked onto unrelated files, since a fallback anchor was never corpus-validated the way a real tag was and could still score above the assignment threshold against something merely similar in register (measured directly: 0.73 similarity between a `math-camp-syllabus` fallback tag and an unrelated linear algebra file). Marking fallback tags with their own origin and excluding that origin from reuse fixed it for good, confirmed by the two real fallback tags in the corpus correctly staying confined to the one document each was minted for.
+## Similar subjects are not always duplicate notes
 
-A handful of quieter bugs came out of actually exercising this against the real, growing corpus rather than fixtures. A stale pre-rename filename left in an exclusion list meant every `rebuild` treated the entire tag vocabulary as if it were a course of file-cards, silently stamping every tag as orphaned — harmless by itself, but a pruning run would have deleted the whole vocabulary outright had it gone uncaught. Staleness detection was originally mtime-only, which is not actually a safe signal: a real rebuild once reported fourteen cards "updated" in a single run when nothing had changed, traced to something — a container remount, most likely — resetting every file's mtime to the same instant at once. A content hash of the file's own bytes replaced mtime as the decisive signal, with the old mtime check kept only as a one-time bridge for cards that predate the field. And separately, image-description output was writing its file link into its own metadata unconditionally but only patching the index card if one already happened to exist at that exact moment — confirmed live that none of five real textbook cards had picked up the link despite the linked file existing on disk for all of them, fixed by having `rebuild` reconcile the two whenever they disagree rather than only at the moment of first write.
+A lecture may exist as handwriting alone and as a later version with slides pasted beside the same handwriting. Searching both can crowd out other useful sources. Whole-document similarity was too broad to distinguish these pairs from different lectures on the same subject. The subset linker instead compares short word sequences from the handwritten portions, then hides the smaller version when its fuller counterpart survives the search. Both remain accessible.
 
-At that recorded validation checkpoint: 30 healthy cards across one course, zero orphaned, zero untagged, and a 14-tag vocabulary (10 corpus-validated, 4 single-document fallbacks, confirmed correctly isolated from each other). The newest generalization came from a second, structurally different corpus entering the picture: a sibling project converting personal application essays and research notes reuses this entire subsystem unmodified except for two changes driven by that real second use case rather than speculative design — the document-type vocabulary a card gets classified into is now a parameter instead of a hardcoded academic set, and every query-side function takes a list of corpus roots instead of one, so a single search can span both corpora at once without two same-named courses in different corpora colliding.
+Links across different years of a course are another feature. The tool reuses existing document comparisons to identify related material, with uncertain matches held for review. That supports revisiting an older explanation without claiming every note has already been matched correctly.
 
-## Ongoing Development
-
-Still open: choosing chunk boundaries for dense proofs versus narrative text, and validating linkage decisions across more of the live corpus. Passage embeddings and the search path used by **[RAG Analysis](/projects/academic-hub/rag_analysis/)** are already implemented.
-
-Part of **Academic Hub**, feeding directly into the retrieval used by **[RAG Analysis](/projects/academic-hub/rag_analysis/)**, and built on the same self-describing output produced by **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** and **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**.
+An early August 2026 checkpoint recorded 30 healthy document cards in one course, with 14 subject labels. Those are historical catalog checks, not current totals or a measure of search accuracy. Dense proofs and narrative notes can still need different passage boundaries. [Corpus Health](/projects/academic-hub/corpus_health/) can report missing or stale outputs, but its available repair is narrowly scoped rather than a general automatic cleanup. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/core/indexer/README.md) describes the catalog, search, and linking behavior.

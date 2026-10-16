@@ -1,9 +1,11 @@
 ---
 title: Problem Generation Sub-Agent
 date: 2026-09-06
+lastmod: 2026-10-16
+summary: "Generate extra course-style practice questions and worked solutions, checking the requested method separately from the answer."
 type: academic-hub-project
 image:
-  caption: 'Problem Generation Sub-Agent loop with dual-pool retrieval, split verification, and generated solution report'
+  caption: "Course examples guide a new problem, followed by separate method and correctness checks."
 links:
   - type: site
     icon: brands/github
@@ -31,20 +33,30 @@ params:
     members: []
 ---
 
-**In plain language:** This tool creates extra practice questions and worked solutions using examples from a student's course materials as a guide. It checks the generated solution too, though that check can miss errors, so students should review the work before relying on it.
-
-A peer of the **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** that generates a new practice problem plus a worked solution for a topic — styled after the student's own problem sets, grounded in their own textbooks, and checked by a second self-verification call before anything is returned — the moment a question sounds like a request for practice rather than an explanation.
+Extra practice is most useful when it exercises the method I am trying to learn. Problem Generation uses examples from my course to draft a new question and worked solution, then checks two things separately: whether the solution is mathematically valid and whether it uses the requested technique. A correct proof by a different method may miss the point of the exercise.
 
 <!--more-->
 
-Two separate retrieval pools get pulled per request: the student's own real problems on the topic as the style and difficulty anchor, and real textbook passages as the correctness anchor. An empty style pool returns nothing rather than generating an ungrounded problem; an empty content pool proceeds on style alone. Generation itself is a two-call loop — one call writes a new problem and solution in the retrieved style, explicitly not a copy of the examples; a second call hands the model back its own answer and asks it to verify correctness, now split into two independently-judged lines (`TECHNIQUE: YES/NO`, `CORRECTNESS: VALID/INVALID`) rather than one combined verdict, since a single verdict let a mathematically valid proof using the *wrong* requested technique slip through as `VALID`. A failure at either step feeds its exact reason into a retry, capped at 5 attempts. Integration is automatic: a regex intent check on the tutor's own question text routes matching questions here, falling straight through to ordinary Q&A if generation returns nothing.
+That distinction came from actual trials. A model asked for a proof using explicit error bounds, known as an epsilon-delta argument, kept using a different approach from its retrieved examples. Splitting the review into "requested technique" and "correctness" caught those mismatches, although the local model still failed to produce an accepted answer in two full trials. The check exposed a limitation; it did not make the model capable of solving the task.
 
-Real end-to-end trials against the math-camp corpus found two real bugs before anything else: the design's chosen local model, `qwen2.5-math:7b`, isn't a real pullable Ollama model at all (fixed to the actual `qwen2-math:7b`), and the per-call timeout — copied from the visualization agent's much shorter Plotly-script workload — was far too short for a full problem-plus-solution response, timing out on every real call until raised to 300s. Once those were fixed, two real *capability* limits surfaced that no amount of code could patch: self-verification is a small local model grading its own math, and it twice rated a solution `VALID` that was actually flawed (a false claim in one case, circular reasoning in the other) when checked by hand; and style-pool retrieval has no relevance threshold, so a deliberately mismatched request ("supply and demand curves" against a pure-math corpus) still returned the closest available real problems and quietly drifted the generated problem toward their topic instead.
+[[Insert Image: Show an illustrative practice request becoming a new question and worked solution, followed by two clearly separate review labels: "Requested method?" and "Correct reasoning?" Use a simple sequence-convergence example and identify it as illustrative, not measured output. Include human inspection after the model checks. Suggested caption: "The right answer and the right method are separate checks." Suggested alt text: "A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-User dogfooding surfaced a sharper version of the same technique problem: asked explicitly for an epsilon-delta proof, the model kept reaching for the open-cover technique used by its retrieved style examples anyway, even after the prompt was rewritten to restate the constraint as a separately labeled, imperative block. The split-verdict fix correctly caught every one of these violations across two full instrumented trials — one attempt even got genuinely close, introducing a real sequence argument before being rejected on a technicality — but never once produced an accepted result. That's real evidence the bottleneck was the local 7B model's own capability, not the retry budget or the verification logic, which is what motivated a proper Gemini comparison rather than more prompt tuning. (A quieter bug fell out of the same trials: a retry prompt telling the model *why* the previous attempt failed, without telling it not to narrate that correction, once leaked "the verification response was not in the expected format" straight into the returned solution text — fixed with an explicit instruction not to reference the correction process.)
+An **illustrative request** makes the difference easier to see:
 
-A throwaway spike reusing `problem_gen`'s exact prompt-building and parsing functions against `gemini-3.1-flash-lite` instead of local Ollama ran the same three technique-constrained requests that broke the local model — and passed **9/9** across compactness, diagonalizability-by-contradiction, and convergence-in-probability, every proof correct by hand, the whole 18-call spike finishing in under two minutes for a fraction of a cent total. Gemini is now the default backend (`PROBLEMGEN_BACKEND=gemini`), with local Ollama kept as an explicit free/private opt-in and its real 9–23-minute-per-call reliability tradeoff documented rather than hidden. A combined-report integration gap found via user dogfooding — `report=True` silently produced no file on this code path — is fixed too, and a real end-to-end trial confirmed the full chain working together: problem generation, self-verification, a rendered report with the solution as its own section, and (once the visualization agent's own Ollama fallback got its Gemini backend) a real embedded Plotly chart in the same file.
+> **Practice question:** Show that the sequence 1/n approaches zero.
+>
+> **Requested method:** Use the definition of convergence.
+>
+> **Solution sketch:** For any positive error tolerance ε, choose an integer N greater than 1/ε. Whenever n is larger than N, the distance 1/n from zero is less than ε.
 
-One more real bug closed most recently: a verification-call timeout was being treated like any other retryable failure, discarding an already-generated, possibly-correct problem and burning a full regeneration attempt on nonsensical retry feedback ("the verification request itself timed out," fed into the *next generation* prompt as if it were a math error to fix). It now retries the same verification call against the same problem instead. Open, honestly-tracked items remain: the section-extraction regex takes the first `## Problem`/`## Solution` match in a response, which a chatty model echoing its own instructions could exploit; the missing relevance threshold and self-verification reliability limits above are still real; and a sibling subproject, `problem_corpus`, now extracts the student's own textbook and problem-set content into a structured, provenance-tagged bank — a first step toward richer few-shot examples and direct-serve matching that this project's generation loop doesn't use yet.
+Checking the sketch means inspecting both the inequalities and the use of the definition, rather than accepting a graph or a bare statement of the limit. This is an invented demonstration, not a transcript of a generation trial.
 
-Part of **Academic Hub**, built directly on top of **[RAG Analysis](/projects/academic-hub/rag_analysis/)**'s retrieval layer and reusing the **[Source Indexer](/projects/academic-hub/source_indexer/)**'s existing `doc_type` filtering rather than adding a new one.
+## Course examples guide the draft
+
+The tool retrieves problem-set passages for style and difficulty, plus textbook passages when available. It will not generate without style examples, but can proceed without textbook passages. A weakly related style match can also pull the draft off topic; the closest available example is not necessarily a suitable one.
+
+Generation now defaults to Gemini, with API cost. In the September 6, 2026 comparison, nine trials across three constrained topics passed the model checks and recorded manual review, while the local alternative had struggled with the requested method. That narrow result motivated the default; it does not establish reliable mathematics across a course. Local generation remains optional.
+
+The second check is another model call, so it can repeat the first call's mistakes. Earlier trials accepted flawed reasoning, including a circular argument. Rejected attempts can be revised within a bounded retry loop, but students still need to inspect the result.
+
+The separately extracted [Problem Corpus](/projects/academic-hub/problem_corpus/) is not yet connected to this generation loop. Current examples come through passage retrieval. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/problem_gen/README.md) documents that distinction and the generation options.

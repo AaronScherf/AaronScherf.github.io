@@ -23,7 +23,7 @@ image coverage, leaving four project pages without an image or brief. The
 author requested descriptions for later generation; generating the assets
 remains a separate step.
 
-## Twenty-eight revised pages
+## All thirty-eight revised pages
 
 | Page | Current coverage | Remaining visual work |
 | --- | --- | --- |
@@ -55,10 +55,20 @@ remains a separate step.
 | [Obsidian Git Sync](../../content/projects/academic-hub/obsidian_git_sync/index.md) | Existing `featured.jpg` retained; replacement brief added | Separate editable-note sync from large sources and transcription |
 | [RAG Analysis](../../content/projects/academic-hub/rag_analysis/index.md) | Existing `featured.jpg` retained; replacement brief added | Show an illustrative question, two passages, and a checkable reference |
 | [Tutor Diagnosis](../../content/projects/academic-hub/tutor_diagnosis/index.md) | Existing `featured.jpg` retained; replacement brief added | Show an illustrative attempt/hint/revision loop and three feedback criteria |
+| [Notes Transcription](../../content/projects/academic-hub/notes_transcription/index.md) | Existing `featured.jpg` retained; replacement brief added | Distinguish handwriting and slide content; show a preserved exponent |
+| [Marker PDF Conversion](../../content/projects/academic-hub/marker_conversion/index.md) | Existing `featured.jpg` retained; replacement brief added | Connect a chapter, figure, and printed/PDF page references |
+| [Journal Discovery](../../content/projects/ai-research-assistant/journal_discovery/index.md) | Existing `featured.jpg` retained; replacement brief added | Show the dated 60-candidate, 15-accepted, 7-downloaded, 8-manual trial |
+| [Visualization](../../content/projects/academic-hub/visualization/index.md) | Existing `featured.jpg` retained; replacement brief added | Capture the actual gradient-descent template with plotting tools, without inventing controls |
+| [Source Indexer](../../content/projects/academic-hub/source_indexer/index.md) | Existing `featured.jpg` retained; replacement brief added | Follow an illustrative question through course, document, and passage selection |
+| [Resume Manager](../../content/projects/resume_manager/index.md) | Existing `featured.jpg` retained; replacement brief added | Separate fixed resume fields from model-rewritten bullets and review checks |
+| [Video Lecture Notes](../../content/projects/academic-hub/video_notes/index.md) | Existing `featured.jpg` retained; replacement brief added | Show transcripts becoming combined notes, with unfinished concept timestamps visible |
+| [Problem Generation](../../content/projects/academic-hub/problem_generation/index.md) | Existing `featured.jpg` retained; replacement brief added | Show separate requested-method and correctness checks |
+| [Commute Podcasts](../../content/blog/audio_generator_podcasts/index.md) | Existing `featured.jpg` retained; replacement brief added | Contrast the historical long file with nine episodes, preserving the 62-minute exception |
+| [Introducing Academic Hub](../../content/blog/academic_hub/index.md) | Existing `featured.jpg` retained; replacement brief added | Show the August 2026 distinction between working conversion and planned sourced answers |
 
-Twenty-one existing assets are preserved. Seven pages need their first
-featured image; twelve pages have replacement briefs for a more focused
-illustration or a faithful research figure. All nineteen briefs are in the
+Thirty-one existing assets are preserved. Seven pages need their first
+featured image; twenty-two pages have replacement briefs for a more focused
+illustration or a faithful research figure. All twenty-nine briefs are in the
 page Markdown itself, not hidden in comments or metadata. No images were
 generated here.
 
@@ -97,3 +107,6 @@ reviewer for visual direction; no external reviewer has been contacted.
 The [batch-04 record](readability-batch-04.md) covers the next five briefs and
 its eighteen-page coverage check. The [batch-05 record](readability-batch-05.md)
 covers ten further replacement briefs and the twenty-eight-page check.
+The [batch-06 record](readability-batch-06.md) covers the final ten briefs.
+The [completeness review](readability-completeness-review.md) maps all
+thirty-eight guide entries and the remaining review gates.

@@ -1,9 +1,11 @@
 ---
 title: Video Lecture Notes
 date: 2026-09-06
+lastmod: 2026-10-16
+summary: "Turn lecture videos into searchable study notes, while keeping the limits of grouping, coverage, and timestamp references visible."
 type: academic-hub-project
 image:
-  caption: 'Automated video lecture notes pipeline from YouTube audio extraction to local LLM synthesis'
+  caption: "Lecture audio becomes a transcript and combined study notes for search."
 links:
   - type: site
     icon: brands/github
@@ -32,14 +34,24 @@ params:
     members: []
 ---
 
-Turns a batch of YouTube lecture videos into synthesized Markdown notes indexed alongside the rest of the corpus — local audio download, local transcription, local Ollama synthesis, with no paid API call anywhere except the existing indexer's own per-document classification step.
+A lecture series can contain several explanations of the same idea, spread across videos with unhelpful titles. Video Lecture Notes downloads the audio, transcribes it, and combines related lectures into study notes that can be searched alongside textbooks and handwritten notes. The combination step matters: it tries to turn a sequence of recordings into one explanation rather than leave a separate transcript for every file.
 
 <!--more-->
 
-The pipeline runs entirely locally before a single Gemini call ever happens: `yt-dlp` resolves per-video and per-playlist metadata and downloads each video's audio track, `faster-whisper` transcribes it on CPU into timestamped segments, and once every video in a batch is transcribed, a fully automatic three-tier grouping algorithm decides which videos belong together as one logical lecture series before anything gets synthesized. Grouping was deliberately built with no manual per-batch configuration at all — a playlist is trusted as one coherent series by default, subdivided only when a title pattern (`Lecture N`, `Part N`, `Week N`) actually detects two or more distinct series bundled into the same playlist; videos with no playlist context fall back to clustering by transcript-embedding similarity (also local, via Ollama), then singleton groups for whatever's left. Synthesis is one local Ollama call per group, prompted with every member video's transcript tagged by its own per-segment timestamp link, so a note spanning multiple lectures can still point back to the exact video and moment a concept came from.
+One trial exposed a surprisingly basic limit. A three-video group produced a note reflecting only one video's content because the local model was receiving only the end of the combined transcript. The shared model helper now requests enough context for the prompt. Rechecking showed better coverage and structure, although reliable links from each concept to the exact video moment remain unfinished.
 
-Run for real, in two passes, against a live 105-video Math Camp lecture playlist (8 videos total so far), the pipeline surfaced two real bugs worth documenting. The first: the shared **[Source Indexer](/projects/academic-hub/source_indexer/)**'s own classifier prompt only ever lets an LLM pick a `doc_type` from the fixed vocabulary it's handed, so every synthesized lecture note was silently filed as `handwritten_notes` — the closest of the four existing types — rather than falling back to its own folder name the way the original design assumed. A dedicated `doc_type` vocabulary for lecture notes, threaded through both places a note gets indexed, fixed it for good, verified against all five real cards produced so far. The second was more consequential and touched shared infrastructure: a 3-video group's synthesized note came back reflecting only one video's content, traced to Ollama silently defaulting to roughly 2,048 tokens of context whenever a caller doesn't request more — confirmed directly against the raw API (`prompt_eval_count: 2050` for a real ~22,000-token prompt) — and llama.cpp keeps the *tail* of an overflowing prompt, not the head. That single mechanism also explained an earlier, wrongly-diagnosed finding from the first pass: three different local models had appeared to categorically refuse to cite timestamps in their output, which looked like a model instruction-following ceiling but was actually the citation instructions (which sit at the top of every prompt) being silently truncated away before the model ever saw them. The fix — sizing Ollama's context window to the actual prompt automatically — lives in the shared Ollama helper both **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** and **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)** also call, so both were quietly exposed to the same risk and now benefit from the same fix.
+[[Insert Image: Show three generic lecture recordings becoming timestamped transcripts and then a short illustrative study note. Use an invented note about sets and functions, labelled as an illustration. Keep a visible "Concept timestamps still incomplete" callout; do not draw working per-concept links. Suggested caption: "Combine related lectures without losing track of what needs checking." Suggested alt text: "Lecture recordings feed transcripts and a combined study note, with a reminder that precise concept-to-video references are unfinished." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-Re-verifying after that fix confirmed most of the damage was the truncation bug — content coverage and structure improved dramatically — but a smaller citation gap remains even now: the model acknowledges the timestamp-link mechanism exists but still tacks on one generic link at the end rather than citing inline per concept as asked. Next up: close that remaining citation gap (either a more directive, example-driven prompt or inserting citations programmatically after generation), empirically tune the content-clustering similarity threshold against a real case where it grouped videos in a genuinely surprising way, regenerate the handful of already-published notes now that synthesis quality has improved, and validate the pipeline against a full real playlist rather than a hand-picked subset — a large multi-video group's prompt turned out to be expensive enough on CPU-only hardware that it may need a summarize-then-combine approach rather than one giant concatenated prompt.
+## From recording to study note
 
-Part of **Academic Hub**, reusing **[Source Indexer](/projects/academic-hub/source_indexer/)**'s existing `doc_type`-based classification and card reconciliation unchanged, and following the same local-Ollama-only constraint already validated by **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** and **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)**.
+Audio download, speech transcription, and note synthesis run locally. The transcript retains timed segments; the synthesis model receives them when drafting the combined note. Registering that note with the [Source Indexer](/projects/academic-hub/source_indexer/) uses the existing classification and embedding API calls, so the full searchable workflow is not entirely offline.
+
+Grouping first uses playlist context and recognizable lecture-series titles. When that context is insufficient, it can compare transcript contents. This saves manual sorting, but shared vocabulary is not the same as belonging to the same lecture: the recorded trial grouped some differently numbered videos together and split another lecture's two parts.
+
+For an **illustrative output**, a note might organize "Sets and functions" into definitions, examples, and a comparison of related ideas. That describes the intended format, not an excerpt from the recorded run. To check an explanation, I still need the recordings and transcripts; a general video link at the end is less useful than a precise reference beside the claim.
+
+## What the trial covered
+
+The September 2026 record covers eight videos from a 105-video Math Camp playlist, across two passes. They produced five indexed notes. That establishes a working download-to-note path on a subset, not full-playlist coverage or complete retention of every explanation.
+
+Long groups remain expensive to synthesize on CPU hardware, and the remaining timestamp and grouping issues affect practical review. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/pipelines/generate_video_notes/README.md) and linked status record distinguish the implemented workflow from those open checks.

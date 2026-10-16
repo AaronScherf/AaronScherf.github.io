@@ -1,8 +1,10 @@
 ---
 title: Resume Manager
 date: 2026-09-09
+lastmod: 2026-10-16
+summary: "Tailor a resume from a maintained record of experience, preserving fixed details and saving checks alongside each application."
 image:
-  caption: 'Resume Manager pipeline architecture from YAML parsing and scoped bullet-tailoring to bidirectional fact-checking'
+  caption: "A maintained master resume and job description produce a tailored draft for review."
 links:
   - type: site
     icon: brands/github
@@ -38,18 +40,30 @@ params:
     members: []
 ---
 
-**In plain language:** This tool takes a detailed master resume and prepares a version for a specific job posting. It can rewrite selected bullet points while keeping names, dates, and other facts tied to the master file; you still review the final wording before using it.
-
-A local pipeline that turns one long-form master resume into a version tailored to a specific job description — structured extraction, selective rewriting, and fact-checking, with a styled PDF as the final output. Three real design revisions in one day, each driven by a bug found running it against my actual resume, landed on a surprising conclusion: the harder of the pipeline's two stages didn't need a local LLM at all.
+A useful tailored resume changes the emphasis without changing the experience. Resume Manager keeps a master record of my roles, projects, and accomplishments, then uses a job description to select relevant experience and rewrite its bullets. Employer names, dates, and locations are copied by code from the master; the model supplies bullet wording rather than rebuilding the whole document.
 
 <!--more-->
 
-The problem it's solving: a single static resume is a compromise for every job it's sent to, but hand-tailoring a new version for each application doesn't scale, and pasting a resume plus a job posting into a chatbot each time is slow and leaves no durable record of everything a resume could say. Resume Manager keeps one hand-maintained master file — a long-form record of every role, project, and metric — and generates a targeted version from it per application, on demand, entirely on local infrastructure.
+The most effective change was removing AI from the first step. My source resume already had recognizable sections, but model-based extraction misplaced fields and omitted information. A conventional parser that reads those sections reduced the recorded bootstrap time from over 90 minutes to about 1.5 seconds on my resume. Language generation remains useful for tailoring; it was unnecessary for reading a layout the code could recognize directly.
 
-The master started as freeform Markdown authored by a local LLM reformatting pass. Against my real resume, that fell over in an instructive way: three sequential roles at one employer share a single printed date range, and with only one freeform `(dates)` slot per entry, the model silently substituted a role's *location* into that slot instead of leaving it honestly blank. The fix was structural — a real YAML schema with a named field for every piece of data — but getting *that* extraction reliable took five more rounds of real, evidence-driven fixes (an LLM occasionally writing a bare `-` as a "no value" placeholder that isn't valid YAML at that position; a genuine venue name containing its own colon breaking YAML's mapping syntax; whitespace and zero-width-space artifacts in the source PDF making faithfully-normalized bullets look "invented" to a naive fact-check) — and even after all of that, a real job still got miscategorized into the wrong section with its bullets dropped entirely, and a real thesis title got written off as "not specified" even though it was sitting right there in the extracted text. Every one of these traced back to the same root cause: a machine-generated, cleanly-sectioned resume doesn't need an LLM to decide where content belongs — it needs a parser that recognizes the shape it's already in. Swapping the entire bootstrap extraction step for deterministic, section-aware parsing (fuzzy-matched headers, a handful of fixed per-entry line shapes) fixed every one of those bugs at once and dropped bootstrap runtime from over 90 minutes of CPU-only inference to about a second and a half, with zero API calls.
+[[Insert Image: Show a generic master-resume card and job-description card feeding a tailored draft plus a review report. Highlight fixed fields such as employer and dates separately from editable bullet text. Use an invented applicant and no real contact information. Include a small "Parser first; model for wording" callout. Suggested caption: "Change the emphasis while keeping the record of experience fixed." Suggested alt text: "A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-Per-application tailoring still uses a local Ollama model — rewriting bullets to match a job description's vocabulary is a genuine language task — but it's scoped narrowly: the model only ever sees an entry's id, org, role, and existing bullets, and returns only which entries to keep and rewritten bullet text. My own code, not the model, reconstructs the final resume from the master data, so a date, an employer name, or a location can't be fabricated during tailoring — there's no field left in the model's response to put a wrong value into. Run for real against an actual UN economist job posting, this caught its own real gap: a bidirectional fact-check (checking for content quietly dropped, not just content invented) flagged a dollar figure that vanished when three bullets got compressed into two, and manual review of the same output found a repeated opening phrase across two different bullets, and a couple of merged bullets that lost a named award along the way.
+## What tailoring can change
 
-Reviewing that real output surfaced a short list of follow-ons, two of which shipped quickly: a genuinely-missing field now renders as blank instead of printing the literal string "Not specified," and a repeated-opening check now flags (and the prompt now discourages) two bullets that open with near-identical phrasing borrowed too literally from the job posting. The idea I was most curious about shipped next: an opt-in `--interactive` flag that asks 2-4 questions grounded in the job description — generated by the same local model, not a fixed template — before tailoring runs, then folds my typed answers into the tailoring prompt as guidance the model has to prioritize without being allowed to override any of its existing rules (no fabricating experience, no dropping a metric, no repeating an opening phrase). It had to work as a standalone flag usable without an AI coding assistant in the loop, and it had to leave the fully automated path completely untouched when the flag isn't passed — a hard requirement, since most of this project's own development ran the tool non-interactively. Run for real against the same UN economist posting: two sensible questions came back, my typed answers visibly steered the rewrite, and the full question-and-answer transcript got saved alongside the other application files so I can see later exactly what shaped a given version — while a second run of the identical command without the flag confirmed nothing about the default behavior had changed.
+An **illustrative example for a hypothetical applicant** applying to a monitoring role:
 
-Work in progress: fitting the tailored output to a page limit, and a paired cover-letter generator.
+> **Master:** Prepared monthly monitoring reports in Excel covering 12 projects.
+>
+> **Tailored:** Prepared monthly Excel reports monitoring 12 projects.
+
+The wording becomes more compact while retaining the tool, frequency, activity, and project count. It adds no claim of managing those projects or improving their results. That is the kind of distinction I still review in the actual output; fixed dates alone cannot protect every factual implication of a rewritten sentence.
+
+The ordinary workflow uses a saved job description and a local model. Optional questions let me explain priorities before tailoring, and the application folder keeps that guidance alongside the job description, draft, PDF, and validation report. A separate route can interpret a rough opportunity description and request a cloud-based relevance brainstorm. That route may send resume material to Gemini; the saved-description route does not require it.
+
+## Check what survived the rewrite
+
+Checks flag possible invented or dropped numbers, repeated openings, similar bullets, and some unsupported responsibility wording. Explicitly supplied facts can include required phrases or acceptable alternatives, making omissions easier to spot. These are advisory checks, not a full understanding of whether the resume is faithful.
+
+The September 2026 application trials showed why that matters: a rewrite dropped a financial figure, and another output omitted qualitative guidance despite a clean numeric report. Newer checks cover more of those cases, but word matching and similarity tests can still miss changes in meaning.
+
+Page fitting now ranks candidate experience and measures rendered drafts against a target length. This replaces the older page's description of page limits as wholly future work; it does not remove the need to inspect the final PDF. The master remains maintained by hand, and tailoring never submits an application. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/resume_manager/README.md) explains the current entry points and review outputs.
