@@ -1,8 +1,10 @@
 ---
 title: Academic Hub
 date: 2026-09-01
+lastmod: 2026-10-16
+summary: "A study workspace connecting handwritten notes, textbooks, source-linked answers, and reviewed study materials."
 image:
-  caption: 'Comprehensive architecture of the Academic Hub ecosystem across sources, pipelines, vault, and tutoring agents'
+  caption: "How source materials become searchable notes and study tools."
 links:
   - type: site
     icon: brands/github
@@ -40,25 +42,34 @@ params:
       - concept_graph
 ---
 
-Academic Hub is the broader knowledge network tying together everything below: converting dense textbooks and messy academic notes into clean Markdown, indexing and tagging the growing corpus, and serving grounded, cited answers back through a tutoring agent — one pipeline turning years of raw coursework into a queryable, AI-tutored knowledge base.
+A question in my handwritten notes can become the starting point for a textbook lookup, a checked explanation, and a study guide. Academic Hub connects those steps by keeping converted materials searchable and preserving references back to the sources. I choose which tools to run and review their outputs along the way.
 
 <!--more-->
 
-The hub spans conversion, indexing, study workflows, tutoring, and corpus maintenance. The established project pages include:
+The useful connection is between a passage and what I do with it later. An answer can record which textbook sections it used; a guide can return to those passages for a fuller explanation. That source trail makes the work easier to inspect, even though a citation alone cannot establish that an explanation is correct.
 
-- **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)** — turns dense, math-heavy textbooks into clean, LLM-ready Markdown using a GPU-rented pipeline built around chapter-aware chunking.
-- **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)** — the GPU-free sibling that handles short, messy academic material: TA notes, problem sets, exams, and handwritten scans with 3-tier cost routing.
-- **[Notes Post-Processing](/projects/academic-hub/postprocess_notes/)** — downstream ML anomaly-detection pass using causal surprisal and masked-LM scoring to catch silent extraction corruptions before visual image verification.
-- **[Obsidian Git Sync](/projects/academic-hub/obsidian_git_sync/)** — syncs Excalidraw handwritten lecture notes between tablet and laptop via lightweight GitHub API integration, paired with lexical subset-linking in the indexer.
-- **[Source Indexer](/projects/academic-hub/source_indexer/)** — turns the growing pile of converted documents into a searchable, tagged corpus with two-stage retrieval.
-- **[RAG Analysis](/projects/academic-hub/rag_analysis/)** — the grounded, citation-backed question-answering agent built on top of that retrieval layer.
-- **[Tutor Diagnosis & Hint Generator](/projects/academic-hub/tutor_diagnosis/)** — pedagogical problem-set tutor with non-spoiler hint generation, 3-axis draft evaluation, and independent verification.
-- **[Problem Corpus Extraction](/projects/academic-hub/problem_corpus/)** — extracts structured practice problems with honest provenance from problem sets and textbooks into an indexed question bank.
-- **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)** — generates targeted practice problems and worked solutions with split-verdict technique and correctness verification.
-- **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** — an opt-in layer that generates an interactive Plotly visualization alongside a tutor answer, with a template library and local coder fallback.
-- **[Audio Generator](/projects/academic-hub/audio_generator/)** — narrates course notes into listenable podcast-length MP3 episodes with LaTeX density routing and multi-worker Piper TTS.
-- **[Video Lecture Notes](/projects/academic-hub/video_notes/)** — transcribes and synthesizes YouTube lecture playlists into structured Markdown notes with clickable timestamp citations.
+[[Insert Image: Replace the dense architecture poster with four clear groups: "Prepare materials", "Find an explanation", "Study and practice", and "Maintain the collection". Follow one generic handwritten question through searchable text, a source-linked answer, and a reviewed guide. Show human review between outputs rather than implying a fully automatic learning system. Use large labels and invented content. Suggested caption: "Follow a question from course material to a reviewed study aid." Suggested alt text: "Notes and textbooks feed search, which supports answers and study materials with source references and human review." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-The hub also includes [Socratic Tutor](/projects/academic-hub/socratic_tutor/), [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/), [Summary Enhancement](/projects/academic-hub/summary_enhancement/), [Corpus Health](/projects/academic-hub/corpus_health/), [Project Steering](/projects/academic-hub/project_steering/), [Guided Solutions](/projects/academic-hub/guided_solutions/), and [Concept Graph](/projects/academic-hub/concept_graph/). These cover different stages of the work, from study workflows used on course material to tools with a narrower test or live-run record. Each page describes its evidence and remaining limits.
+## Prepare the materials
 
-Browse the **[Academic Hub subprojects page](/projects/academic-hub/)** for the current published set.
+- [Textbook conversion](/projects/academic-hub/marker_conversion/) preserves equations, figure descriptions, and page references; [notes transcription](/projects/academic-hub/notes_transcription/) handles shorter documents and handwriting.
+- [Post-processing](/projects/academic-hub/postprocess_notes/) flags suspicious extracted text and compares it with source images before changing it.
+- [Video Lecture Notes](/projects/academic-hub/video_notes/) turns lecture recordings into study notes. Reliable references from each concept back to its exact moment in a video remain unfinished.
+
+## Find an explanation
+
+[Source Indexer](/projects/academic-hub/source_indexer/) finds relevant documents and passages. [RAG Analysis](/projects/academic-hub/rag_analysis/) uses them to answer a question with references I can open and check. [Concept Graph](/projects/academic-hub/concept_graph/) offers another route through the material: connections between ideas, including the assumptions behind them. Its drafted explanations and connections still need review.
+
+## Study and practice
+
+- [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) selects sources, drafts a guide, and proposes edits for review. [Summary Enhancement](/projects/academic-hub/summary_enhancement/) develops a shorter summary into fuller explanations and examples.
+- [Tutor Diagnosis](/projects/academic-hub/tutor_diagnosis/) gives hints and feedback on an attempt. The separate [Socratic Tutor](/projects/academic-hub/socratic_tutor/) tracks progress during a conversation, but its strict checks have struggled with teaching unfamiliar material.
+- [Guided Solutions](/projects/academic-hub/guided_solutions/) keeps my reasoning, agent derivations, and tutoring work distinct for comparison.
+- [Problem Corpus](/projects/academic-hub/problem_corpus/) stores extracted exercises with their provenance. [Problem Generation](/projects/academic-hub/problem_generation/) currently retrieves its own style examples; integration with that stored bank remains separate work.
+- [Visualizations](/projects/academic-hub/visualization/) can accompany an explanation, while [Audio Generator](/projects/academic-hub/audio_generator/) turns notes into spoken episodes. A generated chart or recording still needs checking for its intended use.
+
+## Maintain the collection
+
+[Obsidian Git Sync](/projects/academic-hub/obsidian_git_sync/) keeps working notes available across devices. [Corpus Health](/projects/academic-hub/corpus_health/) reports missing or stale outputs for review, and [Project Steering](/projects/academic-hub/project_steering/) helps prioritize the next work.
+
+The [subproject collection](/projects/academic-hub/) links to each tool's current evidence and limits. These range from fixture-tested rules to recorded runs on actual coursework; they do not all have the same degree of validation.

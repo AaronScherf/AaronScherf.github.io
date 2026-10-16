@@ -1,9 +1,11 @@
 ---
 title: Audio Generator
 date: 2026-09-09
+lastmod: 2026-10-16
+summary: "Turn notes into spoken episodes, translating mathematical notation into language a speech engine can read."
 type: academic-hub-project
 image:
-  caption: 'Audio Generator pipeline from LaTeX classification to multi-worker Piper TTS narration'
+  caption: "Mathematical notes become spoken explanations and separate audio episodes."
 links:
   - type: site
     icon: brands/github
@@ -31,16 +33,18 @@ params:
     members: []
 ---
 
-Converts a course's Markdown notes and converted textbooks into local MP3 narration for commute and exercise listening — discovery, cleaning, and TTS synthesis all run offline on CPU, with one narrow exception: turning dense LaTeX into speakable prose is handed to a tiered Gemini API call, the one step regex and a local model both proved unequal to.
+Audio Generator turns course notes into MP3 episodes for listening away from a screen. Mathematical notation needs an extra step: a speech engine can read words, but raw formula commands often sound unintelligible. The tool rewrites that notation into spoken language before synthesizing the recording.
 
 <!--more-->
 
-For each discovered Markdown file — a student's own course notes or a converted textbook — the pipeline strips code blocks and Markdown syntax, converts LaTeX into narration-ready prose, synthesizes speech via Piper (fast, default) or Kokoro-ONNX (slower, higher quality), and writes the resulting MP3 beside its source. A SHA-256 content hash keyed to each source path means a re-run only regenerates audio for files that actually changed. The dense per-sentence timestamp citations **[Video Lecture Notes](/projects/academic-hub/video_notes/)** attaches to its synthesized notes are stripped before narration too, since a citation is only useful as a clickable link, not read aloud.
+For an **illustrative translation**, E[X] becomes "the expected value of X." Denser equations need more than symbol replacement to preserve what the expression means. The pipeline sends math-heavy passages to a cloud model for that rewrite, while text cleanup and speech synthesis run locally. Plain prose can skip the model call.
 
-The one step that isn't free is turning raw LaTeX into something a TTS voice can actually read. The original regex wrap (`Equation: <raw LaTeX>`) passed literal, unpronounceable command syntax straight through once tested against a real equation-dense note, so narration moved to an LLM. A local `qwen2-math:7b` model fixed the correctness problem but, measured end-to-end against a real 121,637-character file, took roughly six hours to narrate one document — not usable at any real batch volume. Replacing it with the Gemini API cut that to 13 minutes for the same file, about 28x faster, by classifying each chunk's LaTeX density before sending it anywhere: no-math chunks make zero API calls, sparse notation goes to a cheap model, genuinely dense equations go to a stronger one — and every chunk is dispatched through a thread pool rather than a serial loop, since the API, unlike a single local model, serves concurrent requests fine.
+[[Insert Image: Show a short formula labelled "E[X]", the phrase "the expected value of X", and a small sequence of episode cards. Mark the rewrite as an illustrative example rather than a measured transcription. Use a few large labels to distinguish "Make it speakable" from "Generate speech". Suggested caption: "Translate the notation before reading it aloud." Suggested alt text: "A mathematical expression becomes spoken language and then an audio episode." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-Running that pipeline end-to-end against the same real file surfaced a second, unrelated problem: one technically-correct MP3, 3 hours 22 minutes long — accurate, but useless for a commute. A section-aware splitting pass now breaks a long note at every Markdown header, narrates and cleans each section, then greedily groups consecutive sections into 10-20 minute episodes using a real measured calibration (969 characters of narrated text per minute of Piper audio, from one real run) rather than a guessed speaking rate. The first working version of this grouping made a real concurrency mistake worth naming: narrating one section at a time, in a loop, confined each section's own parallelism to its own serialized batch — flattening every section's chunks into one shared dispatch before narrating anything fixed it, cutting narration time for a 74-section file from 13 minutes down to under 4.
+Notes are split into episodes targeting 10–20 minutes. The current code can divide oversized sections at paragraph boundaries; one indivisible paragraph may still exceed the target. Textbook inputs follow a different path and currently produce one MP3 per source file. Editing any part of a note regenerates all of that file's episodes; unchanged sources can be skipped.
 
-The full real-world run — the same 121,637-character TA notes file, now split into 9 episodes — took 3.8 minutes to narrate and 19.4 minutes to synthesize across 3 concurrent Piper workers (a 2.9x speedup over doing it sequentially), 23.2 minutes total end-to-end for nine separately listenable files instead of one unplayable-length one. It also confirmed a known limitation rather than papering over it: one 711-line, header-less section came out as its own 62-minute episode, since the design deliberately never splits inside a single section — left unfixed, on purpose, pending a listening-quality pass on the real output first. Worth being honest about what this test actually exercised, too: raw, unedited LaTeX-heavy notes are the pipeline's hardest case, not its main one — the intended primary use is narrating already-plain-prose LLM-generated summaries, which wouldn't need the Gemini narration step at all. That summary pipeline doesn't exist yet.
+The September 9, 2026 stress test used one equation-dense, roughly 122,000-character note. It took 3.8 minutes to prepare the narration and another 19.4 minutes to synthesize speech, producing nine files in 23.2 minutes overall. One episode was about 62 minutes long. That historical result predates the paragraph-splitting fix; a new listening test is needed to judge the revised output.
 
-Part of **Academic Hub**, reusing the same `core/env/gemini_utils.py` client already shared by **[Source Indexer](/projects/academic-hub/source_indexer/)** and **[Visualization Sub-Agent](/projects/academic-hub/visualization/)**, and stripping the same per-sentence timestamp citations **[Video Lecture Notes](/projects/academic-hub/video_notes/)** attaches to its synthesized notes.
+The local model tried earlier took about six hours on the same difficult input. Cloud rewriting reduced the wait but introduced API cost. Its speed does not establish that every formula was explained correctly, so the saved narration text provides something to inspect before relying on the audio.
+
+[Summary Enhancement](/projects/academic-hub/summary_enhancement/) and [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) now exist, but an automatic weekly-summary-to-audio workflow is not established. Notes audio is stored with the larger course resources, outside tablet notes sync. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/audio_generator/README.md) describes current output and regeneration behavior.

@@ -1,9 +1,11 @@
 ---
 title: Tutor Diagnosis & Hint Generator
 date: 2026-09-28
+lastmod: 2026-10-16
+summary: "Get a hint, examine an attempt on separate reasoning criteria, and compare another solution without treating it as a final verdict."
 type: academic-hub-project
 image:
-  caption: 'Problem-Set Tutor Diagnosis and Hint Generator architecture with 3-axis grading and adversarial verification'
+  caption: "Hints, feedback, and a separate solution help review a student attempt."
 links:
   - type: site
     icon: brands/github
@@ -36,56 +38,30 @@ params:
     members: []
 ---
 
-An interactive extension to the **[RAG Analysis](/projects/academic-hub/rag_analysis/)** tutoring agent designed specifically for problem sets — extracting fresh homework questions, generating motivating direction sketches without giving away the final derivation, diagnosing student drafts against a 3-axis grading rubric, and tracking cognitive gaps over time in a persistent session log.
+A correct conclusion can hide a gap in the argument, while an otherwise sound attempt may use a method the course has not introduced. Tutor Diagnosis examines those differences separately: whether the result is right, whether the steps are justified, and whether the explanation fits the course's definitions and methods. Its scores are model feedback for review, not instructor grades.
 
 <!--more-->
 
-Standard LLMs fail at authentic tutoring for a fundamental reason: they have no pedagogical model. Hand ChatGPT or Claude a homework question, and it immediately outputs a full, worked proof or final answer. For a graduate student working through advanced microeconomics or econometrics, that blithely short-circuits the cognitive struggle essential for mastering the material.
+The tool can also give a hint before I have a full attempt. It searches course material for a useful direction and aims to leave the final derivation to me. When the available passages do not cover the topic, it labels a general hint instead of attaching an unsupported course reference.
 
-The motivation for this tool came from auditing my own coursework in microeconomics and econometrics. That audit surfaced a clear pattern in how human mathematical reasoning actually progresses:
-- In microeconomics, one set of notes preserves annotated stages: `[First Attempt]`, `[Wait, what if...]`, and `[Corrected with proper induction]` — a record of where initial intuition failed before self-correcting.
-- In econometrics, another set of notes places a subtly flawed proof next to a corrected proof with a "Where the Flaw Lies" section to create useful examples for comparison.
+[[Insert Image: Create an illustrative attempt → hint → revised attempt sequence using a simple invented mathematical claim. Beside the revision show three large review labels: "Result", "Reasoning", and "Course fit". Keep the hint distinct from a complete solution and label the scores as feedback rather than grades. Use no private assignment or fabricated application screenshot. Suggested caption: "Review the argument, not just its final answer." Suggested alt text: "A student revises an attempt after a hint, then reviews separate feedback on the result, reasoning, and fit with the course." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-In both courses, capturing, diagnosing, and learning from personal reasoning errors was the highest-value signal available. `tutor_diagnosis.py` builds this loop directly into the `rag_agent.py` interactive REPL across four core capabilities:
+An **illustrative learning loop**, not a transcript or a new test result:
 
-### 1. `/hint <file> <question-ref>` — Guidance Without Giving Away the Answer
-Before a student has an attempt to grade, they often need a nudge to get unstuck. Rather than requiring manual question copy-pasting, `problem_set_parser.py` cleanly extracts a single problem statement from a fresh, unsolved assignment using section boundary patterns.
+> **Claim:** Every even integer is divisible by four.
+>
+> **Attempt:** It works for 4 and 8, so it must hold for all even integers.
+>
+> **Hint:** What would you need to check beyond those two examples?
+>
+> **Revision:** Two is even but not divisible by four. One counterexample disproves the claim.
 
-The extracted question retrieves relevant textbook and lecture passages through `retrieve_passages()`. Generation is governed by `_HINT_PROMPT_TEMPLATE`, which enforces strict negative constraints:
-> *"Give them a motivating sketch of the right technique or theorem to reach for -- enough to get them unstuck and pointed in the right direction. Do NOT state the final answer, a verdict (e.g. True/False), or a worked derivation. If you find yourself about to write out the conclusion, stop and describe the approach instead."*
+The point is to identify the reasoning gap: examples that support a claim do not establish that it holds in every case. For course problems, the tool compares an attempt with a reference answer and retrieved passages, then names the most important gap to revisit.
 
-**Grounding Validation vs. Ungrounded Fallback**: The agent validates whether retrieved passages actually contain the question's core concepts. If course notes lack the required topic (such as Block Marschak / Luce models in microeconomics), the agent avoids hallucinating a forced citation. Instead, it explicitly alerts the student: *"None of your course materials mention [terms] — falling back to a general hint,"* calling `generate_ungrounded_hint()`. An honest, ungrounded on-topic hint beats a confidently wrong hallucination dressed in real citations.
+## A fresh solution for comparison
 
-### 2. `/draft` — Diagnosing Attempts on a 3-Axis Rubric
-After receiving a hint or initial explanation, the student types `/draft` and pastes their handwritten or typed attempt (terminated by `/end`). `diagnose_draft()` compares the draft against the reference answer and retrieved course excerpts.
+A separate solver receives the question without the tutor's earlier answer or the source passages used to write it. In a recorded econometrics trial, this second solution identified an intercept condition the first answer had omitted. The user still compares both arguments; agreement or disagreement is not automatically resolved into a verdict.
 
-Instead of a generic pass/fail verdict, the model evaluates the attempt across a structured **0–5 rubric**:
-- **Correctness (0–5)**: Does the draft reach the right mathematical conclusion through valid reasoning?
-- **Rigor (0–5)**: Is each step formally justified rather than asserted? Are edge cases, degenerate conditions (such as ties or vacuous truth), and assumptions explicitly handled as required by the course?
-- **Course-Fit (0–5)**: Does the proof adopt the professor's idiosyncratic notation, definitions, and framing from course lecture notes rather than generic textbook phrasing?
+Other recorded checks included identifying an intentionally flawed regression argument and producing a hint on a microeconomics problem without a final derivation. Those are limited examples of the workflow, not evidence that feedback will be accurate on every assignment.
 
-The model also outputs a short free-text `gap_tag` (such as `vacuous-case-overlooked` or `fundamental-property-misunderstanding`). Re-running `/draft` after revising preserves the sequence of attempts in the session log naturally, allowing the student to see their progression from initial draft to rigorous proof.
-
-### 3. `/verify` — Independent Adversarial Cross-Check
-Grounding an answer in retrieved excerpts does not guarantee a flawless proof — models can still make subtle algebraic slips or misapply conditions. `/verify` re-solves the active question using an independent call to a stronger model (`gemini-3.6-flash`).
-
-Crucially, the verifier is *not* shown the tutor's prior answer or retrieved excerpts, preventing it from rationalizing or echoing earlier mistakes. Both solutions are printed side by side for the student to compare. The system intentionally avoids auto-adjudication, leaving the student as the final judge and avoiding brittle multi-LLM consensus loops.
-
-### 4. `/summarize [unit]` & Persistent Gap Memory
-Every REPL action appends a structured `Event` to a private local log. When reviewing a problem set, `/summarize` aggregates logged events to synthesize a "What we learned" / "What to focus on" retrospective, alongside **computed** (not model-generated) rubric score averages across all draft attempts.
-
-In subsequent study sessions, `answer_question()` loads recent gap tags and proactively injects them into its answer prompt — alerting the student if a new question touches a conceptual blind spot diagnosed in previous problem sets.
-
-## Testing and Ongoing Development
-
-### Real-Corpus Validation
-The system was validated live against real coursework in the Academic Hub repository:
-- **Diagnostic Precision**: A deliberately flawed econometrics attempt asserting "residuals are always positive" was correctly scored 0/5 across all three axes and produced the precise gap tag `fundamental-property-misunderstanding`.
-- **Non-Spoiler Nudges**: A live test on an incomplete-preferences question produced a motivating counterexample sketch exploring broken transitivity chains without stating a verdict or writing out the derivation.
-- **Independent Divergence**: `/verify` generated an independent proof that surfaced an intercept-term caveat omitted by the tutor model's initial grounded response, confirming the verifier does not echo prior reasoning.
-
-## Ongoing Development
-
-The tutor remains a study aid under development. It does not automatically decide whether its answer or an independent check is correct, so students should compare the reasoning and source material.
-
-Part of **Academic Hub**, bridging **[RAG Analysis](/projects/academic-hub/rag_analysis/)**, **[Source Indexer](/projects/academic-hub/source_indexer/)**, and **[Problem Generation](/projects/academic-hub/problem_generation/)** into an end-to-end study system.
+Course-scoped logs preserve attempts, hints, feedback, and solution comparisons for later summaries. The [status record](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/rag/2026-09-27-tutor-diagnosis-status.md) describes the trials. This is a set of tools within [RAG Analysis](/projects/academic-hub/rag_analysis/); the separate [Socratic Tutor](/projects/academic-hub/socratic_tutor/) tracks an interactive session and applies different conversation rules.

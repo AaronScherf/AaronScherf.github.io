@@ -1,6 +1,8 @@
 ---
 title: RAG Analysis
 date: 2026-08-30
+lastmod: 2026-10-16
+summary: "Answer questions from course passages and keep references that help inspect the explanation and its sources."
 type: academic-hub-project
 links:
   - type: site
@@ -19,7 +21,7 @@ tags:
   - Python
   - LLM / RAG
 image:
-  caption: 'Interactive RAG tutor terminal session answering with grounded citations'
+  caption: "A question leads to relevant passages, an explanation, and references to inspect."
 params:
   subproject:
     id: rag
@@ -39,26 +41,28 @@ params:
     members: []
 ---
 
-A grounded question-answering agent that retrieves and cites real passages from the textbooks and notes produced by the Marker PDF Conversion and Notes Transcription pipelines — usable directly as a multi-turn chat, or as a stateless function other agents can call.
-
-**In plain language:** This study tool searches course materials for relevant passages and uses them to answer questions with source references.
+RAG Analysis answers a question using passages found in my textbooks and course notes, with references back to the material it used. That lets me inspect an explanation and continue reading at its source. The reference is a starting point for checking the answer, not a guarantee that the model interpreted it correctly.
 
 <!--more-->
 
-The core of it is a single function, `answer_question()`, deliberately stateless per call: conversation history is an explicit input and output the caller owns, not internal session state. That one design choice is what lets it serve two different usage modes without two separate implementations — an interactive REPL that threads history across turns, and a plain callable a larger pipeline can invoke once and use the result from, the same way a study-plan agent might eventually hand it a course syllabus and ask for a grounded read on a topic. Inside a call: a follow-up question first gets condensed into a standalone, retrievable query using recent history (skipped entirely on the first turn), the reformulated question goes to the source indexer's existing passage-level search, a diversification step caps how many top-ranked passages can come from a single file so a comparative question actually pulls from multiple sources instead of one dominant document crowding out the rest, and generation is prompted to answer using *only* the retrieved excerpts — citing each one inline and saying so plainly when the excerpts don't cover the question, rather than filling the gap from general knowledge.
+One useful choice is limiting how many passages a single file can contribute. Otherwise, a relevant textbook can fill the available space and crowd out lecture notes or another author's explanation. Follow-up questions are also rewritten using the recent conversation, so "explain that differently" becomes a specific question the search tools can use.
 
-Retrieval itself isn't new machinery built for this agent — it's the passage-level search already shipped as part of the **[Source Indexer](/projects/academic-hub/source_indexer/)** subproject, reused as-is. That's a deliberate sequencing choice: file-level relevance ("which document") and passage-level relevance ("which paragraph actually answers this") are different problems, and building the second on top of an already-validated first meant this agent could focus entirely on reformulation, diversification, and grounded generation instead of re-solving retrieval from scratch.
+[[Insert Image: Show a question connected to two source passages and a short answer with a readable section/page reference. Use invented text and clearly label it illustrative; do not fabricate a screenshot or imply the reference proves the answer. Make the two-source comparison and the route back to a source page visible at thumbnail size. Suggested caption: "Keep an explanation connected to the passages used to write it." Suggested alt text: "Two source passages support an illustrative answer with a section and page reference that can be checked." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-## Testing and Ongoing Development
+A **clearly illustrative example**, rather than a quotation from a recorded answer:
 
-Run for real, not just unit-tested: a live query — "what is the spectral theorem" — produced a substantive, correctly-cited answer synthesizing content from two different files at once (a lecture-note document and a separate linear algebra textbook), each citation a real, checkable theorem and page reference. A full multi-turn exchange confirmed history accumulates correctly across turns and that the reformulation step produces a genuinely on-topic standalone question from a vague follow-up ("explain that differently" → a specific, correctly-scoped restatement of the original question for a beginner). A real side-by-side model comparison — `gemini-3.6-flash` against the project's cheaper default tier, `gemini-3.1-flash-lite` — found no meaningful quality or coverage difference on the same question, so the original choice (picked on an untested "tutoring needs more reasoning" heuristic) was reversed in favor of the cheaper model once actually measured against real output.
+> **Question:** What does the spectral theorem help explain about a real symmetric matrix?
+>
+> **Answer sketch:** It gives perpendicular directions along which the transformation acts by scaling, making its action easier to describe.
+>
+> **Reference format:** Section 7.4, pages 264–266.
 
-Not every finding closed cleanly. One real run during multi-turn testing produced an answer citing files that didn't reappear in a direct re-run of retrieval for the same, correctly-reformulated query — diagnosed as far as the evidence allowed (the reformulation and the retrieval were each independently confirmed correct), but not fully explained. The most likely cause is temperature=0 not being perfectly deterministic server-side, especially with many real passages scoring closely together (0.68–0.74, a tight cluster where a slightly different phrasing could plausibly reorder results) — recorded as a known, real source of run-to-run variance rather than quietly assumed away.
+The name RAG means **retrieval-augmented generation**: find relevant passages first, then supply them to the model writing the answer. This project reuses the [Source Indexer](/projects/academic-hub/source_indexer/) for that search. An August 2026 trial answered a spectral-theorem question using two source files; a follow-up exchange also exercised the conversation-based search step. Those were specific trials, not a broad evaluation of answer accuracy.
 
-## Ongoing Development
+## What is remembered
 
-The current REPL keeps conversational context only for the running process; restarting it does not restore a full dialogue. It does persist course-scoped answer, draft-diagnosis, hint, and verification events when a course is selected. Later answers can use recent logged gap tags, and `/summarize` can turn logged events into a Markdown study note. A requested combined report also writes an answer and its citations to the notes vault. These durable records support review and summaries, but do not make the chat itself resumable across processes.
+The running chat retains its conversation, but restarting the process does not restore the full dialogue. With a course selected, the tool can save answer, hint, draft-feedback, and verification events. Recent recorded learning gaps can inform later answers, and those events can be summarized into a study note. A requested report can also save an answer and its references. These records survive separately from the live chat history.
 
-Practice-problem requests are routed to the separate **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)**; if generation cannot produce a verified problem, the agent falls back to ordinary answering. A separate resolver handles `[Question]` markers in Excalidraw notes, writing answer sidecars and labeling answers that lack corpus grounding. Its recorded microeconomics run resolved seven questions, four grounded and three ungrounded. Ungrounded answers remain leads to check against course material. The single-question retrieval path is still too narrow to claim a comprehensive review of everything studied in a week.
+A companion resolver answers question markers in handwritten notes. Its recorded seven-question run included four source-grounded answers and three marked as ungrounded. General answers remain leads to check, and retrieving a handful of passages is too narrow to establish comprehensive coverage of a week's study.
 
-Part of **Academic Hub**, the broader knowledge network combining this agent with **[Marker PDF Conversion](/projects/academic-hub/marker_conversion/)**, **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**, and the **[Source Indexer](/projects/academic-hub/source_indexer/)** into a single ecosystem for domain-tuned AI assistants. The **[Visualization Sub-Agent](/projects/academic-hub/visualization/)** builds directly on top of this one, reusing its retrieved passages as grounding context for its own local-LLM fallback.
+The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/rag/README.md) describes the current interfaces. [Tutor Diagnosis](/projects/academic-hub/tutor_diagnosis/) adds feedback on an attempt; the separate [Socratic Tutor](/projects/academic-hub/socratic_tutor/) manages an ongoing tutoring session.

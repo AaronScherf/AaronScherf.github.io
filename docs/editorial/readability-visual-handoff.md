@@ -23,7 +23,7 @@ image coverage, leaving four project pages without an image or brief. The
 author requested descriptions for later generation; generating the assets
 remains a separate step.
 
-## Eighteen revised pages
+## Twenty-eight revised pages
 
 | Page | Current coverage | Remaining visual work |
 | --- | --- | --- |
@@ -45,11 +45,22 @@ remains a separate step.
 | [Socratic Tutor](../../content/projects/academic-hub/socratic_tutor/index.md) | New visible brief after paragraph two | Generate student-record/reply-check illustration with the teaching limit visible; add featured asset |
 | [Wheat Yield Prediction](../../content/projects/wheat_yield_prediction/index.md) | Existing `featured.jpg` retained and captioned as an illustration; replacement brief added | Replace montage with a chart of the actual Table 6 values using plotting tools |
 | [Normality Test](../../content/projects/math_thesis/index.md) | Existing `featured.jpg` retained and captioned as an illustration; replacement brief added | Use original thesis figures or reproduce actual outputs with plotting tools; avoid invented curves |
+| [Academic Hub](../../content/projects/academic-hub-overview/index.md) | Existing `featured.jpg` retained; replacement brief added | Replace architecture inventory with four reader-task groups and one source-linked study path |
+| [Journal Article Transcription](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | Existing `featured.jpg` retained; replacement brief added | Show source-page and converted-text comparison with a page locator |
+| [Multi-Agent Workflow](../../content/projects/multi_agent_project/index.md) | Existing `featured.jpg` retained; replacement brief added | Show isolated task copies and one reviewed integration step |
+| [Audio Generator](../../content/projects/academic-hub/audio_generator/index.md) | Existing `featured.jpg` retained; replacement brief added | Show notation becoming spoken language and separate episodes |
+| [Problem Corpus](../../content/projects/academic-hub/problem_corpus/index.md) | Existing `featured.jpg` retained; replacement brief added | Show a readable card whose accompanying solution is labelled as unchecked student work |
+| [Notes Post-Processing](../../content/projects/academic-hub/postprocess_notes/index.md) | Existing `featured.jpg` retained; replacement brief added | Compare the letter p with the intended square-root sign and a source-image check |
+| [Research Notes Conversion](../../content/projects/ai-research-assistant/research_notes_conversion/index.md) | Existing `featured.jpg` retained; replacement brief added | Connect a Word note, a search result, and a paragraph locator |
+| [Obsidian Git Sync](../../content/projects/academic-hub/obsidian_git_sync/index.md) | Existing `featured.jpg` retained; replacement brief added | Separate editable-note sync from large sources and transcription |
+| [RAG Analysis](../../content/projects/academic-hub/rag_analysis/index.md) | Existing `featured.jpg` retained; replacement brief added | Show an illustrative question, two passages, and a checkable reference |
+| [Tutor Diagnosis](../../content/projects/academic-hub/tutor_diagnosis/index.md) | Existing `featured.jpg` retained; replacement brief added | Show an illustrative attempt/hint/revision loop and three feedback criteria |
 
-Eleven existing assets are preserved. Seven pages need their first featured
-image, and two existing research illustrations have replacement briefs to
-improve fidelity to the results. All nine briefs are in the page Markdown
-itself, not hidden in comments or metadata. No images were generated here.
+Twenty-one existing assets are preserved. Seven pages need their first
+featured image; twelve pages have replacement briefs for a more focused
+illustration or a faithful research figure. All nineteen briefs are in the
+page Markdown itself, not hidden in comments or metadata. No images were
+generated here.
 
 ## Later Gemini image pass
 
@@ -83,5 +94,6 @@ The local mismatch report and before snapshots are preserved under
 `.agent-reports/bugs/20261016-missing-figure-briefs/`. The author is the proposed
 reviewer for visual direction; no external reviewer has been contacted.
 
-The [batch-04 record](readability-batch-04.md) covers the five later briefs
-and the renewed image-coverage check across all eighteen pages.
+The [batch-04 record](readability-batch-04.md) covers the next five briefs and
+its eighteen-page coverage check. The [batch-05 record](readability-batch-05.md)
+covers ten further replacement briefs and the twenty-eight-page check.

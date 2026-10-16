@@ -1,9 +1,11 @@
 ---
 title: Journal Article Transcription
 date: 2026-09-01
+lastmod: 2026-10-16
+summary: "Make article contents searchable with page references, while retaining a route back to figures, equations, and the original PDF."
 type: ai-research-assistant-project
 image:
-  caption: 'Journal article transcription pipeline architecture with renderer checks and tiered routing'
+  caption: "Article text becomes searchable while page references lead back to the PDF."
 links:
   - type: site
     icon: brands/github
@@ -31,14 +33,18 @@ params:
     members: []
 ---
 
-A PDF pipeline for academic journal articles that turned out to need almost no new code at all, reusing the **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**'s tiered cost-routing wholesale — paired with **[Research Notes Conversion](/projects/ai-research-assistant/research_notes_conversion/)** as one of the two source corpora feeding **AI Research Assistant**.
+Finding a paper is only the start; later I need to locate the argument, method, or result inside it. Journal Article Transcription converts available article PDFs into searchable text with references back to their pages. A paper's contents can then appear beside my research notes in a search result.
 
 <!--more-->
 
-Journal articles turned out to be the easy half: `transcribe_notes.py`'s existing tiered pipeline — free local extraction where the text layer is clean, hybrid repair, full vision transcription as the fallback — already did exactly what a short academic PDF needs, so the new converter just calls its `process_pdf()` unchanged, pointed at a different, recursively-walked folder (journal articles live under thematic subfolders that may nest further, unlike academic-hub's flat per-category PDF folders) with its own `journal_article` document type.
+The converter reuses the same machinery as the [Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/). Clean digital text can be extracted locally; harder pages need transcription from their images. The current default prepares task cards for an agent working through my subscription, then validates submitted work before writing and indexing it. Search summaries and embeddings still use API calls, even on that transcription route.
 
-One real, generalizable gap surfaced immediately: two of the first three real papers came from academic-publisher renderers (Apache FOP, XEP) the pagination-reliability check had never seen, routing genuinely clean PDFs to expensive page-by-page transcription for no reason — a two-line fix that benefits the notes pipeline too, not just this corpus. A user correction shaped the other real design decision here: the corpus had briefly held a 402-page monograph alongside genuine ~20-page papers, so anything over a page-count threshold is now flagged and skipped outright, never auto-escalated to the GPU/Marker pipeline — that stays reserved for files a human deliberately moves into Academic Hub's own folder, since it's the most expensive step in the whole project.
+[[Insert Image: Show a generic article page beside its converted text, with one paragraph highlighted and a matching "Page 4" locator. Keep an equation and a figure visible on the source side to show why returning to the PDF matters. Use invented article content, not private papers or a fabricated screenshot. Suggested caption: "Search the text, then return to the original page to check it." Suggested alt text: "A source PDF page and converted text share a page reference, with a figure left visible for comparison." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-Not every finding closed cleanly. `page_looks_defective()`'s heuristics, tuned against LaTeX-typeset math lecture notes, flag a real, substantial fraction of pages in every one of the four real papers tested (32–43%) — enough to push all of them into whole-document Gemini batching instead of the cheaper hybrid-repair tier. Likely candidates are citation, footnote, and DOI conventions this checker has never seen. Left as-is: whole-document batching is still correct and still cheap (~$0.02/paper at measured per-page rates), and retuning defect detection for academic-paper prose specifically is a separable question from getting journal articles into the corpus at all. Similarly untouched: no live transcription-quality comparison against a dedicated OCR provider (Mathpix, Mistral) has ever been run, so the conclusion that Gemini is cheaper here is pricing-based only, not empirical accuracy.
+A separate metered-API route remains available. Pending agent work stays pending unless API fallback is explicitly requested; it is not silently sent for paid transcription. Very long documents are flagged for a person's decision rather than automatically sent to the more expensive textbook converter.
 
-Run for real: three distinct papers converted and indexed (a fourth turned out to be a byte-identical duplicate under a different filename, correctly deduplicated by the indexer's own content-hash identity, not a new bug), and a live query for "large language models applications" correctly surfaced both real papers on that topic — federated in the same result set as the essay corpus, no separate query needed. Part of the same **[Source Indexer](/projects/academic-hub/source_indexer/)** / **[RAG Analysis](/projects/academic-hub/rag_analysis/)** ecosystem this builds directly on top of, and reusing **[Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/)**'s own conversion machinery wholesale rather than duplicating it.
+The older September 2026 trial converted and indexed three distinct papers. A fourth file was an exact duplicate, and a topic query found the relevant papers alongside the essay collection. Those results establish the earlier conversion-and-search path; they are not a new live trial of the subscription task-card workflow.
+
+Page references make checking easier, but converted prose cannot preserve everything a figure communicates. Equations, chart labels, and extraction errors still deserve comparison with the PDF. A historical price comparison with other transcription services was not a measured comparison of accuracy.
+
+The [current README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/pipelines/convert_journal_articles/README.md) describes the task-card and API routes. [Research Notes Conversion](/projects/ai-research-assistant/research_notes_conversion/) brings Word documents into the same search tools.

@@ -1,6 +1,8 @@
 ---
 title: Problem Corpus Extraction
 date: 2026-09-06
+lastmod: 2026-10-16
+summary: "Collect scattered exercises while preserving the difference between a question, a student attempt, and a checked answer."
 type: academic-hub-project
 links:
   - type: site
@@ -12,7 +14,7 @@ links:
     label: 'Status: Problem Corpus Extraction'
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_corpus/2026-09-06-problem-corpus-extraction-status.md
 image:
-  caption: 'Problem Corpus Extraction pipeline from regex boundary detection to parallel Gemini Flash-Lite parsing and content-hash serialization'
+  caption: "Extracted questions retain their source and the status of any accompanying solution."
 tags:
   - Python
   - LLM / RAG
@@ -31,25 +33,24 @@ params:
     members: []
 ---
 
-Extracts a structured, persistent bank of practice problems — topic tag, problem statement, verbatim solution text if present, course, and honest provenance metadata — from course problem sets, textbooks, and recitation slides, providing the foundational dataset for practice problem generation.
+A useful practice collection needs more than a list of questions: it needs to say where each question came from and what kind of answer accompanies it. Problem Corpus Extraction gathers exercises from course materials and preserves that distinction. A student's handwritten attempt stays labelled as an attempt.
 
 <!--more-->
 
-The **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)** needs real examples of course problems to anchor both difficulty and style, but course material doesn't arrive as a pre-packaged question bank. Practice problems sit embedded inside multi-page PDF problem sets, converted textbooks, and recitation slides, mixed together with headers, formatting debris, and unverified student notes. `problem_corpus` is the offline extraction tool that walks an indexed course corpus and turns those raw documents into a structured, persistent JSON bank (`<root>/.problem_corpus/<course>.json`).
+That choice came from inspecting the available materials. Some exercises had no answer; others had the student's working beside them, with no basis for calling it an answer key. The stored records therefore mark accompanying text as a student attempt or leave the solution absent. The extractor does not turn an unverified derivation into a verified one.
 
-A core design decision here was being honest about provenance. Inspecting the actual converted materials surfaced a crucial reality check: there is no authoritative "answer key" tier in the corpus. Converted textbook exercises have no solutions in the body text, and course problem sets either contain no answers at all or carry the student's own handwritten attempts under an explicit `### Handwritten Solutions:` heading — unverified, possibly flawed work. Rather than pretending these attempts are answer keys or having an LLM hallucinate "verified" labels, every extracted record explicitly tags `solution_provenance` as either `"student_attempt"` or `null`. Downstream agents can choose how to use or verify that text, but the data store never claims certainty it doesn't possess.
+[[Insert Image: Create a readable question card using an invented elementary exercise. Include large fields "Question", "Source", and "Student attempt—unchecked", with an empty "Answer key" field rather than implying an authoritative solution exists. Show several source documents feeding the collection. Suggested caption: "Keep the question's source and the status of its solution visible." Suggested alt text: "A practice-question card identifies its source and clearly labels accompanying work as an unchecked student attempt." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
-The extraction pipeline is split into clean, isolated stages:
-- **Boundary Detection (`boundaries.py`)**: A pure, zero-I/O pass that scans text for numbered problem patterns (e.g. `Problem 1.2`, `Exercise 3`, `Question 4(a)`). It reuses the battle-tested problem-boundary regex logic from `core/indexer/chunk_index.py`, isolating candidate problem spans without touching the network.
-- **LLM Extraction (`llm_extract.py`)**: Hands each detected span to `gemini-3.1-flash-lite` to extract the clean problem statement, isolate any accompanying solution verbatim, and assign a concise 2–3 word topic tag (e.g., "spectral theorem", "constrained optimization").
-- **Incremental Persistence (`store.py` & `extractor.py`)**: Mirrors the indexer's `.index/chunks/<course>.json` shard convention. An MD5/SHA content hash keyed to each source file means a rerun only processes files that actually changed, making incremental updates practically instantaneous and free. Failure isolation operates at both file level (an unreadable file won't abort the batch) and span level (a single failed extraction doesn't discard other valid problems in that file).
+A **clearly illustrative card**, rather than an excerpt from private coursework:
 
-Running the pipeline for real against `math-camp` validated both its extraction yield and its network resilience:
-```powershell
-python -m agent.problem_corpus.extractor --root ../academic-hub extract --course math-camp
-```
-All 8 `problem_sets` files extracted cleanly, extracting **196 genuine practice problems**. The 4 `recitation_slides` files were evaluated and correctly skipped because they lacked numbered-problem boundaries. 
+> **Question:** Show that the sum of two even integers is even.
+>
+> **Source:** Example worksheet, Question 2.
+>
+> **Accompanying work:** Student attempt, not checked.
 
-The run also provided a valuable lesson in API concurrency: firing 196 extraction requests in a tight loop hit Gemini's free-tier rate limits hard (`429 RESOURCE_EXHAUSTED` on the 15 requests/minute threshold) — a pattern earlier single-query agent spikes never encountered. The retry handler in `common.gemini_utils` proved its value by parsing the API's own suggested `retryDelay` response (waiting up to ~60 seconds when requested) rather than relying on a naive blind backoff timer. Every single call eventually succeeded, achieving **196/196 problem extractions with 0 span-level failures**, finishing in several minutes for less than a cent in total compute.
+The tool first detects numbered question boundaries, then asks a model to separate each statement from any accompanying solution and assign a short topic label. It stores the results by course and skips unchanged files on later runs. A failed extraction can be recorded without discarding other successful questions.
 
-Part of **Academic Hub**, bridging raw course materials indexed by **[Source Indexer](/projects/academic-hub/source_indexer/)** into the practice problem retrieval pools consumed by the **[Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/)**.
+A September 2026 math-camp run produced 196 records from eight problem-set files, with no reported extraction failures. Four slide files had no recognized numbered-question boundaries and were skipped. That is evidence of the run's output, not an accuracy audit of all 196 statements or solutions.
+
+The current tool stops at creating the stored collection. Connecting it to [Problem Generation](/projects/academic-hub/problem_generation/) remains separate work; that generator currently retrieves its own examples. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/problem_corpus/README.md) explains the output and provenance rules.
