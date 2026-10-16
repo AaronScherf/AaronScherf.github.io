@@ -1,7 +1,8 @@
 ---
 title: "An AI Tutor That Gives Hints and Checks Your Reasoning"
-summary: "A course-aware study tutor can offer a useful next step, independently check an answer, and explain where a student's reasoning diverges."
+summary: "A study tool that suggests a next step, compares solutions, and helps me examine the reasoning in my own attempts."
 date: 2026-09-29
+lastmod: 2026-10-15
 authors:
   - me
 tags:
@@ -17,10 +18,10 @@ An AI assistant can produce a complete solution quickly. That is not always what
 
 I built the [Tutor Diagnosis and Hint Generator](/projects/academic-hub/tutor_diagnosis/) to support that kind of study. It uses course materials to suggest a direction, can work through a problem independently as a second check, and can compare a student's submitted reasoning with a reference explanation.
 
-The hint feature aims to point toward a relevant idea or technique without giving away the conclusion. In a live test, it suggested looking for a counterexample by examining a broken chain of preferences. That gave a productive next step without saying whether the claim was true.
+The hint feature aims to point toward a useful idea without giving away the conclusion. For a claim that is meant to hold in every case, an illustrative hint could be: "Try the simplest case you can think of. Which assumption does your argument use?" That gives me something to test while leaving the reasoning to me.
 
-The answer check takes a separate pass at the problem without seeing the tutor's earlier response. Seeing both side by side can reveal a missed assumption or a difference in reasoning. The student remains responsible for deciding what is sound; the system does not automatically settle disagreements.
+The answer check takes a separate pass at the problem without seeing the tutor's earlier response. Comparing the two can reveal a missed assumption or a difference in reasoning. I still have to examine both arguments; agreement between them does not settle whether they are right.
 
-When a student shares their work, the tutor can explain how it compares with a reference answer. The goal is constructive feedback: identify the step where the reasoning diverges, explain why it matters, and help the student see how to close the gap. Course notes can guide the feedback toward the definitions and methods used in class. If those materials do not cover a point, the tutor should say so rather than present a general answer as course-supported.
+When I share an attempt, the tool can compare it with a reference answer and point to a step that needs more work. Course notes help it use the definitions and methods taught in class. If those materials do not cover a point, the tutor should make that gap clear.
 
-These features are study aids, not proof that an answer is correct or a replacement for an instructor. The tutor can still make mistakes, and its feedback needs to be checked. The project page describes the current tests, limits, and ongoing work in more detail.
+The feedback can still miss errors, so I use it as another way to examine my work. The [project page](/projects/academic-hub/tutor_diagnosis/) describes the recorded tests, limits, and ongoing development.

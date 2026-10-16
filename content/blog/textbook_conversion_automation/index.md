@@ -1,7 +1,8 @@
 ---
 title: Making Textbook Conversion Easier to Run in Batches
-summary: "Improvements that reduce interruptions during book conversion, catch duplicate material, and recover from some memory failures."
+summary: "Reusing a textbook across courses and recovering from memory failures make conversion batches easier to supervise."
 date: 2026-09-22
+lastmod: 2026-10-15
 authors:
   - me
 tags:
@@ -15,8 +16,8 @@ Converting a set of textbooks used to require someone nearby to answer repeated 
 
 <!--more-->
 
-The pipeline can now reuse books that appear to be duplicates and leave uncertain matches for later review. This avoids spending time and computing resources converting the same material again, while keeping a person in the loop when the match is unclear.
+The same textbook PDF might appear in the reading folders for two courses. If it has already been converted for one, the tool can reuse that output for the other instead of paying to convert it again. Very close title-and-author matches can also be reused and logged for later confirmation; less certain matches need a decision before they are reused.
 
-It also has a recovery plan for suspected memory failures: retry on the current machine, try a larger one if the failure repeats, and ask for help if that still fails. The failure type is checked before taking those steps, and the recovery state is saved so a restart does not lose track of what has already been tried.
+The recovery procedure first checks whether a failed conversion ran out of memory. If that is the cause, the next steps are to reset and retry on the current machine, then try a larger one if the failure repeats. If that also fails, it calls for help. The run record preserves what has already been tried.
 
-These are implemented safeguards supported by automated tests; they do not mean every large batch has been proven trouble-free in practice. The project page describes the test cases, cost checks, and remaining work under **Testing and Ongoing Development**.
+The person or coding agent running the conversion follows that procedure. Automated tests cover the supporting code, while reliability across large batches still needs observation. The [project page](/projects/academic-hub/marker_conversion/) describes what has been tested, the cost checks, and the remaining work.
