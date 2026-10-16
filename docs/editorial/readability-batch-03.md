@@ -6,6 +6,14 @@ material within the opening paragraph or two wherever possible. Further
 recovery of detail can be considered in a later pass. Publication remains
 separate from editorial approval.
 
+**Visual follow-up:** the author clarified that every page needs a featured
+image, with `Insert Image` descriptions prepared during prose editing where
+an asset is missing. Four pages in this batch lacked both. Their briefs are
+now in the page Markdown; the [visual handoff](readability-visual-handoff.md)
+records all thirteen pages. The earlier "no broken images" check did not
+establish image coverage. Generating the four assets is still pending and
+must precede publication.
+
 ## Scope and acceptance
 
 Work continues in the owned website worktree on `codex/readability-batch-01`,

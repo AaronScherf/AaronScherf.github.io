@@ -67,6 +67,8 @@ The Study Guide Pipeline builds a guide from selected course materials, then let
 
 One early run exposed a useful mismatch: a requested textbook section did not cover the statistical test it was supposed to explain. The stronger expanded guide described what that section actually contained and developed the topic from other relevant material. That was more useful than repeating the requested reference as though it were correct.
 
+[[Insert Image: Create a landscape workflow illustration with a clear human review point: "Choose sources" → "Draft guide" → "Review edits" → "Revised guide". At the review stage, show one proposed change accepted and another rejected; retain the original guide beside the revised copy to show that applying decisions creates a new output. Use generic source cards and invented text rather than private notes, actual review decisions, or a fabricated product screenshot. Keep all four stage labels large and make the review point the main visual focus for thumbnail legibility. Suggested caption: "Choose the materials, then decide which revisions to apply." Suggested alt text: "Selected sources become a draft; a person accepts or rejects proposed edits before a revised copy is created." Save the approved image as featured.jpg or featured.png in this page bundle.]]
+
 ## From materials to a reviewed guide
 
 I start with a topic list, instructions, and rules for choosing sources. The tool assembles a source plan; newly discovered passages normally wait for review before drafting. The draft records which passages were supplied for each topic, and an optional [enhancement pass](/projects/academic-hub/summary_enhancement/) can develop explanations and worked examples further.

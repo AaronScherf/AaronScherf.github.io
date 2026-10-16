@@ -31,6 +31,15 @@ the original readability guide for subsequent batches.
   balance; a later pass may recover additional useful detail. See
   [batch 03](readability-batch-03.md) for the opening checks and next five
   project pages.
+- Every page needs at least one image suitable for its listing thumbnail.
+  Preserve a suitable existing featured image; otherwise add a visible
+  `[[Insert Image: Description]]` block during the prose pass for later Gemini
+  generation. Each brief should explain the image's purpose and composition,
+  include suggested caption and alt text, and identify the eventual
+  `featured.jpg` or `featured.png` page-bundle asset. A text placeholder does
+  not create a thumbnail. Replace it with the approved image before publishing.
+  This author requirement supersedes the original guide's optional-visual
+  rule. See the [visual handoff](readability-visual-handoff.md).
 - Retain the author's corrections: SVGs are produced automatically on save;
   transcription makes them searchable; editable plugin code and interface
   styles are a practical advantage on the author's tablet.
