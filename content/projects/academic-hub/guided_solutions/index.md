@@ -1,6 +1,8 @@
 ---
 title: Guided Solutions
+summary: "Keeping my own reasoning, AI-written derivations, and proofs developed through tutoring together with clear authorship."
 date: 2026-10-11
+lastmod: 2026-10-16
 draft: false
 type: academic-hub-project
 links:
@@ -25,10 +27,20 @@ params:
     members: []
 ---
 
-Guided Solutions is a human-directed workflow for turning a problem set, course sources, and tutoring work into a structured solutions document. It is an operational procedure, not a standalone executable package.
+Guided Solutions brings three contributions to a problem set together: an AI-written derivation, space for my own intuition, and a proof developed through tutoring. Each has its own labelled block, so I can compare approaches and see whose reasoning I am reading.
 
 <!--more-->
 
-The documented run used transcribed lecture material and the retrieval index to support formal, source-grounded proofs. Separate blocks distinguish agent-written derivations, the student's own intuition, and later tutor-session solutions. A hints document supplies a question-by-question structure, and a quality audit checks the resulting work. Keeping these roles explicit makes the document useful for comparison and later review without presenting agent output as the learner's work.
+The separation matters when the routes differ. In the recorded microeconomics run, the agent supplied detailed reference proofs; later tutoring on two questions produced more compact proofs following the student's approach. Both were kept, with room for the student's interpretation alongside them.
 
-The [run audit and workflow](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_sets/2026-10-06-guided-solutions-proof-pipeline-status.md) describes a completed microeconomics problem-set run and a subsequent tutoring integration. It is evidence for that run and a replicable playbook, not evidence that a general automated solutions pipeline or dedicated test suite has shipped. The underlying course documents stay in the private notes vault.
+An **illustrative layout**, rather than an excerpt from the private coursework, looks like this:
+
+> **My reasoning:** I think adding another option changes the chance of choosing the default, but I need to identify why.
+>
+> **Agent derivation:** Work through the choice probabilities under the question's stated rule, showing the intermediate steps.
+>
+> **After tutoring:** Record the proof developed during the discussion and compare its key step with the reference derivation.
+
+To prepare a document, I use the assignment and a question-by-question hints sheet to organize the work. Searchable lecture notes and textbooks supply the course's definitions and notation. The agent is instructed to show its algebra and assumptions, while leaving the student's writing intact. A later audit checks the document's structure and mathematical work.
+
+This is a procedure I direct using the existing conversion, search, and tutoring tools. The [run audit and workflow](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_sets/2026-10-06-guided-solutions-proof-pipeline-status.md) records one completed problem-set run and its tutoring follow-up. It provides a playbook for another assignment; each new solution still needs review. The course documents remain private, and the workflow has no dedicated automated test suite.

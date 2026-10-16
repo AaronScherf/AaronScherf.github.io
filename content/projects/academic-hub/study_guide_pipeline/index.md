@@ -1,6 +1,8 @@
 ---
 title: Study Guide Pipeline
+summary: "Build a guide from selected course passages, deepen thin explanations, and review proposed edits before applying them."
 date: 2026-10-11
+lastmod: 2026-10-16
 draft: false
 type: academic-hub-project
 links:
@@ -59,12 +61,24 @@ params:
     members: []
 ---
 
-The Study Guide Pipeline turns a course-specific guide specification and indexed notes or textbooks into a cited draft, with optional enhancement and reviewed revision stages.
+The Study Guide Pipeline builds a guide from selected course materials, then lets me review proposed edits before they change the text. Topics can draw on named textbook sections, particular lecture notes, or newly discovered passages. Keeping that source selection explicit makes it easier to investigate a gap in the finished guide.
 
 <!--more-->
 
-A source plan resolves pinned sections and files alongside bounded discovery. Discovered passages wait for review unless an explicit override is used. Drafting records the passages used in the guide's provenance. An optional enhancement pass expands a guide; `revise` proposes targeted edits and produces a review file without changing the guide. `apply-revise` applies accepted edits to a new output and checks that untouched content and citations remain consistent. Cost caps and resumable stage work help control longer runs.
+One early run exposed a useful mismatch: a requested textbook section did not cover the statistical test it was supposed to explain. The stronger expanded guide described what that section actually contained and developed the topic from other relevant material. That was more useful than repeating the requested reference as though it were correct.
 
-## What the evidence shows
+## From materials to a reviewed guide
 
-The first comparison tested three draft variants and one enhanced variant on an econometrics guide. The draft-only versions were short and too conceptual for the intended study use; the enhanced version had stronger depth and traceability, but still lacked some exam-oriented structure. The [run report](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/2026-10-07-study-guide-comparison-status.md) records those judgments and their limited sample. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/study_guide/README.md) notes that a later microeconomics guide also needed an assignment-level coverage and correctness check; a generated guide should be reviewed before relying on it.
+I start with a topic list, instructions, and rules for choosing sources. The tool assembles a source plan; newly discovered passages normally wait for review before drafting. The draft records which passages were supplied for each topic, and an optional [enhancement pass](/projects/academic-hub/summary_enhancement/) can develop explanations and worked examples further.
+
+Revision is a separate step. It proposes specific changes for relevance, repetition, correctness, and organization. I can accept or reject them individually. Applying the decisions writes a new guide and checks that untouched passages remain unchanged and that no new page citations have appeared. It also refuses to apply an old review if the guide has changed underneath it.
+
+That approach makes a long guide easier to refine without asking the model to regenerate every section. Spending limits can stop a run between sections or review tasks, and saved revision work can be resumed when its inputs are unchanged.
+
+## What changed in practice
+
+In the first econometrics comparison, three draft-only variants were too short and conceptual for the intended study use. The expanded version supplied deeper derivations and examples, though it still lacked some of the exam-focused structure I wanted. Later topic-based drafts improved the worked problems but also wandered into irrelevant software discussion.
+
+A subsequent review of one draft accepted 27 of 30 proposals. Applying the review made 18 text edits; other accepted items included advisory notes. The run reduced repetition, repaired headings, and added cross-references. An accepted warning can still leave a mathematical issue unresolved when it calls for investigation rather than supplying a correction.
+
+A later microeconomics guide made the remaining gap clear: comparison against the assignment found missing material and errors the revision pass had missed. That check led to hand repairs. The [comparison report](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/2026-10-07-study-guide-comparison-status.md) and [microeconomics run](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/2026-10-09-microecon-hw4-guide-status.md) record the observations; the [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/study_guide/README.md) documents the current workflow. A generated guide still needs that final coverage and correctness review before I rely on it.

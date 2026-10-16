@@ -1,6 +1,8 @@
 ---
 title: Summary Enhancement
+summary: "Expand a short summary into explanations and worked examples while keeping track of its original source passages."
 date: 2026-10-11
+lastmod: 2026-10-16
 draft: false
 type: academic-hub-project
 links:
@@ -31,10 +33,16 @@ params:
     members: []
 ---
 
-Summary Enhancement expands an existing RAG-generated summary into a longer, topic-organized study guide using the exact indexed source chunks recorded by that summary.
+A short summary can name a result without giving me enough detail to use it. Summary Enhancement returns to the exact textbook and note passages recorded by an existing AI-generated summary, then develops fuller explanations by topic. It can also add worked examples whose arithmetic is computed by running code.
 
 <!--more-->
 
-The pipeline can plan topics or take an explicit topic list, synthesize sections, and optionally generate worked examples with code execution. It keeps a source map and paragraph-type provenance in the guide's frontmatter while leaving the reading text free of raw retrieval tags. Formatting passes split long paragraphs and move long formulas into display math. Output goes beside the original guide or to another path inside the notes corpus, without replacing the source by default.
+The useful expansion is in the reasoning between the result and its application. For a statistical test, for example, a section can explain its assumptions, derive the formula, and walk through a small numerical calculation. An introductory description of what a test measures can then become something I can work through step by step.
 
-The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/summary_enhance/README.md) documents the current interface and its limits. Validation confirms that cited labels exist; it cannot prove every sentence follows from the cited passage. Worked-example arithmetic and explanatory prose still need human spot checks. The linked status record documents earlier implementation and test work, but its CLI examples and formatting description predate the current README.
+The tool can plan the topics itself or use a list I supply. It reads the summary's saved source references, retrieves those passages, and writes a separate expanded guide, leaving the original intact. Long equations get their own lines and long paragraphs are split to make the result easier to read.
+
+One important distinction is preserved behind the reading text: which paragraphs draw on the sources, which add broader explanation, and which contain generated examples. A source map records the passages used by each section. This keeps the main text readable while giving me a way to inspect where its explanations came from.
+
+Those records support review; they do not establish that every claim follows from its source. The validator checks that source labels exist, and code execution checks the example's arithmetic. A person still needs to inspect the reasoning and interpretation around those calculations.
+
+This tool expands an existing summary. The broader [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) also plans source selection, creates drafts, and proposes revisions. The [Summary Enhancement README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/summary_enhance/README.md) documents the current interface; the linked status record describes earlier implementation and testing.

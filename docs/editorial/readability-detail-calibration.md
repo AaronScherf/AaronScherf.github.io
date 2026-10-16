@@ -1,8 +1,8 @@
 # Readability calibration: accessible explanations with technical substance
 
 Prepared 2026-10-15, following author feedback on website commit `29ad00f`.
-Status: revised text prepared and website validation passed; author review
-and publication remain pending.
+Status: website validation passed; the author accepted the balance at
+`9da4b91` for now. Publication remains pending.
 Work continues on `codex/readability-batch-01` in the same owned website
 worktree. The scope is the eight posts already revised, with no new pages.
 
@@ -26,6 +26,11 @@ the original readability guide for subsequent batches.
   belong on linked project pages or in supporting documentation.
 - Use a detail to explain why the project behaves as it does. More technical
   names alone do not make an explanation more useful.
+- Put something substantive and interesting in the first paragraph or two
+  wherever possible. The author requested this after accepting the initial
+  balance; a later pass may recover additional useful detail. See
+  [batch 03](readability-batch-03.md) for the opening checks and next five
+  project pages.
 - Retain the author's corrections: SVGs are produced automatically on save;
   transcription makes them searchable; editable plugin code and interface
   styles are a practical advantage on the author's tablet.
@@ -87,5 +92,7 @@ no reviewer has been contacted through an external service.
 - Local evidence is under `.agent-reports/readability-detail-calibration/`.
   Source pipelines were not rerun; historical results were checked against
   their supporting records.
-- Author judgment of the balance between accessibility and substance: pending.
+- Author judgment of the balance at `9da4b91`: accepted for now; a future
+  detail pass remains an option. Batch 03's small opening adjustments need
+  their own review.
 - Publication: pending explicit approval; no website-main changes authorized.

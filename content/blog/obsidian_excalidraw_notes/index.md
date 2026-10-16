@@ -2,7 +2,7 @@
 title: "Why I Use Obsidian and Excalidraw for Academic Notes"
 summary: "How automatic drawing exports and editable plugins help me connect handwritten notes with course materials and adapt the app to my tablet."
 date: 2026-09-24
-lastmod: 2026-10-15
+lastmod: 2026-10-16
 authors:
   - me
 tags:
@@ -16,9 +16,9 @@ I take many of my academic notes by hand. Diagrams, equations, and quick annotat
 
 <!--more-->
 
-I use **Obsidian**, a notes app, with **Excalidraw**, a drawing tool that lets me write and sketch inside it. That keeps my handwritten work alongside lecture slides, textbooks, and other course materials. Links between notes help me follow related ideas, while the search tools I'm building help me find relevant passages across the collection.
+I use **Obsidian**, a notes app, with **Excalidraw**, a drawing tool that lets me write and sketch inside it. Saving a note automatically creates an SVG image of the drawing. My Notes Transcription Pipeline reads those images and turns the handwriting into text that can be searched alongside my other course materials.
 
-OneNote and GoodNotes made writing feel natural, but their file-type limits got in the way of my processing workflow. In my Excalidraw setup, saving a note automatically creates an SVG image of the drawing. The Notes Transcription Pipeline reads those images and turns the handwriting into text that can be searched alongside my other course materials.
+OneNote and GoodNotes made writing feel natural, but their file-type limits got in the way of my processing workflow. This setup keeps my handwritten work alongside lecture slides, textbooks, and other course materials, with links between related notes.
 
 Customization was another major reason to choose this setup. I can edit the source code for Obsidian plugins, which let me add an eraser button and translate a pen-tool menu. When the tablet's gesture bar covered the zoom and undo controls, I changed the interface styles to move them within reach. Being able to fix those details myself was an advantage over my experience with OneNote.
 
