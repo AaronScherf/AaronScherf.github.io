@@ -1,6 +1,8 @@
 ---
 title: Novel Omnibus Normality Test
+summary: "Detect patterns in how data depart from a bell-shaped distribution, and compare the proposed test with Shapiro–Wilk in small-sample simulations."
 date: 2026-08-22
+lastmod: 2026-10-16
 links:
   - type: site
     icon: brands/github
@@ -9,19 +11,38 @@ links:
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test/main/MATH_Final_Thesis.pdf
 image:
-  caption: 'Simulated statistical power curves of the PGLS omnibus test against Shapiro-Wilk across t-, chi-square, gamma, and GPD L-skew distributions'
+  caption: 'Illustration of the power comparisons; the thesis contains the original simulation figures and conditions.'
 tags:
   - Statistics
   - R
   - Mathematics
 ---
 
-My master's thesis in mathematics at Indiana State University, advised by Dr. Mark Inlow: the construction of a new omnibus normality test built on a penalized generalized least squares model, with its statistical power compared against the field-standard Shapiro-Wilk test.
+My mathematics thesis explored a way to test whether data depart from a bell-shaped, or normal, distribution. It transforms an ordered sample into a pattern of departures from what normal data would produce, then looks for structure beyond random fluctuation. The aim was to detect different kinds of departure through one flexible test.
 
 <!--more-->
 
-The Shapiro-Wilk test is the default choice for normality testing in most applied statistics, but it is only approximately omnibus — its power depends on assumptions about a sample's skew and kurtosis, and it struggles most on distributions that are nearly normal with a small amount of skew or kurtosis introduced. This thesis develops an alternative: an empirical process that standardizes and orders a sample, applies the probability integral transform, and subtracts the expected value of each order statistic to produce a zero-mean vector. Samples drawn from a normal distribution fluctuate randomly around zero under this transform, while non-normal samples show systematic, distribution-specific departures — the signal the new test is built to detect.
+In the small-sample simulations, the method performed similarly to the established Shapiro–Wilk test for two families of distributions, but fell behind for two others. The result was a proof of concept with room to investigate the construction further. It did not establish a generally stronger normality test.
 
-To turn that signal into a hypothesis test, the thesis models the departures with a penalized generalized least squares (PGLS) regression, using a penalty term motivated by smoothing splines to separate systematic departure from noise. The design matrix is built from the eigenvectors of the sample's covariance matrix, chosen because they point in the directions of maximal deviation from zero and are most informative precisely for near-normal samples where Shapiro-Wilk is weakest. A test statistic is then derived from the resulting PGLS coefficients.
+[[Insert Image: Replace the current illustrative four-panel montage with a readable crop of the thesis's actual power-comparison figures, or a chart recreated from its published simulation outputs using standard plotting tools. Prefer one panel where the methods are close and one where they differ, with large labels identifying the proposed PGLS test and Shapiro–Wilk. Preserve the original axes and values; do not generate synthetic scientific curves. Keep the existing featured asset until the replacement is approved. Suggested caption: "Similar performance in some tested distributions, lower detection rates in others: samples of 20 observations and 10,000 simulations per tested setting." Suggested alt text: "Two original simulation panels compare the proposed normality test with Shapiro–Wilk, showing that their relative performance depends on the tested distribution." Save the approved figure as featured.jpg or featured.png in this page bundle and remove this brief.]]
 
-Simulated power tests (10,000 iterations, n = 20) compared the PGLS test against Shapiro-Wilk across the t-, chi-square, gamma, and generalized Pareto distributions. PGLS matched Shapiro-Wilk closely for the t-distribution and generalized Pareto distribution, including in the near-normal skew/kurtosis regime where Shapiro-Wilk's power drops off sharply, while trailing it for the chi-square and gamma distributions. The results serve as a proof of concept rather than a finished, optimized test, with the choice of penalty weight, penalty matrix, design matrix, and test statistic all identified as open directions for future work. Full derivations, R implementation, and simulation results are in the linked thesis and repository.
+## Turning a sample into a pattern
+
+An ordered sample contains information about where it departs from the expected shape. After the transformation, normal samples fluctuate around zero. Other distributions can produce a systematic bend or a different pattern of departures. Keeping their direction as well as their size is the useful part of the approach.
+
+I fitted those departures with a penalized generalized least squares model, or PGLS. The penalty discourages the model from simply tracing every noisy point, much as smoothing a jagged line can reveal its broader shape. The model also accounts for how the transformed observations vary together. Its fitted coefficients supply a measure of departure, and simulations of normal samples establish a rejection threshold.
+
+## What the simulations showed
+
+The comparison used samples of 20 observations and 10,000 simulations per tested setting. **Power** is the proportion of non-normal samples a test correctly identifies under those conditions.
+
+| Simulated distribution | Proposed test compared with Shapiro–Wilk |
+| --- | --- |
+| t-distribution | Similar, generally slightly lower power |
+| Generalized Pareto | Similar patterns across the tested shape settings |
+| Gamma | Lower power, by about 10–20 percentage points in the reported comparisons |
+| Chi-square | A larger gap, favoring Shapiro–Wilk over most tested settings |
+
+As distributions became harder to distinguish from normal, detection became difficult for both methods. The [thesis results and conclusion](https://raw.githubusercontent.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test/main/MATH_Final_Thesis.pdf#page=14) describe these conditions and the remaining choices: how strongly to smooth, which patterns to fit, and how to construct the final statistic.
+
+This was my master's thesis at Indiana State University, advised by Dr. Mark Inlow. The [repository](https://github.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test) includes the report and R implementation.

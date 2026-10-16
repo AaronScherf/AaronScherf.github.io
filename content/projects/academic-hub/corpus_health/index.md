@@ -1,6 +1,8 @@
 ---
 title: Corpus Health
+summary: "Find gaps between source documents, converted notes, and search records, then review specific repairs before running them."
 date: 2026-10-11
+lastmod: 2026-10-16
 draft: false
 type: academic-hub-project
 links:
@@ -46,10 +48,18 @@ params:
     members: []
 ---
 
-Corpus Health scans a configured academic corpus for missing outputs, Markdown policy gaps, index inconsistencies, and repository-state issues. Its report separates discovery from a person's decision to act.
+Having a converted lecture note on disk does not mean its latest text is available in search. Corpus Health checks for gaps between source documents, converted text, and the search catalog, then presents specific findings for review. It remembers declined or deferred findings so the same unchanged item does not keep appearing as a new problem.
 
 <!--more-->
 
-The scanner reads explicit roots and policies and makes no model call or corpus edit. A local ledger keeps recurring findings and review decisions stable across runs. A short-lived local review page records accept, decline, or defer decisions. Review itself performs no repair. `apply --accepted` rechecks the target and records a result for each accepted finding. The only enabled repair adapter is an exact-card passage-chunk operation under a cooperative writer lock, followed by an index audit; it may incur embedding API cost. Other repairs remain blocked.
+The repair scope is deliberately small: it can rebuild searchable passages for one identified document whose search record is already current. Before acting, it checks that the document and record still match the reviewed finding. Afterward, it audits the result. A changed source needs another check rather than relying on an old approval.
 
-Fixture tests cover scanner, review, lock, and apply behavior. Initial live read-only scans completed in about 21–28 seconds with no scan errors, but their roughly 305 findings were not all individually classified. A discovery-only daily scheduler trial was installed for October 10–16; its multi-day observation and finding sample review were still open in the [trial handoff](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/academic_hub/2026-10-09-corpus-health-implementation-retrospective.md). The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/tools/corpus_health/README.md) details scope and writer coverage.
+[[Insert Image: Create a landscape explanatory diagram following one document from "Gap found" to "Owner review", "Repair one document", and "Check result". Show the source document beside its search passages, with a missing passage restored only after review. A separate small branch should say "Changed source: review again". Use generic documents rather than private notes or a fabricated report. Keep the four main labels large enough for a thumbnail. Suggested caption: "Discover a gap, choose a repair, and check the result." Suggested alt text: "A missing search passage is reported for review, repaired for one document, and checked afterward; a changed source returns for review." Save the approved image as featured.jpg or featured.png in this page bundle.]]
+
+For an **illustrative case**, a transcript may have been updated while its searchable passages still reflect the earlier version. The scan flags the mismatch. I can accept, decline, or defer it on a local review page; running accepted repairs is a separate step. Rebuilding those passages can incur an AI embedding charge, so acceptance is recorded for each source.
+
+The scanner itself makes no model calls or edits to course materials. Repair uses a shared lock to coordinate with participating tools, but some writers, including Obsidian sync, do not follow that protocol. They must not write to the same destination during a repair. Transcription, textbook conversion, and broader catalog rebuilds remain outside the enabled repair action.
+
+Initial live scans on October 9, 2026 took about 21–28 seconds, but their roughly 305 findings still needed sample review to distinguish genuine gaps from classification mistakes. A daily discovery-only trial was scheduled for October 10–16. An October 16 read-only check found completed reports for several days alongside empty logs for others; the observation period still needs review before claiming reliable daily operation. The scheduled task performs no repairs.
+
+The [implementation and trial record](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/academic_hub/2026-10-09-corpus-health-implementation-retrospective.md) separates fixture tests from live observations. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/tools/corpus_health/README.md) documents the scan policies and current repair boundary.

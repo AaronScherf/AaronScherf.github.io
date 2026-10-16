@@ -1,6 +1,8 @@
 ---
 title: Socratic Tutor
+summary: "Track the reasoning a student has established and check the tutor's next reply against it—with a clear limit when new material needs explaining."
 date: 2026-10-11
+lastmod: 2026-10-16
 draft: false
 type: academic-hub-project
 links:
@@ -31,14 +33,26 @@ params:
     members: []
 ---
 
-The Socratic Tutor is a local session gate for AI-assisted office hours. It tracks what a learner has established, checks the agent's next reply against tutoring rules, and records the session and learner profile.
+The Socratic Tutor gives an AI study conversation a record of which steps the student has established. Before the tutor sends a reply, a local program checks it against that record and rules intended to hold back unreached solution steps. The conversation can then be reviewed against what the student actually said.
 
 <!--more-->
 
-The agent conducts the conversation, while the Python CLI maintains an append-only event log and a state machine. Preparation produces a reviewed problem packet with claims, a glossary, rubric, and sealed solution steps. During a session, `turn` records the learner's message and returns a brief; `say` checks a draft response before it is sent. The solution steps are released for a quoted step check only when verification is available. Pause, skip, defer, revisit, and audit commands cover interrupted and incomplete work.
+That restraint also exposed the central difficulty. In two recorded sessions on one microeconomics problem set, the tutor followed several session rules but struggled to teach unfamiliar material: an explanation could itself reveal a step the student had not reached. The system was better at assessing existing understanding than helping a learner build it.
 
-## What the evidence shows
+[[Insert Image: Create a landscape illustration of a tutoring turn with three large elements: "Student's reasoning", "Reply check", and "Tutor's next question". Show a small record of established steps feeding the check, with one unreached solution step held back. Include a modest label "Current limit: explaining new material" so the picture does not imply that the teaching limitation is solved. Use invented generic notes and no private coursework or fabricated chat screenshot. Suggested caption: "Check the next reply against what the student has established." Suggested alt text: "A student's reasoning updates a record of established steps, which is used to check the tutor's next question before sending it." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
-Automated tests cover the session rules and CLI. Two live sessions on one problem set exercised the skip, defer, pause, and definition-relay paths. They also exposed a teaching limitation: strict claim checking kept the tutor from explaining material the learner had not yet established, making it better at assessment than instruction in those runs. Some claim recognizers fired on unrelated phrases, and ratings could credit weak evidence. A more permissive teaching mode and wider live validation are still design questions, not shipped outcomes.
+An **illustrative version of that failure pattern** is:
 
-The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/tutor/README.md) describes the commands and known limits; the status record above details the live observations.
+> **Student:** I don't understand why this condition matters.
+>
+> **Tutor:** Which part of the condition could you use?
+
+Another question preserves the student's chance to solve the problem, but it may provide little help with the missing concept. A more permissive teaching mode is still a design direction, not an observed solution to this problem.
+
+## What the program keeps track of
+
+An AI agent conducts the dialogue; the Python program maintains the session record and checks proposed replies locally, without asking another model to judge every turn. Preparation defines the problem's key claims, reference steps, glossary, and review criteria. During the conversation, word-pattern checks look for evidence that the student has established a claim or encountered a known pitfall.
+
+When enough progress has been recorded, the reference steps are released for a comparison using quotations from the student's messages. Pausing saves the transcript, summary, and learner record. Skip and defer rules allow incomplete parts to be parked, though the live runs found that returning to a parked question was too rigid.
+
+The checks have limits: unfamiliar wording can be missed, unrelated phrases can trigger a match, and an agent can credit weak evidence. They provide an inspectable record rather than a guarantee against revealing an answer or misjudging understanding. Automated tests exercise the session rules; the [live-run findings](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/tutor/2026-10-08-socratic-tutor-status.md) explain what happened in the two sessions. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/tutor/README.md) documents the current workflow.
