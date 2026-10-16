@@ -1,6 +1,7 @@
 # Readability revisions: batch 01
 
-Prepared 2026-10-15. Status: revised text awaiting author review; publication
+Prepared 2026-10-15. Status: author reviewed the first batch and requested two
+Excalidraw corrections, now applied and awaiting confirmation. Publication
 has not been requested. This batch covers entries 36–38 in the revised guide.
 Its scope is three light blog edits, as requested, rather than the larger
 project-page rewrites at the top of the queue.
@@ -22,9 +23,9 @@ project-page rewrites at the top of the queue.
 
 | Guide entry | Page | Changes | Author review |
 | --- | --- | --- | --- |
-| 36 | [Why I Use Obsidian and Excalidraw for Academic Notes](../../content/blog/obsidian_excalidraw_notes/index.md) | Define the apps; show how a handwritten lecture note and a later version with slides connect; simplify sync language; date the later matching feature; retain export and maintenance tradeoffs | Pending |
-| 37 | [Finding Academic Papers for a Research Library](../../content/blog/academic_journal_discovery/index.md) | Simplify catalog, scoring, and access language; preserve the early 3-of-19 result; add a dated disaster-recovery search example distinguishing relevant candidates from downloaded papers; clarify that conversion/search are separate steps | Pending |
-| 38 | [Tidying Up Academic Hub's Plumbing](../../content/blog/academic_hub_infrastructure_cleanup/index.md) | Show why removing PDFs from the current folder alone did not remove their saved history; distinguish history cleanup from source-file relocation; explain tool grouping plainly; add a direct overview link | Pending |
+| 36 | [Why I Use Obsidian and Excalidraw for Academic Notes](../../content/blog/obsidian_excalidraw_notes/index.md) | Define the apps; show handwriting-plus-slides matching; clarify automatic export on save and subsequent transcription; explain plugin-code customization and the device-control fix | First review complete; corrected wording awaiting confirmation |
+| 37 | [Finding Academic Papers for a Research Library](../../content/blog/academic_journal_discovery/index.md) | Simplify catalog, scoring, and access language; preserve the early 3-of-19 result; add a dated disaster-recovery search example distinguishing relevant candidates from downloaded papers; clarify that conversion/search are separate steps | Reviewed; no changes requested |
+| 38 | [Tidying Up Academic Hub's Plumbing](../../content/blog/academic_hub_infrastructure_cleanup/index.md) | Show why removing PDFs from the current folder alone did not remove their saved history; distinguish history cleanup from source-file relocation; explain tool grouping plainly; add a direct overview link | Reviewed; no changes requested |
 
 ## Evidence followed
 
@@ -38,7 +39,7 @@ plan are linked from its current status prose, beyond the older registry list.
 - **Handwriting and slides:** the Source Indexer README's `related.py`
   description and the Obsidian Sync project page describe keeping both
   original notes and collapsing matched search results. The transcription
-  README establishes the SVG/PNG export step and separate raw/expanded text.
+  README establishes automatic SVG/PNG exports and separate raw/expanded text.
   See the [indexer README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/core/indexer/README.md),
   [transcription README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/pipelines/transcribe_notes/README.md),
   and [subset-note linking design](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/superpowers/specs/indexer/2026-10-03-subset-note-linking-design.md).
@@ -65,10 +66,27 @@ plan are linked from its current status prose, beyond the older registry list.
 
 ## Acceptance and validation
 
+### Author feedback incorporated
+
+The author clarified that SVG images are generated automatically on save;
+export is not a separate manual step. The transcription pipeline is still
+needed to turn the images into searchable text. The earlier wording implied
+manual export and has been corrected in both the body and summary.
+
+The author also asked to emphasize plugin source-code access as an advantage:
+adding an eraser, translating the menu, and adjusting interface styles made
+the app usable on the tablet. These changes are documented in the September
+21/26 records, and the author's comparison with OneNote supplies the personal
+motivation. A local correction record preserves the earlier text under
+`.agent-reports/bugs/20261015-excalidraw-editorial-correction/`.
+
+The first rendering checks below apply to commit `40f087f`. The corrected
+Excalidraw page is included in the subsequent batch-02 build and preview.
+
 | Requirement | Evidence/status |
 | --- | --- |
 | Exactly the three selected posts revised | Prepared; inspect the three content diffs |
-| Plain language and concrete, supported examples | Editorial pass completed; author's voice judgment pending |
+| Plain language and concrete, supported examples | First author review complete; Excalidraw feedback applied; revised wording awaiting confirmation |
 | Historical context and original routes preserved | Original dates retained; later matching and search developments explicitly dated |
 | Frontmatter and summaries reviewed | Required fields preserved; summaries edited; modification date added |
 | No required visuals left unresolved | No images added or placeholders required for these light edits |
@@ -86,6 +104,6 @@ worktree's ignored `.agent-reports/readability-batch-01/` directory. These
 artifacts are local review evidence, not files included in the public site.
 The source pipelines and their historical test results were not rerun.
 
-The guide entries remain incomplete until author review is satisfied. This
-record provides the batch handoff without
-prematurely checking off entries in the source repository's tracker.
+Publication remains pending. The source repository's tracker has not been
+modified; this record distinguishes the first author review from review of
+the corrected Excalidraw text and from publication approval.
