@@ -11,7 +11,7 @@ This is a review inventory, not author approval or publication clearance.
 | --- | --- |
 | Queue coverage | All 38 guide URLs resolve to edited source files; no substantive entry remains undrafted |
 | Original structure | Existing routes and publication states preserved; summaries and captions revised; the long audio-blog title shortened without changing its URL |
-| Technical substance | Each batch records its supported opening detail and source decisions; a full-set review of tone, depth, and repetition is still needed |
+| Technical substance | Each batch records its supported opening detail and source decisions; the holistic editorial review now covers tone, depth, repeated claims, and reader paths |
 | Images | 31 existing featured assets retained; 7 first-image briefs and 22 replacement briefs await the later image pass |
 | Validation | Production build and source/listing checks passed for the final batch; browser results are recorded in batch 06 |
 | Source navigation | Existing code/README/status mappings resolve locally; local body links resolve in the built site |
@@ -66,6 +66,11 @@ progress without changing owner decisions in the source repository.
 | 38 | [Tidying Up Academic Hub's Plumbing](../../content/blog/academic_hub_infrastructure_cleanup/index.md) | existing image retained |
 
 ## Review next
+
+The [holistic portfolio review](readability-holistic-review.md) records the
+full-set assessment and focused follow-up changes, including links between
+source preparation, search, summaries, guides, and concept maps. Author
+review and the visual pass remain open.
 
 Read the site as a connected portfolio: whether each opening explains a
 useful idea, whether technical detail is specific enough, and whether similar

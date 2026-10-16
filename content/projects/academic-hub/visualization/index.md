@@ -45,7 +45,7 @@ The important distinction is how that picture is made. A small library covers fa
 
 ## A plot beside the answer
 
-Visualization is optional within [RAG Analysis](/projects/academic-hub/rag_analysis/). A report can combine the question, answer, source references, and interactive chart in one HTML file. If chart generation fails, the text report can still be produced. A recorded September 6, 2026 trial confirmed a generated practice problem, its solution, and an embedded interactive plot working together; the earlier record of an unconfirmed report-with-plot path is superseded by that trial.
+Visualization is optional within [RAG Analysis](/projects/academic-hub/rag_analysis/). A report can combine the question, answer, source references, and interactive chart in one HTML file. If chart generation fails, the text report can still be produced. A recorded September 6, 2026 trial combined a [generated practice problem](/projects/academic-hub/problem_generation/), its solution, and an embedded interactive plot in the same report.
 
 Generated charts currently use Gemini by default, with API cost. Local Ollama generation is an explicit alternative, but it timed out or produced broken scripts in the recorded comparison. Gemini succeeded twice on the same request. Two successes are useful evidence for that change of default, not a broad chart-accuracy evaluation.
 

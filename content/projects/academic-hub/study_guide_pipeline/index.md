@@ -71,7 +71,9 @@ One early run exposed a useful mismatch: a requested textbook section did not co
 
 ## From materials to a reviewed guide
 
-I start with a topic list, instructions, and rules for choosing sources. The tool assembles a source plan; newly discovered passages normally wait for review before drafting. The draft records which passages were supplied for each topic, and an optional [enhancement pass](/projects/academic-hub/summary_enhancement/) can develop explanations and worked examples further.
+I start with a topic list, instructions, and rules for choosing sources. The [Source Indexer](/projects/academic-hub/source_indexer/) supplies passages from the converted [textbooks](/projects/academic-hub/marker_conversion/) and [course notes](/projects/academic-hub/notes_transcription/). Those passages need to be in the search catalog before guide planning can use them.
+
+The tool assembles a source plan; newly discovered passages normally wait for review before drafting. The draft records which passages were supplied for each topic, and an optional [enhancement pass](/projects/academic-hub/summary_enhancement/) can develop explanations and worked examples further. For tracing relationships between ideas rather than reading a topic in sequence, [Concept Graph](/projects/academic-hub/concept_graph/) uses the same source foundation in a separate drafting workflow.
 
 Revision is a separate step. It proposes specific changes for relevance, repetition, correctness, and organization. I can accept or reject them individually. Applying the decisions writes a new guide and checks that untouched passages remain unchanged and that no new page citations have appeared. It also refuses to apply an old review if the guide has changed underneath it.
 

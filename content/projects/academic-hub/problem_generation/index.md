@@ -53,7 +53,7 @@ Checking the sketch means inspecting both the inequalities and the use of the de
 
 ## Course examples guide the draft
 
-The tool retrieves problem-set passages for style and difficulty, plus textbook passages when available. It will not generate without style examples, but can proceed without textbook passages. A weakly related style match can also pull the draft off topic; the closest available example is not necessarily a suitable one.
+The [Source Indexer](/projects/academic-hub/source_indexer/) finds problem-set passages for style and difficulty, plus textbook passages when available. The generator will not proceed without style examples, but can work without textbook passages. A weakly related style match can also pull the draft off topic; the closest available example is not necessarily a suitable one.
 
 Generation now defaults to Gemini, with API cost. In the September 6, 2026 comparison, nine trials across three constrained topics passed the model checks and recorded manual review, while the local alternative had struggled with the requested method. That narrow result motivated the default; it does not establish reliable mathematics across a course. Local generation remains optional.
 

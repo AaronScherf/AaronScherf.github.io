@@ -1,5 +1,6 @@
 ---
 title: 'AI Research Assistant'
+summary: 'Find academic papers, make their contents searchable, and connect them with personal research notes.'
 date: 2026-09-01
 type: landing
 
@@ -8,7 +9,7 @@ sections:
   - block: collection
     content:
       title: AI Research Assistant Subprojects
-      text: AI Research Assistant is the effort to search for, download, transcribe, embed, index, and analyze journal articles and personal research material into one queryable corpus. Here are the subprojects that make it up.
+      text: 'These tools help build a focused research library: find candidate papers, obtain available PDFs, and make their text searchable alongside research notes. They reuse the conversion and search tools developed for Academic Hub. [The overview](/projects/ai-research-assistant-overview/) follows the workflow and explains where the researcher still makes the decisions.'
       count: 12
       page_type: ai-research-assistant-project
       filters:

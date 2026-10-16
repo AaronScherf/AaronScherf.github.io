@@ -42,11 +42,11 @@ params:
       - concept_graph
 ---
 
-A question in my handwritten notes can become the starting point for a textbook lookup, a checked explanation, and a study guide. Academic Hub connects those steps by keeping converted materials searchable and preserving references back to the sources. I choose which tools to run and review their outputs along the way.
+A question in my handwritten notes can become the starting point for a textbook lookup, an explanation with source references, and a study guide. Academic Hub connects those steps by keeping converted materials searchable and preserving a route back to the originals. I choose which tools to run and review their outputs along the way.
 
 <!--more-->
 
-The useful connection is between a passage and what I do with it later. An answer can record which textbook sections it used; a guide can return to those passages for a fuller explanation. That source trail makes the work easier to inspect, even though a citation alone cannot establish that an explanation is correct.
+The common foundation is a collection of passages I can find and return to. Conversion preserves the text, mathematical notation, and page context; the [Source Indexer](/projects/academic-hub/source_indexer/) makes that material searchable. From there I can ask a question, develop a fuller study explanation, or explore how course concepts depend on one another. These are different ways to work with the same materials.
 
 [[Insert Image: Replace the dense architecture poster with four clear groups: "Prepare materials", "Find an explanation", "Study and practice", and "Maintain the collection". Follow one generic handwritten question through searchable text, a source-linked answer, and a reviewed guide. Show human review between outputs rather than implying a fully automatic learning system. Use large labels and invented content. Suggested caption: "Follow a question from course material to a reviewed study aid." Suggested alt text: "Notes and textbooks feed search, which supports answers and study materials with source references and human review." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
@@ -58,11 +58,13 @@ The useful connection is between a passage and what I do with it later. An answe
 
 ## Find an explanation
 
-[Source Indexer](/projects/academic-hub/source_indexer/) finds relevant documents and passages. [RAG Analysis](/projects/academic-hub/rag_analysis/) uses them to answer a question with references I can open and check. [Concept Graph](/projects/academic-hub/concept_graph/) offers another route through the material: connections between ideas, including the assumptions behind them. Its drafted explanations and connections still need review.
+[RAG Analysis](/projects/academic-hub/rag_analysis/) uses retrieved passages to answer a question with references I can open and check. I can save an answer or a session recap as a study note; [Summary Enhancement](/projects/academic-hub/summary_enhancement/) can return to its recorded passages to develop the explanation further.
+
+[Concept Graph](/projects/academic-hub/concept_graph/) uses the shared source material to map relationships between ideas, including the assumptions that make a conclusion follow. Its first full graph covers part of a microeconomics course. A graph helps trace those dependencies; a guide explains a topic in sequence. Both contain drafted material that needs review.
 
 ## Study and practice
 
-- [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) selects sources, drafts a guide, and proposes edits for review. [Summary Enhancement](/projects/academic-hub/summary_enhancement/) develops a shorter summary into fuller explanations and examples.
+- [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) starts from a topic list, selects indexed sources, drafts a guide, and proposes edits for review. Its optional enhancement step adds the same fuller explanations and worked examples available to an existing summary.
 - [Tutor Diagnosis](/projects/academic-hub/tutor_diagnosis/) gives hints and feedback on an attempt. The separate [Socratic Tutor](/projects/academic-hub/socratic_tutor/) tracks progress during a conversation, but its strict checks have struggled with teaching unfamiliar material.
 - [Guided Solutions](/projects/academic-hub/guided_solutions/) keeps my reasoning, agent derivations, and tutoring work distinct for comparison.
 - [Problem Corpus](/projects/academic-hub/problem_corpus/) stores extracted exercises with their provenance. [Problem Generation](/projects/academic-hub/problem_generation/) currently retrieves its own style examples; integration with that stored bank remains separate work.
@@ -72,4 +74,4 @@ The useful connection is between a passage and what I do with it later. An answe
 
 [Obsidian Git Sync](/projects/academic-hub/obsidian_git_sync/) keeps working notes available across devices. [Corpus Health](/projects/academic-hub/corpus_health/) reports missing or stale outputs for review, and [Project Steering](/projects/academic-hub/project_steering/) helps prioritize the next work.
 
-The [subproject collection](/projects/academic-hub/) links to each tool's current evidence and limits. These range from fixture-tested rules to recorded runs on actual coursework; they do not all have the same degree of validation.
+The [subproject collection](/projects/academic-hub/) links to each tool's current evidence and limits. A useful study session still involves choosing the material, checking coverage, and comparing generated explanations with their sources. The shared source trail makes those checks possible; it does not settle whether an explanation is correct.

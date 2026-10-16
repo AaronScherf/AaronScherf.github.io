@@ -44,7 +44,7 @@ Finding a passage also needs a useful locator. Word documents do not carry the P
 
 For an **illustrative conversion**, a heading such as **Research idea** and its following paragraphs become a heading and ordinary text in the searchable version. A reference such as **Paragraphs 4–6** tells me where to look within that note. This demonstrates the format, not an excerpt from my private writing.
 
-The original Word file stays in place. Conversion creates a Markdown copy, retaining headings, emphasis, and lists. Optional indexing then summarizes and embeds the document using API calls; conversion alone remains local.
+The original Word file stays in place. Conversion creates a Markdown copy, retaining headings, emphasis, and lists. Optional registration with the [Source Indexer](/projects/academic-hub/source_indexer/) adds a catalog description and a representation used for search, using API calls; conversion alone remains local.
 
 Reusing the course-material indexer exposed a useful mismatch: its original document labels tried to classify personal essays as textbooks or handwritten notes. Giving the research collection its own vocabulary fixed that distinction. Search also keeps each result's collection identity, so two folders both named "notes" cannot be confused merely because their names match.
 

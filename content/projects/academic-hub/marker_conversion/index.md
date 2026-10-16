@@ -58,6 +58,8 @@ Where a long book is divided matters. A fixed page limit can cut through a table
 
 [[Insert Image: Show a generic textbook spread becoming a chapter-organized text excerpt and a figure description. Highlight separate "PDF page" and "Printed page" labels, with an illustrative cross-reference that points back to the correct source page. Use newly typeset material and a simple invented diagram, not a private textbook crop. Suggested caption: "Preserve the structure needed to find and check a passage." Suggested alt text: "A textbook chapter, equation, and figure become searchable text with both PDF and printed-page references." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
+The [Source Indexer](/projects/academic-hub/source_indexer/) makes the converted material available as referenced passages. A [study guide](/projects/academic-hub/study_guide_pipeline/) can then select a textbook section for an explanation, while a [concept map](/projects/academic-hub/concept_graph/) can cite evidence for the conditions linking two ideas. Preserving the book's structure gives those later tools something specific to read and cite.
+
 ## Rent the hardware for the batch
 
 Marker is an open-source tool for recognizing text and page layout. Here it runs on a temporary graphics-processing machine in Google Cloud, which provides the computing capacity needed for dense books. The model loads once for a batch rather than starting again for every title. Converted files return locally before the temporary machine and disk are removed; keeping an idle disk would continue to cost money.

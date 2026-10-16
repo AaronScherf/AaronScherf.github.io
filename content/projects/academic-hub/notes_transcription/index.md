@@ -42,6 +42,8 @@ Typed PDFs need care too. A small raised character can carry the difference betw
 
 [[Insert Image: Show an illustrative handwritten margin question beside a generic slide, then its searchable transcription with separate "Slide" and "Handwritten" labels and a source reference. Add a small inset comparing R² with flattened R2. Use invented notes, large labels, and no private coursework. Suggested caption: "Keep the handwriting, slide text, and source trail distinct." Suggested alt text: "A handwritten question and slide become separately labelled searchable text; an inset shows a preserved exponent." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
+Once the output is registered with the [Source Indexer](/projects/academic-hub/source_indexer/), its passages can be found alongside textbook material. That is what lets the [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) draw on a handwritten explanation, or [Concept Graph](/projects/academic-hub/concept_graph/) cite course notes behind a proposed connection. Transcription prepares the material those tools read.
+
 ## Choose how much of the source needs rereading
 
 The PDF path uses three levels of work. Clean digital text can be extracted locally. If only a few pages look defective, those pages receive image-based repair with neighboring text for context. Handwriting, difficult exports, or documents with widespread defects need fuller transcription. Some note-taking exports can omit entire equation regions from their text layer, so an apparently clean extraction is insufficient evidence for trusting them.

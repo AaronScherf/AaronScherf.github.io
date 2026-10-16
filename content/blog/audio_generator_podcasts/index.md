@@ -36,6 +36,6 @@ Speech synthesis took another 19.4 minutes with three local Piper workers. The c
 
 The episodes targeted 10-20 minutes, but one section with no internal headings became an episode of about 62 minutes. The result was not nine uniformly short recordings. It also did not establish whether listening would help me understand or retain the material; that needs listening and content review, beyond generating files.
 
-One earlier claim needed correction: the saved state uses a fingerprint of the whole source note. Editing any part of that note regenerates all its episodes, rather than only the changed section's recording. Unchanged source files can be skipped.
+Regeneration works at the source-file level: the saved state uses a fingerprint of the whole note. Editing any part regenerates all its episodes, while unchanged source files can be skipped.
 
 **Update, October 16, 2026:** the current code can divide oversized sections at paragraph boundaries, following an October 10 fix. One indivisible paragraph can still exceed the target, and a new listening check is needed to assess the changed output. The saved narration text provides a way to inspect formula rewrites before relying on the audio. The [current project page](/projects/academic-hub/audio_generator/) covers output locations, textbook behavior, and the remaining limits.

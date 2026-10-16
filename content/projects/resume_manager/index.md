@@ -54,9 +54,9 @@ An **illustrative example for a hypothetical applicant** applying to a monitorin
 
 > **Master:** Prepared monthly monitoring reports in Excel covering 12 projects.
 >
-> **Tailored:** Prepared monthly Excel reports monitoring 12 projects.
+> **Tailored for a role emphasizing Excel:** Prepared Excel monitoring reports for 12 projects each month.
 
-The wording becomes more compact while retaining the tool, frequency, activity, and project count. It adds no claim of managing those projects or improving their results. That is the kind of distinction I still review in the actual output; fixed dates alone cannot protect every factual implication of a rewritten sentence.
+The revised bullet puts Excel first while keeping the frequency, activity, and project count fixed. It adds no claim of managing those projects or improving their results. That is the kind of distinction I still review in the actual output; fixed dates alone cannot protect every factual implication of a rewritten sentence.
 
 The ordinary workflow uses a saved job description and a local model. Optional questions let me explain priorities before tailoring, and the application folder keeps that guidance alongside the job description, draft, PDF, and validation report. A separate route can interpret a rough opportunity description and request a cloud-based relevance brainstorm. That route may send resume material to Gemini; the saved-description route does not require it.
 
@@ -66,4 +66,4 @@ Checks flag possible invented or dropped numbers, repeated openings, similar bul
 
 The September 2026 application trials showed why that matters: a rewrite dropped a financial figure, and another output omitted qualitative guidance despite a clean numeric report. Newer checks cover more of those cases, but word matching and similarity tests can still miss changes in meaning.
 
-Page fitting now ranks candidate experience and measures rendered drafts against a target length. This replaces the older page's description of page limits as wholly future work; it does not remove the need to inspect the final PDF. The master remains maintained by hand, and tailoring never submits an application. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/resume_manager/README.md) explains the current entry points and review outputs.
+Page fitting ranks candidate experience and measures rendered drafts against a target length, so content selection responds to the available space. I still inspect the final PDF for readable layout and omissions. The master remains maintained by hand, and tailoring never submits an application. The [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/resume_manager/README.md) explains the current entry points and review outputs.

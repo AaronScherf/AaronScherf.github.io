@@ -54,15 +54,21 @@ A question about eigenvalues might belong with a textbook proof, a lecture expla
 
 <!--more-->
 
-The search catalog has a record for each document, much like a library card with a summary and subject labels. Its identity comes from the source file's contents rather than its filename, so renaming a PDF does not have to create a new document. Course-level summaries narrow the search before it compares individual files, keeping a large collection usable without treating every page as an equally likely starting point.
+The search catalog has a record for each document, much like a library card with a brief description and subject labels. These descriptions help find material; the longer summaries I study are written by the answering and guide tools. A record's identity comes from the source file's contents rather than its filename, so renaming a PDF does not have to create a new document. Course-level records narrow the search before it compares individual files.
 
 [[Insert Image: Follow an illustrative question, "Where do my notes explain eigenvalues?", through a course catalog, two document cards, and one highlighted passage with a readable page reference. Use invented document names and text, with large labels "Course", "Document", and "Passage". Do not fabricate a screenshot or actual search result. Suggested caption: "Find the document, then the passage worth reading." Suggested alt text: "An illustrative question narrows from course records to documents and a source-referenced passage." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## Give other study tools something to read
 
-Conversion tools register their outputs with the indexer. Search uses summaries, subject labels, and numerical representations of meaning to rank related material, then returns excerpts from selected documents. PDF-derived passages can carry page references; Word-derived notes without page markers can use headings or numbered paragraphs instead.
+The [notes](/projects/academic-hub/notes_transcription/) and [textbook](/projects/academic-hub/marker_conversion/) converters register their outputs with the indexer. Search uses document descriptions, subject labels, and numerical representations of meaning to rank related material, then returns excerpts from selected documents. PDF-derived passages can carry page references; Word-derived notes without page markers can use headings or numbered paragraphs instead.
 
-[RAG Analysis](/projects/academic-hub/rag_analysis/) uses those passages to draft an answer. The indexer supplies material, not the answer's reasoning, and a relevant-looking passage does not establish that the resulting explanation is correct. The same search infrastructure also supports research notes and journal articles, keeping their collection identities distinct from course materials.
+Several study tools use that foundation:
+
+- [RAG Analysis](/projects/academic-hub/rag_analysis/) retrieves passages for a question and records their references with the answer. [Summary Enhancement](/projects/academic-hub/summary_enhancement/) can reopen the exact passages saved with a study summary to develop it further.
+- [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) selects indexed sources for a topic list, then drafts and revises a longer guide.
+- [Concept Graph](/projects/academic-hub/concept_graph/) retrieves evidence for explanations and connections, including the conditions a theorem needs.
+
+The same search infrastructure supports [papers and research notes](/projects/ai-research-assistant-overview/), keeping their collection identities distinct from course materials. Each downstream tool still has to interpret the passages it receives.
 
 ## Similar subjects are not always duplicate notes
 

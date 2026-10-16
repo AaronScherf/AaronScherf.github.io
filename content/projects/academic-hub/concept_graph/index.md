@@ -80,7 +80,9 @@ That makes the graph useful for tracing a result back through the assumptions an
 
 ## Building and reviewing the connections
 
-An AI agent drafts explanations and connections from task cards containing passages retrieved from lecture notes, slides, assignments, and textbooks. Code then checks the submitted structure: references must come from the supplied passages, required conditions must be present, and circular definition chains are rejected. Those checks catch structural problems; a cited passage can still be misinterpreted.
+An AI agent drafts explanations and connections from task cards containing passages found through the [Source Indexer](/projects/academic-hub/source_indexer/). The [transcription](/projects/academic-hub/notes_transcription/) and [textbook conversion](/projects/academic-hub/marker_conversion/) tools prepare the notes, slides, assignments, and books it searches. Code then checks the submitted structure: references must come from the supplied passages, required conditions must be present, and circular definition chains are rejected. A cited passage can still be misinterpreted.
+
+The same collection supports the [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/). A guide develops a topic through explanations and examples; the graph exposes the relationships and assumptions between ideas. They have separate drafting workflows, so building one does not automatically produce the other.
 
 The drafts remain marked as proposed until a person accepts or edits them. Reviewers can comment, reject a connection, or suggest a missing idea through the page. Suggestions from several reviewers are combined before the maintainer handles them. Submission through GitHub has not yet been tested from start to finish.
 

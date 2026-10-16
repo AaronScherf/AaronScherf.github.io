@@ -61,7 +61,9 @@ The name RAG means **retrieval-augmented generation**: find relevant passages fi
 
 ## What is remembered
 
-The running chat retains its conversation, but restarting the process does not restore the full dialogue. With a course selected, the tool can save answer, hint, draft-feedback, and verification events. Recent recorded learning gaps can inform later answers, and those events can be summarized into a study note. A requested report can also save an answer and its references. These records survive separately from the live chat history.
+The running chat retains its conversation, but restarting the process does not restore the full dialogue. With a course selected, the tool can save answer, hint, draft-feedback, and verification events. Recent recorded learning gaps can inform later answers, and a session recap can turn the recorded discussion into a study note.
+
+Requesting a report also saves the answer as a note with its source references. Those references identify the passages in the [Source Indexer](/projects/academic-hub/source_indexer/), so [Summary Enhancement](/projects/academic-hub/summary_enhancement/) can reopen that material and develop a short answer into fuller explanations and examples. The [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) offers another starting point when I already have a topic list. Saved notes and logs survive separately from the live chat history.
 
 A companion resolver answers question markers in handwritten notes. Its recorded seven-question run included four source-grounded answers and three marked as ungrounded. General answers remain leads to check, and retrieving a handful of passages is too narrow to establish comprehensive coverage of a week's study.
 
