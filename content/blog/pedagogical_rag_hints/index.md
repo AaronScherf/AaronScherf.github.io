@@ -1,6 +1,6 @@
 ---
 title: "An AI Tutor That Gives Hints and Checks Your Reasoning"
-summary: "A study tool that suggests a next step, compares solutions, and helps me examine the reasoning in my own attempts."
+summary: "A tutor that gives hints, separates different kinds of reasoning gaps, and checks a solution with a fresh view of the problem."
 date: 2026-09-29
 lastmod: 2026-10-15
 authors:
@@ -20,8 +20,8 @@ I built the [Tutor Diagnosis and Hint Generator](/projects/academic-hub/tutor_di
 
 The hint feature aims to point toward a useful idea without giving away the conclusion. For a claim that is meant to hold in every case, an illustrative hint could be: "Try the simplest case you can think of. Which assumption does your argument use?" That gives me something to test while leaving the reasoning to me.
 
-The answer check takes a separate pass at the problem without seeing the tutor's earlier response. Comparing the two can reveal a missed assumption or a difference in reasoning. I still have to examine both arguments; agreement between them does not settle whether they are right.
+The second solver gets the question without the tutor's earlier solution or the source passages used to build it. This gives it a fresh chance to spot a missing assumption instead of following the same argument. In one recorded coursework trial, it identified a condition about the regression model that the first response had omitted.
 
-When I share an attempt, the tool can compare it with a reference answer and point to a step that needs more work. Course notes help it use the definitions and methods taught in class. If those materials do not cover a point, the tutor should make that gap clear.
+When I share an attempt, the draft check gives separate scores for whether the conclusion is right, whether each step is justified, and whether it uses the course's definitions and methods. A correct result with a gap in the proof needs different feedback from an otherwise sound argument that uses unfamiliar notation. If the source material does not cover a point, the tutor should make that gap clear.
 
-The feedback can still miss errors, so I use it as another way to examine my work. The [project page](/projects/academic-hub/tutor_diagnosis/) describes the recorded tests, limits, and ongoing development.
+I still have to examine the arguments; agreement between two answers does not settle whether they are right. The [project page](/projects/academic-hub/tutor_diagnosis/) describes the recorded tests, limits, and ongoing development.

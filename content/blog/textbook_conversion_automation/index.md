@@ -16,7 +16,9 @@ Converting a set of textbooks used to require someone nearby to answer repeated 
 
 <!--more-->
 
-The same textbook PDF might appear in the reading folders for two courses. If it has already been converted for one, the tool can reuse that output for the other instead of paying to convert it again. Very close title-and-author matches can also be reused and logged for later confirmation; less certain matches need a decision before they are reused.
+The same textbook PDF might appear in the reading folders for two courses. If it has already been converted for one, the tool can reuse that output for the other. A fingerprint of the file's contents recognizes an exact duplicate even if someone has renamed it.
+
+Very close title-and-author matches can also be reused and logged for later confirmation; less certain matches need a decision first. This policy reflects a cost tradeoff: mistaken reuse can be reversed, while rented GPU time spent converting a duplicate is already gone. Review remains important, but every likely duplicate need not interrupt the batch.
 
 The recovery procedure first checks whether a failed conversion ran out of memory. If that is the cause, the next steps are to reset and retry on the current machine, then try a larger one if the failure repeats. If that also fails, it calls for help. The run record preserves what has already been tried.
 

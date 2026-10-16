@@ -26,6 +26,8 @@ I keep large reference files out of the notes sync so the tablet only needs to d
 
 A lecture can leave me with two versions of a drawing: the notes I wrote in class, and a later copy with the lecture slides pasted beside them. Once transcribed, the search tools can recognize some of those pairs and avoid showing both copies when the more complete version is available. Both originals remain editable.
 
+Matching whole notes by subject matter proved too broad: separate lectures on similar topics could look like duplicate versions. Comparing short sequences of words in the handwritten portions gave a cleaner distinction in the tested microeconomics notes. The useful signal was whether the same writing appeared in both versions.
+
 That connection is what makes the setup useful to me. I can keep writing by hand while making the notes easier to find and revisit later. The transcription tools make the saved drawings searchable, and the sync setup occasionally needs attention.
 
 *Updated October 15, 2026, to include the related-note matching added after this post was first written.*

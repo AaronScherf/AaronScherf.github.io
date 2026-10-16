@@ -1,6 +1,6 @@
 ---
 title: "Finding Academic Papers for a Research Library"
-summary: "How I find candidate papers, narrow them to a research question, and keep track of the full text I still need to obtain."
+summary: "Comparing abstracts with a research question and following citation trails to build a focused paper library."
 date: 2026-09-12
 lastmod: 2026-10-15
 authors:
@@ -17,9 +17,11 @@ Starting a literature review often means finding candidate papers, deciding whic
 
 <!--more-->
 
-The tool starts with a researcher or a topic, then finds candidate papers through OpenAlex, a catalog of academic publications. It compares them with a description of what I'm looking for, so I can narrow the list before deciding what to read. That comparison runs on my computer. It can also suggest newer papers that cite work already in the library; I review those suggestions before anything is downloaded.
+The tool starts with a researcher or a topic, then finds candidate papers through OpenAlex, a catalog of academic publications. A model on my computer turns my research description and candidate abstracts into text embeddings: numerical representations used to compare meaning. Comparing those representations gives each candidate a relevance score before any download begins. This scoring stage makes no paid AI calls.
 
-For full text, the tool checks services that provide freely available copies of papers. It can also try my university's library access where that is available. If a publisher blocks the automated request, the paper goes on a list for me to open through my usual library login. In an early trial, the automatic route obtained 3 of 19 papers; the rest needed a person to retrieve them.
+The library can also become a starting point for discovery. The tool follows citations forward to find newer papers that cite work I've already collected, scores those candidates, and proposes a reading list. I review that list before anything is downloaded.
+
+For full text, the tool tries several services for freely available copies in turn, so one service missing a paper does not end the search. It can also try my university's library access where that is available. If those routes fail, the paper goes on a list for me to open through my usual library login. In an early trial, the automatic route obtained 3 of 19 papers; the rest needed a person to retrieve them.
 
 After the papers are available, separate conversion and search tools add their text to the research library. I can then search the papers alongside course materials, with access to more than their abstracts.
 

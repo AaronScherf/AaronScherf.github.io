@@ -4,6 +4,11 @@ Prepared 2026-10-15. Status: five further blog revisions prepared for author
 review, alongside the requested Excalidraw correction. Publication approval
 is separate from this editing request.
 
+**Follow-up:** the author found the combined revisions too basic and asked
+for slightly more technical substance across all eight posts. See the
+[detail calibration](readability-detail-calibration.md) for the current pass;
+the earlier results below apply to this batch's previous wording.
+
 ## Scope and progress
 
 This continues the same owned website worktree and branch,

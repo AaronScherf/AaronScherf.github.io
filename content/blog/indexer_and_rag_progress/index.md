@@ -1,6 +1,6 @@
 ---
 title: Indexing and Querying Academic Hub
-summary: "Finding relevant passages in my course materials and using source references to check an AI-generated answer."
+summary: "Using passage search and limits on each source's contribution to build answers I can check against textbooks and notes."
 date: 2026-08-30
 lastmod: 2026-10-15
 authors:
@@ -16,9 +16,11 @@ Once books and notes have been converted to text, the next challenge is finding 
 
 <!--more-->
 
-The indexer creates a record for each document and groups related material by course. The first attempt at automatic subject grouping did not separate the real collection well, so I changed the approach and added checks to catch documents that would otherwise be left out.
+The indexer creates a record for each document and groups related material by course. Search first narrows the collection to likely courses and documents, then ranks passages within them. A book can be relevant to a topic overall while only a few paragraphs contain the explanation a question needs.
 
-The question-answering tool searches within those documents and includes references to the passages it used. In a live example, it combined material from two sources to answer a question about the spectral theorem. When the collection does not support an answer, the system is intended to make that gap visible instead of dressing up a guess as a sourced result.
+The answering tool also limits how many passages each file can contribute. That helps keep one highly relevant textbook from crowding lecture notes and other sources out of the material used to write the answer.
+
+In a recorded trial, it combined passages from two sources to answer a question about the spectral theorem, with references back to the material it used. When the collection does not support an answer, the system is intended to make that gap visible instead of dressing up a guess as a sourced result.
 
 An illustrative source reference is **Section 7.4, pages 264–266**. That tells me which part of a source to open when I want to check an explanation or read further. A reference makes the reasoning easier to inspect; it does not guarantee that the answer interpreted the passage correctly.
 

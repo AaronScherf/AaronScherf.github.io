@@ -6,6 +6,11 @@ has not been requested. This batch covers entries 36–38 in the revised guide.
 Its scope is three light blog edits, as requested, rather than the larger
 project-page rewrites at the top of the queue.
 
+**Follow-up:** the author subsequently requested more technical substance in
+all eight revised posts. The [detail calibration](readability-detail-calibration.md)
+records the current editorial target and fresh validation; earlier wording
+and review states below are the batch's history, not approval of that new pass.
+
 ## Versions and scope
 
 - Website base: `e10f9b3`; branch: `codex/readability-batch-01`.
