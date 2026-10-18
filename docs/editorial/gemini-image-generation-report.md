@@ -3,7 +3,7 @@
 **Date:** 2026-10-18  
 **Branch:** `gemini/website-images`  
 **Repository Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`  
-**Status:** **Initial 3 pilot images + Batch 2 (5 images) approved by owner & integrated into page bundles; production build and desktop/mobile checks verified**  
+**Status:** **Pilot (3 images) + Batch 2 (5 images) integrated and committed; Batch 3 originals preserved; 3 new candidates + Source Indexer v2 generated and awaiting owner review; 2 candidates deferred due to model quota limit**  
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
@@ -327,39 +327,171 @@ Full production build and responsive visual checks were performed and recorded f
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
 - **Branch:** `gemini/website-images`
-- **Committed Local Pilot Work (Commit `ea6faef`):**
-  - `content/projects/academic-hub/concept_graph/featured.png` (integrated screenshot)
-  - `content/projects/academic-hub/concept_graph/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/source_indexer/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/source_indexer/featured.jpg` (obsolete prior asset removed)
-  - `content/projects/academic-hub/source_indexer/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/notes_transcription/featured.png` (integrated candidate 02)
-  - `content/projects/academic-hub/notes_transcription/featured.jpg` (obsolete prior asset removed)
-  - `content/projects/academic-hub/notes_transcription/index.md` (frontmatter updated with "Illustration:" prefix, brief removed)
-  - `docs/editorial/image-candidates/concept_graph/candidate-01.png`
-  - `docs/editorial/image-candidates/concept_graph/candidate-02.png`
-  - `docs/editorial/image-candidates/source_indexer/candidate-01.png`
-  - `docs/editorial/image-candidates/notes_transcription/candidate-01.png`
-  - `docs/editorial/image-candidates/notes_transcription/candidate-02.png`
-- **Integrated Batch 2 Work (Pending Commit):**
-  - `content/projects/academic-hub/study_guide_pipeline/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/study_guide_pipeline/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/summary_enhancement/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/summary_enhancement/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/guided_solutions/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/guided_solutions/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/socratic_tutor/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/socratic_tutor/index.md` (frontmatter updated, brief removed)
-  - `content/projects/academic-hub/corpus_health/featured.png` (integrated candidate 01)
-  - `content/projects/academic-hub/corpus_health/index.md` (frontmatter updated, brief removed)
-  - `docs/editorial/image-candidates/study_guide_pipeline/candidate-01.png`
-  - `docs/editorial/image-candidates/summary_enhancement/candidate-01.png`
-  - `docs/editorial/image-candidates/guided_solutions/candidate-01.png`
-  - `docs/editorial/image-candidates/socratic_tutor/candidate-01.png`
-  - `docs/editorial/image-candidates/corpus_health/candidate-01.png`
+- **Committed Local Work:**
+  - Commit `ea6faef`: Pilot images integrated for Concept Graph, Source Indexer, Notes Transcription.
+  - Commit `d87e78e`: Batch 2 images integrated for Study Guide Pipeline, Summary Enhancement, Guided Solutions, Socratic Tutor, Corpus Health.
+  - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
+
+---
+
+## Batch 3: Pilot Correction & Next Page Candidates
+
+Dated: 2026-10-18  
+Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery commit)
+
+### Pilot Correction: Source Indexer (Candidate 02)
+
+- **Page:** `content/projects/academic-hub/source_indexer/index.md`
+- **Correction Requirement:** Eigenvalue statement must include a nonzero vector condition: $Av = \lambda v$ with $v \neq 0$.
+- **Output File Path:** `docs/editorial/image-candidates/source_indexer/candidate-02.png`
+- **Active Integrated Image:** `content/projects/academic-hub/source_indexer/featured.png` (retained unmodified pending review)
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 573 KB (586,636 bytes)
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: on the left, a small neat query box with text 'Where do my notes explain eigenvalues?'. A crisp arrow leads to a clean white card labelled 'Course'. Another arrow leads to two layered white cards labelled 'Document'. A third arrow leads to an enlarged white card labelled 'Passage'. Inside the Passage card, there is a highlighted box with simple clean text 'Av = λv (v ≠ 0) defines eigenvalues of matrix A.' and an attached teal label badge reading 'p. 42'. Three prominent sans-serif labels: 'Course', 'Document', 'Passage'. Perfectly legible sans-serif typography, generous 8% outer margins, balanced 16:9 composition, flat clean aesthetic.
+  ```
+- **Visual & Factual Inspection:**
+  - **Composition:** Perfectly preserves the approved Candidate 01 composition and card hierarchy ("Course" → "Document" → "Passage").
+  - **Mathematical Correction:** The highlighted passage definition now explicitly states: `Av = λv (v ≠ 0) defines eigenvalues of matrix A.` with attached teal badge `p. 42`.
+  - **Typography & Symbols:** The Greek letter $\lambda$ and inequality sign $\neq$ are sharply rendered with no artifacts.
+  - **Review Status:** **Owner review pending** (Not integrated into page bundle).
+
+---
+
+### Batch 3 Candidates Summary Table
+
+| Item | Page | Original Brief | Candidate Path | Dimensions | Original Archive | Status |
+|---|---|---|---|---|---|---|
+| **Corr. Source Indexer** | [`content/projects/academic-hub/source_indexer/index.md`](../../content/projects/academic-hub/source_indexer/index.md) | Owner correction: $v \neq 0$ condition | [`docs/editorial/image-candidates/source_indexer/candidate-02.png`](image-candidates/source_indexer/candidate-02.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `6f6f58b6...`) | **Owner review pending** |
+| **9. Project Steering** | [`content/projects/academic-hub/project_steering/index.md`](../../content/projects/academic-hub/project_steering/index.md) | `project_steering/index.md` (L41); Queue row 03 | [`docs/editorial/image-candidates/project_steering/candidate-01.png`](image-candidates/project_steering/candidate-01.png) | 1376 x 768 (16:9) | None at baseline / HEAD | **Owner review pending** |
+| **10. Marker PDF Conversion** | [`content/projects/academic-hub/marker_conversion/index.md`](../../content/projects/academic-hub/marker_conversion/index.md) | `marker_conversion/index.md` (L59); Queue row 02 | [`docs/editorial/image-candidates/marker_conversion/candidate-01.png`](image-candidates/marker_conversion/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `c6c176e1...`) | **Owner review pending** |
+| **11. Notes Post-Processing** | [`content/projects/academic-hub/postprocess_notes/index.md`](../../content/projects/academic-hub/postprocess_notes/index.md) | `postprocess_notes/index.md` (L44); Queue row 10 | [`docs/editorial/image-candidates/postprocess_notes/candidate-01.png`](image-candidates/postprocess_notes/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `a5f9c895...`) | **Owner review pending** |
+| **12. RAG Analysis** | [`content/projects/academic-hub/rag_analysis/index.md`](../../content/projects/academic-hub/rag_analysis/index.md) | `rag_analysis/index.md` (L50); Queue row 11 | *(Deferred due to model quota)* | N/A | `original-featured.jpg` (SHA-256: `262f423c...`) | **Generation deferred (Quota limited)** |
+| **13. Problem Generation** | [`content/projects/academic-hub/problem_generation/index.md`](../../content/projects/academic-hub/problem_generation/index.md) | `problem_generation/index.md` (L42); Queue row 12 | *(Deferred due to model quota)* | N/A | `original-featured.jpg` (SHA-256: `f2e675e5...`) | **Generation deferred (Quota limited)** |
+
+---
+
+### Detailed Batch 3 Reviews
+
+#### 9. Project Steering: Owner-Reviewed Shortlist
+
+- **Page:** `content/projects/academic-hub/project_steering/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/project_steering/index.md` (line 41); `docs/editorial/gemini-image-generation-queue.md` (Row 03)
+- **Output File Path:** `docs/editorial/image-candidates/project_steering/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 657 KB (673,136 bytes)
+- **Original Asset:** No featured image at baseline or HEAD commit; correctly recorded in `docs/editorial/image-originals-inventory.md`.
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right with three large prominent stage labels: 'Proposed', 'Review', and 'Ready'. Under 'Proposed': a clean white card listing five tasks: 'Format exam notes', 'Corpus scan trial', a highlighted row with a violet badge 'Missing estimate', 'Re-index lecture notes', and 'Export summary'. A clean teal arrow leads to 'Review': a central card labelled 'Owner Review' with a violet badge 'Approval'. A curved purple arrow leads from Ready back to Review labelled 'Changed task: return to review'. A clean teal arrow leads to 'Ready': a clean white shortlist card titled 'Shortlist' showing three numbered tasks: '1. Re-index lecture notes', '2. Verify study guide', and '3. Export summary'. At the bottom center, a discreet pill tag: 'Prioritized, not implemented'. Minimalist flat vector aesthetic, crisp sans-serif typography, generous margins, balanced 16:9 composition.
+  ```
+- **Proposed Caption:** "A shortlist built from decisions I have reviewed."
+- **Proposed Alt Text:** "Task suggestions pass through owner review; changed tasks and missing estimates stay out of the ready shortlist."
+- **Visual & Factual Inspection:**
+  - **Workflow & Stages:** Clear three-stage pipeline matching the brief: "Proposed" → "Review" → "Ready".
+  - **Constraint Fulfillment:**
+    - The "Proposed" card lists tasks, with one highlighted row held back by a violet "Missing estimate" badge.
+    - A curved return arrow explicitly labelled "Changed task: return to review" links from the ready stage back to Owner Review.
+    - The "Ready" card contains an explicit 3-item "Shortlist" of prioritized tasks.
+    - Bottom pill explicitly communicates: "Prioritized, not implemented", reinforcing that priority decisions are separate from implementation.
+  - **Legibility & Quality:** Crisp typography, solid dark navy background (`#14202D`), no stray characters or spelling errors.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 10. Marker PDF Conversion: Structure, Figure Descriptions, and Page Tracking
+
+- **Page:** `content/projects/academic-hub/marker_conversion/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/marker_conversion/index.md` (line 59); `docs/editorial/gemini-image-generation-queue.md` (Row 02)
+- **Output File Path:** `docs/editorial/image-candidates/marker_conversion/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 790 KB (808,508 bytes)
+- **Original Archive:** `docs/editorial/image-candidates/marker_conversion/original-featured.jpg` (SHA-256: `c6c176e17efa8650e14604dd685b1320d2d1110d88fa3f23ba89902f4161057c`, 631,466 bytes)
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal progression from left to right: On the left, an open textbook spread card titled 'Chapter 3: Spectral Theory' with two distinct page badges: teal badge 'PDF p. 165' and violet badge 'Printed p. 157', featuring a simple geometric diagram. Clean branching arrows lead to two structured output cards on the right: Top card titled 'Chapter Excerpt' with subheader '3.2 Normal Operators', cross-reference text 'Reference: printed p. 157', and a source anchor tag; Bottom card titled 'Figure Description' with text 'Fig 3.1: Orthogonal projection diagram' and a searchable text badge. Balanced 16:9 composition, generous outer padding, perfectly legible sans-serif typography, clean flat vector aesthetic.
+  ```
+- **Proposed Caption:** "Preserve the structure needed to find and check a passage."
+- **Proposed Alt Text:** "A textbook chapter, equation, and figure become searchable text with both PDF and printed-page references."
+- **Visual & Factual Inspection:**
+  - **Structure & Dual Page Anchors:** Left card illustrates an open textbook spread titled "Chapter 3: Spectral Theory", clearly displaying both "PDF p. 165" (teal) and "Printed p. 157" (violet) badges.
+  - **Branching Outputs:** Two structured right cards:
+    1. "Chapter Excerpt": "3.2 Normal Operators", "Reference: printed p. 157", and "Source anchor tag" pill.
+    2. "Figure Description": "Fig 3.1: Orthogonal projection diagram" with "Searchable text" badge.
+  - **Graphic Illustration:** A clean 3D orthogonal projection diagram connects visually to the figure description card.
+  - **Legibility & Quality:** Sharp typography, excellent contrast, perfectly legible at thumbnail width.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 11. Notes Post-Processing: Symbol Verification Against Source
+
+- **Page:** `content/projects/academic-hub/postprocess_notes/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/postprocess_notes/index.md` (line 44); `docs/editorial/gemini-image-generation-queue.md` (Row 10)
+- **Output File Path:** `docs/editorial/image-candidates/postprocess_notes/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 740 KB (757,912 bytes)
+- **Original Archive:** `docs/editorial/image-candidates/postprocess_notes/original-featured.jpg` (SHA-256: `a5f9c8954c44a0fa633f9f38a9053b4a5e727fb2754a1ed5e9dcdc83348d0372`, 700,834 bytes)
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial illustration on a solid dark navy background (#14202D). High contrast, minimalist graphic diagram with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal three-stage comparison from left to right: 1. Left card labelled 'Source Page' showing typeset mathematical formula with a clear radical symbol '√(h² + k²)'; 2. Middle card labelled 'Mistaken Extraction' showing formula 'p(h² + k²)' where the first letter 'p' is highlighted in a soft amber warning box with label 'Suspicious symbol'; A verification arrow connects from the source page to the correction; 3. Right card labelled 'Corrected Reading' showing '√(h² + k²)' with the radical symbol '√' highlighted in a teal badge with label 'Verified against source: p → √'. Discreet bottom note: 'Illustrative example, not automated proof'. Balanced 16:9 composition, generous outer margins, crisp typography, clean vector design.
+  ```
+- **Proposed Caption:** "One ordinary-looking letter can change the meaning of an equation."
+- **Proposed Alt Text:** "The letter p in extracted text is replaced with a square-root sign after comparison with the source formula."
+- **Visual & Factual Inspection:**
+  - **Comparison Layout:** Three cards showing the exact progression requested:
+    1. "Source Page": Clean formulas with genuine square root: $\gamma = \sqrt{h^2 + k^2}$, $h = \frac{\sqrt{h^2 + k^2}}{h + k}$.
+    2. "Mistaken Extraction": $p(h^2 + k^2)$ with the first symbol $p$ enclosed in an amber "Suspicious symbol" box.
+    3. "Corrected Reading": $\sqrt{h^2 + k^2}$ with the radical symbol $\sqrt{}$ highlighted in teal and tagged "Verified against source: $p \to \sqrt{}$".
+  - **Bottom Tag:** "Illustrative example, not automated proof", directly addressing the constraint to avoid claiming complete equation verification.
+  - **Defect Note:** The generator duplicated the stage headings above and below each card ("Source Page", "Mistaken Extraction", "Corrected Reading"). While all mathematical terms, callouts, and badges are crisp and readable, this minor duplicate heading is recorded for review.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 12. RAG Analysis & 13. Problem Generation: Deferred Due to Model Quota
+
+- **Pages:**
+  - `content/projects/academic-hub/rag_analysis/index.md` (Brief: line 50; Queue row 11)
+  - `content/projects/academic-hub/problem_generation/index.md` (Brief: line 42; Queue row 12)
+- **Status:** **Generation deferred; originals safely archived and verified**
+- **Original Archives:**
+  - `rag_analysis`: `docs/editorial/image-candidates/rag_analysis/original-featured.jpg` (SHA-256: `262f423c91066bf1a8cdc34de4d02919ba24425155cfcba24b6ee3ccd7a02693`, 596,934 bytes)
+  - `problem_generation`: `docs/editorial/image-candidates/problem_generation/original-featured.jpg` (SHA-256: `f2e675e5a8173a3bae285b2251723d260382bbf227569dffb3af2e0e4ccca539`, 562,108 bytes)
+- **Quota Limit Encountered:**
+  Antigravity native image model (`gemini-3.1-flash-image`) returned `429 Too Many Requests (RESOURCE_EXHAUSTED)`.
+  In strict compliance with workspace and user instructions (*"If unavailable or quota-limited, report that limitation and preserve progress. Do not silently switch to a metered API"*), candidate generation for these two pages is deferred until the model quota resets (approximately 1 hour), rather than attempting paid external API calls.
+
+---
+
+## Workspace Status and Changes Summary
+
+- **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
+- **Branch:** `gemini/website-images`
+- **Committed Local Work:**
+  - Commit `ea6faef`: Pilot images integrated for Concept Graph, Source Indexer, Notes Transcription.
+  - Commit `d87e78e`: Batch 2 images integrated for Study Guide Pipeline, Summary Enhancement, Guided Solutions, Socratic Tutor, Corpus Health.
+  - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
+- **Uncommitted Batch 3 Changes (Awaiting Owner Review):**
+  - `docs/editorial/image-originals-inventory.md` (updated with Batch 3 originals)
+  - `docs/editorial/image-candidates/marker_conversion/original-featured.jpg`
+  - `docs/editorial/image-candidates/postprocess_notes/original-featured.jpg`
+  - `docs/editorial/image-candidates/rag_analysis/original-featured.jpg`
+  - `docs/editorial/image-candidates/problem_generation/original-featured.jpg`
+  - `docs/editorial/image-candidates/source_indexer/candidate-02.png` (corrected $v \neq 0$ candidate)
+  - `docs/editorial/image-candidates/project_steering/candidate-01.png`
+  - `docs/editorial/image-candidates/marker_conversion/candidate-01.png`
+  - `docs/editorial/image-candidates/postprocess_notes/candidate-01.png`
   - `docs/editorial/gemini-image-generation-report.md` (updated report)
 - **Integrity Verification:**
-  - All remaining queue items (rows 10 through 27) remain untouched with their `[[Insert Image: ...]]` blocks preserved.
+  - No edits have been made to `content/projects/` page bundles or active featured assets for Batch 3.
+  - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
   - No branches switched, merged, or pushed.
+
 
 
