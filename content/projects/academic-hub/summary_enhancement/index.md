@@ -17,6 +17,10 @@ links:
 tags:
   - Python
   - Study Guides
+image:
+  caption: "Illustration: expand the reasoning while keeping the source trail."
+  alt_text: "A short summary and its source passages lead to a fuller explanation with assumptions, a derivation, and a computed example."
+  focal_point: Center
 params:
   subproject:
     id: summary_enhancement
@@ -38,8 +42,6 @@ A short summary can name a result without giving me enough detail to use it. Sum
 <!--more-->
 
 The useful expansion is in the reasoning between the result and its application. For a statistical test, for example, a section can explain its assumptions, derive the formula, and walk through a small numerical calculation. An introductory description of what a test measures can then become something I can work through step by step.
-
-[[Insert Image: Create a landscape before-and-after illustration of a short summary becoming an expanded study section while staying connected to the same source passages. On the left, show a compact summary card beside two source cards; on the right, show three clear parts labelled "Assumptions", "Derivation", and "Worked example". Connect the source cards to the expanded explanation and use a small code/calculator symbol beside the example. Make it clear this is an illustration using invented content, not a screenshot or evidence that the example's reasoning has been verified. Favor a few large labels over dense equations so it works as a thumbnail and on a phone. Suggested caption: "Expand the reasoning while keeping the source trail." Suggested alt text: "A short summary and its source passages lead to a fuller explanation with assumptions, a derivation, and a computed example." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 The starting document can be a saved [RAG answer or session recap](/projects/academic-hub/rag_analysis/), or a draft from the [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/). It needs the recorded passage references those tools write. The enhancer uses them to reopen the same material in the [Source Indexer](/projects/academic-hub/source_indexer/), rather than search again and possibly choose different evidence.
 

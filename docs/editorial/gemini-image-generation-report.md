@@ -3,7 +3,7 @@
 **Date:** 2026-10-18  
 **Branch:** `gemini/website-images`  
 **Repository Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`  
-**Status:** **All three pilot images approved by owner & integrated into page bundles; production build and desktop/mobile checks verified**  
+**Status:** **Initial 3 pilot images + Batch 2 (5 images) approved by owner & integrated into page bundles; production build and desktop/mobile checks verified**  
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
@@ -150,23 +150,216 @@ In accordance with [`docs/editorial/gemini-image-generation-handoff.md`](gemini-
 
 ---
 
+## Batch 2 Candidates Summary Table
+
+| Item | Page | Original Brief | Candidate Path | Dimensions | Tool / Model | Status |
+|---|---|---|---|---|---|---|
+| **4. Study Guide Pipeline** | [`content/projects/academic-hub/study_guide_pipeline/index.md`](../../content/projects/academic-hub/study_guide_pipeline/index.md) | `study_guide_pipeline/index.md` (L70); Queue row 04 | [`docs/editorial/image-candidates/study_guide_pipeline/candidate-01.png`](image-candidates/study_guide_pipeline/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (Imagen) | **Approved by owner & integrated** (`featured.png`) |
+| **5. Summary Enhancement** | [`content/projects/academic-hub/summary_enhancement/index.md`](../../content/projects/academic-hub/summary_enhancement/index.md) | `summary_enhancement/index.md` (L42); Queue row 06 | [`docs/editorial/image-candidates/summary_enhancement/candidate-01.png`](image-candidates/summary_enhancement/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (Imagen) | **Approved by owner & integrated** (`featured.png`) |
+| **6. Guided Solutions** | [`content/projects/academic-hub/guided_solutions/index.md`](../../content/projects/academic-hub/guided_solutions/index.md) | `guided_solutions/index.md` (L36); Queue row 07 | [`docs/editorial/image-candidates/guided_solutions/candidate-01.png`](image-candidates/guided_solutions/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (Imagen) | **Approved by owner & integrated** (`featured.png`) |
+| **7. Socratic Tutor** | [`content/projects/academic-hub/socratic_tutor/index.md`](../../content/projects/academic-hub/socratic_tutor/index.md) | `socratic_tutor/index.md` (L42); Queue row 08 | [`docs/editorial/image-candidates/socratic_tutor/candidate-01.png`](image-candidates/socratic_tutor/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (Imagen) | **Approved by owner & integrated** (`featured.png`) |
+| **8. Corpus Health** | [`content/projects/academic-hub/corpus_health/index.md`](../../content/projects/academic-hub/corpus_health/index.md) | `corpus_health/index.md` (L57); Queue row 09 | [`docs/editorial/image-candidates/corpus_health/candidate-01.png`](image-candidates/corpus_health/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (Imagen) | **Approved by owner & integrated** (`featured.png`) |
+
+---
+
+## Detailed Batch 2 Candidate Reviews
+
+### 4. Study Guide Pipeline: Human Review of Proposed Edits
+
+- **Page:** `content/projects/academic-hub/study_guide_pipeline/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/study_guide_pipeline/index.md` (line 70); `docs/editorial/gemini-image-generation-queue.md` (Row 04)
+- **Output File Path:** `docs/editorial/image-candidates/study_guide_pipeline/candidate-01.png`
+- **Page Bundle Asset:** `content/projects/academic-hub/study_guide_pipeline/featured.png`
+- **Tool / Model:** Antigravity `generate_image` (Imagen capability under owner subscription)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 600 KB
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right with four distinct large stage labels: 'Choose sources', 'Draft guide', 'Review edits', and 'Revised guide'. Under 'Choose sources': two clean cards labelled 'Textbook' and 'Lecture notes'. Under 'Draft guide': a document titled 'Draft Guide' with text 'Wald Test'. Under 'Review edits': a human review card titled 'Human Review' with two clear proposal tags: a teal tag 'Add derivation Accepted' and a violet tag 'Drop citation Rejected'. Under 'Revised guide': a clean document titled 'Revised Guide' with text 'Newly added derivation' and a small overlapping card titled 'Original draft' kept beside it. Generous 8% outer margins, balanced 16:9 composition, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Integrated Caption:** "Illustration: choose the materials, then decide which revisions to apply."
+- **Integrated Alt Text:** "Selected sources become a draft; a person accepts or rejects proposed edits before a revised copy is created."
+- **Visual & Factual Inspection:**
+  - **Composition & Stages:** Four distinct horizontal stages matching the exact workflow requested: "Choose sources" → "Draft guide" → "Review edits" → "Revised guide".
+  - **Review Point Focus:** The third stage, "Human Review", clearly showcases decision-making: "Add derivation" is marked with a teal "Accepted" pill, and "Drop citation" is marked with a violet "Rejected" pill.
+  - **Preservation of Original Draft:** The final stage displays "Revised Guide" ("Newly added derivation") with the "Original draft" card retained directly alongside it to demonstrate that applying decisions produces a separate revised output.
+  - **Typography & Spelling:** 100% correct typography; all stage headers and card labels are crisp and correctly spelled.
+  - **Palette & Legibility:** Solid dark navy background (`#14202D`) with teal and muted violet accents; large fonts ensure readability at thumbnail and mobile viewports.
+- **Integration Status:** **Completed** — saved to `content/projects/academic-hub/study_guide_pipeline/featured.png`, `image` metadata added to `index.md` frontmatter, and fulfilled `[[Insert Image: ...]]` block removed.
+
+---
+
+### 5. Summary Enhancement: Expand Reasoning While Keeping Source Trail
+
+- **Page:** `content/projects/academic-hub/summary_enhancement/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/summary_enhancement/index.md` (line 42); `docs/editorial/gemini-image-generation-queue.md` (Row 06)
+- **Output File Path:** `docs/editorial/image-candidates/summary_enhancement/candidate-01.png`
+- **Page Bundle Asset:** `content/projects/academic-hub/summary_enhancement/featured.png`
+- **Tool / Model:** Antigravity `generate_image` (Imagen capability under owner subscription)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 695 KB
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial illustration on a solid dark navy background (#14202D). High contrast, minimalist graphic diagram with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal progression from left to right: On the left, a card titled 'Summary' showing the short formula 'OLS: β = (XᵀX)⁻¹Xᵀy'. In the middle, two source cards titled 'Textbook p. 112' and 'Lecture Note 4'. Clean curved connector lines branch from the sources to three distinct cards on the right: Card 1 labelled 'Assumptions' showing 'E[ε|X] = 0'; Card 2 labelled 'Derivation' showing 'Normal Equations: Xᵀ(y - Xβ) = 0'; Card 3 labelled 'Worked example' showing 'β̂ = 2.45' with a small neat calculator icon beside it. Balanced 16:9 composition, generous 8% outer margins, crisp typography, flat clean vector aesthetic.
+  ```
+- **Integrated Caption:** "Illustration: expand the reasoning while keeping the source trail."
+- **Integrated Alt Text:** "A short summary and its source passages lead to a fuller explanation with assumptions, a derivation, and a computed example."
+- **Visual & Factual Inspection:**
+  - **Structure & Progression:** Left-to-right transformation showing a compact "Summary" card ($OLS: \beta = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$) connected via intermediate source cards ("Textbook p. 112" and "Lecture Note 4") to an expanded three-part breakdown.
+  - **Three Expanded Sections:** The right side clearly displays three distinct cards: "Assumptions" ($\mathrm{E}[\epsilon|\mathbf{X}] = 0$), "Derivation" ($\mathbf{X}^T(\mathbf{y} - \mathbf{X}\beta) = 0$), and "Worked example" ($\hat{\beta} = 2.45$ with calculator icon).
+  - **Mathematical Veracity:** Correct matrix OLS normal equations and conditional expectation notation; cleanly avoids cluttered or unreadable equations.
+  - **Typography & Legibility:** Bold headers and clean monospace/serif math rendering; ample spacing prevents crowding.
+- **Integration Status:** **Completed** — saved to `content/projects/academic-hub/summary_enhancement/featured.png`, `image` metadata added to `index.md` frontmatter, and fulfilled `[[Insert Image: ...]]` block removed.
+
+---
+
+### 6. Guided Solutions: Visible Authorship and Multi-Perspective Solutions
+
+- **Page:** `content/projects/academic-hub/guided_solutions/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/guided_solutions/index.md` (line 36); `docs/editorial/gemini-image-generation-queue.md` (Row 07)
+- **Output File Path:** `docs/editorial/image-candidates/guided_solutions/candidate-01.png`
+- **Page Bundle Asset:** `content/projects/academic-hub/guided_solutions/featured.png`
+- **Tool / Model:** Antigravity `generate_image` (Imagen capability under owner subscription)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 646 KB
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial illustration on a solid dark navy background (#14202D). High contrast, minimalist graphic diagram with teal (#35C9C8) and muted violet (#A58AE0) accents. Balanced 16:9 composition. At the top, a clean banner card: 'Problem: Prove that the intersection of two open sets U and V is open'. Below it, three distinct equal-width cards side by side: 1. Left card titled 'My reasoning' with a casual handwritten thought bubble containing 'Point x must have a small radius fitting inside both sets'; 2. Middle card titled 'AI derivation' with teal top bar containing step-by-step mathematical proof: 'Let x ∈ U ∩ V. ∃ r₁, r₂ > 0 with B(x, r₁) ⊆ U, B(x, r₂) ⊆ V. Set r = min(r₁, r₂)'; 3. Right card titled 'After tutoring' with violet top bar containing a shorter proof path: 'Focus on key step: r = min(r₁, r₂) > 0 proves B(x, r) ⊆ U ∩ V'. Perfectly legible sans-serif typography, generous margins, clean flat vector design.
+  ```
+- **Integrated Caption:** "Illustration: three contributions to a solution, with their authorship kept visible."
+- **Integrated Alt Text:** "A problem-set question with separate spaces for student reasoning, an AI derivation, and a proof developed through tutoring."
+- **Visual & Factual Inspection:**
+  - **Problem Header:** A top card frames the authentic mathematical question: "Problem: Prove that the intersection of two open sets U and V is open".
+  - **Three Authorship Roles:** Three side-by-side cards clearly demarcate perspective:
+    1. "My reasoning": Depicts an organic thought bubble with informal student intuition ("Point x must have a small radius fitting inside both sets").
+    2. "AI derivation": Formal step-by-step topological proof with open balls $B(x, r_1) \subseteq U$ and $B(x, r_2) \subseteq V$, setting $r = \min(r_1, r_2)$.
+    3. "After tutoring": Compact proof highlight showing the essential insight ($r = \min(r_1, r_2) > 0$).
+  - **Mathematical & Visual Integrity:** Real mathematical definitions and clean notation without hallucinated characters or pseudo-proofs.
+  - **Contrast & Hierarchy:** Clear header badges with teal and violet accents against dark navy.
+- **Integration Status:** **Completed** — saved to `content/projects/academic-hub/guided_solutions/featured.png`, `image` metadata added to `index.md` frontmatter, and fulfilled `[[Insert Image: ...]]` block removed.
+
+---
+
+### 7. Socratic Tutor: Reply Check Against Established Steps
+
+- **Page:** `content/projects/academic-hub/socratic_tutor/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/socratic_tutor/index.md` (line 42); `docs/editorial/gemini-image-generation-queue.md` (Row 08)
+- **Output File Path:** `docs/editorial/image-candidates/socratic_tutor/candidate-01.png`
+- **Page Bundle Asset:** `content/projects/academic-hub/socratic_tutor/featured.png`
+- **Tool / Model:** Antigravity `generate_image` (Imagen capability under owner subscription)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 687 KB
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow with three prominent stage labels: 'Student\'s reasoning', 'Reply check', and 'Tutor\'s next question'. On the left: a card labelled 'Student\'s reasoning' containing handwritten-style note 'f(x) is continuous on [a,b], but why does it achieve a maximum?'. In the center: a card labelled 'Reply check' with a top connector labelled 'Established steps', showing a green checkmark 'Step 1: Continuity identified' and a locked violet tag 'Step 2: Extreme Value Theorem Held back'. On the right: a card labelled 'Tutor\'s next question' with text 'What property does the closed interval [a,b] have?'. At the bottom, a discreet violet badge: 'Current limit: explaining new material'. Balanced 16:9 composition, crisp typography, generous 8% outer margins.
+  ```
+- **Integrated Caption:** "Illustration: check the next reply against what the student has established."
+- **Integrated Alt Text:** "A student's reasoning updates a record of established steps, which is used to check the tutor's next question before sending it."
+- **Visual & Factual Inspection:**
+  - **Three Primary Elements:** "Student's reasoning", "Reply check", and "Tutor's next question" displayed in a clean three-card horizontal workflow.
+  - **Gatekeeping & Step Record:** The central "Reply check" card illustrates the core mechanism: a checkmark for "Step 1: Continuity identified", alongside a padlock icon holding back "Step 2: Extreme Value Theorem Held back".
+  - **Socratic Interaction:** The tutor card offers a guided inquiry ("What property does the closed interval [a,b] have?") rather than revealing the unreached theorem.
+  - **Factual Honesty / Limitation Badge:** A bottom badge prominently notes "Current limit: explaining new material", directly addressing the brief's constraint to avoid claiming the teaching limitation is resolved.
+  - **Typography & Visual Quality:** High contrast, legible typography, balanced spacing.
+- **Integration Status:** **Completed** — saved to `content/projects/academic-hub/socratic_tutor/featured.png`, `image` metadata added to `index.md` frontmatter, and fulfilled `[[Insert Image: ...]]` block removed.
+
+---
+
+### 8. Corpus Health: Discover, Review, Repair, and Re-audit
+
+- **Page:** `content/projects/academic-hub/corpus_health/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/corpus_health/index.md` (line 57); `docs/editorial/gemini-image-generation-queue.md` (Row 09)
+- **Output File Path:** `docs/editorial/image-candidates/corpus_health/candidate-01.png`
+- **Page Bundle Asset:** `content/projects/academic-hub/corpus_health/featured.png`
+- **Tool / Model:** Antigravity `generate_image` (Imagen capability under owner subscription)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 710 KB
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Four large horizontal stage labels from left to right: 'Gap found', 'Owner review', 'Repair one document', and 'Check result'. Under 'Gap found': document card with warning icon and text 'Alert: Missing search passage'. Under 'Owner review': document card with text 'Review' and violet button 'Accept repair'. Under 'Repair one document': card with text 'Action: Targeted rebuild: single document'. Under 'Check result': card with text 'Audit: Result: restored passages' and teal badge 'Verified current'. A clean arrow leads from Action back to Owner review labelled 'Changed source: review again'. Balanced 16:9 composition, generous 8% margins, crisp typography, flat clean aesthetic.
+  ```
+- **Integrated Caption:** "Illustration: discover a gap, choose a repair, and check the result."
+- **Integrated Alt Text:** "A missing search passage is reported for review, repaired for one document, and checked afterward; a changed source returns for review."
+- **Visual & Factual Inspection:**
+  - **Four Pipeline Stages:** Clear horizontal cards corresponding to "Gap found", "Owner review", "Repair one document", and "Check result".
+  - **Targeted Repair & Loop-back:** Emphasizes that repair scope is restricted to a single document ("Action: Targeted rebuild: single document"), followed by post-action verification ("Audit: Result: restored passages", "Verified current").
+  - **Changed Source Handling:** Distinct bottom loop-back arrow reading "Changed source: review again" connects Action back to Owner review, accurately reflecting the requirement that altered source material requires re-review rather than blind automation.
+  - **Spelling & Legibility:** Clean typography, zero garbled text or spurious artifacts.
+- **Integration Status:** **Completed** — saved to `content/projects/academic-hub/corpus_health/featured.png`, `image` metadata added to `index.md` frontmatter, and fulfilled `[[Insert Image: ...]]` block removed.
+
+---
+
+## Batch 2 Production Build and Visual Verification (Desktop & Mobile 390px)
+
+Full production build and responsive visual checks were performed and recorded for all five Batch 2 integrated pages.
+
+### 1. Production Build Output
+- **Command:** `hugo --minify`
+- **Hugo Version:** v0.163.3 extended windows/amd64
+- **Build Duration:** 6,853 ms
+- **Statistics:**
+  - Pages: 119
+  - Paginator pages: 4
+  - Non-page files: 37
+  - Processed images: 603 (80 new responsive WebP variants generated)
+  - Errors: 0
+  - Warnings: 0
+
+### 2. Article View Verification (Desktop & Mobile 390px)
+
+| Page | Responsive Srcset Generated | Sizes Attribute | Rendered Caption | Rendered Article Alt Text | 390px Mobile & Desktop Legibility | Intended Claim Communicated |
+|---|---|---|---|---|---|---|
+| **Study Guide Pipeline** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: choose the materials, then decide which revisions to apply.</span>` | `alt="Selected sources become a draft; a person accepts or rejects proposed edits before a revised copy is created."` | Four bold stages and Accepted/Rejected proposal badges remain clearly distinguishable and readable on 390px mobile screens. | Human review point with accepted/rejected decisions creating a new output. |
+| **Summary Enhancement** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: expand the reasoning while keeping the source trail.</span>` | `alt="A short summary and its source passages lead to a fuller explanation with assumptions, a derivation, and a computed example."` | High-contrast cards for Assumptions, Derivation, and Worked Example with calculator icon scale down cleanly at 390px without equation distortion. | Three-part expansion connected to explicit course source citations. |
+| **Guided Solutions** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: three contributions to a solution, with their authorship kept visible.</span>` | `alt="A problem-set question with separate spaces for student reasoning, an AI derivation, and a proof developed through tutoring."` | Problem header and three distinct authorship cards (thought bubble, formal proof, compact highlight) remain legible and clearly demarcated at 390px. | Visible multi-perspective solution retaining student intuition alongside AI proof. |
+| **Socratic Tutor** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: check the next reply against what the student has established.</span>` | `alt="A student's reasoning updates a record of established steps, which is used to check the tutor's next question before sending it."` | Step checkmark, held-back padlock tag, question card, and bottom limitation badge remain sharp and readable on mobile devices. | Gated reply check preventing unreached theorem leaks while noting teaching limits. |
+| **Corpus Health** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: discover a gap, choose a repair, and check the result.</span>` | `alt="A missing search passage is reported for review, repaired for one document, and checked afterward; a changed source returns for review."` | Four large stage cards, single-document action label, and changed-source loop-back arrow maintain legibility without card collisions at 390px. | Discovery, human review, targeted single-document rebuild, and changed-source re-review. |
+
+### 3. Collection Card / Thumbnail Verification (Desktop & Mobile 390px)
+
+- **Listing Location:** `public/projects/academic-hub/index.html` and `public/projects/index.html`
+- **Responsive Srcset for Cards:** Generated WebP variants at 400w, 600w, 800w with `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"` and `object-contain` within exact 16:9 containers.
+- **Thumbnail Legibility:** The bold headers, generous outer margins (>8%), and dark navy backgrounds ensure all five cards present clearly without awkward cropping or illegible micro-text in 300px–390px card grids.
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
 - **Branch:** `gemini/website-images`
-- **Files Modified / Added / Removed:**
-  - `content/projects/academic-hub/concept_graph/featured.png` (added integrated screenshot)
-  - `content/projects/academic-hub/concept_graph/index.md` (added `image` frontmatter, removed fulfilled `[[Insert Image: ...]]`)
-  - `content/projects/academic-hub/source_indexer/featured.png` (added integrated candidate 01)
-  - `content/projects/academic-hub/source_indexer/featured.jpg` (removed obsolete prior asset)
-  - `content/projects/academic-hub/source_indexer/index.md` (updated `image` frontmatter, removed fulfilled `[[Insert Image: ...]]`)
-  - `content/projects/academic-hub/notes_transcription/featured.png` (added integrated candidate 02)
-  - `content/projects/academic-hub/notes_transcription/featured.jpg` (removed obsolete prior asset)
-  - `content/projects/academic-hub/notes_transcription/index.md` (updated `image` frontmatter with Illustration caption, removed fulfilled `[[Insert Image: ...]]`)
+- **Committed Local Pilot Work (Commit `ea6faef`):**
+  - `content/projects/academic-hub/concept_graph/featured.png` (integrated screenshot)
+  - `content/projects/academic-hub/concept_graph/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/source_indexer/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/source_indexer/featured.jpg` (obsolete prior asset removed)
+  - `content/projects/academic-hub/source_indexer/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/notes_transcription/featured.png` (integrated candidate 02)
+  - `content/projects/academic-hub/notes_transcription/featured.jpg` (obsolete prior asset removed)
+  - `content/projects/academic-hub/notes_transcription/index.md` (frontmatter updated with "Illustration:" prefix, brief removed)
   - `docs/editorial/image-candidates/concept_graph/candidate-01.png`
   - `docs/editorial/image-candidates/concept_graph/candidate-02.png`
   - `docs/editorial/image-candidates/source_indexer/candidate-01.png`
   - `docs/editorial/image-candidates/notes_transcription/candidate-01.png`
   - `docs/editorial/image-candidates/notes_transcription/candidate-02.png`
-  - `docs/editorial/gemini-image-generation-report.md`
-- **Unchanged:** All remaining 26 queue items, other page bundles, layouts, styles, and configs remain untouched.
+- **Integrated Batch 2 Work (Pending Commit):**
+  - `content/projects/academic-hub/study_guide_pipeline/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/study_guide_pipeline/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/summary_enhancement/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/summary_enhancement/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/guided_solutions/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/guided_solutions/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/socratic_tutor/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/socratic_tutor/index.md` (frontmatter updated, brief removed)
+  - `content/projects/academic-hub/corpus_health/featured.png` (integrated candidate 01)
+  - `content/projects/academic-hub/corpus_health/index.md` (frontmatter updated, brief removed)
+  - `docs/editorial/image-candidates/study_guide_pipeline/candidate-01.png`
+  - `docs/editorial/image-candidates/summary_enhancement/candidate-01.png`
+  - `docs/editorial/image-candidates/guided_solutions/candidate-01.png`
+  - `docs/editorial/image-candidates/socratic_tutor/candidate-01.png`
+  - `docs/editorial/image-candidates/corpus_health/candidate-01.png`
+  - `docs/editorial/gemini-image-generation-report.md` (updated report)
+- **Integrity Verification:**
+  - All remaining queue items (rows 10 through 27) remain untouched with their `[[Insert Image: ...]]` blocks preserved.
+  - No branches switched, merged, or pushed.
+
+

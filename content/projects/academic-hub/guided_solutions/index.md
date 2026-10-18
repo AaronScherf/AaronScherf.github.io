@@ -13,6 +13,10 @@ links:
 tags:
   - Study Guides
   - Learning Tools
+image:
+  caption: "Illustration: three contributions to a solution, with their authorship kept visible."
+  alt_text: "A problem-set question with separate spaces for student reasoning, an AI derivation, and a proof developed through tutoring."
+  focal_point: Center
 params:
   subproject:
     id: guided_solutions
@@ -32,8 +36,6 @@ Guided Solutions brings three contributions to a problem set together: an AI-wri
 <!--more-->
 
 The separation matters when the routes differ. In the recorded microeconomics run, the agent supplied detailed reference proofs; later tutoring on two questions produced more compact proofs following the student's approach. Both were kept, with room for the student's interpretation alongside them.
-
-[[Insert Image: Create a landscape featured illustration of one problem-set question with three clearly separated, labelled contributions: "My reasoning", "AI derivation", and "After tutoring". Use a handwritten thought bubble, a step-by-step proof, and a shorter proof path to distinguish the roles; show that they remain available for comparison. Use invented, minimal content rather than private coursework or a fabricated screenshot. Keep the three labels large enough to read in a thumbnail and on a phone. Suggested caption: "Three contributions to a solution, with their authorship kept visible." Suggested alt text: "A problem-set question with separate spaces for student reasoning, an AI derivation, and a proof developed through tutoring." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 An **illustrative layout**, rather than an excerpt from the private coursework, looks like this:
 

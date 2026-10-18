@@ -17,6 +17,10 @@ links:
 tags:
   - Python
   - Learning Tools
+image:
+  caption: "Illustration: check the next reply against what the student has established."
+  alt_text: "A student's reasoning updates a record of established steps, which is used to check the tutor's next question before sending it."
+  focal_point: Center
 params:
   subproject:
     id: socratic_tutor
@@ -38,8 +42,6 @@ The Socratic Tutor gives an AI study conversation a record of which steps the st
 <!--more-->
 
 That restraint also exposed the central difficulty. In two recorded sessions on one microeconomics problem set, the tutor followed several session rules but struggled to teach unfamiliar material: an explanation could itself reveal a step the student had not reached. The system was better at assessing existing understanding than helping a learner build it.
-
-[[Insert Image: Create a landscape illustration of a tutoring turn with three large elements: "Student's reasoning", "Reply check", and "Tutor's next question". Show a small record of established steps feeding the check, with one unreached solution step held back. Include a modest label "Current limit: explaining new material" so the picture does not imply that the teaching limitation is solved. Use invented generic notes and no private coursework or fabricated chat screenshot. Suggested caption: "Check the next reply against what the student has established." Suggested alt text: "A student's reasoning updates a record of established steps, which is used to check the tutor's next question before sending it." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 An **illustrative version of that failure pattern** is:
 

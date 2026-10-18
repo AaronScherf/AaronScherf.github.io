@@ -25,6 +25,10 @@ links:
 tags:
   - Python
   - Corpus Maintenance
+image:
+  caption: "Illustration: discover a gap, choose a repair, and check the result."
+  alt_text: "A missing search passage is reported for review, repaired for one document, and checked afterward; a changed source returns for review."
+  focal_point: Center
 params:
   subproject:
     id: corpus_health
@@ -53,8 +57,6 @@ Having a converted lecture note on disk does not mean its latest text is availab
 <!--more-->
 
 The repair scope is deliberately small: it can rebuild searchable passages for one identified document whose search record is already current. Before acting, it checks that the document and record still match the reviewed finding. Afterward, it audits the result. A changed source needs another check rather than relying on an old approval.
-
-[[Insert Image: Create a landscape explanatory diagram following one document from "Gap found" to "Owner review", "Repair one document", and "Check result". Show the source document beside its search passages, with a missing passage restored only after review. A separate small branch should say "Changed source: review again". Use generic documents rather than private notes or a fabricated report. Keep the four main labels large enough for a thumbnail. Suggested caption: "Discover a gap, choose a repair, and check the result." Suggested alt text: "A missing search passage is reported for review, repaired for one document, and checked afterward; a changed source returns for review." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 For an **illustrative case**, a transcript may have been updated while its searchable passages still reflect the earlier version. The scan flags the mismatch. I can accept, decline, or defer it on a local review page; running accepted repairs is a separate step. Rebuilding those passages can incur an AI embedding charge, so acceptance is recorded for each source.
 
