@@ -33,6 +33,10 @@ links:
 tags:
   - Python
   - Learning Tools
+image:
+  caption: "Screenshot of the interactive Microeconomics concept graph interface, showing concept nodes, connections, and the details panel for a selected concept."
+  alt_text: "Screenshot of the interactive Microeconomics concept graph web viewer showing interconnected nodes and the details panel for Rational preference relation."
+  focal_point: Center
 params:
   subproject:
     id: concept_graph
@@ -67,8 +71,6 @@ Concept Graph maps the ideas in a course and the conditions that connect them. A
 <!--more-->
 
 For example, the package's sample graph connects a **partial order** to a **total order** when every pair can be compared. A partial order can leave two items unranked relative to one another; adding that comparison requirement produces a total order. The condition on the arrow explains what changed, rather than leaving me to infer it from two nearby boxes.
-
-[[Insert Image: Create a focused landscape diagram based on the sample-graph example above, rather than a screenshot of the entire crowded graph. Show "Partial order" leading to "Total order" only when "Every pair can be compared"; place that condition directly on the connection. Include a small source-reference symbol and a visible "Proposed" label to communicate that connections have supporting material and still need review. Present it as an explanatory illustration, not a verified claim or an exact reproduction of the live interface. Use large labels, high contrast, and ample space so the condition remains readable on a phone and the two concepts remain recognizable in a thumbnail. Suggested caption: "The condition on a connection explains what is needed to reach the next idea." Suggested alt text: "A proposed connection from partial order to total order, conditional on every pair being comparable, with a source-reference symbol." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 The first full graph covers the first half of a graduate microeconomic theory sequence: [open the live graph](https://aaronscherf.github.io/microecon-concept-graph/). As of October 15, 2026, it contains 104 concepts and 159 connections across eight course sections. Those counts describe the draft's scale; the explanations and connections still need review.
 

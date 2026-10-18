@@ -26,7 +26,9 @@ tags:
   - LLM / RAG
   - Vector Database
 image:
-  caption: "Search narrows a question to relevant documents and then to referenced passages."
+  caption: "Illustration: find the document, then the passage worth reading."
+  alt_text: "An illustrative question narrows from course records to documents and a source-referenced passage."
+  focal_point: Center
 params:
   subproject:
     id: source_indexer
@@ -55,8 +57,6 @@ A question about eigenvalues might belong with a textbook proof, a lecture expla
 <!--more-->
 
 The search catalog has a record for each document, much like a library card with a brief description and subject labels. These descriptions help find material; the longer summaries I study are written by the answering and guide tools. A record's identity comes from the source file's contents rather than its filename, so renaming a PDF does not have to create a new document. Course-level records narrow the search before it compares individual files.
-
-[[Insert Image: Follow an illustrative question, "Where do my notes explain eigenvalues?", through a course catalog, two document cards, and one highlighted passage with a readable page reference. Use invented document names and text, with large labels "Course", "Document", and "Passage". Do not fabricate a screenshot or actual search result. Suggested caption: "Find the document, then the passage worth reading." Suggested alt text: "An illustrative question narrows from course records to documents and a source-referenced passage." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## Give other study tools something to read
 

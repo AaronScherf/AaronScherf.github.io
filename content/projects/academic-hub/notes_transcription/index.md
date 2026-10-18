@@ -18,7 +18,9 @@ tags:
   - LLM / RAG
   - Hugging Face
 image:
-  caption: "Course pages and handwritten drawings become searchable text with source references."
+  caption: "Illustration: keep the handwriting, slide text, and source trail distinct while preserving mathematical superscripts."
+  alt_text: "A presentation slide and handwritten note with vector domain R^n are transcribed into distinct labelled blocks, with mathematical formatting and superscripts preserved."
+  focal_point: Center
 params:
   subproject:
     id: transcribe_notes
@@ -39,8 +41,6 @@ A question scribbled beside a lecture slide is easy to lose in a folder of drawi
 <!--more-->
 
 Typed PDFs need care too. A small raised character can carry the difference between R² and R2, yet ordinary text extraction may flatten them into the same line. The pipeline uses character size and vertical position to recover exponents and subscripts locally before deciding whether a page needs AI transcription. That preserves useful structure without paying a model to reread every clean page.
-
-[[Insert Image: Show an illustrative handwritten margin question beside a generic slide, then its searchable transcription with separate "Slide" and "Handwritten" labels and a source reference. Add a small inset comparing R² with flattened R2. Use invented notes, large labels, and no private coursework. Suggested caption: "Keep the handwriting, slide text, and source trail distinct." Suggested alt text: "A handwritten question and slide become separately labelled searchable text; an inset shows a preserved exponent." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 Once the output is registered with the [Source Indexer](/projects/academic-hub/source_indexer/), its passages can be found alongside textbook material. That is what lets the [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) draw on a handwritten explanation, or [Concept Graph](/projects/academic-hub/concept_graph/) cite course notes behind a proposed connection. Transcription prepares the material those tools read.
 
