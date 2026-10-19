@@ -849,6 +849,81 @@ Full production build and responsive visual checks were performed and recorded f
 
 ---
 
+## Batch 5 Candidates & Queue Status (Final 11 Remaining Pages — 2026-10-19)
+
+Dated: 2026-10-19  
+Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-originals-inventory.md` (committed locally at `cb6d4fc`). Per owner instructions, candidates are being worked through in queue order. All new candidates are preserved strictly under `docs/editorial/image-candidates/` awaiting owner review before any page bundle integration.
+
+### Batch 5 Queue Status Table
+
+| Order | Page | Candidate Path | Method / Tool | Status |
+|---|---|---|---|---|
+| **1** | [`obsidian_git_sync`](../../content/projects/academic-hub/obsidian_git_sync/index.md) | [`candidate-01.png`](image-candidates/obsidian_git_sync/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **2** | [`research_notes_conversion`](../../content/projects/ai-research-assistant/research_notes_conversion/index.md) | [`candidate-01.png`](image-candidates/research_notes_conversion/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **3** | [`audio_generator_podcasts`](../../content/blog/audio_generator_podcasts/index.md) | In queue (row 13) | Antigravity `generate_image` | **Blocked by image allowance** (Quota reset at 18:21 UTC / 14:21 EDT) |
+| **4** | [`problem_corpus`](../../content/projects/academic-hub/problem_corpus/index.md) | In queue (row 15) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **5** | [`audio_generator`](../../content/projects/academic-hub/audio_generator/index.md) | In queue (row 16) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **6** | [`multi_agent_project`](../../content/projects/multi_agent_project/index.md) | In queue (row 17) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **7** | [`journal_article_transcription`](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | In queue (row 18) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **8** | [`academic-hub-overview`](../../content/projects/academic-hub-overview/index.md) | In queue (row 19) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **9** | [`math_thesis`](../../content/projects/math_thesis/index.md) | In queue (row 20) | Standard plotting tool from verified PDF data | Source evidence verified (`Scherf_Aaron_ISU_Thesis.pdf` p. 15–16) |
+| **10** | [`wheat_yield_prediction`](../../content/projects/wheat_yield_prediction/index.md) | In queue (row 21) | Standard plotting tool from Table 6 data | Source evidence verified (`Scherf_Aaron_Berkeley_Thesis.pdf` Table 6) |
+| **11** | [`introducing_academic_hub`](../../content/blog/academic_hub/index.md) | In queue (row 27) | Antigravity `generate_image` | In queue (pending quota reset) |
+
+---
+
+### Detailed Reviews of Completed Batch 5 Candidates
+
+#### 19. Obsidian Git Sync: Lightweight Note Sync vs. Source Archive (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/obsidian_git_sync/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/obsidian_git_sync/index.md` (Queue row 11)
+- **Output File Path:** `docs/editorial/image-candidates/obsidian_git_sync/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 741,918 bytes
+- **SHA-256 Digest:** `5809e69ead6769d1bf37d4825480a400fb62aa66e359666c2fda0cdd7b2fa813`
+- **Original Archive:** `docs/editorial/image-candidates/obsidian_git_sync/original-featured.jpg` (SHA-256: `ecc2ed917598ce6210d8b65c9ec382397b8a2b6083325a1aeb38ae027458b6fc`, 509,046 bytes)
+- **Proposed Caption:** "Sync the working notes while keeping large sources separate."
+- **Proposed Alt Text:** "A tablet and laptop share editable notes while a separate archive supplies source images and documents for transcription."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal architecture composition: 1. On the left, a lightweight sync cluster showing a tablet card and laptop card connected by bidirectional sync arrows, with a large bold header 'Editable notes' and badges for 'Markdown notes' and 'Excalidraw drawings'; 2. A small violet callout badge attached to drawing notes: 'Saving drawing auto-creates SVG'; 3. Separated by a clear dashed boundary line, on the right is a storage card titled 'Large sources' containing 'Textbook PDFs & Raw Audio' with violet badge 'Outside sync'; 4. Downstream arrow leads from Large sources to a processing card titled 'Searchable text' with teal badge 'Transcription & Indexing'; 5. Discreet bottom pill tag: 'Separation of working vault from heavy media'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Lightweight Sync Cluster:** Tablet and laptop cards are linked by clean bidirectional sync arrows beneath a prominent "Editable notes" header with badges for "Markdown notes" and "Excalidraw drawings".
+  - **Drawing Export Callout:** Violet speech bubble clearly states: "Saving drawing auto-creates SVG", illustrating automated vector rendering without claiming full OCR inside tablet sync.
+  - **Architectural Boundary:** A clean dashed vertical boundary line separates lightweight sync from external storage.
+  - **Large Sources & Downstream Search:** Storage box "Large sources" ("Textbook PDFs & Raw Audio", badge "Outside sync") feeds downstream "Searchable text" ("Transcription & Indexing").
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 20. Research Notes Conversion: Structured Outline with Paragraph Locators (Candidate 01)
+
+- **Page:** `content/projects/ai-research-assistant/research_notes_conversion/index.md`
+- **Original Brief Path:** `content/projects/ai-research-assistant/research_notes_conversion/index.md` (Queue row 12)
+- **Output File Path:** `docs/editorial/image-candidates/research_notes_conversion/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 685,555 bytes
+- **SHA-256 Digest:** `7d9f6e777d83b12f745de96307791e4178dad5ca42650775dca150d57faf77cb`
+- **Original Archive:** `docs/editorial/image-candidates/research_notes_conversion/original-featured.jpg` (SHA-256: `c80b6dec6949855a2146155bf9440261350b82dafad2dea316185cda1e3f0904`, 579,817 bytes)
+- **Proposed Caption:** "Find a research idea again, with a reference to its place in the note."
+- **Proposed Alt Text:** "A Word note and a paper appear in the same collection; a selected note passage has a paragraph locator."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow layout: 1. On the left, an input card titled 'Word Research Note' (.docx) showing a clean outline: bold heading 'Research idea' and bullets 'Proposed mechanism' and 'Possible comparison'; 2. A clean arrow leads to a shared container on the right titled 'Unified Search Collection'; 3. Inside the collection, two cards sit side by side: left card 'Searchable Note Passage' showing the converted text with a prominent teal badge 'Locator: Paragraphs 4–6'; right card 'Academic Paper' with title 'Comparative Resilience Study' and violet badge 'Literature search'; 4. Clean search magnifying glass icon linking both cards; 5. Discreet bottom pill tag: 'Invented note outline with paragraph locators'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Source Word Document:** Input card clearly marked "Word Research Note (.docx)" with outline headings "Research idea", "Proposed mechanism", and "Possible comparison".
+  - **Unified Search Collection:** Right container places converted personal note text directly alongside a published academic paper ("Comparative Resilience Study").
+  - **Paragraph Locator:** Highlighted passage contains a crisp teal badge: "Locator: Paragraphs 4–6", accurately reflecting the tool's paragraph fallback mechanism for Word files.
+  - **Discreet Tag:** Bottom pill tag marks: "Invented note outline with paragraph locators".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
@@ -864,19 +939,19 @@ Full production build and responsive visual checks were performed and recorded f
   - Commit `398ec57`: Integrate approved Batch 3 featured images and pilot correction.
   - Commit `0d012cb`: Archive Batch 4 originals and add candidate images for review.
   - Commit `df6a563`: Revise resume_manager candidate-02 with geometric gear icon.
-- **Batch 4 Integration:**
-  - All 5 approved Batch 4 images copied to active page bundles as `featured.png`.
-  - Replaced `featured.jpg` removed from all 5 page bundles.
-  - Frontmatter captions prefixed with `Illustration:` and updated with alt text.
-  - Fulfilled `[[Insert Image: ...]]` placeholders removed.
-  - Hugo production build passed (`619` processed images, 0 errors, 0 warnings).
-  - Responsive srcset and mobile 390px legibility verified.
-
+  - Commit `2889640`: Integrate approved Batch 4 featured images (`journal_discovery`, `visualization`, `resume_manager`, `video_notes`, `tutor_diagnosis`) and record responsive verification.
+  - Commit `cb6d4fc`: Archive all 11 Batch 5 original featured images with verified SHA-256 digests in `image-originals-inventory.md`.
+- **Active Uncommitted Candidate Work (Batch 5):**
+  - Generated and saved `docs/editorial/image-candidates/obsidian_git_sync/candidate-01.png`.
+  - Generated and saved `docs/editorial/image-candidates/research_notes_conversion/candidate-01.png`.
+  - Native image generation quota reached on queue item 3 (`audio_generator_podcasts`) with reset expected at `2026-10-19T18:21:20Z`.
+  - Source evidence verified in local PDFs for the two thesis pages (`math_thesis` and `wheat_yield_prediction`).
 - **Integrity Verification:**
   - All original archived files (`original-featured.jpg`) are verified with SHA-256 and recorded in `image-originals-inventory.md`.
-  - All candidate versions (`candidate-01.png`, `candidate-02.png`) remain preserved under `docs/editorial/image-candidates/`.
+  - All candidate versions remain preserved under `docs/editorial/image-candidates/`.
   - Exactly one featured asset exists per page bundle (`featured.png`).
   - No branches switched, merged, pushed, or deployed.
+
 
 
 
