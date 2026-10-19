@@ -507,6 +507,128 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
 
 ---
 
+## Batch 3 Candidate Revisions (Round 2 — 2026-10-19)
+
+Targeted corrections requested by the owner for four Batch 3 candidates. All previous originals, candidate files, and approved featured images are preserved. No page bundles have been modified.
+
+### Summary Table of Active Batch 3 Review Candidates
+
+| Item | Page | Candidate Path | Dimensions | Status | Key Correction / Feature |
+|---|---|---|---|---|---|
+| **Corr. Source Indexer** | [`source_indexer`](../../content/projects/academic-hub/source_indexer/index.md) | [`candidate-02.png`](image-candidates/source_indexer/candidate-02.png) | 1376 x 768 (16:9) | **Owner review pending** (Unchanged from R1) | $\mathbf{Av} = \lambda \mathbf{v} \; (\mathbf{v} \neq 0)$ |
+| **9. Project Steering** | [`project_steering`](../../content/projects/academic-hub/project_steering/index.md) | [`candidate-02.png`](image-candidates/project_steering/candidate-02.png) | 1376 x 768 (16:9) | **Owner review pending** (Revised R2) | Shortlist contains only proposed tasks; 'Format exam notes' replaces unproposed task; 'Corpus scan trial' missing estimate held back |
+| **10. Marker Conversion** | [`marker_conversion`](../../content/projects/academic-hub/marker_conversion/index.md) | [`candidate-01.png`](image-candidates/marker_conversion/candidate-01.png) | 1376 x 768 (16:9) | **Owner review pending** (Unchanged from R1) | Dual PDF & printed page tracking, figure description |
+| **11. Notes Post-Processing** | [`postprocess_notes`](../../content/projects/academic-hub/postprocess_notes/index.md) | [`candidate-02.png`](image-candidates/postprocess_notes/candidate-02.png) | 1376 x 768 (16:9) | **Owner review pending** (Revised R2) | Removed unrelated lower equation and duplicate bottom headers; focused strictly on single expression $\sqrt{h^2 + k^2}$ and $p \to \sqrt{}$ correction |
+| **12. RAG Analysis** | [`rag_analysis`](../../content/projects/academic-hub/rag_analysis/index.md) | [`candidate-02.png`](image-candidates/rag_analysis/candidate-02.png) | 1376 x 768 (16:9) | **Owner review pending** (Revised R2) | Added explicit "real symmetric matrix" condition to question and textbook passage; inspectable source trail |
+| **13. Problem Generation** | [`problem_generation`](../../content/projects/academic-hub/problem_generation/index.md) | [`candidate-02.png`](image-candidates/problem_generation/candidate-02.png) | 1376 x 768 (16:9) | **Owner review pending** (Revised R2) | Completed convergence proof ($\forall n \ge N, |1/n| \le 1/N < \varepsilon$); split method and reasoning checks with human inspection |
+
+---
+
+### Detailed Reviews of Revised Candidates
+
+#### 9. Project Steering: Proposed-Task Alignment & Shortlist Derivation (Candidate 02)
+
+- **Page:** `content/projects/academic-hub/project_steering/index.md`
+- **Output File Path:** `docs/editorial/image-candidates/project_steering/candidate-02.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 654,708 bytes
+- **SHA-256 Digest:** `8de74ce3a4dafbb62ce0cf403cad1a890c3c7cbd5fdbbe1ed17f5de3245a0541`
+- **Proposed Caption:** "A shortlist built from decisions I have reviewed."
+- **Proposed Alt Text:** "Task suggestions pass through owner review; changed tasks and missing estimates stay out of the ready shortlist."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right with three large prominent stage labels: 'Proposed', 'Review', and 'Ready'. Under 'Proposed': a clean white card listing four tasks: 'Format exam notes', 'Corpus scan trial' with an attached violet badge 'Missing estimate', 'Re-index lecture notes', and 'Export summary'. A clean teal arrow leads to 'Review': a central card labelled 'Owner Review' with a violet badge 'Approval'. A curved purple arrow leads from Ready back to Review labelled 'Changed task: return to review'. A clean teal arrow leads to 'Ready': a clean white shortlist card titled 'Shortlist' containing three numbered tasks from the proposed list: '1. Re-index lecture notes', '2. Format exam notes', and '3. Export summary'. At the bottom center, a discreet pill tag: 'Prioritized, not implemented'. Minimalist flat vector aesthetic, crisp sans-serif typography, generous outer margins, balanced 16:9 composition.
+  ```
+- **Visual & Factual Inspection:**
+  - **Proposed Task List:** Contains four clean tasks: "Format exam notes", "Corpus scan trial", "Re-index lecture notes", and "Export summary".
+  - **Missing Estimate Hold-Back:** A violet badge reading "Missing estimate" is directly attached beneath "Corpus scan trial", visibly justifying why it does not advance to the ready shortlist.
+  - **Shortlist Alignment:** The "Shortlist" on the Ready card consists exclusively of tasks originating in the Proposed list:
+    1. "Re-index lecture notes"
+    2. "Format exam notes" (replacing the unproposed "Verify study guide" from Candidate 01)
+    3. "Export summary"
+  - **Changed-Task Loop & State Distinction:** A curved purple connector arrow links from Ready back to Review: "Changed task: return to review". A bottom centered pill tag clearly states: "Prioritized, not implemented".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 11. Notes Post-Processing: Focused Expression & Clean Layout (Candidate 02)
+
+- **Page:** `content/projects/academic-hub/postprocess_notes/index.md`
+- **Output File Path:** `docs/editorial/image-candidates/postprocess_notes/candidate-02.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 652,232 bytes
+- **SHA-256 Digest:** `579f6163ccbd60a27276b3156e3e06807df9e1a06e5170156708c4f73e212c63`
+- **Proposed Caption:** "One ordinary-looking letter can change the meaning of an equation."
+- **Proposed Alt Text:** "The letter p in extracted text is replaced with a square-root sign after comparison with the source formula."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial illustration on a solid dark navy background (#14202D). High contrast, minimalist graphic diagram with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal three-stage comparison across three distinct white cards: 1. Left card with single top title 'Source Page' showing exactly one formula with a clean radical symbol '√(h² + k²)' and no other equations; 2. Middle card with single top title 'Mistaken Extraction' showing formula 'p(h² + k²)' where the initial letter 'p' is highlighted in an amber warning box labelled 'Suspicious symbol'; A verification connector arrow leads from the source page to the correction; 3. Right card with single top title 'Corrected Reading' showing '√(h² + k²)' with the radical sign '√' highlighted in a teal badge labelled 'Verified against source: p → √'. Only have titles at the top of each card; do not place any duplicate titles or labels below the cards. Discreet bottom note: 'Illustrative example, not automated proof'. Balanced 16:9 composition, generous outer margins, crisp typography, clean vector aesthetic.
+  ```
+- **Visual & Factual Inspection:**
+  - **Single Focused Expression:** The unrelated lower equation from Candidate 01 has been removed; the Source Page card now displays solely the target expression: $\sqrt{h^2 + k^2}$.
+  - **Removal of Duplicate Headings:** The redundant stage headings beneath the cards from Candidate 01 are eliminated. Only clean top titles appear ("Source Page", "Mistaken Extraction", "Corrected Reading").
+  - **Three-Stage Progression:**
+    1. Source Page: $\sqrt{h^2 + k^2}$
+    2. Mistaken Extraction: $p(h^2 + k^2)$ with $p$ enclosed in amber badge "Suspicious symbol".
+    3. Corrected Reading: $\sqrt{h^2 + k^2}$ with radical $\sqrt{}$ highlighted in teal and callout badge "Verified against source: $p \to \sqrt{}$".
+  - **Verification Trail & Qualification:** A verification connector links the source to the correction, and the bottom note explicitly declares: "Illustrative example, not automated proof".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 12. RAG Analysis: Explicit Real Symmetric Matrix Condition (Candidate 02)
+
+- **Page:** `content/projects/academic-hub/rag_analysis/index.md`
+- **Output File Path:** `docs/editorial/image-candidates/rag_analysis/candidate-02.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 705,186 bytes
+- **SHA-256 Digest:** `ecb8f43a733af97537cd3062d422d81b0a2b08cff46bebc06271d87371639fe4`
+- **Proposed Caption:** "Keep an explanation connected to the passages used to write it."
+- **Proposed Alt Text:** "Two source passages support an illustrative answer with a section and page reference that can be checked."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: On the left, a card labelled 'Question' with text 'How does the spectral theorem help with real symmetric matrices?'. Clean arrows branch to two central source passage cards: top card labelled 'Textbook Passage' with violet badge 'Sec 7.4, p. 264' and text 'A real symmetric matrix has an orthonormal eigenbasis.'; bottom card labelled 'Lecture Notes' with teal badge 'Lecture 12, p. 3' and text 'Each eigenvector direction is scaled by its eigenvalue.'. Connector arrows merge into an 'Answer' card on the right with concise explanation 'Orthogonal eigenvector coordinates turn the transformation into separate scaling operations.' and an attached inspectable reference tag 'Source trail: Sec 7.4, pp. 264–266'. Discreet bottom badge: 'Illustrative: reference enables inspection'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, flat clean vector aesthetic.
+  ```
+- **Visual & Factual Inspection:**
+  - **Mathematical Condition:** The question explicitly states: "How does the spectral theorem help with real symmetric matrices?", and the textbook passage specifies: "A real symmetric matrix has an orthonormal eigenbasis." (with violet badge "Sec 7.4, p. 264"). This ensures no false implication that arbitrary matrices have real eigenvalues or orthogonal eigenbases.
+  - **Lecture Passage & Explanation:** Lecture notes card shows "Each eigenvector direction is scaled by its eigenvalue." (teal badge "Lecture 12, p. 3"). Answer states: "Orthogonal eigenvector coordinates turn the transformation into separate scaling operations."
+  - **Inspectable Source Trail:** An attached tag records "Source trail: Sec 7.4, pp. 264–266".
+  - **Discreet Qualification:** Bottom pill clearly reads "Illustrative: reference enables inspection".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 13. Problem Generation: Complete Convergence Argument (Candidate 02)
+
+- **Page:** `content/projects/academic-hub/problem_generation/index.md`
+- **Output File Path:** `docs/editorial/image-candidates/problem_generation/candidate-02.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 672,989 bytes
+- **SHA-256 Digest:** `bc91d1a9799577446687ff7e807d0c455ac3c85da189010ddfdc203c70a2689f`
+- **Proposed Caption:** "The right answer and the right method are separate checks."
+- **Proposed Alt Text:** "A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal progression from left to right across clean white cards: 1. Left card labelled 'Practice Request' with text 'Show 1/n → 0 using ε-N definition'; 2. Crisp arrow leads to 'Draft Solution' card with complete proof: 'Given ε > 0, choose N ∈ ℕ with N > 1/ε. For every n ≥ N, |1/n| ≤ 1/N < ε.'; 3. Clean arrows lead to two separate verification checks stacked vertically: top check with teal badge 'Requested method? PASS (ε-N applied)'; bottom check with violet badge 'Correct reasoning? PASS (inequalities valid)'; 4. Arrow leads to final card labelled 'Human Inspection' with review checklist icon and note 'Student verifies reasoning'. Discreet bottom tag: 'Illustrative demonstration'. Balanced 16:9 composition, generous 8% outer margins, crisp sans-serif typography, flat clean vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Complete Mathematical Argument:** The Draft Solution card now contains the rigorous, complete convergence proof:
+    $$\text{Given } \varepsilon > 0, \text{ choose } N \in \mathbb{N} \text{ with } N > \frac{1}{\varepsilon}.$$
+    $$\text{For every } n \ge N, \left|\frac{1}{n}\right| \le \frac{1}{N} < \varepsilon.$$
+    This explicitly establishes the inequality for all $n \ge N$, correcting the incomplete argument from Candidate 01.
+  - **Independent Verification Checks:**
+    1. "Requested method? PASS (ε-N applied)" (teal ribbon badge)
+    2. "Correct reasoning? PASS (inequalities valid)" (violet ribbon badge)
+  - **Human Inspection Stage:** Connects to final "Human Inspection" card with checklist and "Student verifies reasoning".
+  - **Discreet Qualification:** Bottom pill tag clearly reads "Illustrative demonstration".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
@@ -517,13 +639,19 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
   - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
   - Commit `112fd70`: Archive Batch 3 originals, add candidates for steering, marker, postprocess, and source indexer v2.
   - Commit `220bafc`: Add candidate images for rag_analysis and problem_generation.
-- **Current Worktree Status:**
-  - Clean (`git status --short` reports clean working directory).
-  - All 6 candidate assets (1 pilot correction + 5 new Batch 3 pages) are safely committed under `docs/editorial/image-candidates/` awaiting owner review.
+  - Commit `52a05fe`: Documentation tracking update in generation report.
+- **Current Round 2 Candidates (Awaiting Owner Review):**
+  - `docs/editorial/image-candidates/project_steering/candidate-02.png` (created)
+  - `docs/editorial/image-candidates/postprocess_notes/candidate-02.png` (created)
+  - `docs/editorial/image-candidates/rag_analysis/candidate-02.png` (created)
+  - `docs/editorial/image-candidates/problem_generation/candidate-02.png` (created)
+  - `docs/editorial/image-candidates/marker_conversion/candidate-01.png` (preserved from Round 1)
+  - `docs/editorial/image-candidates/source_indexer/candidate-02.png` (preserved from Round 1)
 - **Integrity Verification:**
-  - No edits have been made to `content/projects/` page bundles or active featured assets for Batch 3.
+  - Zero edits have been made to `content/projects/` page bundles or active featured assets.
+  - All original archived files (`original-featured.jpg`) and Candidate 01 assets remain untouched.
   - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
-  - No branches switched, merged, or pushed.
+  - No branches switched, merged, pushed, or deployed.
 
 
 
