@@ -21,7 +21,9 @@ tags:
   - Python
   - LLM / RAG
 image:
-  caption: "A question leads to relevant passages, an explanation, and references to inspect."
+  caption: "Illustration: keep an explanation connected to the passages used to write it."
+  alt_text: "Two source passages support an illustrative answer with a section and page reference that can be checked."
+  focal_point: Center
 params:
   subproject:
     id: rag
@@ -46,8 +48,6 @@ RAG Analysis answers a question using passages found in my textbooks and course 
 <!--more-->
 
 One useful choice is limiting how many passages a single file can contribute. Otherwise, a relevant textbook can fill the available space and crowd out lecture notes or another author's explanation. Follow-up questions are also rewritten using the recent conversation, so "explain that differently" becomes a specific question the search tools can use.
-
-[[Insert Image: Show a question connected to two source passages and a short answer with a readable section/page reference. Use invented text and clearly label it illustrative; do not fabricate a screenshot or imply the reference proves the answer. Make the two-source comparison and the route back to a source page visible at thumbnail size. Suggested caption: "Keep an explanation connected to the passages used to write it." Suggested alt text: "Two source passages support an illustrative answer with a section and page reference that can be checked." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 A **clearly illustrative example**, rather than a quotation from a recorded answer:
 

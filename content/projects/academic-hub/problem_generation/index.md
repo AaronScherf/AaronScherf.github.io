@@ -5,7 +5,9 @@ lastmod: 2026-10-16
 summary: "Generate extra course-style practice questions and worked solutions, checking the requested method separately from the answer."
 type: academic-hub-project
 image:
-  caption: "Course examples guide a new problem, followed by separate method and correctness checks."
+  caption: "Illustration: the right answer and the right method are separate checks."
+  alt_text: "A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
@@ -38,8 +40,6 @@ Extra practice is most useful when it exercises the method I am trying to learn.
 <!--more-->
 
 That distinction came from actual trials. A model asked for a proof using explicit error bounds, known as an epsilon-delta argument, kept using a different approach from its retrieved examples. Splitting the review into "requested technique" and "correctness" caught those mismatches, although the local model still failed to produce an accepted answer in two full trials. The check exposed a limitation; it did not make the model capable of solving the task.
-
-[[Insert Image: Show an illustrative practice request becoming a new question and worked solution, followed by two clearly separate review labels: "Requested method?" and "Correct reasoning?" Use a simple sequence-convergence example and identify it as illustrative, not measured output. Include human inspection after the model checks. Suggested caption: "The right answer and the right method are separate checks." Suggested alt text: "A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 An **illustrative request** makes the difference easier to see:
 

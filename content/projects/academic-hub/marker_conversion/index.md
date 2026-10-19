@@ -26,7 +26,9 @@ tags:
   - Google Cloud Platform
   - LLM / RAG
 image:
-  caption: "Textbook conversion preserves chapter boundaries and references back to source pages."
+  caption: "Illustration: preserve the structure needed to find and check a passage."
+  alt_text: "A textbook chapter, equation, and figure become searchable text with both PDF and printed-page references."
+  focal_point: Center
 params:
   subproject:
     id: convert_textbook
@@ -55,8 +57,6 @@ Finding a word in a textbook PDF does not necessarily find the argument around a
 <!--more-->
 
 Where a long book is divided matters. A fixed page limit can cut through a table or a proof, so the converter looks for chapter boundaries in the PDF outline or printed contents first. It also distinguishes the PDF's page position from the page number printed in the book. That lets a reference such as "see page 157" remain useful even when a preface has shifted the file's numbering.
-
-[[Insert Image: Show a generic textbook spread becoming a chapter-organized text excerpt and a figure description. Highlight separate "PDF page" and "Printed page" labels, with an illustrative cross-reference that points back to the correct source page. Use newly typeset material and a simple invented diagram, not a private textbook crop. Suggested caption: "Preserve the structure needed to find and check a passage." Suggested alt text: "A textbook chapter, equation, and figure become searchable text with both PDF and printed-page references." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 The [Source Indexer](/projects/academic-hub/source_indexer/) makes the converted material available as referenced passages. A [study guide](/projects/academic-hub/study_guide_pipeline/) can then select a textbook section for an explanation, while a [concept map](/projects/academic-hub/concept_graph/) can cite evidence for the conditions linking two ideas. Preserving the book's structure gives those later tools something specific to read and cite.
 

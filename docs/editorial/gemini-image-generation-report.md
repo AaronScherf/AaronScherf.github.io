@@ -629,6 +629,41 @@ Targeted corrections requested by the owner for four Batch 3 candidates. All pre
 
 ---
 
+## Batch 3 Production Build and Visual Verification (Desktop & Mobile 390px)
+
+Full production build and responsive visual checks were performed and recorded for all six integrated pages (Source Indexer candidate 02, Project Steering candidate 02, Marker Conversion candidate 01, Notes Post-Processing candidate 02, RAG Analysis candidate 02, and Problem Generation candidate 02).
+
+### 1. Production Build Output
+- **Command:** `hugo --minify`
+- **Hugo Version:** v0.163.3 extended windows/amd64
+- **Build Duration:** 18,675 ms
+- **Statistics:**
+  - Pages: 119
+  - Paginator pages: 4
+  - Non-page files: 38
+  - Processed images: 619 (new responsive WebP variants generated across all viewports)
+  - Errors: 0
+  - Warnings: 0
+
+### 2. Article View Verification (Desktop & Mobile 390px)
+
+| Page | Responsive Srcset Generated | Sizes Attribute | Rendered Caption | Rendered Article Alt Text | 390px Mobile & Desktop Legibility | Intended Claim Communicated |
+|---|---|---|---|---|---|---|
+| **Source Indexer** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: find the document, then the passage worth reading.</span>` | `alt="An illustrative question narrows from course records to documents and a source-referenced passage."` | Nonzero eigenvector condition $\mathbf{Av} = \lambda \mathbf{v} \; (\mathbf{v} \neq 0)$ and page 42 badge remain crisp and sharp at 390px mobile width. | Search narrowing from course to document to verified referenced passage. |
+| **Project Steering** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: a shortlist built from decisions I have reviewed.</span>` | `alt="Task suggestions pass through owner review; changed tasks and missing estimates stay out of the ready shortlist."` | Proposed task list, missing estimate hold-back, and 3-item ready shortlist scale down cleanly with balanced spacing. | Owner review gate; unestimated tasks held back; changed tasks return to review. |
+| **Marker Conversion** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: preserve the structure needed to find and check a passage.</span>` | `alt="A textbook chapter, equation, and figure become searchable text with both PDF and printed-page references."` | Dual PDF and printed page tracking badges and figure description card remain clearly legible at 390px. | Structural conversion preserving book references and geometric figure descriptions. |
+| **Notes Post-Processing** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: one ordinary-looking letter can change the meaning of an equation.</span>` | `alt="The letter p in extracted text is replaced with a square-root sign after comparison with the source formula."` | Single formula focus $\sqrt{h^2 + k^2}$, amber suspicious symbol badge, and teal verification badge maintain high contrast and clarity. | Detection and source comparison of plausible optical extraction errors without claiming automated proof. |
+| **RAG Analysis** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: keep an explanation connected to the passages used to write it.</span>` | `alt="Two source passages support an illustrative answer with a section and page reference that can be checked."` | Explicit real symmetric matrix condition, dual textbook/lecture citations, and source trail tag are legible without overlap at 390px. | Dual-source grounding with inspectable reference route back to source pages. |
+| **Problem Generation** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: the right answer and the right method are separate checks.</span>` | `alt="A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection."` | Complete convergence argument ($\forall n \ge N, |1/n| \le 1/N < \varepsilon$), stacked method/correctness check badges, and human inspection stage remain sharp on mobile. | Separate evaluation of method and reasoning validity culminating in human student inspection. |
+
+### 3. Collection Card / Thumbnail Verification (Desktop & Mobile 390px)
+
+- **Listing Location:** `public/projects/academic-hub/index.html` and `public/projects/index.html`
+- **Responsive Srcset for Cards:** Generated WebP variants at 400w, 600w, 800w with `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"` and `object-contain` within exact 16:9 containers.
+- **Thumbnail Legibility:** High contrast dark navy background (`#14202D`), generous outer padding (>8%), and bold card headers ensure all six project cards display cleanly without cropping or illegible micro-text in 300px–390px grid views.
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
@@ -640,17 +675,14 @@ Targeted corrections requested by the owner for four Batch 3 candidates. All pre
   - Commit `112fd70`: Archive Batch 3 originals, add candidates for steering, marker, postprocess, and source indexer v2.
   - Commit `220bafc`: Add candidate images for rag_analysis and problem_generation.
   - Commit `52a05fe`: Documentation tracking update in generation report.
-- **Current Round 2 Candidates (Awaiting Owner Review):**
-  - `docs/editorial/image-candidates/project_steering/candidate-02.png` (created)
-  - `docs/editorial/image-candidates/postprocess_notes/candidate-02.png` (created)
-  - `docs/editorial/image-candidates/rag_analysis/candidate-02.png` (created)
-  - `docs/editorial/image-candidates/problem_generation/candidate-02.png` (created)
-  - `docs/editorial/image-candidates/marker_conversion/candidate-01.png` (preserved from Round 1)
-  - `docs/editorial/image-candidates/source_indexer/candidate-02.png` (preserved from Round 1)
+  - Commit `515745e`: Add Round 2 revised candidate images for Batch 3.
+- **Active Integrated Work (Batch 3):**
+  - All 6 approved candidates integrated as `featured.png` in their page bundles.
+  - Replaced baseline `featured.jpg` removed from page bundles (preserved in `docs/editorial/image-candidates/*/original-featured.jpg`).
+  - Frontmatters updated with `Illustration:` captions and descriptive alt text; all fulfilled `[[Insert Image: ...]]` placeholders removed.
+  - Production build verified with `hugo --minify` (0 errors, 619 processed images).
 - **Integrity Verification:**
-  - Zero edits have been made to `content/projects/` page bundles or active featured assets.
-  - All original archived files (`original-featured.jpg`) and Candidate 01 assets remain untouched.
-  - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
+  - All candidate files and archived originals remain preserved in `docs/editorial/image-candidates/`.
   - No branches switched, merged, pushed, or deployed.
 
 

@@ -17,6 +17,10 @@ links:
 tags:
   - Python
   - Project Planning
+image:
+  caption: "Illustration: a shortlist built from decisions I have reviewed."
+  alt_text: "Task suggestions pass through owner review; changed tasks and missing estimates stay out of the ready shortlist."
+  focal_point: Center
 params:
   subproject:
     id: project_steering
@@ -37,8 +41,6 @@ Project Steering helps me choose the next task from a long project list. I revie
 <!--more-->
 
 Each task keeps its identity when it moves within the list, but suggestions are tied to its wording. If the description changes after an AI agent proposes an estimate or assignment, that proposal becomes stale and needs a fresh review. That keeps an old suggestion from being approved for changed work.
-
-[[Insert Image: Create a landscape illustration showing a long task list becoming a three-item shortlist after owner review. Use three large labels: "Proposed", "Review", "Ready". Show one changed task returning for review and one task waiting for an effort estimate. Use invented task names, without copying the private planning ledger or fabricating a product screenshot. The main idea is that suggestions stay separate from approved priorities. Suggested caption: "A shortlist built from decisions I have reviewed." Suggested alt text: "Task suggestions pass through owner review; changed tasks and missing estimates stay out of the ready shortlist." Save the approved image as featured.jpg or featured.png in this page bundle.]]
 
 The review page also lets me hold a task until a chosen date without changing its priority score. Reviewing [Corpus Health's daily-scan trial](/projects/academic-hub/corpus_health/), for example, can remain important while staying out of today's shortlist until the trial finishes. Suggested assignments to coding agents have their own approval step, separate from priority estimates.
 

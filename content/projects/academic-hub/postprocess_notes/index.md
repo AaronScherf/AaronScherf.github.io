@@ -14,7 +14,9 @@ links:
     label: 'Status: Notes Postprocessing'
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/postprocess_notes/2026-08-27-notes-postprocessing-status.md
 image:
-  caption: "Suspicious extracted text is compared with its source page before correction."
+  caption: "Illustration: one ordinary-looking letter can change the meaning of an equation."
+  alt_text: "The letter p in extracted text is replaced with a square-root sign after comparison with the source formula."
+  focal_point: Center
 tags:
   - Python
   - Hugging Face
@@ -40,8 +42,6 @@ A square-root sign once became the letter p in my extracted notes. The text stil
 <!--more-->
 
 Context on both sides of a symbol mattered. Looking only at the text before the corrupted character missed evidence that appeared afterward; a second local model could use that surrounding context to judge which positions deserved attention. The models flag candidates rather than deciding what the source must have said.
-
-[[Insert Image: Create a close comparison of an illustrative source formula, the mistaken extraction "p(h² + k²)", and the corrected "√(h² + k²)". Highlight only the first symbol. Show a source-page comparison between detection and correction, using a newly typeset example rather than an unapproved private page crop. Suggested caption: "One ordinary-looking letter can change the meaning of an equation." Suggested alt text: "The letter p in extracted text is replaced with a square-root sign after comparison with the source formula." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 The recorded motivating run repaired that square-root error on page 6 and left nine other flagged candidates unchanged. The notation below illustrates the difference:
 
