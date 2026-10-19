@@ -128,3 +128,60 @@ Archived 2026-10-18 at commit `8e5056df4b06698565ec38e1ae35b26208d91b06` prior t
 - HEAD commit: `8e5056df4b06698565ec38e1ae35b26208d91b06`
 - Verification: exact binary copy and SHA-256 match.
 
+---
+
+## Batch 4 Preserved Originals (Archived 2026-10-19)
+
+Archived 2026-10-19 at commit `398ec57` prior to generating Batch 4 candidates. Exact byte copy; verified with SHA-256.
+
+| Page | Before this image pass | Preserved original | SHA-256 Digest |
+|---|---|---|---|
+| journal_discovery | Existing featured image | [original-featured.jpg](image-candidates/journal_discovery/original-featured.jpg) | `9381a2faf80812bf4a3afafeacced2d5824b8824b6fbb730f4728ebec567fbbf` |
+| visualization | Existing featured image | [original-featured.jpg](image-candidates/visualization/original-featured.jpg) | `5159cf46af38df9ac81c0ff436fcdb3ddd0b5b26fce712a42c290314772c698a` |
+| resume_manager | Existing featured image | [original-featured.jpg](image-candidates/resume_manager/original-featured.jpg) | `a9da1fe1f95a1f1d26d7a11fd17f6dff4d4a0ed8afea795dfae00266602fc3ff` |
+| video_notes | Existing featured image | [original-featured.jpg](image-candidates/video_notes/original-featured.jpg) | `422a104467d8f8099f4dbc3e68bd3202bca95970aa59caff7788b68e5caeaa22` |
+| tutor_diagnosis | Existing featured image | [original-featured.jpg](image-candidates/tutor_diagnosis/original-featured.jpg) | `84c01856b93d26aa2617ce049bfeebe02f52f0ac6dae1d89bcdf01aa257ddf90` |
+
+### Batch 4 Provenance Details
+
+#### journal_discovery
+- Original path: `content/projects/ai-research-assistant/journal_discovery/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/journal_discovery/original-featured.jpg`
+- Size: 553753 bytes
+- Git blob ID: `94eb53f2df6f0a075f082285e86d1dc5a00608cf`
+- SHA-256: `9381a2faf80812bf4a3afafeacced2d5824b8824b6fbb730f4728ebec567fbbf`
+- Verification: exact binary copy and SHA-256 match.
+
+#### visualization
+- Original path: `content/projects/academic-hub/visualization/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/visualization/original-featured.jpg`
+- Size: 737246 bytes
+- Git blob ID: `7727b4a70bea6f6ad40b3caf12e310222dcab38c`
+- SHA-256: `5159cf46af38df9ac81c0ff436fcdb3ddd0b5b26fce712a42c290314772c698a`
+- Verification: exact binary copy and SHA-256 match.
+
+#### resume_manager
+- Original path: `content/projects/resume_manager/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/resume_manager/original-featured.jpg`
+- Size: 580578 bytes
+- Git blob ID: `70241bfa6eb28b2f3a58087be73251ff690471f8`
+- SHA-256: `a9da1fe1f95a1f1d26d7a11fd17f6dff4d4a0ed8afea795dfae00266602fc3ff`
+- Verification: exact binary copy and SHA-256 match.
+
+#### video_notes
+- Original path: `content/projects/academic-hub/video_notes/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/video_notes/original-featured.jpg`
+- Size: 564761 bytes
+- Git blob ID: `c49658849b3f27ff6049b9dc80627f7426e30316`
+- SHA-256: `422a104467d8f8099f4dbc3e68bd3202bca95970aa59caff7788b68e5caeaa22`
+- Verification: exact binary copy and SHA-256 match.
+
+#### tutor_diagnosis
+- Original path: `content/projects/academic-hub/tutor_diagnosis/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/tutor_diagnosis/original-featured.jpg`
+- Size: 667603 bytes
+- Git blob ID: `0221b6dbbbb694c4ca46f3769f252d84f705af76`
+- SHA-256: `84c01856b93d26aa2617ce049bfeebe02f52f0ac6dae1d89bcdf01aa257ddf90`
+- Verification: exact binary copy and SHA-256 match.
+
+

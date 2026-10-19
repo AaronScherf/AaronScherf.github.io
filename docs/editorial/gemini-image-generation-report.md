@@ -664,6 +664,157 @@ Full production build and responsive visual checks were performed and recorded f
 
 ---
 
+## Batch 4 Candidates (Prepared for Owner Review — 2026-10-19)
+
+Dated: 2026-10-19  
+Originals preserved and hash-verified in `docs/editorial/image-originals-inventory.md`. All five candidates prepared under `docs/editorial/image-candidates/` awaiting owner review. No page bundles or articles have been modified for Batch 4.
+
+### Batch 4 Candidates Summary Table
+
+| Item | Page | Candidate Path | Dimensions | Tool / Generation Method | Status |
+|---|---|---|---|---|---|
+| **14. Journal Discovery** | [`journal_discovery`](../../content/projects/ai-research-assistant/journal_discovery/index.md) | [`candidate-01.png`](image-candidates/journal_discovery/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+| **15. Visualization** | [`visualization`](../../content/projects/academic-hub/visualization/index.md) | [`candidate-01.png`](image-candidates/visualization/candidate-01.png) | 1376 x 768 (16:9) | Rendered mathematical plot (`agent/viz/templates/gradient_descent.py`) | **Owner review pending** |
+| **16. Resume Manager** | [`resume_manager`](../../content/projects/resume_manager/index.md) | [`candidate-01.png`](image-candidates/resume_manager/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+| **17. Video Lecture Notes** | [`video_notes`](../../content/projects/academic-hub/video_notes/index.md) | [`candidate-01.png`](image-candidates/video_notes/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+| **18. Tutor Diagnosis** | [`tutor_diagnosis`](../../content/projects/academic-hub/tutor_diagnosis/index.md) | [`candidate-01.png`](image-candidates/tutor_diagnosis/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+
+---
+
+### Detailed Reviews of Batch 4 Candidates
+
+#### 14. Journal Discovery: Research Query Funnel & Access Branching (Candidate 01)
+
+- **Page:** `content/projects/ai-research-assistant/journal_discovery/index.md`
+- **Original Brief Path:** `content/projects/ai-research-assistant/journal_discovery/index.md` (Queue row 03)
+- **Output File Path:** `docs/editorial/image-candidates/journal_discovery/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 617,916 bytes
+- **SHA-256 Digest:** `51076898d883b25692cef71c2acff1769c0d5fa4d67cb80b89e360d0c5fa3634`
+- **Original Archive:** `docs/editorial/image-candidates/journal_discovery/original-featured.jpg` (SHA-256: `9381a2faf80812bf4a3afafeacced2d5824b8824b6fbb730f4728ebec567fbbf`, 553,753 bytes)
+- **Proposed Caption:** "Finding a relevant paper and obtaining its full text are separate steps."
+- **Proposed Alt Text:** "One disaster-research trial narrowed 60 candidates to 15 accepted papers, with seven PDFs downloaded and eight left for manual access."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow progression representing a research discovery funnel: 1. On the left, a card labelled 'Research Query' with text 'Topic: Disaster Resilience' and subtitle badge 'Dated trial: Oct 15'; 2. A clean arrow leads to a funnel card titled 'Candidate Pool' with text '60 candidates retrieved'; 3. Arrow leads to 'Human Review' card with teal check badge '15 accepted'; 4. Branching arrows lead to two distinct outcome cards on the right: top card with teal badge '7 PDFs downloaded' and bottom card with violet badge '8 manual-access entries'; 5. Discreet bottom tag: 'Single trial outcome, not a general rate'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, flat clean vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Funnel Progression:** Left-to-right flow from Research Query ("Topic: Disaster Resilience") to Candidate Pool ("60 candidates retrieved").
+  - **Human Review Gate:** Central card highlights "Human Review" with a checkmark badge reading "15 accepted".
+  - **Access Branching:** Branches clearly into two cards on the right: "7 PDFs downloaded" (teal badge) and "8 manual-access entries" (violet badge).
+  - **Single Trial Qualification:** Subtitle badge on the query card notes "Dated trial: Oct 15", and the bottom tag explicitly states: "Single trial outcome, not a general rate", avoiding any claim of a universal success rate.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 15. Visualization: Gradient Descent Surface & Actual Trajectory (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/visualization/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/visualization/index.md` (Queue row 04)
+- **Output File Path:** `docs/editorial/image-candidates/visualization/candidate-01.png`
+- **Tool / Model:** Rendered mathematical plot using Plotly from `agent/viz/templates/gradient_descent.py` captured via headless Edge
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 240,472 bytes
+- **SHA-256 Digest:** `ad8aad6f225bbd36d2a3faf35c6085de62d46073b493c8f3068055d92669a07c`
+- **Original Archive:** `docs/editorial/image-candidates/visualization/original-featured.jpg` (SHA-256: `5159cf46af38df9ac81c0ff436fcdb3ddd0b5b26fce712a42c290314772c698a`, 737,246 bytes)
+- **Proposed Caption:** "Inspect the steps as they approach the minimum."
+- **Proposed Alt Text:** "A gradient-descent path curves across the contours of a bowl-shaped function toward its minimum at the origin."
+- **Rendering Specification:**
+  - Evaluates the actual objective function $f(x, y) = x^2 + 2y^2$ across an elliptic grid $x, y \in [-4.5, 4.5]$.
+  - Computes the numerical gradient descent trajectory starting from $(3.5, 3.0)$ with step size $\alpha = 0.15$ over 25 iterations.
+  - Plots genuine elliptic contour lines in teal tones (`#15293E` to `#35C9C8`) on a `#0E1724` plot surface.
+  - Plots the discrete descent steps in vibrant violet (`#B794F6`, `#D6BCFA`) showing how steps cross contours orthogonally.
+  - Callouts indicate "Start (3.5, 3.0)" (diamond marker) and "Minimum (0, 0)" (star marker) without edge clipping.
+  - Right information panel displays an Objective Function card with exact formula $f(x, y) = x^2 + 2y^2$, contour/descent badges, and a Steepest Descent Trajectory explanation card.
+  - Bottom badge explicitly attributes: "Rendered from template: gradient_descent.py".
+- **Visual & Factual Inspection:**
+  - Truly authentic mathematical plot generated directly from code; zero generative diffusion hallucination or fabricated interface elements.
+  - High contrast, dark navy background `#14202D`, crisp typography, and balanced 16:9 composition.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 16. Resume Manager: Structured Master Resume to Tailored Draft (Candidate 01)
+
+- **Page:** `content/projects/resume_manager/index.md`
+- **Original Brief Path:** `content/projects/resume_manager/index.md` (Queue row 06)
+- **Output File Path:** `docs/editorial/image-candidates/resume_manager/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 779,649 bytes
+- **SHA-256 Digest:** `e1f50efdae6dfbde27e4ae63b5d1836032d205f4b7aad738a2637659b9b72ffb`
+- **Original Archive:** `docs/editorial/image-candidates/resume_manager/original-featured.jpg` (SHA-256: `a9da1fe1f95a1f1d26d7a11fd17f6dff4d4a0ed8afea795dfae00266602fc3ff`, 580,578 bytes)
+- **Proposed Caption:** "Change the emphasis while keeping the record of experience fixed."
+- **Proposed Alt Text:** "A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. On the left, two input cards stacked vertically: top card 'Master Resume' showing fixed fields with violet badges 'Employer: Acme Corp' and 'Dates: 2023–2025'; bottom card 'Job Description' with teal badge 'Requirements: Distributed Systems'; 2. A central processing node with a neat callout badge 'Parser first; model for wording'; 3. Clean arrows lead to two cards on the right: top card 'Tailored Draft' with editable bullet points; bottom card 'Review Report' with check badges 'Fixed facts verified' and 'Validation check: PASS'. Discreet bottom tag: 'Invented applicant profile'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, flat clean aesthetic.
+  ```
+- **Visual & Factual Inspection:**
+  - **Fixed vs. Editable Distinction:** "Master Resume" distinctly separates fixed facts with violet badges ("Employer: Acme Corp", "Dates: 2023–2025"). "Tailored Draft" highlights editable bullet points.
+  - **Target Guidance:** "Job Description" specifies "Requirements: Distributed Systems" in teal.
+  - **Architectural Callout:** Center routing node features the callout: "Parser first; model for wording".
+  - **Validation & Privacy:** "Review Report" card includes checkmarks for "Fixed facts verified" and "Validation check: PASS". Bottom tag confirms "Invented applicant profile".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 17. Video Lecture Notes: Multi-Lecture Synthesis & Timestamp Limits (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/video_notes/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/video_notes/index.md` (Queue row 07)
+- **Output File Path:** `docs/editorial/image-candidates/video_notes/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 696,833 bytes
+- **SHA-256 Digest:** `5a7745fc5180e32e0ad52a644408180818fddfd45cb6e632d2443f943eb11bac`
+- **Original Archive:** `docs/editorial/image-candidates/video_notes/original-featured.jpg` (SHA-256: `422a104467d8f8099f4dbc3e68bd3202bca95970aa59caff7788b68e5caeaa22`, 564,761 bytes)
+- **Proposed Caption:** "Combine related lectures without losing track of what needs checking."
+- **Proposed Alt Text:** "Lecture recordings feed transcripts and a combined study note, with a reminder that precise concept-to-video references are unfinished."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. On the left, three stacked video cards labelled 'Lecture 01', 'Lecture 02', and 'Lecture 03' with clean video camera icons; 2. Clean arrows merge into a central card titled 'Timestamped Transcripts' showing two clear dialogue lines: first line with teal badge '04:15' and text 'Recall our definition of a function.'; second line with teal badge '18:30' and text 'A mapping assigns each domain element.'; 3. Arrow leads to a clean card on the right titled 'Study Note: Sets & Functions' with text 'Summary: Injective vs Surjective mappings', with a small badge 'Illustrative note'; 4. Attached to the bottom of the transcript card, a prominent violet callout speech bubble: 'Concept timestamps still incomplete'; 5. Discreet bottom pill tag: 'Illustrative lecture synthesis'. Perfectly legible sans-serif typography, balanced 16:9 composition, generous outer margins, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Multi-Lecture Input:** Three stacked video cards on the left ("Lecture 01", "Lecture 02", "Lecture 03") with clean camera icons.
+  - **Timestamped Transcripts:** Dialogue lines with teal time tags ("04:15: Recall our definition of a function.", "18:30: A mapping assigns each domain element.").
+  - **Incomplete Timestamp Callout:** A prominent violet speech bubble reads: "Concept timestamps still incomplete", explicitly documenting the unfinished reference link without falsely claiming granular timestamping.
+  - **Study Note Card:** Right card shows "Study Note: Sets & Functions" with summary of injective/surjective mappings and badge "Illustrative note".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 18. Tutor Diagnosis & Hint Generator: Formative Review & Step Feedback (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/tutor_diagnosis/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/tutor_diagnosis/index.md` (Queue row 09)
+- **Output File Path:** `docs/editorial/image-candidates/tutor_diagnosis/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 833,968 bytes
+- **SHA-256 Digest:** `bd30d9f046708f2bdca9bcf9ec9906ec80e3b8ceed7ae9efdd3657821f9912f7`
+- **Original Archive:** `docs/editorial/image-candidates/tutor_diagnosis/original-featured.jpg` (SHA-256: `84c01856b93d26aa2617ce049bfeebe02f52f0ac6dae1d89bcdf01aa257ddf90`, 667,603 bytes)
+- **Proposed Caption:** "Review the argument, not just its final answer."
+- **Proposed Alt Text:** "A student revises an attempt after a hint, then reviews separate feedback on the result, reasoning, and fit with the course."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. Left card labelled 'Student Attempt' with text 'Claim: (A+B)² = A² + 2AB + B² for matrices A, B'; 2. Arrow leads to a central card labelled 'Tutor Hint' with violet badge 'Hint, not solution' and text 'Check if matrix multiplication commutes: does AB = BA?'; 3. Arrow leads to 'Revised Attempt' card with text 'A² + AB + BA + B² (since AB ≠ BA)'; 4. Stacked beside the revision are three distinct review labels: 'Result: Valid', 'Reasoning: Non-commutative property recognized', and 'Course fit: Linear Algebra standards'; 5. Discreet bottom tag: 'Formative feedback, not grade assessment'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, flat clean vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Attempt → Hint → Revision Progression:** Clear three-card sequence illustrating student reasoning:
+    1. Initial attempt: $(A+B)^2 = A^2 + 2AB + B^2$ for matrices $A, B$.
+    2. Tutor hint: "Check if matrix multiplication commutes: does $AB = BA$?" (violet badge "Hint, not solution").
+    3. Revised attempt: $A^2 + AB + BA + B^2$ (since $AB \neq BA$).
+  - **Three Review Feedback Labels:** Stacked beside the revision:
+    - "Result: Valid"
+    - "Reasoning: Non-commutative property recognized"
+    - "Course fit: Linear Algebra standards"
+  - **Formative Framing:** Bottom pill tag clearly notes "Formative feedback, not grade assessment", reinforcing that this is diagnostic guidance rather than formal grading.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
@@ -676,14 +827,22 @@ Full production build and responsive visual checks were performed and recorded f
   - Commit `220bafc`: Add candidate images for rag_analysis and problem_generation.
   - Commit `52a05fe`: Documentation tracking update in generation report.
   - Commit `515745e`: Add Round 2 revised candidate images for Batch 3.
-- **Active Integrated Work (Batch 3):**
-  - All 6 approved candidates integrated as `featured.png` in their page bundles.
-  - Replaced baseline `featured.jpg` removed from page bundles (preserved in `docs/editorial/image-candidates/*/original-featured.jpg`).
-  - Frontmatters updated with `Illustration:` captions and descriptive alt text; all fulfilled `[[Insert Image: ...]]` placeholders removed.
-  - Production build verified with `hugo --minify` (0 errors, 619 processed images).
+  - Commit `398ec57`: Integrate approved Batch 3 featured images and pilot correction.
+- **Active Uncommitted Batch 4 Work (Awaiting Owner Review):**
+  - Archived originals for all 5 Batch 4 pages preserved in `image-candidates/*/original-featured.jpg` and recorded in `image-originals-inventory.md`.
+  - Five candidate images created in `docs/editorial/image-candidates/`:
+    - `docs/editorial/image-candidates/journal_discovery/candidate-01.png`
+    - `docs/editorial/image-candidates/visualization/candidate-01.png`
+    - `docs/editorial/image-candidates/resume_manager/candidate-01.png`
+    - `docs/editorial/image-candidates/video_notes/candidate-01.png`
+    - `docs/editorial/image-candidates/tutor_diagnosis/candidate-01.png`
+  - Generation report updated with Batch 4 candidate reviews.
 - **Integrity Verification:**
-  - All candidate files and archived originals remain preserved in `docs/editorial/image-candidates/`.
+  - Zero edits have been made to `content/projects/` page bundles or active featured assets for Batch 4.
+  - All original archived files (`original-featured.jpg`) are verified with SHA-256.
+  - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
   - No branches switched, merged, pushed, or deployed.
+
 
 
 
