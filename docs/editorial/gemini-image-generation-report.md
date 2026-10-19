@@ -516,10 +516,10 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
   - Commit `d87e78e`: Batch 2 images integrated for Study Guide Pipeline, Summary Enhancement, Guided Solutions, Socratic Tutor, Corpus Health.
   - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
   - Commit `112fd70`: Archive Batch 3 originals, add candidates for steering, marker, postprocess, and source indexer v2.
-- **Uncommitted Batch 3 Changes (Awaiting Owner Review):**
-  - `docs/editorial/image-candidates/rag_analysis/candidate-01.png` (generated after quota reset)
-  - `docs/editorial/image-candidates/problem_generation/candidate-01.png` (generated after quota reset)
-  - `docs/editorial/gemini-image-generation-report.md` (updated report)
+  - Commit `220bafc`: Add candidate images for rag_analysis and problem_generation.
+- **Current Worktree Status:**
+  - Clean (`git status --short` reports clean working directory).
+  - All 6 candidate assets (1 pilot correction + 5 new Batch 3 pages) are safely committed under `docs/editorial/image-candidates/` awaiting owner review.
 - **Integrity Verification:**
   - No edits have been made to `content/projects/` page bundles or active featured assets for Batch 3.
   - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
