@@ -5,7 +5,9 @@ lastmod: 2026-10-16
 summary: "Keep editable notes available on tablet and laptop while large source files stay outside the lightweight sync."
 type: academic-hub-project
 image:
-  caption: "Editable notes sync between devices; large source materials remain in a separate archive."
+  caption: "Illustration: Sync the working notes while keeping large sources separate."
+  alt_text: "A tablet and laptop share editable notes while a separate source archive feeds transcription and search."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
@@ -46,8 +48,6 @@ I want to write a lecture note on my tablet and find the editable drawing on my 
 <!--more-->
 
 The tablet currently uses Fit, which exchanges files through GitHub's API rather than maintaining a local Git history. That avoids the history-download problem that caused trouble with an earlier plugin. The laptop uses Obsidian Git, and some settings remain device-specific.
-
-[[Insert Image: Show a tablet and laptop exchanging editable notes, with a separate source archive connected to transcription and search. Use large labels "Editable notes", "Large sources", and "Searchable text". Add a small callout that saving a drawing creates its SVG automatically; do not imply every export belongs in tablet sync. Use generic notes and no private repository names or real coursework. Suggested caption: "Sync the working notes while keeping large sources separate." Suggested alt text: "A tablet and laptop share editable notes while a separate archive supplies source images and documents for transcription." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 | Lightweight notes vault | Separate source archive |
 | --- | --- |

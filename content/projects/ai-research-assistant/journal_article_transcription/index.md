@@ -5,7 +5,9 @@ lastmod: 2026-10-16
 summary: "Make article contents searchable with page references, while retaining a route back to figures, equations, and the original PDF."
 type: ai-research-assistant-project
 image:
-  caption: "Article text becomes searchable while page references lead back to the PDF."
+  caption: "Illustration: Search converted text, then return to the source page to check it."
+  alt_text: "An invented journal PDF page and its matching searchable paragraph share a page-four locator; the original equation and figure remain available to inspect."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
@@ -38,8 +40,6 @@ Finding a paper is only the start; later I need to locate the argument, method, 
 <!--more-->
 
 The converter reuses the same machinery as the [Notes Transcription Pipeline](/projects/academic-hub/notes_transcription/). Clean digital text can be extracted locally; harder pages need transcription from their images. The current default prepares task cards for an agent working through my subscription, then validates submitted work before writing and indexing it. Search summaries and embeddings still use API calls, even on that transcription route.
-
-[[Insert Image: Show a generic article page beside its converted text, with one paragraph highlighted and a matching "Page 4" locator. Keep an equation and a figure visible on the source side to show why returning to the PDF matters. Use invented article content, not private papers or a fabricated screenshot. Suggested caption: "Search the text, then return to the original page to check it." Suggested alt text: "A source PDF page and converted text share a page reference, with a figure left visible for comparison." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 A separate metered-API route remains available. Pending agent work stays pending unless API fallback is explicitly requested; it is not silently sent for paid transcription. Very long documents are flagged for a person's decision rather than automatically sent to the more expensive textbook converter.
 

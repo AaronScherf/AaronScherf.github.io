@@ -4,7 +4,9 @@ date: 2026-09-01
 lastmod: 2026-10-16
 summary: "A study workspace connecting handwritten notes, textbooks, source-linked answers, and reviewed study materials."
 image:
-  caption: "How source materials become searchable notes and study tools."
+  caption: "Illustration: Follow a question from course material to a reviewed study aid."
+  alt_text: "A course question moves through searchable text and a source-linked answer to a draft study guide, human review, and collection maintenance."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
@@ -47,8 +49,6 @@ A question in my handwritten notes can become the starting point for a textbook 
 <!--more-->
 
 The common foundation is a collection of passages I can find and return to. Conversion preserves the text, mathematical notation, and page context; the [Source Indexer](/projects/academic-hub/source_indexer/) makes that material searchable. From there I can ask a question, develop a fuller study explanation, or explore how course concepts depend on one another. These are different ways to work with the same materials.
-
-[[Insert Image: Replace the dense architecture poster with four clear groups: "Prepare materials", "Find an explanation", "Study and practice", and "Maintain the collection". Follow one generic handwritten question through searchable text, a source-linked answer, and a reviewed guide. Show human review between outputs rather than implying a fully automatic learning system. Use large labels and invented content. Suggested caption: "Follow a question from course material to a reviewed study aid." Suggested alt text: "Notes and textbooks feed search, which supports answers and study materials with source references and human review." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## Prepare the materials
 

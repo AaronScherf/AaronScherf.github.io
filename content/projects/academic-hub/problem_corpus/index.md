@@ -14,7 +14,9 @@ links:
     label: 'Status: Problem Corpus Extraction'
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/problem_corpus/2026-09-06-problem-corpus-extraction-status.md
 image:
-  caption: "Extracted questions retain their source and the status of any accompanying solution."
+  caption: "Illustration: Keep the question source and the status of its solution visible."
+  alt_text: "An invented practice-question card identifies its source, labels a student attempt as unchecked, and leaves the answer key empty."
+  focal_point: Center
 tags:
   - Python
   - LLM / RAG
@@ -38,8 +40,6 @@ A useful practice collection needs more than a list of questions: it needs to sa
 <!--more-->
 
 That choice came from inspecting the available materials. Some exercises had no answer; others had the student's working beside them, with no basis for calling it an answer key. The stored records therefore mark accompanying text as a student attempt or leave the solution absent. The extractor does not turn an unverified derivation into a verified one.
-
-[[Insert Image: Create a readable question card using an invented elementary exercise. Include large fields "Question", "Source", and "Student attempt—unchecked", with an empty "Answer key" field rather than implying an authoritative solution exists. Show several source documents feeding the collection. Suggested caption: "Keep the question's source and the status of its solution visible." Suggested alt text: "A practice-question card identifies its source and clearly labels accompanying work as an unchecked student attempt." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 A **clearly illustrative card**, rather than an excerpt from private coursework:
 

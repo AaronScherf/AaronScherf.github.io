@@ -11,7 +11,9 @@ links:
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/wheat_yield_prediction_gee/master/reports/Aaron_M_Scherf_Final_Thesis.pdf
 image:
-  caption: 'Illustration of the model comparison and satellite-data workflow; measured results are reported in the thesis.'
+  caption: "Thesis Table 6 compares holdout results across two models and two environmental data sources."
+  alt_text: "A bar chart shows field-record R-squared values of 0.829 and 0.113, and satellite-data values of 0.746 and 0.243, for random forest and linear mixed models."
+  focal_point: Center
 tags:
   - Python
   - Machine Learning
@@ -23,8 +25,6 @@ Choosing a wheat variety is partly a question of where it will grow. My master's
 <!--more-->
 
 The results separated two questions that can easily get mixed together. Machine learning models outperformed the study's linear mixed-model baseline on held-out observations. Satellite data helped that baseline, but the machine learning models performed better with the manually collected environmental data. A stronger model and a more accessible data source did not automatically make the best combination.
-
-[[Insert Image: Replace the current illustrative montage with a compact results chart made using standard plotting tools from Table 6 of the linked thesis, printed page 34, PDF page 42. Compare environment-only holdout R-squared values: field records—random forest 0.829, linear mixed model 0.113; satellite data—random forest 0.746, linear mixed model 0.243. Use these exact values, a common axis, large labels, and no invented scatter points or map heat spots. Keep the existing featured image until its replacement is approved. Suggested caption: "Changing the model and changing the data source had different effects in this study's holdout sample." Suggested alt text: "Random forest outperformed the linear mixed model for both data sources; satellite data improved the linear model but reduced random forest performance." Save the approved chart as featured.jpg or featured.png in this page bundle and remove this brief.]]
 
 ## What was compared
 

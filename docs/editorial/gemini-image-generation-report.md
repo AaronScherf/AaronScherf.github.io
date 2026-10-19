@@ -1,12 +1,12 @@
 # Gemini / Antigravity Image Generation Pilot Report
 
-**Date:** 2026-10-18  
-**Branch:** `gemini/website-images`  
-**Status:** **Pilot (3 images) + Batch 2 (5 images) + Batch 3 (6 images) + Batch 4 (5 images) integrated and verified; all 11 Batch 5 candidates completed and awaiting owner review**  
+**Date:** 2026-10-19
+**Integration branch:** `codex/website-images-final-integration` (from Gemini commit `9b2b436`)
+**Status:** **All 29 queued page images are integrated; the final 11 were approved and integrated on 2026-10-19**
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
-All generated candidates use Antigravity's native image-generation capability under the owner's subscription, without invoking metered or paid third-party APIs. Per explicit owner decisions:
+Generated illustrations used Antigravity's native image capability; the gradient plot and thesis figures used plotting tools or original source figures. No metered third-party image API was used. Per explicit owner decisions:
 1. **Concept Graph:** Candidate 01 was declined as too simple; Candidate 02 (owner-supplied screenshot of the live web viewer) was approved and integrated as `featured.png`.
 2. **Source Indexer:** Candidate 01 was approved and integrated as `featured.png`.
 3. **Notes Transcription:** Candidate 01 was revised to Candidate 02 to visually embed the vector domain $\mathbb{R}^n$ directly into the slide and margin notes with a preserved math formatting callout. Caption explicitly labelled as an illustration. Candidate 02 was approved and integrated as `featured.png`.
@@ -849,26 +849,26 @@ Full production build and responsive visual checks were performed and recorded f
 
 ---
 
-## Batch 5 Candidates & Queue Status (Final 11 Remaining Pages — 2026-10-19)
+## Batch 5 Candidates & Queue Status (Final 11 Integrated Pages — 2026-10-19)
 
 Dated: 2026-10-19  
-Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-originals-inventory.md` (committed locally at `cb6d4fc`). Per owner instructions, candidates are being worked through in queue order. All new candidates are preserved strictly under `docs/editorial/image-candidates/` awaiting owner review before any page bundle integration.
+Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-originals-inventory.md` (committed locally at `cb6d4fc`). All 11 final candidates were approved by the owner on 2026-10-19 and integrated into their page bundles. Candidate versions and archived originals remain in `docs/editorial/image-candidates/`.
 
 ### Batch 5 Queue Status Table
 
-| Order | Page | Current Review Candidate | Method / Tool | Status |
+| Order | Page | Integrated Candidate | Method / Tool | Status |
 |---|---|---|---|---|
-| **1** | [`obsidian_git_sync`](../../content/projects/academic-hub/obsidian_git_sync/index.md) | [`candidate-02.png`](image-candidates/obsidian_git_sync/candidate-02.png) | Antigravity `generate_image` + vector edit (stray text removed) | **Awaiting owner review** (Candidate 01 preserved) |
-| **2** | [`research_notes_conversion`](../../content/projects/ai-research-assistant/research_notes_conversion/index.md) | [`candidate-02.png`](image-candidates/research_notes_conversion/candidate-02.png) | Antigravity `generate_image` + coherent note replacement | **Awaiting owner review** (Candidate 01 preserved) |
-| **3** | [`audio_generator_podcasts`](../../content/blog/audio_generator_podcasts/index.md) | [`candidate-01.png`](image-candidates/audio_generator_podcasts/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
-| **4** | [`problem_corpus`](../../content/projects/academic-hub/problem_corpus/index.md) | [`candidate-01.png`](image-candidates/problem_corpus/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
-| **5** | [`audio_generator`](../../content/projects/academic-hub/audio_generator/index.md) | [`candidate-02.png`](image-candidates/audio_generator/candidate-02.png) | Antigravity `generate_image` + generic episode labels | **Awaiting owner review** (Candidate 01 preserved) |
-| **6** | [`multi_agent_project`](../../content/projects/multi_agent_project/index.md) | [`candidate-02.png`](image-candidates/multi_agent_project/candidate-02.png) | Antigravity `generate_image` + neutral handoff field | **Awaiting owner review** (Candidate 01 preserved) |
-| **7** | [`journal_article_transcription`](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | [`candidate-02.png`](image-candidates/journal_article_transcription/candidate-02.png) | Python PIL diagram composition (matching readable text & schematic figure) | **Awaiting owner review** (Candidate 01 preserved) |
-| **8** | [`academic-hub-overview`](../../content/projects/academic-hub-overview/index.md) | [`candidate-01.png`](image-candidates/academic_hub_overview/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
-| **9** | [`math_thesis`](../../content/projects/math_thesis/index.md) | [`candidate-01.png`](image-candidates/math_thesis/candidate-01.png) | Python PIL composition from authentic ISU thesis PDF (Figs 5 & 7) | **Awaiting owner review** |
-| **10** | [`wheat_yield_prediction`](../../content/projects/wheat_yield_prediction/index.md) | [`candidate-02.png`](image-candidates/wheat_yield_prediction/candidate-02.png) | Matplotlib chart from verified Berkeley thesis Table 6 ($R^2$) | **Awaiting owner review** (Candidate 01 preserved) |
-| **11** | [`introducing_academic_hub`](../../content/blog/academic_hub/index.md) | [`candidate-01.png`](image-candidates/introducing_academic_hub/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **1** | [`obsidian_git_sync`](../../content/projects/academic-hub/obsidian_git_sync/index.md) | [`candidate-02.png`](image-candidates/obsidian_git_sync/candidate-02.png) | Antigravity `generate_image` + vector edit (stray text removed) | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **2** | [`research_notes_conversion`](../../content/projects/ai-research-assistant/research_notes_conversion/index.md) | [`candidate-02.png`](image-candidates/research_notes_conversion/candidate-02.png) | Antigravity `generate_image` + coherent note replacement | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **3** | [`audio_generator_podcasts`](../../content/blog/audio_generator_podcasts/index.md) | [`candidate-01.png`](image-candidates/audio_generator_podcasts/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **4** | [`problem_corpus`](../../content/projects/academic-hub/problem_corpus/index.md) | [`candidate-01.png`](image-candidates/problem_corpus/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **5** | [`audio_generator`](../../content/projects/academic-hub/audio_generator/index.md) | [`candidate-02.png`](image-candidates/audio_generator/candidate-02.png) | Antigravity `generate_image` + generic episode labels | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **6** | [`multi_agent_project`](../../content/projects/multi_agent_project/index.md) | [`candidate-02.png`](image-candidates/multi_agent_project/candidate-02.png) | Antigravity `generate_image` + neutral handoff field | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **7** | [`journal_article_transcription`](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | [`candidate-02.png`](image-candidates/journal_article_transcription/candidate-02.png) | Python PIL diagram composition (matching readable text & schematic figure) | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **8** | [`academic-hub-overview`](../../content/projects/academic-hub-overview/index.md) | [`candidate-01.png`](image-candidates/academic_hub_overview/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **9** | [`math_thesis`](../../content/projects/math_thesis/index.md) | [`candidate-01.png`](image-candidates/math_thesis/candidate-01.png) | Python PIL composition from authentic ISU thesis PDF (Figs 5 & 7) | **Approved by owner & integrated** (`featured.png`) |
+| **10** | [`wheat_yield_prediction`](../../content/projects/wheat_yield_prediction/index.md) | [`candidate-02.png`](image-candidates/wheat_yield_prediction/candidate-02.png) | Matplotlib chart from verified Berkeley thesis Table 6 ($R^2$) | **Approved by owner & integrated** (`featured.png`) (Candidate 01 preserved) |
+| **11** | [`introducing_academic_hub`](../../content/blog/academic_hub/index.md) | [`candidate-01.png`](image-candidates/introducing_academic_hub/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
 
 ---
 
@@ -880,7 +880,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/academic-hub/obsidian_git_sync/index.md` (Queue row 11)
 - **Original Archive:** `docs/editorial/image-candidates/obsidian_git_sync/original-featured.jpg` (SHA-256: `ecc2ed917598ce6210d8b65c9ec382397b8a2b6083325a1aeb38ae027458b6fc`, 509,046 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/obsidian_git_sync/candidate-01.png` (1376x768, 741,918 bytes, SHA-256: `5809e69ead6769d1bf37d4825480a400fb62aa66e359666c2fda0cdd7b2fa813`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/obsidian_git_sync/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/obsidian_git_sync/candidate-02.png`
   - **Tool / Method:** Image edit removing stray generated label; centered pill
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 702,746 bytes
@@ -892,7 +892,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - **Lightweight Sync Cluster:** Tablet and laptop cards are linked by clean bidirectional sync arrows beneath a prominent "Editable notes" header with badges for "Markdown notes" and "Excalidraw drawings".
     - **Drawing Export Callout:** Violet speech bubble clearly states: "Saving drawing auto-creates SVG".
     - **Architectural Boundary:** Dashed vertical line clearly separates synced editable vault from external "Large sources" ("Textbook PDFs & Raw Audio", badge "Outside sync") feeding "Searchable text".
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -902,7 +902,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/ai-research-assistant/research_notes_conversion/index.md` (Queue row 12)
 - **Original Archive:** `docs/editorial/image-candidates/research_notes_conversion/original-featured.jpg` (SHA-256: `c80b6dec6949855a2146155bf9440261350b82dafad2dea316185cda1e3f0904`, 579,817 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/research_notes_conversion/candidate-01.png` (1376x768, 685,555 bytes, SHA-256: `7d9f6e777d83b12f745de96307791e4178dad5ca42650775dca150d57faf77cb`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/research_notes_conversion/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/research_notes_conversion/candidate-02.png`
   - **Tool / Method:** Replaced nonsense Latin passage with coherent invented note; single locator badge
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 650,892 bytes
@@ -914,7 +914,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - **Single Locator Badge:** Removed duplicated locator string from the body text. Shows *"Locator: Paragraphs 4–6"* exactly once, as a prominent teal badge at the bottom of the card.
     - **Source Word Document:** Left card clearly marked "Word Research Note (.docx)" with outline headings "Research idea", "Proposed mechanism", and "Possible comparison".
     - **Unified Search Collection:** Converted personal note sits alongside published academic paper ("Comparative Resilience Study", violet badge "Literature search").
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -935,7 +935,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - **Notation Translation Inset:** Attached inset accurately shows mathematical formula $E[X] \to$ spoken phrase `"the expected value of X"` with teal badge "Speech rewrite".
   - **Nine-Episode Split:** Right panel clearly shows the historical multi-episode breakdown: "Ep 1: Section 1", "Ep 2: Section 2", "Ep 3: Section 3" with prominent violet badge "about 62 minutes (oversized)", "Ep 4: Section 4", and "Ep 5–9: Sections 5–9".
   - **Discreet Tag:** Bottom pill tag marks: "Historical nine-file trial: audio production before duration balancing".
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -956,7 +956,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - **Structured Question Card:** Right card cleanly segments metadata ("Math 101 · Problem Set 01"), question statement ("Prove that the sum of two odd integers is even"), and student attempt with amber warning badge ("Unchecked attempt").
   - **Unverified Answer Key:** Distinct dashed section clearly marks "Answer key: [Empty — no verified key]", adhering strictly to the constraint that extraction does not invent or assume verified solutions.
   - **Discreet Tag:** Bottom pill tag marks: "Invented exercise: source and attempt status clearly distinguished".
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -966,7 +966,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/academic-hub/audio_generator/index.md` (Queue row 16)
 - **Original Archive:** `docs/editorial/image-candidates/audio_generator/original-featured.jpg` (SHA-256: `1a06c76689d09d34b77c6484259c5656ddd41fd83bb44c94aace76cc30378c52`, 498,991 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/audio_generator/candidate-01.png` (1376x768, 626,271 bytes, SHA-256: `51044d5a87d0eaac8a0a22430afec23ddd635e366e148346f989550b9d8cd53b`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/audio_generator/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/audio_generator/candidate-02.png`
   - **Tool / Method:** Specific minute durations removed; generic episode labels preserved
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 606,822 bytes
@@ -978,7 +978,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - **Two-Stage Architecture:** Clearly separates text preprocessing ("Stage 1: Make it speakable") from TTS generation ("Stage 2: Generate speech").
     - **Notation Transformation:** Math block $\mathbb{E}[X]$ transforms into spoken phrase `"the expected value of X"` with badge "Narration rewrite".
     - **Discreet Tag:** Bottom pill tag marks: "Illustrative rewrite example, not a measured transcription".
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -988,7 +988,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/multi_agent_project/index.md` (Queue row 17)
 - **Original Archive:** `docs/editorial/image-candidates/multi_agent_project/original-featured.jpg` (SHA-256: `186d4c2bde6cded292358136d53be284e8cbac11bfc45822a4f03a2198613ec2`, 392,862 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/multi_agent_project/candidate-01.png` (1376x768, 637,093 bytes, SHA-256: `c8d4f9387144fd4cfea5d8eace1b9ddc3edec051b88f9b6b9b798692e81dcdab`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/multi_agent_project/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/multi_agent_project/candidate-02.png`
   - **Tool / Method:** Replaced affirmative checks claim with neutral handoff field
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 630,209 bytes
@@ -1001,7 +1001,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - **Structured Handoff Record:** Center card features: "Changes: Explicit file edits", "Checks: Test and lint results", and "Open questions: Handoff tradeoffs".
     - **Human Integration Gate:** Right card highlights "Review and integrate" with teal badge "Human integration gate" and checkmark icon leading to "Production release".
     - **Discreet Tag:** Bottom pill tag marks: "Isolated working branches feeding one human review gate".
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -1011,7 +1011,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/ai-research-assistant/journal_article_transcription/index.md` (Queue row 18)
 - **Original Archive:** `docs/editorial/image-candidates/journal_article_transcription/original-featured.jpg` (SHA-256: `1440b2b44170c6d7e1c1d75a4d5c2e72a35e9c4becccec9d3925e527814b8f6e`, 676,478 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/journal_article_transcription/candidate-01.png` (1376x768, 816,692 bytes, SHA-256: `4b361176d8eb3e4b50a97a3af991ee7be75338243ccbf9b4fcfed3f764e78892`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/journal_article_transcription/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/journal_article_transcription/candidate-02.png`
   - **Tool / Method:** Clean PIL diagram composition with matching readable text and schematic block figure
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 79,265 bytes
@@ -1024,7 +1024,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - **Simple Schematic Figure:** Replaced synthetic measurement curves with a clean schematic box diagram: `Policy Shock (X)` $\to$ `Transmission Channel` $\to$ `Output Adjustment (ΔY)`, labelled *"Figure 2: Stylized Transmission Pathway"*.
     - **Page 4 Connection:** Left header marks "Source Article PDF (Page 4)", right badge marks "Locator: Page 4", and connector arrow loops back to the highlighted PDF passage with callout *"Check original equation and figure"*.
     - **Discreet Tag:** Bottom pill tag marks: "Invented article excerpt: searchable text linked to PDF page".
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -1044,7 +1044,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - **Four Distinct Groups:** Clear top-level headers: "Prepare materials", "Find an explanation", "Study and practice", "Maintain the collection".
   - **Question Progression:** Traces a single conceptual question ("What is an eigenvalue?") through preparation $\to$ passage lookup $\to$ source-linked answer (p. 42 ref) $\to$ draft study guide $\to$ teal check badge "Human review" $\to$ reviewed study aid $\to$ corpus health & sync checks.
   - **Discreet Tag:** Bottom pill tag marks: "Question trajectory from course materials to reviewed study aids".
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -1068,7 +1068,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - Both y-axis "Power" labels and x-axis "Degrees of Freedom" labels are fully intact and unclipped.
   - Footnote attribution: "Source: Master Thesis (Indiana State University, 2019) Figures 5 & 7, p. 15–16 · Preserving original axes and Monte Carlo values".
   - Strictly scientific plotting; zero synthetic diffusion artwork.
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -1078,7 +1078,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 - **Original Brief Path:** `content/projects/wheat_yield_prediction/index.md` (Queue row 21)
 - **Original Archive:** `docs/editorial/image-candidates/wheat_yield_prediction/original-featured.jpg` (SHA-256: `288ae12f8992aa1849a462558a538ffd37b63f35f552e12612bd9b500dbfc717`, 530,641 bytes — verified on disk and in `image-originals-inventory.md`)
 - **Candidate 01 (Preserved):** `docs/editorial/image-candidates/wheat_yield_prediction/candidate-01.png` (1376x768, 68,259 bytes, SHA-256: `9c7c9db3687c02ee674e52bf2d6f3b4e02a44361db36e9f2b8738c9fe3d1ee0f`)
-- **Candidate 02 (Current Review):** `docs/editorial/image-candidates/wheat_yield_prediction/candidate-02.png`
+- **Candidate 02 (Integrated):** `docs/editorial/image-candidates/wheat_yield_prediction/candidate-02.png`
   - **Tool / Method:** Standard plotting tool (`matplotlib`) from verified Table 6 source data with verified footnote split
   - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
   - **File Size:** 68,216 bytes
@@ -1093,7 +1093,7 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
     - Palette matches website design system: background `#14202D`, card background `#1A293B`, Random Forest bars in teal `#35C9C8`, Linear Mixed Model bars in violet `#A58AE0`.
     - Prominent value labels directly above each bar, clean grid lines, and explicit attribution footnote: "Source: Master Thesis (UC Berkeley, 2020) Table 6, p. 34 · Environment-only holdout evaluation (15% validation split)".
     - Strictly scientific plotting; zero synthetic diffusion artwork.
-    - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+    - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
@@ -1114,49 +1114,16 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - **Three-Part Roadmap:** Follows scattered sources $\to$ working textbook converter $\to$ planned search & sourced answers (dashed card container).
   - **Discreet Tag:** Bottom pill tag marks: "August 2026 initial architecture: converter working before search".
   - **Editorial Note for Review:** The generated image includes paired badges (top and bottom) on the middle ("First working tool") and right ("Planned stage") cards; all text is legible and spelling is correct.
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png`; original and candidates preserved).
 
 ---
 
-## Workspace Status and Changes Summary
+## Final integration and verification (2026-10-19)
 
-- **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
-- **Branch:** `gemini/website-images`
-- **Committed Local Work:**
-  - Commit `ea6faef`: Pilot images integrated for Concept Graph, Source Indexer, Notes Transcription.
-  - Commit `d87e78e`: Batch 2 images integrated for Study Guide Pipeline, Summary Enhancement, Guided Solutions, Socratic Tutor, Corpus Health.
-  - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
-  - Commit `112fd70`: Archive Batch 3 originals, add candidates for steering, marker, postprocess, and source indexer v2.
-  - Commit `220bafc`: Add candidate images for rag_analysis and problem_generation.
-  - Commit `52a05fe`: Documentation tracking update in generation report.
-  - Commit `515745e`: Add Round 2 revised candidate images for Batch 3.
-  - Commit `398ec57`: Integrate approved Batch 3 featured images and pilot correction.
-  - Commit `0d012cb`: Archive Batch 4 originals and add candidate images for review.
-  - Commit `df6a563`: Revise resume_manager candidate-02 with geometric gear icon.
-  - Commit `2889640`: Integrate approved Batch 4 featured images (`journal_discovery`, `visualization`, `resume_manager`, `video_notes`, `tutor_diagnosis`) and record responsive verification.
-  - Commit `cb6d4fc`: Archive all 11 Batch 5 original featured images with verified SHA-256 digests in `image-originals-inventory.md`.
-  - Commit `74a3909`: Add Batch 5 candidates for `obsidian_git_sync` and `research_notes_conversion`.
-  - Commit `e1915b7`: Add remaining Batch 5 candidate images for owner review.
-- **Active Uncommitted Candidate Work (Batch 5 Revisions):**
-  - Generated and verified `candidate-02.png` for the six requested revisions:
-    - `obsidian_git_sync/candidate-02.png`: stray "Pill tag" text removed, clean centered pill.
-    - `research_notes_conversion/candidate-02.png`: coherent invented research note, single locator badge.
-    - `audio_generator/candidate-02.png`: generic episode labels with specific unverified minute durations removed.
-    - `multi_agent_project/candidate-02.png`: changed "Test pass & linter clean" to neutral "Test and lint results".
-    - `journal_article_transcription/candidate-02.png`: matching readable text and schematic block diagram without measurement curves.
-    - `wheat_yield_prediction/candidate-02.png`: footnote corrected to verified "15% validation split".
-  - Earlier `candidate-01.png` files are strictly preserved.
-  - Corrected all Batch 5 archived original hashes and sizes in the report against `image-originals-inventory.md` and disk.
-  - All 11 candidates remain strictly in candidate storage awaiting explicit owner review before any page bundle integration.
-- **Integrity Verification:**
-  - All original archived files (`original-featured.jpg`) are verified with SHA-256 against disk and recorded in `image-originals-inventory.md`.
-  - All candidate versions remain preserved under `docs/editorial/image-candidates/`.
-  - Exactly one featured asset exists per page bundle (`featured.png`).
-  - No branches switched, merged, pushed, or deployed.
-
-
-
-
-
-
-
+- **Owner decision:** Approved and integrated the 11 Batch 5 candidate versions named in the table above. This completes the original 29-page image queue. The Source Indexer correction was also integrated earlier; it is a revision of one of those 29 pages, not an additional page.
+- **Page changes:** Each of the final 11 page bundles now contains the approved `featured.png`, updated caption and `image.alt_text`, and no fulfilled `[[Insert Image: ...]]` brief. Each former `featured.jpg` has an exact binary archive under `docs/editorial/image-candidates/<page>/original-featured.jpg`; all candidate versions remain there too.
+- **Source branch:** Gemini completed corrections at commit `9b2b436` on `gemini/website-images`. Final page integration was performed in the separate `codex/website-images-final-integration` worktree.
+- **Production build:** Hugo Extended 0.163.3 completed successfully: 119 pages and 619 processed images. Pagefind indexed 38 pages.
+- **Rendered pages:** Each of the 11 article HTML files contains the approved image and matching alt text; each public page bundle contains its copied `featured.png`. Candidate and active image SHA-256 digests match.
+- **Queue audit:** All 29 paths in the frozen image queue have exactly one active featured image and no unresolved `[[Insert Image: ...]]` brief. The five separate retrospective blog drafts were outside this 29-page queue and remain a separate editorial task.
+- **Publication:** This branch has not been merged, pushed, or deployed. Existing draft and publication states were preserved.

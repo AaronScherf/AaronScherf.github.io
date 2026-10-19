@@ -5,7 +5,9 @@ lastmod: 2026-10-16
 summary: "Turn notes into spoken episodes, translating mathematical notation into language a speech engine can read."
 type: academic-hub-project
 image:
-  caption: "Mathematical notes become spoken explanations and separate audio episodes."
+  caption: "Illustration: Translate the notation before reading it aloud."
+  alt_text: "An expected-value expression becomes spoken language, then three illustrative audio episodes."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
@@ -38,8 +40,6 @@ Audio Generator turns course notes into MP3 episodes for listening away from a s
 <!--more-->
 
 For an **illustrative translation**, E[X] becomes "the expected value of X." Denser equations need more than symbol replacement to preserve what the expression means. The pipeline sends math-heavy passages to a cloud model for that rewrite, while text cleanup and speech synthesis run locally. Plain prose can skip the model call.
-
-[[Insert Image: Show a short formula labelled "E[X]", the phrase "the expected value of X", and a small sequence of episode cards. Mark the rewrite as an illustrative example rather than a measured transcription. Use a few large labels to distinguish "Make it speakable" from "Generate speech". Suggested caption: "Translate the notation before reading it aloud." Suggested alt text: "A mathematical expression becomes spoken language and then an audio episode." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 Notes are split into episodes targeting 10–20 minutes. The current code can divide oversized sections at paragraph boundaries; one indivisible paragraph may still exceed the target. Textbook inputs follow a different path and currently produce one MP3 per source file. Editing any part of a note regenerates all of that file's episodes; unchanged sources can be skipped.
 

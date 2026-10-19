@@ -11,7 +11,9 @@ tags:
   - Audio / TTS
   - LLM / RAG
 image:
-  caption: "Mathematical notation is rewritten for speech before notes become separate audio episodes."
+  caption: "Illustration: The historical nine-file trial still needed duration balancing."
+  alt_text: "A three-hour recording becomes nine episode files; one remains about 62 minutes, and a formula is rewritten for speech."
+  focal_point: Center
 ---
 
 I built the [Audio Generator](/projects/academic-hub/audio_generator/) to make course notes available away from a screen. Reading a mathematical document aloud requires more than sending its text to a speech engine: formula commands need to become spoken language first. As an illustrative example, E[X] should become "the expected value of X," not a recital of brackets and formatting commands.
@@ -19,8 +21,6 @@ I built the [Audio Generator](/projects/academic-hub/audio_generator/) to make c
 <!--more-->
 
 The first complete recording exposed a different problem: it was three hours and 22 minutes long. Generating a valid MP3 had solved file production, but left navigation through a long set of notes unresolved. I changed the output to separate episodes grouped around headings, with an index showing which sections went into each file.
-
-[[Insert Image: Show a long audio timeline labelled "3 hours 22 minutes" beside an episode list from the historical nine-file trial. Mark one episode "about 62 minutes" and the others simply by section, without inventing durations. Add a small E[X] to "expected value of X" translation inset. Suggested caption: "Producing the recording was only the first step." Suggested alt text: "A long recording becomes separate episode files; the historical trial still includes one oversized episode, and notation is translated before speech synthesis." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 *This October 1, 2026 post describes the September development run. The dated update below separates later changes from that result.*
 

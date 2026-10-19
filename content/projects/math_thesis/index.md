@@ -11,7 +11,9 @@ links:
   - type: pdf
     url: https://raw.githubusercontent.com/AaronScherf/Novel-Omnibus-Normality-Test-and-Power-Comparison-with-the-Shapiro-Wilk-Test/main/MATH_Final_Thesis.pdf
 image:
-  caption: 'Illustration of the power comparisons; the thesis contains the original simulation figures and conditions.'
+  caption: "Original thesis figures compare the proposed PGLS test with Shapiro–Wilk for samples of 20 observations and 10,000 simulations per setting."
+  alt_text: "Two original simulation panels compare the proposed test with Shapiro–Wilk, showing similar power for one tested distribution and lower power for another."
+  focal_point: Center
 tags:
   - Statistics
   - R
@@ -23,8 +25,6 @@ My mathematics thesis explored a way to test whether data depart from a bell-sha
 <!--more-->
 
 In the small-sample simulations, the method performed similarly to the established Shapiro–Wilk test for two families of distributions, but fell behind for two others. The result was a proof of concept with room to investigate the construction further. It did not establish a generally stronger normality test.
-
-[[Insert Image: Replace the current illustrative four-panel montage with a readable crop of the thesis's actual power-comparison figures, or a chart recreated from its published simulation outputs using standard plotting tools. Prefer one panel where the methods are close and one where they differ, with large labels identifying the proposed PGLS test and Shapiro–Wilk. Preserve the original axes and values; do not generate synthetic scientific curves. Keep the existing featured asset until the replacement is approved. Suggested caption: "Similar performance in some tested distributions, lower detection rates in others: samples of 20 observations and 10,000 simulations per tested setting." Suggested alt text: "Two original simulation panels compare the proposed normality test with Shapiro–Wilk, showing that their relative performance depends on the tested distribution." Save the approved figure as featured.jpg or featured.png in this page bundle and remove this brief.]]
 
 ## Turning a sample into a pattern
 
