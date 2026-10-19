@@ -1,5 +1,7 @@
 # Retrospective Milestone Blog Image Generation Report
 
+> **Final integration review, October 19:** Candidate 02 for all three remaining posts passed visual and factual review. The images are integrated as `featured.png` with explanatory captions and alt text on `codex/milestone-blog-final-publication`. All five retrospective posts are now prepared with `draft: false`; the three newly prepared posts will remain off the live site until this branch is merged and deployed. The earlier candidate status and Gemini handoff below are preserved as a record of what was reviewed.
+
 > **Publication review, October 19:** Two images passed visual/factual review and were integrated into their page bundles on `codex/milestone-blog-publication-review` (commit `f9bea62`): `resume_parser_milestone` and `reviewable_study_guides`. The other three posts required targeted replacements per [the correction handoff](milestone-blog-image-corrections.md): `practice_problem_checks` removed incoherent algebra in favor of a clean architectural request/solution split; `questions_in_lecture_notes` replaced an overbroad convexity question and invented citation with an uncontroversial rate-of-change question and citation-free answer cards; `concept_map_conditions` replaced the specific unverified chapter/page citation with a generic "Source reference to review" badge while preserving the comparability condition and "Proposed" tag. All original `candidate-01.png` files are strictly preserved alongside the new `candidate-02.png` assets.
 
 **Date:** 2026-10-19  

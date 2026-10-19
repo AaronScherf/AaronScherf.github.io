@@ -1,5 +1,7 @@
 # Historical milestone drafts: first selection
 
+> **Final publication review, October 19:** Gemini's corrected images for the practice-problem, lecture-question, and concept-map posts passed review and are integrated on `codex/milestone-blog-final-publication`. All five retrospective posts are prepared for publication; the final three become live only after this branch is merged and deployed. The original drafting-stage checklist below remains for historical context.
+
 > **Publication review, October 19:** This document records the original drafting baseline. The resume-parser and study-guide posts now have reviewed featured images and are prepared for publication on `codex/milestone-blog-publication-review`. The practice-problem, lecture-question, and concept-map posts remain drafts because their first image candidates need factual corrections. See [the image review](milestone-blog-image-report.md) and [correction handoff](milestone-blog-image-corrections.md). Nothing is live until the branch is merged and deployed.
 
 Prepared 2026-10-16. Source repository inspected at `d0fced1`; website

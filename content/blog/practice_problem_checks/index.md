@@ -2,8 +2,12 @@
 title: "A Practice Problem Can Have the Right Answer and Still Miss the Point"
 summary: "Testing generated exercises revealed two separate questions: does the reasoning hold up, and does it practice the method I asked for?"
 date: 2026-09-06
-lastmod: 2026-10-16
-draft: true
+lastmod: 2026-10-19
+draft: false
+image:
+  caption: "Illustration: a useful exercise must practice the intended skill as well as reach a defensible answer."
+  alt_text: "An illustrative practice request and draft solution face separate method and reasoning checks; the method is unresolved, while the model's reasoning check still needs human review."
+  focal_point: Center
 authors:
   - me
 tags:
@@ -17,8 +21,6 @@ One early test of my practice-problem generator produced a flawed proof, then ma
 
 The idea behind the [Problem Generation Sub-Agent](/projects/academic-hub/problem_generation/) is appealing. Instead of asking for a generic exercise, it searches my course materials for examples of the topic, style, and difficulty, then drafts a new problem and a worked solution. The [Source Indexer](/projects/academic-hub/source_indexer/) supplies those examples. A second model call checks the result before it reaches me.
 
-[[Insert Image: Create a simple landscape editorial illustration of one practice request branching into two separate checks, labelled "Requested method?" and "Sound reasoning?". Show one generic solution card with the method check unresolved rather than two green approval badges. Use invented minimal content, no real assignment and no fabricated application interface. Follow the image handoff's approved palette and style when available; make the two questions readable at mobile size. Suggested caption: "A useful exercise has to practice the intended skill as well as reach a defensible answer." Suggested alt text: "A practice solution faces separate checks for its requested method and the soundness of its reasoning." Save an approved image as featured.jpg or featured.png in this page bundle.]]
-
 That second call was less reassuring than it looked. In the linear algebra trial, the solution treated certain eigenspaces as perpendicular without having the assumptions that would justify it. It also relied on part of the conclusion it was supposed to establish. The checker accepted it anyway. Asking the same small model to read its answer again had not supplied the missing mathematical judgment.
 
 The method problem was easier to isolate. When a request specified a particular kind of proof, the generator kept imitating a different approach in the retrieved examples. Emphasizing the instruction more strongly did not reliably change that behavior. Splitting the verdict into two questions—whether the method matched and whether the mathematics was correct—at least made it possible to reject an answer that passed only one test.
@@ -29,4 +31,4 @@ Even those nine successes had qualifications. Some proofs used the requested met
 
 A useful next trial would ask for several different exercises on the same skill, then check both their proofs and whether they demand meaningfully different reasoning. The near-duplicate probability problems show why a string of valid verdicts cannot answer that question.
 
-*Retrospective draft prepared October 16, 2026, covering the September 6 milestone. The [status record at that revision](https://github.com/AaronScherf/ai-sandbox-master/blob/5c78c2e3d47939869c2f077e1c479d7500dad832/ai-sandbox/academic-rag-model/docs/2026-09-05-problem-generation-status.md) preserves the trials and their limitations. Project links describe the tools as they have developed since.*
+*Retrospective account prepared October 16, 2026, covering the September 6 milestone. The [status record at that revision](https://github.com/AaronScherf/ai-sandbox-master/blob/5c78c2e3d47939869c2f077e1c479d7500dad832/ai-sandbox/academic-rag-model/docs/2026-09-05-problem-generation-status.md) preserves the trials and their limitations. Project links describe the tools as they have developed since.*
