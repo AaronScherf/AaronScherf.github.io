@@ -184,4 +184,115 @@ Archived 2026-10-19 at commit `398ec57` prior to generating Batch 4 candidates. 
 - SHA-256: `84c01856b93d26aa2617ce049bfeebe02f52f0ac6dae1d89bcdf01aa257ddf90`
 - Verification: exact binary copy and SHA-256 match.
 
+---
+
+## Batch 5 Preserved Originals (Archived 2026-10-19)
+
+Archived 2026-10-19 at commit `2889640` prior to generating Batch 5 candidates for the final 11 remaining pages. Exact binary copy; verified with SHA-256 and Git blob IDs.
+
+| Page | Before this image pass | Preserved original | SHA-256 Digest |
+|---|---|---|---|
+| obsidian_git_sync | Existing featured image | [original-featured.jpg](image-candidates/obsidian_git_sync/original-featured.jpg) | `ecc2ed917598ce6210d8b65c9ec382397b8a2b6083325a1aeb38ae027458b6fc` |
+| research_notes_conversion | Existing featured image | [original-featured.jpg](image-candidates/research_notes_conversion/original-featured.jpg) | `c80b6dec6949855a2146155bf9440261350b82dafad2dea316185cda1e3f0904` |
+| audio_generator_podcasts | Existing featured image | [original-featured.jpg](image-candidates/audio_generator_podcasts/original-featured.jpg) | `cdb34701cabb5593c10028fb6a9430b7fee958e745ef109f41a64a9562e640e9` |
+| problem_corpus | Existing featured image | [original-featured.jpg](image-candidates/problem_corpus/original-featured.jpg) | `c31ec2dd2bd333d66ba3327ff6d1fa07829e7a861e994d78371bb7b0ddb76c89` |
+| audio_generator | Existing featured image | [original-featured.jpg](image-candidates/audio_generator/original-featured.jpg) | `1a06c76689d09d34b77c6484259c5656ddd41fd83bb44c94aace76cc30378c52` |
+| multi_agent_project | Existing featured image | [original-featured.jpg](image-candidates/multi_agent_project/original-featured.jpg) | `186d4c2bde6cded292358136d53be284e8cbac11bfc45822a4f03a2198613ec2` |
+| journal_article_transcription | Existing featured image | [original-featured.jpg](image-candidates/journal_article_transcription/original-featured.jpg) | `1440b2b44170c6d7e1c1d75a4d5c2e72a35e9c4becccec9d3925e527814b8f6e` |
+| academic_hub_overview | Existing featured image | [original-featured.jpg](image-candidates/academic_hub_overview/original-featured.jpg) | `32ced1072124c23c7e42c3e9248c7f2e0550b4a183a1632f2f3f75ecabb928af` |
+| math_thesis | Existing featured image | [original-featured.jpg](image-candidates/math_thesis/original-featured.jpg) | `b79b4b4cc93ddc0c02f56ae2264356232cb332b2da83b97a28b26d9a77d6c42f` |
+| wheat_yield_prediction | Existing featured image | [original-featured.jpg](image-candidates/wheat_yield_prediction/original-featured.jpg) | `288ae12f8992aa1849a462558a538ffd37b63f35f552e12612bd9b500dbfc717` |
+| introducing_academic_hub | Existing featured image | [original-featured.jpg](image-candidates/introducing_academic_hub/original-featured.jpg) | `75c9496a724beafa24b1ed30b1fa246b49b9b9ee66bd039a183f8211556e09fd` |
+
+### Batch 5 Provenance Details
+
+#### obsidian_git_sync
+- Original path: `content/projects/academic-hub/obsidian_git_sync/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/obsidian_git_sync/original-featured.jpg`
+- Size: 509046 bytes
+- Git blob ID: `2ae093e1b3a14509870f52e3b5fdafd5e597ba8e`
+- SHA-256: `ecc2ed917598ce6210d8b65c9ec382397b8a2b6083325a1aeb38ae027458b6fc`
+- Verification: exact binary copy and SHA-256 match.
+
+#### research_notes_conversion
+- Original path: `content/projects/ai-research-assistant/research_notes_conversion/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/research_notes_conversion/original-featured.jpg`
+- Size: 579817 bytes
+- Git blob ID: `578f37f3a81da946cc3dc88909e694f5cd9fe07c`
+- SHA-256: `c80b6dec6949855a2146155bf9440261350b82dafad2dea316185cda1e3f0904`
+- Verification: exact binary copy and SHA-256 match.
+
+#### audio_generator_podcasts
+- Original path: `content/blog/audio_generator_podcasts/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/audio_generator_podcasts/original-featured.jpg`
+- Size: 682331 bytes
+- Git blob ID: `bf3057b100a5620f57fa89f28e01e0e154a20d97`
+- SHA-256: `cdb34701cabb5593c10028fb6a9430b7fee958e745ef109f41a64a9562e640e9`
+- Verification: exact binary copy and SHA-256 match.
+
+#### problem_corpus
+- Original path: `content/projects/academic-hub/problem_corpus/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/problem_corpus/original-featured.jpg`
+- Size: 488061 bytes
+- Git blob ID: `719301b17e201832b2dfe6540c9ded43213b8346`
+- SHA-256: `c31ec2dd2bd333d66ba3327ff6d1fa07829e7a861e994d78371bb7b0ddb76c89`
+- Verification: exact binary copy and SHA-256 match.
+
+#### audio_generator
+- Original path: `content/projects/academic-hub/audio_generator/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/audio_generator/original-featured.jpg`
+- Size: 498991 bytes
+- Git blob ID: `70fd7f91c59926ff3a0256518e9aa1c39d94a9d2`
+- SHA-256: `1a06c76689d09d34b77c6484259c5656ddd41fd83bb44c94aace76cc30378c52`
+- Verification: exact binary copy and SHA-256 match.
+
+#### multi_agent_project
+- Original path: `content/projects/multi_agent_project/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/multi_agent_project/original-featured.jpg`
+- Size: 392862 bytes
+- Git blob ID: `453088f230b887a761fd269b878463cbf3b10704`
+- SHA-256: `186d4c2bde6cded292358136d53be284e8cbac11bfc45822a4f03a2198613ec2`
+- Verification: exact binary copy and SHA-256 match.
+
+#### journal_article_transcription
+- Original path: `content/projects/ai-research-assistant/journal_article_transcription/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/journal_article_transcription/original-featured.jpg`
+- Size: 676478 bytes
+- Git blob ID: `06fca9a1bb229069ce92cb7ee50abf77ac210df1`
+- SHA-256: `1440b2b44170c6d7e1c1d75a4d5c2e72a35e9c4becccec9d3925e527814b8f6e`
+- Verification: exact binary copy and SHA-256 match.
+
+#### academic_hub_overview
+- Original path: `content/projects/academic-hub-overview/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/academic_hub_overview/original-featured.jpg`
+- Size: 563933 bytes
+- Git blob ID: `128cf297b82d98f6819eb05aefbe34db05b3e0f7`
+- SHA-256: `32ced1072124c23c7e42c3e9248c7f2e0550b4a183a1632f2f3f75ecabb928af`
+- Verification: exact binary copy and SHA-256 match.
+
+#### math_thesis
+- Original path: `content/projects/math_thesis/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/math_thesis/original-featured.jpg`
+- Size: 501803 bytes
+- Git blob ID: `d2229a3fcb6bf47fa54d446b6b2455abd87fb1a0`
+- SHA-256: `b79b4b4cc93ddc0c02f56ae2264356232cb332b2da83b97a28b26d9a77d6c42f`
+- Verification: exact binary copy and SHA-256 match.
+
+#### wheat_yield_prediction
+- Original path: `content/projects/wheat_yield_prediction/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/wheat_yield_prediction/original-featured.jpg`
+- Size: 530641 bytes
+- Git blob ID: `d7f49668e114e7e69348aef64719ceb7d63ccbaa`
+- SHA-256: `288ae12f8992aa1849a462558a538ffd37b63f35f552e12612bd9b500dbfc717`
+- Verification: exact binary copy and SHA-256 match.
+
+#### introducing_academic_hub
+- Original path: `content/blog/academic_hub/featured.jpg`
+- Archive path: `docs/editorial/image-candidates/introducing_academic_hub/original-featured.jpg`
+- Size: 615399 bytes
+- Git blob ID: `c19ec94025e6c554c56d971deab41eb174017981`
+- SHA-256: `75c9496a724beafa24b1ed30b1fa246b49b9b9ee66bd039a183f8211556e09fd`
+- Verification: exact binary copy and SHA-256 match.
+
+
 
