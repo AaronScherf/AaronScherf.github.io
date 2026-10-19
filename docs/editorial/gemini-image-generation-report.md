@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-18  
 **Branch:** `gemini/website-images`  
-**Status:** **Pilot (3 images) + Batch 2 (5 images) + Batch 3 (6 images) + Batch 4 (5 images) integrated and verified; 11 remaining pages in preparation**  
+**Status:** **Pilot (3 images) + Batch 2 (5 images) + Batch 3 (6 images) + Batch 4 (5 images) integrated and verified; all 11 Batch 5 candidates completed and awaiting owner review**  
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
@@ -860,15 +860,15 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 |---|---|---|---|---|
 | **1** | [`obsidian_git_sync`](../../content/projects/academic-hub/obsidian_git_sync/index.md) | [`candidate-01.png`](image-candidates/obsidian_git_sync/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
 | **2** | [`research_notes_conversion`](../../content/projects/ai-research-assistant/research_notes_conversion/index.md) | [`candidate-01.png`](image-candidates/research_notes_conversion/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
-| **3** | [`audio_generator_podcasts`](../../content/blog/audio_generator_podcasts/index.md) | In queue (row 13) | Antigravity `generate_image` | **Blocked by image allowance** (Quota reset at 18:21 UTC / 14:21 EDT) |
-| **4** | [`problem_corpus`](../../content/projects/academic-hub/problem_corpus/index.md) | In queue (row 15) | Antigravity `generate_image` | In queue (pending quota reset) |
-| **5** | [`audio_generator`](../../content/projects/academic-hub/audio_generator/index.md) | In queue (row 16) | Antigravity `generate_image` | In queue (pending quota reset) |
-| **6** | [`multi_agent_project`](../../content/projects/multi_agent_project/index.md) | In queue (row 17) | Antigravity `generate_image` | In queue (pending quota reset) |
-| **7** | [`journal_article_transcription`](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | In queue (row 18) | Antigravity `generate_image` | In queue (pending quota reset) |
-| **8** | [`academic-hub-overview`](../../content/projects/academic-hub-overview/index.md) | In queue (row 19) | Antigravity `generate_image` | In queue (pending quota reset) |
-| **9** | [`math_thesis`](../../content/projects/math_thesis/index.md) | In queue (row 20) | Standard plotting tool from verified PDF data | Source evidence verified (`Scherf_Aaron_ISU_Thesis.pdf` p. 15–16) |
-| **10** | [`wheat_yield_prediction`](../../content/projects/wheat_yield_prediction/index.md) | In queue (row 21) | Standard plotting tool from Table 6 data | Source evidence verified (`Scherf_Aaron_Berkeley_Thesis.pdf` Table 6) |
-| **11** | [`introducing_academic_hub`](../../content/blog/academic_hub/index.md) | In queue (row 27) | Antigravity `generate_image` | In queue (pending quota reset) |
+| **3** | [`audio_generator_podcasts`](../../content/blog/audio_generator_podcasts/index.md) | [`candidate-01.png`](image-candidates/audio_generator_podcasts/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **4** | [`problem_corpus`](../../content/projects/academic-hub/problem_corpus/index.md) | [`candidate-01.png`](image-candidates/problem_corpus/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **5** | [`audio_generator`](../../content/projects/academic-hub/audio_generator/index.md) | [`candidate-01.png`](image-candidates/audio_generator/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **6** | [`multi_agent_project`](../../content/projects/multi_agent_project/index.md) | [`candidate-01.png`](image-candidates/multi_agent_project/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **7** | [`journal_article_transcription`](../../content/projects/ai-research-assistant/journal_article_transcription/index.md) | [`candidate-01.png`](image-candidates/journal_article_transcription/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **8** | [`academic-hub-overview`](../../content/projects/academic-hub-overview/index.md) | [`candidate-01.png`](image-candidates/academic_hub_overview/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
+| **9** | [`math_thesis`](../../content/projects/math_thesis/index.md) | [`candidate-01.png`](image-candidates/math_thesis/candidate-01.png) | Standard plotting tool from verified PDF data | **Awaiting owner review** |
+| **10** | [`wheat_yield_prediction`](../../content/projects/wheat_yield_prediction/index.md) | [`candidate-01.png`](image-candidates/wheat_yield_prediction/candidate-01.png) | Standard plotting tool from Table 6 data | **Awaiting owner review** |
+| **11** | [`introducing_academic_hub`](../../content/blog/academic_hub/index.md) | [`candidate-01.png`](image-candidates/introducing_academic_hub/candidate-01.png) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Awaiting owner review** |
 
 ---
 
@@ -924,6 +924,229 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
 
 ---
 
+#### 21. Turning Dense Math Notes into Commute Podcasts (Candidate 01)
+
+- **Page:** `content/blog/audio_generator_podcasts/index.md`
+- **Original Brief Path:** `content/blog/audio_generator_podcasts/index.md` (Queue row 13)
+- **Output File Path:** `docs/editorial/image-candidates/audio_generator_podcasts/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 686,112 bytes
+- **SHA-256 Digest:** `3fab772dda8ab6c1f7f580930c8db425c6d51b2a1106c07efc9f9ee18b6d4633`
+- **Original Archive:** `docs/editorial/image-candidates/audio_generator_podcasts/original-featured.jpg` (SHA-256: `64a7c85854b7c62bb95f5735165d4bb3ce7c735c02bcfb62e49c95b7fe3e7ba2`, 336,750 bytes)
+- **Proposed Caption:** "Illustration: initial trial produced a 3-hour audio file, then split into nine uneven sections before duration balancing was added."
+- **Proposed Alt Text:** "A 3-hour audio waveform and speech-rewritten formula alongside a 9-episode split with an oversized 62-minute episode."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal comparison layout: 1. On the left, an audio timeline card titled 'Initial Single Audio File' with a continuous soundwave bar prominently labelled 'Duration: 3 hours 22 minutes'; 2. Attached as an inset below it, a small notation translation card showing formula 'E[X]' with a clean arrow to spoken phrase '"the expected value of X"' with teal badge 'Speech rewrite'; 3. A clean arrow leads to the right container titled 'Nine-Episode Split (Historical Trial)'; 4. Inside the episode list, neat stacked cards: 'Ep 1: Section 1', 'Ep 2: Section 2', a highlighted card 'Ep 3: Section 3' with a prominent violet badge 'about 62 minutes (oversized)', followed by 'Ep 4: Section 4' and 'Ep 5–9: Sections 5–9'; 5. Discreet bottom pill tag: 'Historical nine-file trial: audio production before duration balancing'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Initial Audio Waveform:** Left card clearly displays "Initial Single Audio File" with continuous soundwave bar labelled "Duration: 3 hours 22 minutes".
+  - **Notation Translation Inset:** Attached inset accurately shows mathematical formula $E[X] \to$ spoken phrase `"the expected value of X"` with teal badge "Speech rewrite".
+  - **Nine-Episode Split:** Right panel clearly shows the historical multi-episode breakdown: "Ep 1: Section 1", "Ep 2: Section 2", "Ep 3: Section 3" with prominent violet badge "about 62 minutes (oversized)", "Ep 4: Section 4", and "Ep 5–9: Sections 5–9".
+  - **Discreet Tag:** Bottom pill tag marks: "Historical nine-file trial: audio production before duration balancing".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 22. Problem Corpus Extraction (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/problem_corpus/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/problem_corpus/index.md` (Queue row 15)
+- **Output File Path:** `docs/editorial/image-candidates/problem_corpus/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 765,530 bytes
+- **SHA-256 Digest:** `912de1e2221476c4b6d0cd9dd4fec18f37269eae0ab3db2246c42edcc0e257a2`
+- **Original Archive:** `docs/editorial/image-candidates/problem_corpus/original-featured.jpg` (SHA-256: `95e0c65369c0717cbff38b32cfd5efc5d2dfaafe0f1a9426f8f17bc16447849e`, 784,547 bytes)
+- **Proposed Caption:** "Illustration: extract exercises from problem sets and exams into structured question cards, recording sources and keeping student work distinct from verified keys."
+- **Proposed Alt Text:** "Three course documents feed a structured card separating an invented proof question, an unchecked student attempt, and an empty answer key."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow layout: 1. On the left, three stacked source document cards labelled 'Problem Set 01', 'Midterm Exam 2024', and 'Discussion Worksheet' feeding arrows into a central pipeline; 2. On the right, a large structured question card titled 'Extracted Problem Card' with distinct visible fields: 'Source: Math 101 · Problem Set 01' with teal badge, 'Question: Prove that the sum of two odd integers is even', 'Student attempt — unchecked: Let x = 2k+1, y = 2m+1...' with amber warning badge 'Unchecked attempt', and 'Answer key: [Empty — no verified key]' with dashed border; 3. Discreet bottom pill tag: 'Invented exercise: source and attempt status clearly distinguished'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Source Course Materials:** Stacked cards for "Problem Set 01", "Midterm Exam 2024", and "Discussion Worksheet" feed into the extraction pipeline.
+  - **Structured Question Card:** Right card cleanly segments metadata ("Math 101 · Problem Set 01"), question statement ("Prove that the sum of two odd integers is even"), and student attempt with amber warning badge ("Unchecked attempt").
+  - **Unverified Answer Key:** Distinct dashed section clearly marks "Answer key: [Empty — no verified key]", adhering strictly to the constraint that extraction does not invent or assume verified solutions.
+  - **Discreet Tag:** Bottom pill tag marks: "Invented exercise: source and attempt status clearly distinguished".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 23. Audio Generator: Text to Spoken Equations (Candidate 01)
+
+- **Page:** `content/projects/academic-hub/audio_generator/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/audio_generator/index.md` (Queue row 16)
+- **Output File Path:** `docs/editorial/image-candidates/audio_generator/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 626,271 bytes
+- **SHA-256 Digest:** `51044d5a87d0eaac8a0a22430afec23ddd635e366e148346f989550b9d8cd53b`
+- **Original Archive:** `docs/editorial/image-candidates/audio_generator/original-featured.jpg` (SHA-256: `186bc76878b277259169fa126584c6ca9318b76c8bbdb1d83ae0fcda7baeeeb2`, 336,750 bytes)
+- **Proposed Caption:** "Illustration: rewrite mathematical notation for spoken clarity before generating speech episodes."
+- **Proposed Alt Text:** "A two-stage diagram showing mathematical notation rewritten for spoken narration, followed by three audio episodes."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Two-stage horizontal pipeline layout: 1. On the left, a large card titled 'Stage 1: Make it speakable' showing formula notation 'E[X]' inside a violet math block transformed by a clean arrow into the spoken phrase '"the expected value of X"' with a teal badge 'Narration rewrite'; 2. A clean connector arrow leads to the right card titled 'Stage 2: Generate speech'; 3. Inside Stage 2, a sequence of three neat audio episode cards stacked vertically: 'Episode 01 (12 min)' with sound wave icon, 'Episode 02 (15 min)' with sound wave icon, and 'Episode 03 (18 min)' with sound wave icon; 4. Discreet bottom pill tag: 'Illustrative rewrite example, not a measured transcription'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Two-Stage Architecture:** Clearly separates text preprocessing from TTS generation: "Stage 1: Make it speakable" and "Stage 2: Generate speech".
+  - **Notation Transformation:** Math block $\mathbb{E}[X]$ transforms into `"the expected value of X"` with badge "Narration rewrite".
+  - **Audio Episodes:** Sequential episodes ("Episode 01 (12 min)", "Episode 02 (15 min)", "Episode 03 (18 min)") with waveform icons show balanced multi-part generation.
+  - **Discreet Tag:** Bottom pill tag marks: "Illustrative rewrite example, not a measured transcription".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 24. Multi-Agent Development Workflow (Candidate 01)
+
+- **Page:** `content/projects/multi_agent_project/index.md`
+- **Original Brief Path:** `content/projects/multi_agent_project/index.md` (Queue row 17)
+- **Output File Path:** `docs/editorial/image-candidates/multi_agent_project/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 637,093 bytes
+- **SHA-256 Digest:** `c8d4f9387144fd4cfea5d8eace1b9ddc3edec051b88f9b6b9b798692e81dcdab`
+- **Original Archive:** `docs/editorial/image-candidates/multi_agent_project/original-featured.jpg` (SHA-256: `e06c74d64387d8ba1cf67ce8b233959c908cf67482cb4125f1fcb7e28b8686d0`, 495,204 bytes)
+- **Proposed Caption:** "Illustration: isolated working branches assemble verified changes and checks for a single human integration decision."
+- **Proposed Alt Text:** "Two parallel worktrees feed a structured handoff record into a human integration gate leading to production release."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. On the left, two stacked cards representing isolated working copies: top card 'Worktree: Task A' with text 'Task: Documentation Review'; bottom card 'Worktree: Task B' with text 'Task: Test Suite Fixes'; 2. Both feed clean arrows into a central 'Handoff Record' card displaying three clear bullet sections: 'Changes: Explicit file edits', 'Checks: Test pass & linter clean', and 'Open questions: Handoff tradeoffs'; 3. Arrow leads to a final card on the right titled 'Review and integrate' with a teal badge 'Human integration gate' and checkmark icon, leading to 'Production release'; 4. Discreet bottom pill tag: 'Isolated working branches feeding one human review gate'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Isolated Worktrees:** Left stacked cards show parallel branches ("Worktree: Task A" - Documentation Review, "Worktree: Task B" - Test Suite Fixes) without cross-contamination.
+  - **Structured Handoff Record:** Center card features the three key sections: "Changes: Explicit file edits", "Checks: Test pass & linter clean", and "Open questions: Handoff tradeoffs".
+  - **Human Integration Gate:** Right card highlights "Review and integrate" with teal badge "Human integration gate" and checkmark icon leading to "Production release".
+  - **Discreet Tag:** Bottom pill tag marks: "Isolated working branches feeding one human review gate".
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 25. Journal Article Transcription (Candidate 01)
+
+- **Page:** `content/projects/ai-research-assistant/journal_article_transcription/index.md`
+- **Original Brief Path:** `content/projects/ai-research-assistant/journal_article_transcription/index.md` (Queue row 18)
+- **Output File Path:** `docs/editorial/image-candidates/journal_article_transcription/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 816,692 bytes
+- **SHA-256 Digest:** `4b361176d8eb3e4b50a97a3af991ee7be75338243ccbf9b4fcfed3f764e78892`
+- **Original Archive:** `docs/editorial/image-candidates/journal_article_transcription/original-featured.jpg` (SHA-256: `fa5ec58d34190c1f4e1fdbf184711f5dff7284f938221666ff2cf0f951e44f80`, 555,274 bytes)
+- **Proposed Caption:** "Illustration: extract searchable text from journal articles while preserving a link back to the source page for formulas and figures."
+- **Proposed Alt Text:** "A journal PDF page with a formula and chart is converted to searchable text with a page-4 locator and return reference."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Two-column side-by-side comparison: 1. On the left, a card titled 'Source Article PDF (Page 4)' showing an academic page spread with visible formula 'ΔY = α + βX + ε', a compact vector line chart box labelled 'Figure 2: Shock Dynamics', and a highlighted paragraph; 2. On the right, a card titled 'Converted Searchable Text' displaying the matching extracted paragraph text, topped by a prominent teal badge 'Locator: Page 4'; 3. A clean connector arrow loops back from the converted text to the source page with a violet callout: 'Check original equation and figure'; 4. Discreet bottom pill tag: 'Invented article excerpt: searchable text linked to PDF page'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Source Article PDF:** Left card shows page layout with formula $\Delta Y = \alpha + \beta X + \epsilon$, line chart "Figure 2: Shock Dynamics", and highlighted paragraph text.
+  - **Converted Text & Locator:** Right card displays converted searchable text topped with prominent teal badge "Locator: Page 4".
+  - **Return-to-Source Loop:** Connector arrow loops back to source page with violet callout: "Check original equation and figure".
+  - **Discreet Tag:** Bottom pill tag marks: "Invented article excerpt: searchable text linked to PDF page".
+  - **Editorial Note for Review:** The paragraph body text within the right card contains illustrative pseudo-words ("The setirement tollets emeyanent..."), though the primary structural labels, formula, chart caption, and return callout are crisp and spelled correctly.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 26. Academic Hub Overview (Candidate 01)
+
+- **Page:** `content/projects/academic-hub-overview/index.md`
+- **Original Brief Path:** `content/projects/academic-hub-overview/index.md` (Queue row 19)
+- **Output File Path:** `docs/editorial/image-candidates/academic_hub_overview/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 656,064 bytes
+- **SHA-256 Digest:** `3b2d39add3c86c4017b3bcc9dc59747e4f68ff75065a40082d267d39841e4ae7`
+- **Original Archive:** `docs/editorial/image-candidates/academic_hub_overview/original-featured.jpg` (SHA-256: `94c399b6ff8d5bf3d8206d4e5f157fdfdd36605daea7ea7535b4c1aa390ca481`, 389,017 bytes)
+- **Proposed Caption:** "Illustration: the path from course materials to verified explanations, study aids, and vault maintenance."
+- **Proposed Alt Text:** "A horizontal workflow traces a course question through preparation, search passage retrieval, human-reviewed study aids, and collection maintenance."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Four-stage horizontal workflow architecture with large bold group headers: 1. Group 'Prepare materials' showing handwritten note question 'What is an eigenvalue?' becoming 'Searchable text'; 2. Group 'Find an explanation' showing search passage lookup yielding 'Source-linked answer (p. 42 ref)'; 3. Group 'Study and practice' showing 'Draft study guide' passing through a teal check badge 'Human review' to become 'Reviewed study aid'; 4. Group 'Maintain the collection' with 'Corpus health & sync checks'; 5. Clean connecting arrows trace the question's journey across all stages; 6. Discreet bottom pill tag: 'Question trajectory from course materials to reviewed study aids'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **Four Distinct Groups:** Clear top-level headers: "Prepare materials", "Find an explanation", "Study and practice", "Maintain the collection".
+  - **Question Progression:** Traces a single conceptual question ("What is an eigenvalue?") through preparation $\to$ passage lookup $\to$ source-linked answer (p. 42 ref) $\to$ draft study guide $\to$ teal check badge "Human review" $\to$ reviewed study aid $\to$ corpus health & sync checks.
+  - **Discreet Tag:** Bottom pill tag marks: "Question trajectory from course materials to reviewed study aids".
+  - **Typographic Integrity:** 100% correct spelling, balanced spacing, and high contrast.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 27. Novel Omnibus Normality Test (Candidate 01)
+
+- **Page:** `content/projects/math_thesis/index.md`
+- **Original Brief Path:** `content/projects/math_thesis/index.md` (Queue row 20)
+- **Output File Path:** `docs/editorial/image-candidates/math_thesis/candidate-01.png`
+- **Tool / Model:** Python PIL image composition from verified source PDF (`static/uploads/Scherf_Aaron_ISU_Thesis.pdf`, Figures 5 & 7, p. 15–16)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 123,823 bytes
+- **SHA-256 Digest:** `b2322c447f5b23525f315f1904a0e43064fc2dbb395deee4e9e1c211dd8e21ed`
+- **Original Archive:** `docs/editorial/image-candidates/math_thesis/original-featured.jpg` (SHA-256: `d95d1fa2e2bc1f605a5d2eb7b830d1e57c6b7501b1a7741d7c3558869ff32f91`, 389,017 bytes)
+- **Proposed Caption:** "Empirical power comparison of the proposed PGLS test versus Shapiro–Wilk for samples of size n = 20."
+- **Proposed Alt Text:** "Side-by-side empirical power curves showing similar performance under t-distribution departures and lower detection under Chi-square departures."
+- **Method & Source Verification:**
+  - Composed directly from authentic high-resolution vector figures extracted from Aaron Scherf's Master's thesis (`static/uploads/Scherf_Aaron_ISU_Thesis.pdf`, Figures 5 & 7 on pp. 15–16).
+  - Preserves exact simulation results (10,000 Monte Carlo runs per setting, $n=20$), original axes (Degrees of Freedom 2–10, Power 0.0–1.0), and authentic curve trajectories.
+  - Left card: t-distribution power comparison (similar performance between PGLS and SW) with teal badge "Similar Performance (t-distribution)".
+  - Right card: Chi-Square distribution power comparison (lower detection rate for PGLS relative to SW) with violet badge "Lower Detection Rate (Chi-Square)".
+  - Both y-axis "Power" labels and x-axis "Degrees of Freedom" labels are fully intact and unclipped.
+  - Footnote attribution: "Source: Master Thesis (Indiana State University, 2019) Figures 5 & 7, p. 15–16 · Preserving original axes and Monte Carlo values".
+  - Strictly scientific plotting; zero synthetic diffusion artwork.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 28. Predicting Wheat Yields in New Environments (Candidate 01)
+
+- **Page:** `content/projects/wheat_yield_prediction/index.md`
+- **Original Brief Path:** `content/projects/wheat_yield_prediction/index.md` (Queue row 21)
+- **Output File Path:** `docs/editorial/image-candidates/wheat_yield_prediction/candidate-01.png`
+- **Tool / Model:** Standard plotting tool (`matplotlib`) from verified Table 6 source data (`static/uploads/Scherf_Aaron_Berkeley_Thesis.pdf`, p. 34 / PDF p. 42)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 68,259 bytes
+- **SHA-256 Digest:** `9c7c9db3687c02ee674e52bf2d6f3b4e02a44361db36e9f2b8738c9fe3d1ee0f`
+- **Original Archive:** `docs/editorial/image-candidates/wheat_yield_prediction/original-featured.jpg` (SHA-256: `918ef9bf73a4b6cfd88d2f7fe700bb1df731057c7cb17cbbab67be5188f504c5`, 708,828 bytes)
+- **Proposed Caption:** "Holdout sample performance comparison between Random Forest and Linear Mixed Models across environmental data sources."
+- **Proposed Alt Text:** "A grouped bar chart comparing Random Forest and Linear Mixed Model holdout R² across field records and satellite-derived data."
+- **Method & Source Verification:**
+  - Rendered with Python `matplotlib` using the exact Table 6 holdout $R^2$ values from Aaron Scherf's Master's thesis (UC Berkeley, 2020, p. 34):
+    - Field Records (CIMMYT Trial Data): Random Forest $R^2 = 0.829$, Linear Mixed Model $R^2 = 0.113$
+    - Satellite-Derived Data (Google Earth Engine): Random Forest $R^2 = 0.746$, Linear Mixed Model $R^2 = 0.243$
+  - Palette matches website design system: background `#14202D`, card background `#1A293B`, Random Forest bars in teal `#35C9C8`, Linear Mixed Model bars in violet `#A58AE0`.
+  - Prominent value labels directly above each bar, clean grid lines, and explicit attribution footnote: "Source: Master Thesis (UC Berkeley, 2020) Table 6, p. 34 · Environment-only holdout evaluation (n = 15% validation split)".
+  - Strictly scientific plotting; zero synthetic diffusion artwork.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 29. Introducing Academic Hub (Candidate 01)
+
+- **Page:** `content/blog/academic_hub/index.md`
+- **Original Brief Path:** `content/blog/academic_hub/index.md` (Queue row 27)
+- **Output File Path:** `docs/editorial/image-candidates/introducing_academic_hub/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 720,204 bytes
+- **SHA-256 Digest:** `3b04bc361248a644573f3d4c8b408600b810601ab5dd51bba8c668cbb5302e89`
+- **Original Archive:** `docs/editorial/image-candidates/introducing_academic_hub/original-featured.jpg` (SHA-256: `e68e4c0d16c5b9662b66723e7f91845fe9daea33d3d63b2767098c767fc7f40e`, 389,017 bytes)
+- **Proposed Caption:** "Illustration: August 2026 plan showing the initial textbook converter operating before search and sourced answers were added."
+- **Proposed Alt Text:** "A roadmap diagram showing scattered sources feeding a working textbook converter, with search and sourced answers marked as a planned stage."
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal project roadmap layout with prominent top header 'August 2026 Historical Plan': 1. On the left, an input card titled 'Scattered Sources' showing generic textbooks and handwritten notes; 2. An arrow leads to a central card titled 'Working: Textbook Converter' with a teal check badge 'First working tool'; 3. Clean arrow leads to a card on the right with dashed outline titled 'Planned: Search & Sourced Answers' with a violet badge 'Planned stage'; 4. Discreet bottom pill tag: 'August 2026 initial architecture: converter working before search'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Visual & Factual Inspection:**
+  - **August 2026 Architecture:** Top header clearly designates "August 2026 Historical Plan".
+  - **Three-Part Roadmap:** Follows scattered sources $\to$ working textbook converter $\to$ planned search & sourced answers (dashed card container).
+  - **Discreet Tag:** Bottom pill tag marks: "August 2026 initial architecture: converter working before search".
+  - **Editorial Note for Review:** The generated image includes paired badges (top and bottom) on the middle ("First working tool") and right ("Planned stage") cards; all text is legible and spelling is correct.
+  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
 ## Workspace Status and Changes Summary
 
 - **Repository Root:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`
@@ -941,16 +1164,17 @@ Originals preserved and hash-verified for all 11 pages in `docs/editorial/image-
   - Commit `df6a563`: Revise resume_manager candidate-02 with geometric gear icon.
   - Commit `2889640`: Integrate approved Batch 4 featured images (`journal_discovery`, `visualization`, `resume_manager`, `video_notes`, `tutor_diagnosis`) and record responsive verification.
   - Commit `cb6d4fc`: Archive all 11 Batch 5 original featured images with verified SHA-256 digests in `image-originals-inventory.md`.
-- **Active Uncommitted Candidate Work (Batch 5):**
-  - Generated and saved `docs/editorial/image-candidates/obsidian_git_sync/candidate-01.png`.
-  - Generated and saved `docs/editorial/image-candidates/research_notes_conversion/candidate-01.png`.
-  - Native image generation quota reached on queue item 3 (`audio_generator_podcasts`) with reset expected at `2026-10-19T18:21:20Z`.
-  - Source evidence verified in local PDFs for the two thesis pages (`math_thesis` and `wheat_yield_prediction`).
+  - Commit `74a3909`: Add Batch 5 candidates for `obsidian_git_sync` and `research_notes_conversion`.
+- **Active Uncommitted Candidate Work (Batch 5 Completed):**
+  - All 11 candidate images (Items 1–11 in Batch 5 queue) are generated, hash-verified, and preserved under `docs/editorial/image-candidates/<page>/candidate-01.png`.
+  - Authenticity confirmed for the two thesis pages (`math_thesis` and `wheat_yield_prediction`) using authentic source figures and Table 6 values from local PDFs.
+  - All 11 candidates remain strictly in candidate storage awaiting explicit owner review before any page bundle integration.
 - **Integrity Verification:**
   - All original archived files (`original-featured.jpg`) are verified with SHA-256 and recorded in `image-originals-inventory.md`.
   - All candidate versions remain preserved under `docs/editorial/image-candidates/`.
   - Exactly one featured asset exists per page bundle (`featured.png`).
   - No branches switched, merged, pushed, or deployed.
+
 
 
 
