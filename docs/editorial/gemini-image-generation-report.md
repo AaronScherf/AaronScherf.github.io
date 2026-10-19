@@ -2,8 +2,7 @@
 
 **Date:** 2026-10-18  
 **Branch:** `gemini/website-images`  
-**Repository Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`  
-**Status:** **Pilot (3 images) + Batch 2 (5 images) integrated and committed; Batch 3 originals preserved; all 5 Batch 3 candidates + Source Indexer v2 generated and awaiting owner review**  
+**Status:** **Pilot (3 images) + Batch 2 (5 images) + Batch 3 (6 images) + Batch 4 (5 images) integrated and verified; 11 remaining pages in preparation**  
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
@@ -664,20 +663,20 @@ Full production build and responsive visual checks were performed and recorded f
 
 ---
 
-## Batch 4 Candidates (Prepared for Owner Review — 2026-10-19)
+## Batch 4 Approved Images & Integration (2026-10-19)
 
 Dated: 2026-10-19  
-Originals preserved and hash-verified in `docs/editorial/image-originals-inventory.md`. All five candidates prepared under `docs/editorial/image-candidates/` awaiting owner review. No page bundles or articles have been modified for Batch 4.
+Originals preserved and hash-verified in `docs/editorial/image-originals-inventory.md`. All five candidates approved by owner on 2026-10-19 and integrated into active page bundles as `featured.png`. Replaced `featured.jpg` removed, captions updated with `Illustration:`, alt text updated, and fulfilled `[[Insert Image: ...]]` blocks removed.
 
 ### Batch 4 Candidates Summary Table
 
 | Item | Page | Candidate Path | Dimensions | Tool / Generation Method | Status |
 |---|---|---|---|---|---|
-| **14. Journal Discovery** | [`journal_discovery`](../../content/projects/ai-research-assistant/journal_discovery/index.md) | [`candidate-01.png`](image-candidates/journal_discovery/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
-| **15. Visualization** | [`visualization`](../../content/projects/academic-hub/visualization/index.md) | [`candidate-01.png`](image-candidates/visualization/candidate-01.png) | 1376 x 768 (16:9) | Rendered mathematical plot (`agent/viz/templates/gradient_descent.py`) | **Owner review pending** |
-| **16. Resume Manager** | [`resume_manager`](../../content/projects/resume_manager/index.md) | [`candidate-02.png`](image-candidates/resume_manager/candidate-02.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** (Revised to gear icon) |
-| **17. Video Lecture Notes** | [`video_notes`](../../content/projects/academic-hub/video_notes/index.md) | [`candidate-01.png`](image-candidates/video_notes/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
-| **18. Tutor Diagnosis** | [`tutor_diagnosis`](../../content/projects/academic-hub/tutor_diagnosis/index.md) | [`candidate-01.png`](image-candidates/tutor_diagnosis/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+| **14. Journal Discovery** | [`journal_discovery`](../../content/projects/ai-research-assistant/journal_discovery/index.md) | [`candidate-01.png`](image-candidates/journal_discovery/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **15. Visualization** | [`visualization`](../../content/projects/academic-hub/visualization/index.md) | [`candidate-01.png`](image-candidates/visualization/candidate-01.png) | 1376 x 768 (16:9) | Rendered mathematical plot (`agent/viz/templates/gradient_descent.py`) | **Approved by owner & integrated** (`featured.png`) |
+| **16. Resume Manager** | [`resume_manager`](../../content/projects/resume_manager/index.md) | [`candidate-02.png`](image-candidates/resume_manager/candidate-02.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **17. Video Lecture Notes** | [`video_notes`](../../content/projects/academic-hub/video_notes/index.md) | [`candidate-01.png`](image-candidates/video_notes/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
+| **18. Tutor Diagnosis** | [`tutor_diagnosis`](../../content/projects/academic-hub/tutor_diagnosis/index.md) | [`candidate-01.png`](image-candidates/tutor_diagnosis/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Approved by owner & integrated** (`featured.png`) |
 
 ---
 
@@ -704,7 +703,7 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
   - **Human Review Gate:** Central card highlights "Human Review" with a checkmark badge reading "15 accepted".
   - **Access Branching:** Branches clearly into two cards on the right: "7 PDFs downloaded" (teal badge) and "8 manual-access entries" (violet badge).
   - **Single Trial Qualification:** Subtitle badge on the query card notes "Dated trial: Oct 15", and the bottom tag explicitly states: "Single trial outcome, not a general rate", avoiding any claim of a universal success rate.
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png` copied to page bundle, `featured.jpg` removed, caption prefixed with `Illustration:`, alt text added, placeholder removed).
 
 ---
 
@@ -731,7 +730,7 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
 - **Visual & Factual Inspection:**
   - Truly authentic mathematical plot generated directly from code; zero generative diffusion hallucination or fabricated interface elements.
   - High contrast, dark navy background `#14202D`, crisp typography, and balanced 16:9 composition.
-- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+- **Review Status:** **Approved by owner & integrated** (`featured.png` copied to page bundle, `featured.jpg` removed, caption prefixed with `Illustration:`, alt text added, placeholder removed).
 
 ---
 
@@ -757,7 +756,7 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
   - **Fixed vs. Editable Distinction:** "Master Resume" distinctly separates fixed facts with violet badges ("Employer: Acme Corp", "Dates: 2023–2025"). "Tailored Draft" highlights editable bullet points.
   - **Target Guidance:** "Job Description" specifies "Requirements: Distributed Systems" in teal.
   - **Validation & Privacy:** "Review Report" card includes checkmarks for "Fixed facts verified" and "Validation check: PASS". Bottom tag confirms "Invented applicant profile".
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png` copied to page bundle, `featured.jpg` removed, caption prefixed with `Illustration:`, alt text added, placeholder removed).
 
 ---
 
@@ -782,7 +781,7 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
   - **Timestamped Transcripts:** Dialogue lines with teal time tags ("04:15: Recall our definition of a function.", "18:30: A mapping assigns each domain element.").
   - **Incomplete Timestamp Callout:** A prominent violet speech bubble reads: "Concept timestamps still incomplete", explicitly documenting the unfinished reference link without falsely claiming granular timestamping.
   - **Study Note Card:** Right card shows "Study Note: Sets & Functions" with summary of injective/surjective mappings and badge "Illustrative note".
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png` copied to page bundle, `featured.jpg` removed, caption prefixed with `Illustration:`, alt text added, placeholder removed).
 
 ---
 
@@ -812,7 +811,41 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
     - "Reasoning: Non-commutative property recognized"
     - "Course fit: Linear Algebra standards"
   - **Formative Framing:** Bottom pill tag clearly notes "Formative feedback, not grade assessment", reinforcing that this is diagnostic guidance rather than formal grading.
-  - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+  - **Review Status:** **Approved by owner & integrated** (`featured.png` copied to page bundle, `featured.jpg` removed, caption prefixed with `Illustration:`, alt text added, placeholder removed).
+
+---
+
+## Batch 4 Production Build and Visual Verification (Desktop & Mobile 390px)
+
+Full production build and responsive visual checks were performed and recorded for all five Batch 4 integrated pages (Journal Discovery candidate 01, Visualization candidate 01, Resume Manager candidate 02, Video Lecture Notes candidate 01, and Tutor Diagnosis candidate 01).
+
+### 1. Production Build Output
+- **Command:** `hugo --minify`
+- **Hugo Version:** v0.163.3 extended windows/amd64
+- **Build Duration:** 59,683 ms
+- **Statistics:**
+  - Pages: 119
+  - Paginator pages: 4
+  - Non-page files: 38
+  - Processed images: 619 (new responsive WebP variants generated across all viewports)
+  - Errors: 0
+  - Warnings: 0
+
+### 2. Article View Verification (Desktop & Mobile 390px)
+
+| Page | Responsive Srcset Generated | Sizes Attribute | Rendered Caption | Rendered Article Alt Text | 390px Mobile & Desktop Legibility | Intended Claim Communicated |
+|---|---|---|---|---|---|---|
+| **Journal Discovery** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: Finding a relevant paper and obtaining its full text are separate steps.</span>` | `alt="One disaster-research trial narrowed 60 candidates to 15 accepted papers, with seven PDFs downloaded and eight left for manual access."` | Funnel stages (60 candidates → 15 accepted → 7 PDFs / 8 manual access) scale cleanly; trial badge and qualification tag remain sharp. | Research query narrowing to candidate pool; separate download and manual access handoff. |
+| **Visualization** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: Inspect the steps as they approach the minimum.</span>` | `alt="A gradient-descent path curves across the contours of a bowl-shaped function toward its minimum at the origin."` | Contour lines, start/minimum markers, and trajectory step arrows remain razor sharp; objective function and attribution badge clearly legible. | Actual numerical descent trajectory on $f(x,y)=x^2+2y^2$ rendered directly from template code. |
+| **Resume Manager** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: Change the emphasis while keeping the record of experience fixed.</span>` | `alt="A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks."` | Central geometric gear icon below "Parser first; model for wording" is crisp and mechanical; fixed vs. editable badges legible at 390px. | Fixed master records supply invariant facts; model tailors bullets with review checks. |
+| **Video Lecture Notes** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: Combine related lectures without losing track of what needs checking.</span>` | `alt="Lecture recordings feed transcripts and a combined study note, with a reminder that precise concept-to-video references are unfinished."` | Lecture cards, timestamped dialogue lines, and violet "Concept timestamps still incomplete" callout are clear and readable without clipping. | Multi-lecture synthesis into structured note with transparent acknowledgement of timestamp limitations. |
+| **Tutor Diagnosis** | 320w, 480w, 640w, 720w (WebP) | `(max-width: 480px) 100vw, (max-width: 640px) 90vw, (max-width: 720px) 80vw, 720px` | `<span class=article-header-caption>Illustration: Review the argument, not just its final answer.</span>` | `alt="A student revises an attempt after a hint, then reviews separate feedback on the result, reasoning, and fit with the course."` | Student matrix attempt, tutor commutativity hint, corrected expansion, and three review criteria chips scale evenly on mobile. | Formative diagnostic loop highlighting mathematical reasoning over answers. |
+
+### 3. Collection Card / Thumbnail Verification (Desktop & Mobile 390px)
+
+- **Listing Location:** `public/projects/index.html`, `public/projects/academic-hub/index.html`, and `public/projects/ai-research-assistant/index.html`
+- **Responsive Srcset for Cards:** Generated WebP variants at 400w, 600w, 800w with `sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"` and `object-contain` within 16:9 aspect ratios.
+- **Thumbnail Legibility:** High contrast dark navy background (`#14202D`), ample padding (>8%), and bold card headers ensure all five project cards render cleanly in grid and single-column mobile views.
 
 ---
 
@@ -829,19 +862,20 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
   - Commit `52a05fe`: Documentation tracking update in generation report.
   - Commit `515745e`: Add Round 2 revised candidate images for Batch 3.
   - Commit `398ec57`: Integrate approved Batch 3 featured images and pilot correction.
-- **Active Uncommitted Batch 4 Work (Awaiting Owner Review):**
-  - Archived originals for all 5 Batch 4 pages preserved in `image-candidates/*/original-featured.jpg` and recorded in `image-originals-inventory.md`.
-  - Five candidate images created in `docs/editorial/image-candidates/`:
-    - `docs/editorial/image-candidates/journal_discovery/candidate-01.png`
-    - `docs/editorial/image-candidates/visualization/candidate-01.png`
-    - `docs/editorial/image-candidates/resume_manager/candidate-01.png`
-    - `docs/editorial/image-candidates/video_notes/candidate-01.png`
-    - `docs/editorial/image-candidates/tutor_diagnosis/candidate-01.png`
-  - Generation report updated with Batch 4 candidate reviews.
+  - Commit `0d012cb`: Archive Batch 4 originals and add candidate images for review.
+  - Commit `df6a563`: Revise resume_manager candidate-02 with geometric gear icon.
+- **Batch 4 Integration:**
+  - All 5 approved Batch 4 images copied to active page bundles as `featured.png`.
+  - Replaced `featured.jpg` removed from all 5 page bundles.
+  - Frontmatter captions prefixed with `Illustration:` and updated with alt text.
+  - Fulfilled `[[Insert Image: ...]]` placeholders removed.
+  - Hugo production build passed (`619` processed images, 0 errors, 0 warnings).
+  - Responsive srcset and mobile 390px legibility verified.
+
 - **Integrity Verification:**
-  - Zero edits have been made to `content/projects/` page bundles or active featured assets for Batch 4.
-  - All original archived files (`original-featured.jpg`) are verified with SHA-256.
-  - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
+  - All original archived files (`original-featured.jpg`) are verified with SHA-256 and recorded in `image-originals-inventory.md`.
+  - All candidate versions (`candidate-01.png`, `candidate-02.png`) remain preserved under `docs/editorial/image-candidates/`.
+  - Exactly one featured asset exists per page bundle (`featured.png`).
   - No branches switched, merged, pushed, or deployed.
 
 

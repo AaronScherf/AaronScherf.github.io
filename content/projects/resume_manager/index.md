@@ -4,7 +4,8 @@ date: 2026-09-09
 lastmod: 2026-10-16
 summary: "Tailor a resume from a maintained record of experience, preserving fixed details and saving checks alongside each application."
 image:
-  caption: "A maintained master resume and job description produce a tailored draft for review."
+  caption: "Illustration: Change the emphasis while keeping the record of experience fixed."
+  alt_text: "A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks."
 links:
   - type: site
     icon: brands/github
@@ -45,8 +46,6 @@ A useful tailored resume changes the emphasis without changing the experience. R
 <!--more-->
 
 The most effective change was removing AI from the first step. My source resume already had recognizable sections, but model-based extraction misplaced fields and omitted information. A conventional parser that reads those sections reduced the recorded bootstrap time from over 90 minutes to about 1.5 seconds on my resume. Language generation remains useful for tailoring; it was unnecessary for reading a layout the code could recognize directly.
-
-[[Insert Image: Show a generic master-resume card and job-description card feeding a tailored draft plus a review report. Highlight fixed fields such as employer and dates separately from editable bullet text. Use an invented applicant and no real contact information. Include a small "Parser first; model for wording" callout. Suggested caption: "Change the emphasis while keeping the record of experience fixed." Suggested alt text: "A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## What tailoring can change
 

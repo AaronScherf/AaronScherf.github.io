@@ -5,7 +5,8 @@ lastmod: 2026-10-16
 summary: "Get a hint, examine an attempt on separate reasoning criteria, and compare another solution without treating it as a final verdict."
 type: academic-hub-project
 image:
-  caption: "Hints, feedback, and a separate solution help review a student attempt."
+  caption: "Illustration: Review the argument, not just its final answer."
+  alt_text: "A student revises an attempt after a hint, then reviews separate feedback on the result, reasoning, and fit with the course."
 links:
   - type: site
     icon: brands/github
@@ -43,8 +44,6 @@ A correct conclusion can hide a gap in the argument, while an otherwise sound at
 <!--more-->
 
 The tool can also give a hint before I have a full attempt. It searches course material for a useful direction and aims to leave the final derivation to me. When the available passages do not cover the topic, it labels a general hint instead of attaching an unsupported course reference.
-
-[[Insert Image: Create an illustrative attempt → hint → revised attempt sequence using a simple invented mathematical claim. Beside the revision show three large review labels: "Result", "Reasoning", and "Course fit". Keep the hint distinct from a complete solution and label the scores as feedback rather than grades. Use no private assignment or fabricated application screenshot. Suggested caption: "Review the argument, not just its final answer." Suggested alt text: "A student revises an attempt after a hint, then reviews separate feedback on the result, reasoning, and fit with the course." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 An **illustrative learning loop**, not a transcript or a new test result:
 

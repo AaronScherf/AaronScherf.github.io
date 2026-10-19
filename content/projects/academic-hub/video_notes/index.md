@@ -5,7 +5,8 @@ lastmod: 2026-10-16
 summary: "Turn lecture videos into searchable study notes, while keeping the limits of grouping, coverage, and timestamp references visible."
 type: academic-hub-project
 image:
-  caption: "Lecture audio becomes a transcript and combined study notes for search."
+  caption: "Illustration: Combine related lectures without losing track of what needs checking."
+  alt_text: "Lecture recordings feed transcripts and a combined study note, with a reminder that precise concept-to-video references are unfinished."
 links:
   - type: site
     icon: brands/github
@@ -39,8 +40,6 @@ A lecture series can contain several explanations of the same idea, spread acros
 <!--more-->
 
 One trial exposed a surprisingly basic limit. A three-video group produced a note reflecting only one video's content because the local model was receiving only the end of the combined transcript. The shared model helper now requests enough context for the prompt. Rechecking showed better coverage and structure, although reliable links from each concept to the exact video moment remain unfinished.
-
-[[Insert Image: Show three generic lecture recordings becoming timestamped transcripts and then a short illustrative study note. Use an invented note about sets and functions, labelled as an illustration. Keep a visible "Concept timestamps still incomplete" callout; do not draw working per-concept links. Suggested caption: "Combine related lectures without losing track of what needs checking." Suggested alt text: "Lecture recordings feed transcripts and a combined study note, with a reminder that precise concept-to-video references are unfinished." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## From recording to study note
 

@@ -5,7 +5,8 @@ lastmod: 2026-10-16
 summary: "Add an interactive mathematical plot to a sourced explanation, using a prepared template or generated chart code."
 type: academic-hub-project
 image:
-  caption: "An interactive plot accompanies an explanation and its source references."
+  caption: "Illustration: Inspect the steps as they approach the minimum."
+  alt_text: "A gradient-descent path curves across the contours of a bowl-shaped function toward its minimum at the origin."
 links:
   - type: site
     icon: brands/github
@@ -40,8 +41,6 @@ A formula for gradient descent describes repeated steps toward a minimum. A pict
 <!--more-->
 
 The important distinction is how that picture is made. A small library covers familiar concepts with prepared Plotly charts, which run without a chart-generation model call. For other topics, the tool asks a model to write chart code using the question and retrieved course passages. That opens up more concepts, but introduces another judgment: a script can run successfully while illustrating the wrong idea.
-
-[[Insert Image: Capture the existing gradient-descent template using standard plotting tools, showing its actual contour surface and descent path. Pair a close readable crop with the formula f(x, y) = x² + 2y² and a short explanation of the path toward the origin. Do not invent a step-size slider or use generated artwork to stand in for a mathematical plot. Suggested caption: "Inspect the steps as they approach the minimum." Suggested alt text: "A gradient-descent path curves across the contours of a bowl-shaped function toward its minimum at the origin." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## A plot beside the answer
 

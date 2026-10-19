@@ -5,7 +5,8 @@ lastmod: 2026-10-16
 summary: "Find papers for a research question, obtain available full text, and keep a clear handoff for papers that need library access."
 type: ai-research-assistant-project
 image:
-  caption: "Research topics lead to candidate papers, available PDFs, and a reviewed library handoff."
+  caption: "Illustration: Finding a relevant paper and obtaining its full text are separate steps."
+  alt_text: "One disaster-research trial narrowed 60 candidates to 15 accepted papers, with seven PDFs downloaded and eight left for manual access."
 links:
   - type: site
     icon: brands/github
@@ -47,8 +48,6 @@ A search for "disaster resilience" can return papers about infrastructure, recov
 <!--more-->
 
 The October 15, 2026 trial makes the stages concrete: a disaster-research query retrieved 60 candidates, accepted 15 as relevant, and downloaded seven PDFs. Eight accepted papers still needed manual access. Finding a candidate, obtaining its full text, and reading or evaluating it are separate accomplishments; the pipeline handles the first two only within the available access routes.
-
-[[Insert Image: Show the recorded October 15 disaster-query funnel: 60 candidates, 15 accepted, then branches for 7 PDFs and 8 manual-access entries. Label the numbers as one dated trial, not a general success rate. Include a short research-angle card and a human review point; avoid private library screens. Suggested caption: "Finding a relevant paper and obtaining its full text are separate steps." Suggested alt text: "One disaster-research trial narrowed 60 candidates to 15 accepted papers, with seven PDFs downloaded and eight left for manual access." Save the approved replacement as featured.jpg or featured.png in this page bundle.]]
 
 ## Grow a library around a question
 
