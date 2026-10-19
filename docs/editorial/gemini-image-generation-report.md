@@ -3,7 +3,7 @@
 **Date:** 2026-10-18  
 **Branch:** `gemini/website-images`  
 **Repository Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-website-images`  
-**Status:** **Pilot (3 images) + Batch 2 (5 images) integrated and committed; Batch 3 originals preserved; 3 new candidates + Source Indexer v2 generated and awaiting owner review; 2 candidates deferred due to model quota limit**  
+**Status:** **Pilot (3 images) + Batch 2 (5 images) integrated and committed; Batch 3 originals preserved; all 5 Batch 3 candidates + Source Indexer v2 generated and awaiting owner review**  
 
 This report documents the three initial pilot image candidates created, revised, and integrated for Aaron Scherf's personal academic portfolio website, following the requirements and style guidance defined in [`docs/editorial/gemini-image-generation-handoff.md`](gemini-image-generation-handoff.md) and [`docs/editorial/gemini-image-generation-queue.md`](gemini-image-generation-queue.md).
 
@@ -368,8 +368,8 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
 | **9. Project Steering** | [`content/projects/academic-hub/project_steering/index.md`](../../content/projects/academic-hub/project_steering/index.md) | `project_steering/index.md` (L41); Queue row 03 | [`docs/editorial/image-candidates/project_steering/candidate-01.png`](image-candidates/project_steering/candidate-01.png) | 1376 x 768 (16:9) | None at baseline / HEAD | **Owner review pending** |
 | **10. Marker PDF Conversion** | [`content/projects/academic-hub/marker_conversion/index.md`](../../content/projects/academic-hub/marker_conversion/index.md) | `marker_conversion/index.md` (L59); Queue row 02 | [`docs/editorial/image-candidates/marker_conversion/candidate-01.png`](image-candidates/marker_conversion/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `c6c176e1...`) | **Owner review pending** |
 | **11. Notes Post-Processing** | [`content/projects/academic-hub/postprocess_notes/index.md`](../../content/projects/academic-hub/postprocess_notes/index.md) | `postprocess_notes/index.md` (L44); Queue row 10 | [`docs/editorial/image-candidates/postprocess_notes/candidate-01.png`](image-candidates/postprocess_notes/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `a5f9c895...`) | **Owner review pending** |
-| **12. RAG Analysis** | [`content/projects/academic-hub/rag_analysis/index.md`](../../content/projects/academic-hub/rag_analysis/index.md) | `rag_analysis/index.md` (L50); Queue row 11 | *(Deferred due to model quota)* | N/A | `original-featured.jpg` (SHA-256: `262f423c...`) | **Generation deferred (Quota limited)** |
-| **13. Problem Generation** | [`content/projects/academic-hub/problem_generation/index.md`](../../content/projects/academic-hub/problem_generation/index.md) | `problem_generation/index.md` (L42); Queue row 12 | *(Deferred due to model quota)* | N/A | `original-featured.jpg` (SHA-256: `f2e675e5...`) | **Generation deferred (Quota limited)** |
+| **12. RAG Analysis** | [`content/projects/academic-hub/rag_analysis/index.md`](../../content/projects/academic-hub/rag_analysis/index.md) | `rag_analysis/index.md` (L50); Queue row 11 | [`docs/editorial/image-candidates/rag_analysis/candidate-01.png`](image-candidates/rag_analysis/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `262f423c...`) | **Owner review pending** |
+| **13. Problem Generation** | [`content/projects/academic-hub/problem_generation/index.md`](../../content/projects/academic-hub/problem_generation/index.md) | `problem_generation/index.md` (L42); Queue row 12 | [`docs/editorial/image-candidates/problem_generation/candidate-01.png`](image-candidates/problem_generation/candidate-01.png) | 1376 x 768 (16:9) | `original-featured.jpg` (SHA-256: `f2e675e5...`) | **Owner review pending** |
 
 ---
 
@@ -454,18 +454,56 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
 
 ---
 
-#### 12. RAG Analysis & 13. Problem Generation: Deferred Due to Model Quota
+#### 12. RAG Analysis: Dual-Source Passage Grounding and Inspectable Route Back
 
-- **Pages:**
-  - `content/projects/academic-hub/rag_analysis/index.md` (Brief: line 50; Queue row 11)
-  - `content/projects/academic-hub/problem_generation/index.md` (Brief: line 42; Queue row 12)
-- **Status:** **Generation deferred; originals safely archived and verified**
-- **Original Archives:**
-  - `rag_analysis`: `docs/editorial/image-candidates/rag_analysis/original-featured.jpg` (SHA-256: `262f423c91066bf1a8cdc34de4d02919ba24425155cfcba24b6ee3ccd7a02693`, 596,934 bytes)
-  - `problem_generation`: `docs/editorial/image-candidates/problem_generation/original-featured.jpg` (SHA-256: `f2e675e5a8173a3bae285b2251723d260382bbf227569dffb3af2e0e4ccca539`, 562,108 bytes)
-- **Quota Limit Encountered:**
-  Antigravity native image model (`gemini-3.1-flash-image`) returned `429 Too Many Requests (RESOURCE_EXHAUSTED)`.
-  In strict compliance with workspace and user instructions (*"If unavailable or quota-limited, report that limitation and preserve progress. Do not silently switch to a metered API"*), candidate generation for these two pages is deferred until the model quota resets (approximately 1 hour), rather than attempting paid external API calls.
+- **Page:** `content/projects/academic-hub/rag_analysis/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/rag_analysis/index.md` (line 50); `docs/editorial/gemini-image-generation-queue.md` (Row 11)
+- **Output File Path:** `docs/editorial/image-candidates/rag_analysis/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 704 KB (720,754 bytes)
+- **Original Archive:** `docs/editorial/image-candidates/rag_analysis/original-featured.jpg` (SHA-256: `262f423c91066bf1a8cdc34de4d02919ba24425155cfcba24b6ee3ccd7a02693`, 596,934 bytes)
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: On the left, a card labelled 'Question' with text 'What does the spectral theorem explain?'. Clean arrows branch to two central source passage cards: top card labelled 'Textbook Passage' with violet badge 'Sec 7.4, p. 264' and text 'Real eigenvalues with orthogonal eigenvectors'; bottom card labelled 'Lecture Notes' with teal badge 'Lecture 12, p. 3' and text 'Orthogonal directions act as pure scaling axes'. Connector arrows merge into an 'Answer' card on the right with concise explanation 'Perpendicular scaling directions simplify matrix analysis' and an attached inspectable reference tag 'Source trail: Sec 7.4, pp. 264–266'. Discreet bottom badge: 'Illustrative: reference enables inspection'. Balanced 16:9 composition, generous outer margins, crisp typography, flat clean vector aesthetic.
+  ```
+- **Proposed Caption:** "Keep an explanation connected to the passages used to write it."
+- **Proposed Alt Text:** "Two source passages support an illustrative answer with a section and page reference that can be checked."
+- **Visual & Factual Inspection:**
+  - **Workflow & Structure:** Left-to-right progression from an illustrative question to two distinct source passages and a referenced answer.
+  - **Dual Source Grounding:** Shows a "Textbook Passage" (Sec 7.4, p. 264: "Real eigenvalues with orthogonal eigenvectors") and "Lecture Notes" (Lecture 12, p. 3: "Orthogonal directions act as pure scaling axes").
+  - **Inspectable Route Back:** The answer card features an attached "Source trail: Sec 7.4, pp. 264–266" tag, enabling inspection.
+  - **Bottom Tag:** "Illustrative: reference enables inspection", explicitly clarifying that references guide inspection rather than guaranteeing flawless interpretation.
+  - **Typography & Integrity:** Zero spelling or mathematical errors, high contrast, clean vector aesthetic.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
+
+---
+
+#### 13. Problem Generation: Separate Method and Correctness Checks
+
+- **Page:** `content/projects/academic-hub/problem_generation/index.md`
+- **Original Brief Path:** `content/projects/academic-hub/problem_generation/index.md` (line 42); `docs/editorial/gemini-image-generation-queue.md` (Row 12)
+- **Output File Path:** `docs/editorial/image-candidates/problem_generation/candidate-01.png`
+- **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
+- **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 621 KB (635,895 bytes)
+- **Original Archive:** `docs/editorial/image-candidates/problem_generation/original-featured.jpg` (SHA-256: `f2e675e5a8173a3bae285b2251723d260382bbf227569dffb3af2e0e4ccca539`, 562,108 bytes)
+- **Exact Prompt:**
+  ```text
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal progression from left to right: On the left, a card labelled 'Practice Request' with text 'Show 1/n → 0 using ε-N definition'. A crisp arrow leads to 'Draft Solution' card with text 'Choose N > 1/ε; then |1/n| < ε'. Clean arrows lead to two separate verification checks stacked vertically: top check with teal badge 'Requested method? PASS (ε-N applied)'; bottom check with violet badge 'Correct reasoning? PASS (inequalities valid)'. An arrow leads to the final stage: a clean card labelled 'Human Inspection' with a review checklist icon and note 'Student verifies reasoning'. Discreet bottom tag: 'Illustrative demonstration'. Balanced 16:9 composition, generous 8% outer margins, crisp sans-serif typography, clean flat vector design.
+  ```
+- **Proposed Caption:** "The right answer and the right method are separate checks."
+- **Proposed Alt Text:** "A practice problem and solution are reviewed for both the requested technique and mathematical correctness before student inspection."
+- **Visual & Factual Inspection:**
+  - **Workflow & Structure:** Follows a progression from "Practice Request" to "Draft Solution", split into two independent verification checks, culminating in "Human Inspection".
+  - **Two Independent Checks:**
+    1. "Requested method? PASS (ε-N applied)" (teal badge)
+    2. "Correct reasoning? PASS (inequalities valid)" (violet badge)
+  - **Human Verification:** The final card explicitly requires "Human Inspection" ("Student verifies reasoning") with a checklist icon.
+  - **Mathematical Integrity:** Correct sequence convergence formulation ($\forall \epsilon > 0, N > 1/\epsilon \implies |1/n| < \epsilon$).
+  - **Bottom Tag:** "Illustrative demonstration".
+  - **Typography & Integrity:** Zero spelling defects, clean vector styling.
+- **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
 
 ---
 
@@ -477,21 +515,16 @@ Commit context: `8e5056df4b06698565ec38e1ae35b26208d91b06` (Originals recovery c
   - Commit `ea6faef`: Pilot images integrated for Concept Graph, Source Indexer, Notes Transcription.
   - Commit `d87e78e`: Batch 2 images integrated for Study Guide Pipeline, Summary Enhancement, Guided Solutions, Socratic Tutor, Corpus Health.
   - Commit `8e5056d`: Cherry-pick of original archives for Source Indexer, Notes Transcription, and baseline provenance inventory.
+  - Commit `112fd70`: Archive Batch 3 originals, add candidates for steering, marker, postprocess, and source indexer v2.
 - **Uncommitted Batch 3 Changes (Awaiting Owner Review):**
-  - `docs/editorial/image-originals-inventory.md` (updated with Batch 3 originals)
-  - `docs/editorial/image-candidates/marker_conversion/original-featured.jpg`
-  - `docs/editorial/image-candidates/postprocess_notes/original-featured.jpg`
-  - `docs/editorial/image-candidates/rag_analysis/original-featured.jpg`
-  - `docs/editorial/image-candidates/problem_generation/original-featured.jpg`
-  - `docs/editorial/image-candidates/source_indexer/candidate-02.png` (corrected $v \neq 0$ candidate)
-  - `docs/editorial/image-candidates/project_steering/candidate-01.png`
-  - `docs/editorial/image-candidates/marker_conversion/candidate-01.png`
-  - `docs/editorial/image-candidates/postprocess_notes/candidate-01.png`
+  - `docs/editorial/image-candidates/rag_analysis/candidate-01.png` (generated after quota reset)
+  - `docs/editorial/image-candidates/problem_generation/candidate-01.png` (generated after quota reset)
   - `docs/editorial/gemini-image-generation-report.md` (updated report)
 - **Integrity Verification:**
   - No edits have been made to `content/projects/` page bundles or active featured assets for Batch 3.
   - All `[[Insert Image: ...]]` briefs remain in place awaiting owner review.
   - No branches switched, merged, or pushed.
+
 
 
 
