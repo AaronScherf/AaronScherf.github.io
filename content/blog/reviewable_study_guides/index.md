@@ -2,8 +2,12 @@
 title: "A Long Study Guide Still Needs to Answer the Right Questions"
 summary: "The first microeconomics guide connected selected sources, drafting, and reviewed edits—and showed why the finished guide still needed checking against the assignment."
 date: 2026-10-09
-lastmod: 2026-10-16
-draft: true
+lastmod: 2026-10-19
+draft: false
+image:
+  caption: "An illustration of checking guide coverage against the assignment."
+  alt_text: "An illustrative assignment checklist matches two study-guide sections while a third requirement reveals a coverage gap, despite a reviewed edit elsewhere."
+  focal_point: Center
 authors:
   - me
 tags:
@@ -17,8 +21,6 @@ The first microeconomics run of my study-guide pipeline produced eleven topics o
 
 There was a useful advance here as well. The [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/) could now assemble a guide from an explicit source plan, expand a chosen topic, and propose revisions for review. I could inspect what it planned to read and decide which edits to keep, instead of asking for a complete rewrite and trying to spot everything that had changed.
 
-[[Insert Image: Create a landscape editorial illustration showing a generic assignment checklist beside a substantial guide. Connect two checklist items to matching guide sections; leave a third visibly unmatched and labelled "Coverage gap". Include a small reviewed-edit marker on one section, without implying that editorial review guarantees coverage or correctness. Use invented course content and no private assignment. Follow the image handoff's approved palette and style when available. Suggested caption: "Check the guide against what it is meant to help you do." Suggested alt text: "An assignment checklist matches two guide sections while a third requirement reveals a coverage gap, despite a reviewed edit elsewhere." Save an approved image as featured.jpg or featured.png in this page bundle.]]
-
 That source plan connects the visible study aid to the less visible infrastructure. The [conversion tools](/projects/academic-hub/marker_conversion/) prepare textbooks and course notes; the [Source Indexer](/projects/academic-hub/source_indexer/) locates passages within them. For a guide, I can name particular sources and sections as well as request a bounded search. Newly discovered passages normally wait for review before drafting.
 
 Revision works on specific changes. It can suggest removing an irrelevant passage, consolidating repeated explanations, correcting a claim, or reorganizing a section. Applying accepted edits creates a revised copy and checks that untouched blocks remain unchanged. It also refuses a review if the guide has changed since the review was prepared. Those checks make edits traceable; mathematical judgment still has to come from examining the content.
@@ -29,4 +31,4 @@ The finished guide became usable through that combination of generated material,
 
 The practical payoff is a guide I can investigate. If a topic is thin, I can examine the source plan. If a paragraph changes, I can inspect the proposed edit. If the guide is meant to prepare me for an assignment, that assignment supplies a final coverage check. Each makes the next revision more focused than simply asking the model for a better guide.
 
-*Retrospective draft prepared October 16, 2026, covering the October 9 milestone. The [dated microeconomics run record](https://github.com/AaronScherf/ai-sandbox-master/blob/bbcf843bac181794e37c47772fe82ff57ac97b54/ai-sandbox/academic-rag-model/docs/status/agent/2026-10-09-microecon-hw4-guide-status.md) and [pipeline instructions at the same revision](https://github.com/AaronScherf/ai-sandbox-master/blob/bbcf843bac181794e37c47772fe82ff57ac97b54/ai-sandbox/academic-rag-model/agent/study_guide/README.md) distinguish implemented steps from proposed improvements. Project links include later developments.*
+*Retrospective account prepared October 16, 2026, covering the October 9 milestone. The [dated microeconomics run record](https://github.com/AaronScherf/ai-sandbox-master/blob/bbcf843bac181794e37c47772fe82ff57ac97b54/ai-sandbox/academic-rag-model/docs/status/agent/2026-10-09-microecon-hw4-guide-status.md) and [pipeline instructions at the same revision](https://github.com/AaronScherf/ai-sandbox-master/blob/bbcf843bac181794e37c47772fe82ff57ac97b54/ai-sandbox/academic-rag-model/agent/study_guide/README.md) distinguish implemented steps from proposed improvements. Project links include later developments.*

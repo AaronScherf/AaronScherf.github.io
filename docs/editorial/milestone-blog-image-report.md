@@ -1,5 +1,7 @@
 # Retrospective Milestone Blog Image Generation Report
 
+> **Publication review, October 19:** The candidate review below records Gemini's handoff, not final editorial approval. Two images have passed the subsequent visual/factual review and have been integrated into their page bundles: `resume_parser_milestone` and `reviewable_study_guides`. Both posts are prepared with `draft: false` on `codex/milestone-blog-publication-review`, pending landing to `main`. The other three posts remain drafts with their image briefs intact. Their first candidates must not be published as-is: `practice_problem_checks` displays incoherent algebra; `questions_in_lecture_notes` overstates a convexity claim and invents a course citation; `concept_map_conditions` invents a section/page citation. See [the correction handoff](milestone-blog-image-corrections.md) for replacement specifications. The five original candidates remain here for comparison.
+
 **Date:** 2026-10-19  
 **Branch:** `gemini/milestone-blog-images`  
 **Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-milestone-blog-images`  
