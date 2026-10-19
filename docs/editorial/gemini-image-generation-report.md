@@ -675,7 +675,7 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
 |---|---|---|---|---|---|
 | **14. Journal Discovery** | [`journal_discovery`](../../content/projects/ai-research-assistant/journal_discovery/index.md) | [`candidate-01.png`](image-candidates/journal_discovery/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
 | **15. Visualization** | [`visualization`](../../content/projects/academic-hub/visualization/index.md) | [`candidate-01.png`](image-candidates/visualization/candidate-01.png) | 1376 x 768 (16:9) | Rendered mathematical plot (`agent/viz/templates/gradient_descent.py`) | **Owner review pending** |
-| **16. Resume Manager** | [`resume_manager`](../../content/projects/resume_manager/index.md) | [`candidate-01.png`](image-candidates/resume_manager/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
+| **16. Resume Manager** | [`resume_manager`](../../content/projects/resume_manager/index.md) | [`candidate-02.png`](image-candidates/resume_manager/candidate-02.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** (Revised to gear icon) |
 | **17. Video Lecture Notes** | [`video_notes`](../../content/projects/academic-hub/video_notes/index.md) | [`candidate-01.png`](image-candidates/video_notes/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
 | **18. Tutor Diagnosis** | [`tutor_diagnosis`](../../content/projects/academic-hub/tutor_diagnosis/index.md) | [`candidate-01.png`](image-candidates/tutor_diagnosis/candidate-01.png) | 1376 x 768 (16:9) | Antigravity `generate_image` (`gemini-3.1-flash-image`) | **Owner review pending** |
 
@@ -735,26 +735,27 @@ Originals preserved and hash-verified in `docs/editorial/image-originals-invento
 
 ---
 
-#### 16. Resume Manager: Structured Master Resume to Tailored Draft (Candidate 01)
+#### 16. Resume Manager: Structured Master Resume to Tailored Draft (Candidate 02)
 
 - **Page:** `content/projects/resume_manager/index.md`
 - **Original Brief Path:** `content/projects/resume_manager/index.md` (Queue row 06)
-- **Output File Path:** `docs/editorial/image-candidates/resume_manager/candidate-01.png`
+- **Output File Path:** `docs/editorial/image-candidates/resume_manager/candidate-02.png`
 - **Tool / Model:** Antigravity `generate_image` (`gemini-3.1-flash-image`)
 - **Actual Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
-- **File Size:** 779,649 bytes
-- **SHA-256 Digest:** `e1f50efdae6dfbde27e4ae63b5d1836032d205f4b7aad738a2637659b9b72ffb`
+- **File Size:** 749,098 bytes
+- **SHA-256 Digest:** `9224cd861e511a80ab7ad82a0f9157114b15d496ff8e89284d85bdd21686afcc`
 - **Original Archive:** `docs/editorial/image-candidates/resume_manager/original-featured.jpg` (SHA-256: `a9da1fe1f95a1f1d26d7a11fd17f6dff4d4a0ed8afea795dfae00266602fc3ff`, 580,578 bytes)
+- **Earlier Candidates:** `candidate-01.png` (779,649 bytes, SHA-256: `e1f50efd...`, replaced due to biological appearance of center icon)
 - **Proposed Caption:** "Change the emphasis while keeping the record of experience fixed."
 - **Proposed Alt Text:** "A structured master resume supplies fixed facts while a job description guides bullet wording; the resulting draft includes review checks."
 - **Exact Prompt:**
   ```text
-  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. On the left, two input cards stacked vertically: top card 'Master Resume' showing fixed fields with violet badges 'Employer: Acme Corp' and 'Dates: 2023–2025'; bottom card 'Job Description' with teal badge 'Requirements: Distributed Systems'; 2. A central processing node with a neat callout badge 'Parser first; model for wording'; 3. Clean arrows lead to two cards on the right: top card 'Tailored Draft' with editable bullet points; bottom card 'Review Report' with check badges 'Fixed facts verified' and 'Validation check: PASS'. Discreet bottom tag: 'Invented applicant profile'. Balanced 16:9 composition, generous outer margins, crisp sans-serif typography, flat clean aesthetic.
+  Clean modern technical editorial diagram on a solid dark navy background (#14202D). High contrast, minimalist graphic illustration with teal (#35C9C8) and muted violet (#A58AE0) accents. Horizontal workflow from left to right: 1. On the left, two input cards stacked vertically: top card 'Master Resume' showing fixed fields with violet badges 'Employer: Acme Corp' and 'Dates: 2023–2025'; bottom card 'Job Description' with teal badge 'Requirements: Distributed Systems'; 2. In the center, a processing junction with a teal square node containing a clean geometric mechanical gear icon, topped by a white speech bubble callout 'Parser first; model for wording'; 3. Clean connector arrows lead to two cards on the right: top card 'Tailored Draft' with editable bullet points; bottom card 'Review Report' with check badges 'Fixed facts verified' and 'Validation check: PASS'; 4. At the bottom center, a discreet pill tag: 'Invented applicant profile'. Crisp sans-serif typography, balanced 16:9 composition, generous outer margins, clean flat vector design.
   ```
 - **Visual & Factual Inspection:**
+  - **Mechanical Gear Icon:** The center node beneath the "Parser first; model for wording" callout bubble now features a crisp, clean geometric gear icon representing code parsing, completely replacing the organic-looking icon from Candidate 01.
   - **Fixed vs. Editable Distinction:** "Master Resume" distinctly separates fixed facts with violet badges ("Employer: Acme Corp", "Dates: 2023–2025"). "Tailored Draft" highlights editable bullet points.
   - **Target Guidance:** "Job Description" specifies "Requirements: Distributed Systems" in teal.
-  - **Architectural Callout:** Center routing node features the callout: "Parser first; model for wording".
   - **Validation & Privacy:** "Review Report" card includes checkmarks for "Fixed facts verified" and "Validation check: PASS". Bottom tag confirms "Invented applicant profile".
   - **Review Status:** **Owner review pending** (Asset preserved under `image-candidates/`; not integrated into page bundle).
 
