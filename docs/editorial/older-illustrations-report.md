@@ -3,15 +3,15 @@
 **Date:** 2026-10-20  
 **Branch:** `gemini/older-image-corrections`  
 **Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-older-image-corrections`  
-**Status:** **7 of 9 replacement candidates completed and verified; 2 pending quota reset** (all 9 original `featured.jpg` files preserved).
+**Status:** **All 9 replacement candidates completed and verified** (all 9 original `featured.jpg` files preserved).
 
-This report documents the replacement candidates generated for the nine older website illustrations identified in [`docs/editorial/live_site_readiness_audit_2026-10-19.md`](live_site_readiness_audit_2026-10-19.md). All work was executed in accordance with the site's [`CLAUDE.md`](../../CLAUDE.md), [`docs/AGENT_ROUTING.md`](../AGENT_ROUTING.md), and workspace instructions.
+This report documents the replacement candidates generated for all nine older website illustrations identified in [`docs/editorial/live_site_readiness_audit_2026-10-19.md`](live_site_readiness_audit_2026-10-19.md). All work was executed in accordance with the site's [`CLAUDE.md`](../../CLAUDE.md), [`docs/AGENT_ROUTING.md`](../AGENT_ROUTING.md), and workspace instructions.
 
 Per instructions:
 - For each page bundle, the existing `featured.jpg` was copied unchanged to `docs/editorial/image-candidates/<slug>/original-featured.jpg`.
 - Completed replacements are saved as `candidate-01.png` in each candidate directory.
 - No page content or frontmatter was modified; no live `featured.jpg` was replaced; nothing was merged, pushed, or deployed.
-- Due to upstream model capacity limits (`RESOURCE_EXHAUSTED` / 429 reset window), the first 7 priority candidates have been generated, visually inspected at full resolution and thumbnail scale, and recorded below. The remaining 2 candidates are fully documented with verified briefs and planned prompts, ready for resumption once quota resets.
+- All nine candidate images have been visually inspected at full resolution and mobile thumbnail scale, verified against source claims, and recorded below with dimensions and SHA-256 hashes.
 
 ---
 
@@ -26,8 +26,8 @@ Per instructions:
 | 5 | `ai-research-assistant-overview` | `content/projects/ai-research-assistant-overview/index.md` | [`original-featured.jpg`](image-candidates/ai-research-assistant-overview/original-featured.jpg) | [`candidate-01.png`](image-candidates/ai-research-assistant-overview/candidate-01.png) | 1376 x 768 (16:9) | 826,986 B | `39fcf0d551940c452047130ee3d2f7e7d6a03c8bf4f27503b17ca96d483f98e7` | **Completed Candidate 01** (Ready for owner review) |
 | 6 | `obsidian_excalidraw_notes` | `content/blog/obsidian_excalidraw_notes/index.md` | [`original-featured.jpg`](image-candidates/obsidian_excalidraw_notes/original-featured.jpg) | [`candidate-01.png`](image-candidates/obsidian_excalidraw_notes/candidate-01.png) | 1376 x 768 (16:9) | 791,568 B | `55211e6c97e92d836d4d9226f0051d6f5be1101ba7ce91e87b91862d40c31de0` | **Completed Candidate 01** (Ready for owner review) |
 | 7 | `academic_resource_progress` | `content/blog/academic_resource_progress/index.md` | [`original-featured.jpg`](image-candidates/academic_resource_progress/original-featured.jpg) | [`candidate-01.png`](image-candidates/academic_resource_progress/candidate-01.png) | 1376 x 768 (16:9) | 889,093 B | `6e9ab4c2178fbbd90313b38f4db5f6f3aa2e9b5b27b63fe687f76c5d5b8d8e92` | **Completed Candidate 01** (Ready for owner review) |
-| 8 | `academic_journal_discovery` | `content/blog/academic_journal_discovery/index.md` | [`original-featured.jpg`](image-candidates/academic_journal_discovery/original-featured.jpg) | *Pending generation* | — | — | — | **Pending resumption** (quota reset) |
-| 9 | `academic_hub_infrastructure_cleanup` | `content/blog/academic_hub_infrastructure_cleanup/index.md` | [`original-featured.jpg`](image-candidates/academic_hub_infrastructure_cleanup/original-featured.jpg) | *Pending generation* | — | — | — | **Pending resumption** (quota reset) |
+| 8 | `academic_journal_discovery` | `content/blog/academic_journal_discovery/index.md` | [`original-featured.jpg`](image-candidates/academic_journal_discovery/original-featured.jpg) | [`candidate-01.png`](image-candidates/academic_journal_discovery/candidate-01.png) | 1024 x 572 (16:9) | 782,843 B | `de880edd57425016f90028c80e222972b2d04ef7bf03a4c27afb9cd3aa28646f` | **Completed Candidate 01** (Ready for owner review) |
+| 9 | `academic_hub_infrastructure_cleanup` | `content/blog/academic_hub_infrastructure_cleanup/index.md` | [`original-featured.jpg`](image-candidates/academic_hub_infrastructure_cleanup/original-featured.jpg) | [`candidate-01.png`](image-candidates/academic_hub_infrastructure_cleanup/candidate-01.png) | 1024 x 572 (16:9) | 941,153 B | `cddfdb35f839ce80cc9f001b3df9db5eb06a8139ea68ff5de8266bc2234daaad` | **Completed Candidate 01** (Ready for owner review) |
 
 ---
 
@@ -185,24 +185,27 @@ Per instructions:
 
 ---
 
-## Remaining Candidates Documentation (Pending Quota Reset)
-
-All original `featured.jpg` assets for the remaining two pages are preserved under their respective `docs/editorial/image-candidates/<slug>/original-featured.jpg` locations. Generation was interrupted when model quota was reached (`RESOURCE_EXHAUSTED` / 429 reset window).
-
 ### 8. Academic Journal Discovery (`academic_journal_discovery`)
 
 - **Page Path:** `content/blog/academic_journal_discovery/index.md`
 - **Original Asset Preserved:** `docs/editorial/image-candidates/academic_journal_discovery/original-featured.jpg` (636,777 bytes, SHA-256: `968c643cd05db8c36af4d6eb2d73edd321f4035f41e4ffca4506b7cfc8632ff2`)
-- **Audit Requirement:** Show OpenAlex candidates → local relevance scoring → owner review → available full-text retrieval or manual-access queue → conversion. Keep named download services out unless verified against the code.
-- **Defects in Original:** Overcrowded 5-tier download waterfall naming unverified services (`Unpaywall`, `Semantic Scholar`, `CORE.ac.uk`, `arXiv`, `Columbia EZproxy (scraping)`), `BOT CHALLENGE DETECTED`, and illegible thumbnail text.
-- **Resumption Plan:**
-  - Sequential workflow with dark slate cards:
-    - Step 1: `OpenAlex Candidates` (Search catalog by topic or author)
-    - Step 2: `Local Relevance Scoring` (Offline model evaluates abstracts)
-    - Step 3: `Owner Review` (Inspect candidate list)
-    - Step 4 (split): `Full-Text Retrieval` (Available open downloads) vs. `Manual-Access Queue` (Worklist for library access)
-    - Step 5: `Document Conversion` (Searchable text in library)
-  - Target output: `docs/editorial/image-candidates/academic_journal_discovery/candidate-01.png`.
+- **Candidate 01 Path:** `docs/editorial/image-candidates/academic_journal_discovery/candidate-01.png`
+- **Dimensions:** 1024 x 572 pixels (16:9 landscape aspect ratio)
+- **File Size:** 782,843 bytes
+- **SHA-256 Digest:** `de880edd57425016f90028c80e222972b2d04ef7bf03a4c27afb9cd3aa28646f`
+- **Palette & Style:** Solid dark navy background (`#14202D`), dark slate cards (`#1E2D3D`), vibrant teal (`#35C9C8`) and muted violet (`#A58AE0`) accents.
+- **Visible Labels:**
+  - Overall Header: `ACADEMIC PAPER DISCOVERY PIPELINE`
+  - Card 1 (teal border): `OpenAlex Candidates` / `Catalog search by topic or author`
+  - Card 2: `Local Relevance Scoring` / `Offline model scores candidate abstracts`
+  - Card 3 (violet header): `Owner Review` / `Inspects and approves reading list`
+  - Upper Branch (teal header): `Full-Text Retrieval` / `Available open copies downloaded`
+  - Lower Branch (violet header): `Manual-Access Queue` / `Worklist for university library access`
+  - Final Card (teal border): `Document Conversion` / `Text added to searchable research library`
+- **Audit & Source Alignment:**
+  - Audit requirement: *"Show OpenAlex candidates → local relevance scoring → owner review → available full-text retrieval or manual-access queue → conversion. Keep named download services out unless verified against the code."*
+  - Checks confirmed: Entirely eliminates the unverified 5-tier download waterfall naming unverified services (`Unpaywall`, `Semantic Scholar`, `CORE.ac.uk`, `arXiv`, `Columbia EZproxy (scraping)`), simulated Cloudflare / bot challenges, and illegible thumbnail text. Depicts a crisp, verified 5-stage sequential flow with clear distinction between open downloads and manual library access.
+- **Status:** **Completed Candidate 01**; ready for owner review.
 
 ---
 
@@ -210,13 +213,30 @@ All original `featured.jpg` assets for the remaining two pages are preserved und
 
 - **Page Path:** `content/blog/academic_hub_infrastructure_cleanup/index.md`
 - **Original Asset Preserved:** `docs/editorial/image-candidates/academic_hub_infrastructure_cleanup/original-featured.jpg` (553,104 bytes, SHA-256: `aca3053c51ecbf9ba6b5e09e3472a0b123be5c109a3412aca515415c0fbfbf77`)
-- **Audit Requirement:** Show the documented notes-history reduction from about 217 MB to 35 MB, separation of heavy source files, and code grouped by function. Keep it readable at article width.
-- **Defects in Original:** Two crowded panels with illegible text at article width, typos (`Fit GitHub API`, `Store heaiy data`), and confusing overlapping folder piles.
-- **Resumption Plan:**
-  - Clean two-section diagram:
-    - Left section: `Repository Split & History Shrink` (notes history reduced from ~217 MB to 35 MB; heavy source files moved to separate archive).
-    - Right section: `Code Reorganization` (software tools grouped into functional packages: conversion, discovery, study tutoring, and shared utilities).
-  - Target output: `docs/editorial/image-candidates/academic_hub_infrastructure_cleanup/candidate-01.png`.
+- **Candidate 01 Path:** `docs/editorial/image-candidates/academic_hub_infrastructure_cleanup/candidate-01.png`
+- **Dimensions:** 1024 x 572 pixels (16:9 landscape aspect ratio)
+- **File Size:** 941,153 bytes
+- **SHA-256 Digest:** `cddfdb35f839ce80cc9f001b3df9db5eb06a8139ea68ff5de8266bc2234daaad`
+- **Palette & Style:** Solid dark navy background (`#14202D`), dark slate cards (`#1E2D3D`), teal (`#35C9C8`) and muted violet (`#A58AE0`) panel borders.
+- **Visible Labels:**
+  - Overall Header: `ACADEMIC HUB INFRASTRUCTURE CLEANUP & HISTORY REDUCTION`
+  - Left Panel (teal outline): `Notes History Reduction`
+    - Top Card: `Repository Split`
+    - Highlight Pill: `Notes history reduced from ~217 MB to 35 MB`
+    - Context: `Large PDFs removed from sync history for fast tablet syncing`
+    - Arrow down →
+    - Bottom Card: `Heavy Source Archive` / `Textbook PDFs and media stored in separate storage`
+  - Right Panel (violet outline): `Code Modularization`
+    - Card: `Modular Packages` / `Tools grouped by functional role instead of flat folders`
+    - Neatly indented package badges with folder icons:
+      - `pipelines/ — Conversion & transcription`
+      - `discovery/ — Paper search & scoring`
+      - `agent/ — Tutoring & hint generation`
+      - `core/ — Shared indexing & utilities`
+- **Audit & Source Alignment:**
+  - Audit requirement: *"Show the documented notes-history reduction from about 217 MB to 35 MB, separation of heavy source files, and code grouped by function. Keep it readable at article width."*
+  - Checks confirmed: Replaces the crowded, low-contrast original containing typos (*"Fit GitHub API"*, *"Store heaiy data"*) and a chaotic pile of 15 overlapping folders. Displays a clean, balanced two-column side-by-side design that remains completely legible at standard article width and thumbnail scale.
+- **Status:** **Completed Candidate 01**; ready for owner review.
 
 ---
 
@@ -225,7 +245,7 @@ All original `featured.jpg` assets for the remaining two pages are preserved und
 - [x] Dedicated task worktree initialized under `.worktrees/gemini-older-image-corrections` on branch `gemini/older-image-corrections` from `main` (`e2788e6`).
 - [x] No writes to main repository checkout.
 - [x] All 9 original `featured.jpg` assets copied unchanged to `image-candidates/<slug>/original-featured.jpg` and verified against source SHA-256 hashes.
-- [x] 7 replacement candidates generated in 1376 x 768 PNG format using subscription-native Antigravity image capability.
+- [x] All 9 replacement candidates generated in 16:9 PNG format.
 - [x] Every generated image inspected at full resolution and thumbnail scale for label accuracy, spelling, and alignment.
 - [x] Zero changes made to page frontmatter, markdown content, or live `featured.jpg` files.
 - [x] All completed candidates and report staged with explicit file paths and committed.
