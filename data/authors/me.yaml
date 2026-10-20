@@ -47,13 +47,16 @@ links:
   #   url: https://orcid.org/0009-0007-1044-3162
 
 interests:
-  - Sustainable Agriculture
+  - International Development
+  - Humanitarian Assistance
   - Inclusive Finance
+  - Social Protection
   - Development Economics
   - Machine Learning
   - Applied Econometrics
   - Remote Sensing
-  - AI Ethics
+  - Sustainable Agriculture
+  - AI Applications and Ethics
   - Pedagogy and Skills Development
 
 education:
@@ -96,13 +99,13 @@ experience:
     start: 2024-01-10
     end: 2025-07-15
     summary: |
-      Led results tracking and accountability for over 50 development projects in wartime Ukraine.
+      Led results tracking, evaluation and accountability for over 50 development projects in wartime Ukraine.
   - role: Foreign Service Officer- Program Design Officer
     org: USAID/Colombia
     start: 2022-02-15
     end: 2024-01-10
     summary: |
-      Led design and procurement of new development projects, including integration of gender and social inclusion efforts throughout 30 active programs.
+      Led design and evaluation of development projects, including integration of gender and social inclusion efforts throughout 30 active programs.
   - role: Foreign Service Officer - Program Officer
     org: USAID/Washington
     start: 2020-05-15
@@ -133,7 +136,7 @@ skills:
         level: 4
       - label: R
         level: 4
-      - label: Stata
+      - label: AI-Native Software Development
         level: 3
       - label: Javascript
         level: 2
