@@ -10,6 +10,7 @@ tags:
   - Productivity
 image:
   caption: 'Handwritten academic notes connected to a searchable library of course resources'
+  alt_text: 'Illustration contrasting closed note apps with an editable Obsidian and Excalidraw workflow that sends handwritten notes to transcription.'
 ---
 
 I take many of my academic notes by hand. Diagrams, equations, and quick annotations are often easier to draw than type, but handwritten pages are hard to search and connect to related material later.

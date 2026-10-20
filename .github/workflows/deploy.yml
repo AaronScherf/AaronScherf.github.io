@@ -58,6 +58,11 @@ jobs:
       - name: Build Static Site
         run: hugo --minify
 
+      - name: Generate Pagefind Search Index
+        run: |
+          npm run pagefind
+          test -f public/pagefind/pagefind.js
+
       - name: Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:

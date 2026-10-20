@@ -10,6 +10,7 @@ tags:
   - Python
 image:
   caption: 'A batch of textbooks moving through conversion with review and recovery steps'
+  alt_text: 'Illustrated flowchart of duplicate detection, textbook conversion scheduling, and responses to out-of-memory failures.'
 ---
 
 Converting a set of textbooks used to require someone nearby to answer repeated prompts and step in when a book exceeded the available machine memory. Recent changes to [Marker PDF Conversion](/projects/academic-hub/marker_conversion/) aim to make batch runs easier to supervise.

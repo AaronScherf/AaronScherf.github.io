@@ -5,6 +5,7 @@ date: 2026-09-01
 lastmod: 2026-10-16
 image:
   caption: 'How paper discovery, document conversion, and search connect research materials'
+  alt_text: 'Diagram connects research inputs to paper discovery, document conversion, and search across research and course materials.'
 links:
   - type: site
     icon: brands/github

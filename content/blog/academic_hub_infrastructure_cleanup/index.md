@@ -10,6 +10,7 @@ tags:
   - Python
 image:
   caption: 'A lightweight notes library and a better organized academic resource toolkit'
+  alt_text: 'Illustration of tablet notes split into a small sync vault and a separate reference archive, alongside code grouped into functional packages.'
 ---
 
 Two recent changes to Academic Hub were about making the everyday work easier: keeping notes in sync and finding my way around the software.

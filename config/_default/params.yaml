@@ -174,7 +174,10 @@ hugoblox:
   search:
     enable: true
     # Trending/suggested search terms
-    suggestions: []
+    suggestions:
+      - handwritten notes
+      - study guides
+      - research papers
     # Quick action shortcuts in search modal
     quick_actions: []
 

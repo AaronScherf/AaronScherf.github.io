@@ -11,6 +11,7 @@ tags:
   - Python
 image:
   caption: 'Research topics leading to relevant papers and a searchable research library'
+  alt_text: 'Flowchart follows research topics through paper discovery, local relevance scoring, full-text retrieval, and manual follow-up for inaccessible papers.'
 ---
 
 Starting a literature review often means finding candidate papers, deciding which ones matter, and tracking down the full text. I built the [Journal Discovery Pipeline](/projects/ai-research-assistant/journal_discovery/) to help organize those steps and add selected papers to a searchable research library.
