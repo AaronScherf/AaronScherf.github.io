@@ -3,7 +3,7 @@
 **Date:** 2026-10-20  
 **Branch:** `gemini/older-image-corrections`  
 **Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-older-image-corrections`  
-**Status:** **6 of 9 replacement candidates completed and verified; 3 pending quota reset** (all 9 original `featured.jpg` files preserved).
+**Status:** **7 of 9 replacement candidates completed and verified; 2 pending quota reset** (all 9 original `featured.jpg` files preserved).
 
 This report documents the replacement candidates generated for the nine older website illustrations identified in [`docs/editorial/live_site_readiness_audit_2026-10-19.md`](live_site_readiness_audit_2026-10-19.md). All work was executed in accordance with the site's [`CLAUDE.md`](../../CLAUDE.md), [`docs/AGENT_ROUTING.md`](../AGENT_ROUTING.md), and workspace instructions.
 
@@ -11,7 +11,7 @@ Per instructions:
 - For each page bundle, the existing `featured.jpg` was copied unchanged to `docs/editorial/image-candidates/<slug>/original-featured.jpg`.
 - Completed replacements are saved as `candidate-01.png` in each candidate directory.
 - No page content or frontmatter was modified; no live `featured.jpg` was replaced; nothing was merged, pushed, or deployed.
-- Due to upstream model capacity limits (`RESOURCE_EXHAUSTED` / 429 reset window), the first 6 priority candidates were generated, visually inspected at full resolution and thumbnail scale, and recorded below. The remaining 3 candidates are fully documented with verified briefs and planned prompts, ready for resumption once quota resets.
+- Due to upstream model capacity limits (`RESOURCE_EXHAUSTED` / 429 reset window), the first 7 priority candidates have been generated, visually inspected at full resolution and thumbnail scale, and recorded below. The remaining 2 candidates are fully documented with verified briefs and planned prompts, ready for resumption once quota resets.
 
 ---
 
@@ -25,7 +25,7 @@ Per instructions:
 | 4 | `site_management` | `content/blog/site_management/index.md` | [`original-featured.jpg`](image-candidates/site_management/original-featured.jpg) | [`candidate-01.png`](image-candidates/site_management/candidate-01.png) | 1376 x 768 (16:9) | 720,900 B | `8952dfd2a0d8a15af3e9d6864b66c194bb6a2710531c674970a8312515a82353` | **Completed Candidate 01** (Ready for owner review) |
 | 5 | `ai-research-assistant-overview` | `content/projects/ai-research-assistant-overview/index.md` | [`original-featured.jpg`](image-candidates/ai-research-assistant-overview/original-featured.jpg) | [`candidate-01.png`](image-candidates/ai-research-assistant-overview/candidate-01.png) | 1376 x 768 (16:9) | 826,986 B | `39fcf0d551940c452047130ee3d2f7e7d6a03c8bf4f27503b17ca96d483f98e7` | **Completed Candidate 01** (Ready for owner review) |
 | 6 | `obsidian_excalidraw_notes` | `content/blog/obsidian_excalidraw_notes/index.md` | [`original-featured.jpg`](image-candidates/obsidian_excalidraw_notes/original-featured.jpg) | [`candidate-01.png`](image-candidates/obsidian_excalidraw_notes/candidate-01.png) | 1376 x 768 (16:9) | 791,568 B | `55211e6c97e92d836d4d9226f0051d6f5be1101ba7ce91e87b91862d40c31de0` | **Completed Candidate 01** (Ready for owner review) |
-| 7 | `academic_resource_progress` | `content/blog/academic_resource_progress/index.md` | [`original-featured.jpg`](image-candidates/academic_resource_progress/original-featured.jpg) | *Pending generation* | — | — | — | **Pending resumption** (quota reset) |
+| 7 | `academic_resource_progress` | `content/blog/academic_resource_progress/index.md` | [`original-featured.jpg`](image-candidates/academic_resource_progress/original-featured.jpg) | [`candidate-01.png`](image-candidates/academic_resource_progress/candidate-01.png) | 1376 x 768 (16:9) | 889,093 B | `6e9ab4c2178fbbd90313b38f4db5f6f3aa2e9b5b27b63fe687f76c5d5b8d8e92` | **Completed Candidate 01** (Ready for owner review) |
 | 8 | `academic_journal_discovery` | `content/blog/academic_journal_discovery/index.md` | [`original-featured.jpg`](image-candidates/academic_journal_discovery/original-featured.jpg) | *Pending generation* | — | — | — | **Pending resumption** (quota reset) |
 | 9 | `academic_hub_infrastructure_cleanup` | `content/blog/academic_hub_infrastructure_cleanup/index.md` | [`original-featured.jpg`](image-candidates/academic_hub_infrastructure_cleanup/original-featured.jpg) | *Pending generation* | — | — | — | **Pending resumption** (quota reset) |
 
@@ -162,23 +162,32 @@ Per instructions:
 
 ---
 
-## Remaining Candidates Documentation (Pending Quota Reset)
-
-All original `featured.jpg` assets for the remaining three pages are preserved under their respective `docs/editorial/image-candidates/<slug>/original-featured.jpg` locations. Generation was interrupted when model quota was reached (`RESOURCE_EXHAUSTED` / 429 reset window: ~4h 53m).
-
 ### 7. Academic Resource Progress (`academic_resource_progress`)
 
 - **Page Path:** `content/blog/academic_resource_progress/index.md`
 - **Original Asset Preserved:** `docs/editorial/image-candidates/academic_resource_progress/original-featured.jpg` (558,576 bytes, SHA-256: `320f5d682c1e0a4035fad5a667d2ae85a6212e240ca258f0f35af67d1ed3bdad`)
-- **Audit Requirement:** Show textbook conversion with page tracking and figure descriptions alongside tiered transcription and notation repair for notes. No malformed labels or unsupported cloud setup.
-- **Defects in Original:** Malformed labels (`SUITABLE PAGES BY PYMUPDF FONT BASELINES`, misspelled `CORRUPTED OR HANDWWITTEN PAGES`), and unverified cloud infrastructure (`EPHEMERAL GOOGLE CLOUD GPU VM`).
-- **Resumption Plan:**
-  - Two parallel horizontal workflows:
-    - Upper row (Textbook Conversion, teal accents): `Textbook Conversion` (printed page tracking and folio alignment) → `Figure Descriptions` (generates descriptions for diagrams).
-    - Lower row (Notes Transcription, muted violet accents): `Tiered Transcription` (routes between local extraction and AI) → `Notation Repair` (reconstructs superscripts and notation).
-  - Target output: `docs/editorial/image-candidates/academic_resource_progress/candidate-01.png`.
+- **Candidate 01 Path:** `docs/editorial/image-candidates/academic_resource_progress/candidate-01.png`
+- **Dimensions:** 1376 x 768 pixels (16:9 landscape aspect ratio)
+- **File Size:** 889,093 bytes
+- **SHA-256 Digest:** `6e9ab4c2178fbbd90313b38f4db5f6f3aa2e9b5b27b63fe687f76c5d5b8d8e92`
+- **Palette & Style:** Solid dark navy background (`#14202D`), dark slate cards (`#1E2D3D`), teal and muted violet borders and arrows.
+- **Visible Labels:**
+  - Upper row (Textbook Pipeline, teal borders):
+    - `Textbook Conversion` / `Printed page tracking and folio alignment`
+    - Arrow → `Figure Descriptions` / `Searchable descriptions for diagrams`
+  - Lower row (Notes Pipeline, muted violet borders):
+    - `Tiered Transcription` / `Routes between local extraction and AI`
+    - Arrow → `Notation Repair` / `Reconstructs superscripts and notation`
+- **Audit & Source Alignment:**
+  - Audit requirement: *"Show textbook conversion with page tracking and figure descriptions alongside tiered transcription and notation repair for notes. No malformed labels or unsupported cloud setup."*
+  - Checks confirmed: Removed malformed labels (earlier `SUITABLE PAGES BY PYMUPDF FONT BASELINES`, misspelled `CORRUPTED OR HANDWWITTEN PAGES`) and unsupported cloud infrastructure (`EPHEMERAL GOOGLE CLOUD GPU VM`). Two clean parallel rows depict textbook conversion (printed/PDF page tracking, figure descriptions) and note transcription (tiered extraction routing, notation repair) with 100% accurate spelling and high contrast.
+- **Status:** **Completed Candidate 01**; ready for owner review.
 
 ---
+
+## Remaining Candidates Documentation (Pending Quota Reset)
+
+All original `featured.jpg` assets for the remaining two pages are preserved under their respective `docs/editorial/image-candidates/<slug>/original-featured.jpg` locations. Generation was interrupted when model quota was reached (`RESOURCE_EXHAUSTED` / 429 reset window).
 
 ### 8. Academic Journal Discovery (`academic_journal_discovery`)
 
@@ -188,11 +197,11 @@ All original `featured.jpg` assets for the remaining three pages are preserved u
 - **Defects in Original:** Overcrowded 5-tier download waterfall naming unverified services (`Unpaywall`, `Semantic Scholar`, `CORE.ac.uk`, `arXiv`, `Columbia EZproxy (scraping)`), `BOT CHALLENGE DETECTED`, and illegible thumbnail text.
 - **Resumption Plan:**
   - Sequential workflow with dark slate cards:
-    - Step 1: `OpenAlex Candidates` (search academic catalog by researcher or topic)
-    - Step 2: `Local Relevance Scoring` (offline embedding comparison)
-    - Step 3: `Owner Review` (inspect prioritized reading list)
-    - Step 4 (split): `Available Full-Text Retrieval` vs. `Manual-Access Queue` (for restricted papers)
-    - Step 5: `Document Conversion` (adds text to searchable research library)
+    - Step 1: `OpenAlex Candidates` (Search catalog by topic or author)
+    - Step 2: `Local Relevance Scoring` (Offline model evaluates abstracts)
+    - Step 3: `Owner Review` (Inspect candidate list)
+    - Step 4 (split): `Full-Text Retrieval` (Available open downloads) vs. `Manual-Access Queue` (Worklist for library access)
+    - Step 5: `Document Conversion` (Searchable text in library)
   - Target output: `docs/editorial/image-candidates/academic_journal_discovery/candidate-01.png`.
 
 ---
@@ -216,7 +225,7 @@ All original `featured.jpg` assets for the remaining three pages are preserved u
 - [x] Dedicated task worktree initialized under `.worktrees/gemini-older-image-corrections` on branch `gemini/older-image-corrections` from `main` (`e2788e6`).
 - [x] No writes to main repository checkout.
 - [x] All 9 original `featured.jpg` assets copied unchanged to `image-candidates/<slug>/original-featured.jpg` and verified against source SHA-256 hashes.
-- [x] 6 replacement candidates generated in 1376 x 768 PNG format using subscription-native Antigravity image capability.
+- [x] 7 replacement candidates generated in 1376 x 768 PNG format using subscription-native Antigravity image capability.
 - [x] Every generated image inspected at full resolution and thumbnail scale for label accuracy, spelling, and alignment.
 - [x] Zero changes made to page frontmatter, markdown content, or live `featured.jpg` files.
 - [x] All completed candidates and report staged with explicit file paths and committed.
