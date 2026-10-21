@@ -120,13 +120,15 @@ experience:
       Supported research on integration of asylum seekers through data analysis, presentation and report drafting. Culminated in presentation of independent research project.
 
 skills:
-  - name: International Development & Government Policy
+  - name: International Development & Assistance Programming
     items:
       - label: Program Design & Evaluation
         level: 4
       - label: Monitoring & Evaluation Frameworks
         level: 4
       - label: International Development Funding & Budget Analysis
+        level: 3
+      - label: Locally-led and Inclusive Development
         level: 3
       - label: Donor Coordination
         level: 3
@@ -142,6 +144,8 @@ skills:
         level: 2
       - label: Java
         level: 2
+      - label: Julia
+        level: 1
   - name: Research & Communication
     items:
       - label: Academic Writing
@@ -152,6 +156,8 @@ skills:
         level: 4
       - label: Analytical Report Writing
         level: 4
+      - label: Reproducible Social Science
+        level: 3
       - label: Grant Proposals
         level: 3
 languages:
