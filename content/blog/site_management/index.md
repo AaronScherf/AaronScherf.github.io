@@ -9,8 +9,8 @@ tags:
   - Hugo Blox
   - Claude Code
 image:
-  caption: 'Editing and reviewing the text files that become pages on this website'
-  alt_text: 'Illustration connects a reviewed Markdown edit to a site preview and GitHub Pages deployment.'
+  caption: 'Illustration: Markdown editing, human review, a GitHub Actions build, and publication.'
+  alt_text: 'Four stages connect a Markdown edit, human review, a GitHub Actions build, and the published page.'
 ---
 
 Each page on this site starts as a text file. **Hugo** turns those files into web pages, and **HugoBlox** supplies the "Academic CV" template for their appearance. I write in Markdown, a simple format for marking headings, links, and other formatting within the text.

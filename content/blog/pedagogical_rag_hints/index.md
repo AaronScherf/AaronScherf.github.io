@@ -9,8 +9,8 @@ tags:
   - Academic Hub
   - Education
 image:
-  caption: 'A study tutor offering a hint, checking work, and explaining a reasoning gap'
-  alt_text: 'Illustration contrasting a full AI-generated proof with a tutor workflow that offers hints, checks grounding, and reviews a student attempt.'
+  caption: 'Illustration: A tutor gives a hint and reviews a student attempt.'
+  alt_text: 'A student question branches into a tutor hint, while a separate student attempt leads to a review of reasoning and course alignment.'
 ---
 
 An AI assistant can produce a complete solution quickly. That is not always what a student needs. When I am stuck, a useful hint can help me make progress while leaving the reasoning in my hands.

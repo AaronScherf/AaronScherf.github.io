@@ -4,8 +4,8 @@ summary: "Find relevant papers, make their contents searchable, and look across 
 date: 2026-09-01
 lastmod: 2026-10-16
 image:
-  caption: 'How paper discovery, document conversion, and search connect research materials'
-  alt_text: 'Diagram connects research inputs to paper discovery, document conversion, and search across research and course materials.'
+  caption: 'Illustration: Research workflows feed a shared index and searchable collection.'
+  alt_text: 'Paper discovery, article conversion, and research document conversion point to a source indexer and a searchable research collection.'
 links:
   - type: site
     icon: brands/github

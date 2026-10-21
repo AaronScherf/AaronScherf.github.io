@@ -9,8 +9,8 @@ tags:
   - Academic Hub
   - Python
 image:
-  caption: 'Academic books and notes being converted into searchable text'
-  alt_text: 'Parallel workflows turn textbooks and lecture notes into searchable Markdown with page tracking and notation repair.'
+  caption: 'Illustration: Textbook conversion and note transcription preserve information for search.'
+  alt_text: 'Textbook conversion leads to searchable figure descriptions, while tiered note transcription leads to notation repair.'
 ---
 
 The [Academic Hub conversion tools](/projects/academic-hub/marker_conversion/) turn books and class documents into text that can be searched alongside my notes. Textbooks and handwritten or mixed-format documents need different approaches, so the project now has a tool for each.

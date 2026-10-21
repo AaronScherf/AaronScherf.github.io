@@ -9,8 +9,8 @@ tags:
   - Academic Hub
   - Python
 image:
-  caption: 'A batch of textbooks moving through conversion with review and recovery steps'
-  alt_text: 'Illustrated flowchart of duplicate detection, textbook conversion scheduling, and responses to out-of-memory failures.'
+  caption: 'Illustration: Duplicate checks and supervised recovery in a textbook conversion batch.'
+  alt_text: 'Duplicate detection leads to reuse or review, supervised batch conversion, and either completed text or supervised recovery.'
 ---
 
 Converting a set of textbooks used to require someone nearby to answer repeated prompts and step in when a book exceeded the available machine memory. Recent changes to [Marker PDF Conversion](/projects/academic-hub/marker_conversion/) aim to make batch runs easier to supervise.

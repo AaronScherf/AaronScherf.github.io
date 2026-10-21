@@ -10,8 +10,8 @@ tags:
   - Academic Research
   - Python
 image:
-  caption: 'Research topics leading to relevant papers and a searchable research library'
-  alt_text: 'Flowchart follows research topics through paper discovery, local relevance scoring, full-text retrieval, and manual follow-up for inaccessible papers.'
+  caption: 'Illustration: Paper candidates move through scoring, review, access, and conversion.'
+  alt_text: 'OpenAlex candidates pass through local relevance scoring and owner review, then available full text or a manual-access queue leads to document conversion.'
 ---
 
 Starting a literature review often means finding candidate papers, deciding which ones matter, and tracking down the full text. I built the [Journal Discovery Pipeline](/projects/ai-research-assistant/journal_discovery/) to help organize those steps and add selected papers to a searchable research library.

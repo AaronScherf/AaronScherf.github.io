@@ -9,8 +9,8 @@ tags:
   - Academic Hub
   - Python
 image:
-  caption: 'A lightweight notes library and a better organized academic resource toolkit'
-  alt_text: 'Illustration of tablet notes split into a small sync vault and a separate reference archive, alongside code grouped into functional packages.'
+  caption: 'Illustration: A smaller notes history and code organized by function.'
+  alt_text: 'The notes repository history shrinks from about 217 MB to 35 MB as large source files move to an archive, beside code grouped into functional packages.'
 ---
 
 Two recent changes to Academic Hub were about making the everyday work easier: keeping notes in sync and finding my way around the software.
