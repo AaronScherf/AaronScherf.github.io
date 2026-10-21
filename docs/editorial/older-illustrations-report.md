@@ -2,9 +2,9 @@
 
 > **Owner Approval & Integration Handoff, October 20, 2026:** All nine Candidate 01 replacement images have been reviewed and approved by the owner for integration into the website. The task branch `gemini/older-image-corrections` is prepared and handed back to Codex for the final landing and publication pass (replacing `featured.jpg` / installing `featured.png` in page bundles, updating frontmatter image parameters and alt text, verifying builds, and deploying). All nine original `featured.jpg` assets remain preserved in `image-candidates/<slug>/original-featured.jpg`.
 
-**Date:** 2026-10-20  
-**Branch:** `gemini/older-image-corrections`  
-**Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-older-image-corrections`  
+**Date:** 2026-10-20
+**Branch:** `gemini/older-image-corrections`
+**Worktree:** `C:/Users/theaa/ai-sandbox-master/.worktrees/gemini-older-image-corrections`
 **Status:** **All 9 replacement candidates approved by owner for integration** (all 9 original `featured.jpg` files preserved).
 
 This report documents the replacement candidates generated for all nine older website illustrations identified in [`docs/editorial/live_site_readiness_audit_2026-10-19.md`](live_site_readiness_audit_2026-10-19.md). All work was executed in accordance with the site's [`CLAUDE.md`](../../CLAUDE.md), [`docs/AGENT_ROUTING.md`](../AGENT_ROUTING.md), and workspace instructions.
