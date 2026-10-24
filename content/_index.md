@@ -14,49 +14,59 @@ cascade:
   share: false
 
 sections:
-  - block: resume-biography-3
+  - block: resume-biography
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
         url: uploads/resume.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:
         gradient_mesh:
           enable: true
-
-      # Name heading sizing to accommodate long or short names
-      name:
-        size: md # Options: xs, sm, md, lg (default), xl
-
-      # Avatar customization
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+        size: medium
+        shape: circle
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: 'How I Can Help'
       subtitle: ''
       text: |-
-        My research sits at the intersection of geospatial data, machine learning, and international development — using high-resolution satellite imagery and applied econometrics to understand how climate and conflict shocks affect vulnerable communities, and to inform more effective, evidence-based programming.
+        I am available for consulting and applied research projects that need both technical analysis and an understanding of how decisions get made in practice. My work with USAID and in research has prepared me to help with:
 
-        My passion for these topics is grounded in my experience serving as a diplomat with USAID, including particularly my work on monitoring and evaluation for USAID's portfolio in wartime Ukraine and development program design in Colombia. I bring that same field-tested rigor to all of my work, including building open-source tools for data analysis, designing monitoring and evaluation frameworks, and interpreting data gathered under extreme operational constraints from conflicts and disasters.
+        - **Program design and evaluation:** Turn a broad goal into a workable plan for measuring results, then make sense of the evidence as conditions change.
+        - **Geospatial and data analysis:** Combine satellite, field, and administrative data to answer questions about places where information is incomplete.
+        - **Research and decision tools:** Build practical workflows that make sources easier to find, check, and use.
 
-        **Areas of expertise:**
-        - International development program design, monitoring and evaluation
-        - International development funding and budget allocation
-        - Development donor coordination, particularly for conflict resilience and disaster response
-        - Geospatial and machine learning methods for climate and conflict risk analysis
+        If one of these fits a problem you are working on, [email me](mailto:theaaronscherf@gmail.com) to discuss it. You can also [download my CV](/uploads/resume.pdf) and explore the projects below.
+    design:
+      columns: '1'
+  - block: collection
+    id: projects
+    content:
+      title: Selected Projects
+      subtitle: ''
+      text: 'These projects show how I approach work across development research and practical software: from testing whether satellite data can help predict wheat yields to building tools that keep research and study materials connected to their sources.'
+      page_type: projects
+      count: 6
+      filters:
+        folders:
+          - projects
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 2
+      show_date: false
+      show_read_time: false
+      show_read_more: false
+  - block: markdown
+    content:
+      title: My Research
+      subtitle: ''
+      text: |-
+        My research asks when detailed information about a place can change a decision, and when it only creates the appearance of certainty. I am especially interested in how climate stress, conflict, and disasters interact, and how satellite observations and statistical models can be checked against evidence from the ground.
 
-        Open to expert consultations and applied research collaborations at this intersection. Reach out via [email](mailto:theaaronscherf@gmail.com).
+        In my [wheat-yield project](/projects/wheat_yield_prediction/), I compared satellite measurements with field records to test how well different models predicted crop performance in new environments. That question—what a model can tell us when local data are scarce, and what it cannot—also shapes the work I want to pursue in sustainable development.
     design:
       columns: '1'
   - block: resume-experience
@@ -111,23 +121,6 @@ sections:
   #         - events
   #   design:
   #     view: card
-  - block: collection
-    id: projects
-    content:
-      title: Projects
-      subtitle: ''
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
-      page_type: projects
-      filters:
-        folders:
-          - projects
-    design:
-      view: article-grid
-      fill_image: false
-      columns: 2
-      show_date: false
-      show_read_time: false
-      show_read_more: false
   - block: collection
     id: blog
     content:
