@@ -87,10 +87,11 @@ sections:
   #   content:
   #     title: Skills
   #     username: me
-  - block: resume-awards
-    content:
-      title: Awards
-      username: me
+  # Hidden for now; the awards remain in data/authors/me.yaml.
+  # - block: resume-awards
+  #   content:
+  #     title: Awards
+  #     username: me
   # Hidden for now; the languages remain in data/authors/me.yaml.
   # - block: resume-languages
   #   content:
