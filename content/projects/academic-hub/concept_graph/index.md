@@ -2,7 +2,7 @@
 title: Concept Graph
 summary: "Explore how course ideas connect, including the conditions a theorem needs and the source passages behind each proposed connection."
 date: 2026-10-11
-lastmod: 2026-10-16
+lastmod: 2026-10-25
 draft: false
 type: academic-hub-project
 links:
@@ -13,14 +13,18 @@ links:
   - type: site
     icon: brands/github
     label: Current status
+    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-21-econometrics-second-course-status.md
+  - type: site
+    icon: brands/github
+    label: First-course status (historical)
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-15-concept-graph-status.md
   - type: site
     icon: brands/github
-    label: Core status
+    label: Core status (historical)
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-09-concept-graph-core-status.md
   - type: site
     icon: brands/github
-    label: Drafting and seed-run status
+    label: Drafting and seed-run status (historical)
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-10-concept-graph-pipeline-status.md
   - type: site
     icon: brands/github
@@ -28,8 +32,12 @@ links:
     url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-14-concept-graph-proposals-status.md
   - type: site
     icon: globe
-    label: Live concept graph
+    label: Live microeconomics graph
     url: https://aaronscherf.github.io/microecon-concept-graph/
+  - type: site
+    icon: globe
+    label: Live econometrics graph
+    url: https://aaronscherf.github.io/econometrics-concept-graph-site/
 tags:
   - Python
   - Learning Tools
@@ -46,11 +54,11 @@ params:
     readme_path: ai-sandbox/academic-rag-model/agent/concept_graph/README.md
     status_docs:
       - path: ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-09-concept-graph-core-status.md
-        role: current
+        role: historical
         lifecycle_ids:
           - concept-graph-core
       - path: ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-10-concept-graph-pipeline-status.md
-        role: current
+        role: historical
         lifecycle_ids:
           - concept-graph-pipeline
       - path: ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-14-concept-graph-proposals-status.md
@@ -59,6 +67,11 @@ params:
           - concept-graph-proposals
           - concept-graph-viewer
       - path: ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-15-concept-graph-status.md
+        role: historical
+        lifecycle_ids:
+          - concept-graph-proposals
+          - concept-graph-viewer
+      - path: ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-21-econometrics-second-course-status.md
         role: current
         lifecycle_ids:
           - concept-graph-proposals
@@ -72,7 +85,7 @@ Concept Graph maps the ideas in a course and the conditions that connect them. A
 
 For example, the package's sample graph connects a **partial order** to a **total order** when every pair can be compared. A partial order can leave two items unranked relative to one another; adding that comparison requirement produces a total order. The condition on the arrow explains what changed, rather than leaving me to infer it from two nearby boxes.
 
-The first full graph covers the first half of a graduate microeconomic theory sequence: [open the live graph](https://aaronscherf.github.io/microecon-concept-graph/). As of October 15, 2026, it contains 104 concepts and 159 connections across eight course sections. Those counts describe the draft's scale; the explanations and connections still need review.
+The first full graph covers the first half of a graduate microeconomic theory sequence: [open the live microeconomics graph](https://aaronscherf.github.io/microecon-concept-graph/). As of October 15, 2026, it contains 104 concepts and 159 connections across eight course sections. A second graph now covers a graduate econometrics course: [open the live econometrics graph](https://aaronscherf.github.io/econometrics-concept-graph-site/). Completed on October 21, 2026, it contains 112 concepts and 135 connections across seven course sections, all awaiting the owner's review. Those counts describe each draft's scale; every concept and connection remains marked as proposed until reviewed.
 
 ## Following an idea
 
@@ -88,8 +101,17 @@ The same collection supports the [Study Guide Pipeline](/projects/academic-hub/s
 
 The drafts remain marked as proposed until a person accepts or edits them. Reviewers can comment, reject a connection, or suggest a missing idea through the page. Suggestions from several reviewers are combined before the maintainer handles them. Submission through GitHub has not yet been tested from start to finish.
 
+## What a second course taught
+
+Applying the drafting pipeline to econometrics revealed where a data-driven statistics course differs from pure mathematical theory:
+
+- **Checking against the syllabus:** Initial drafting from lecture notes and textbook passages missed 21 key concepts, including an entire syllabus topic on dynamic causal effects. Adding an explicit gap check that compares the course syllabus against the drafted concept list caught those omissions before review.
+- **Specialized connection types:** The original vocabulary grouped too many relationships into generic categories. Econometrics required two new connection types—one (`defined_via`) for concepts formally defined in terms of other concepts, and another (`assumption_of`) to separate the conditions an empirical estimator requires from the mathematical premises of a theorem.
+- **Rotating agent roles:** To prevent a model from approving its own blind spots, the pipeline rotates responsibilities: Gemini drafts nodes and connections from source passages, Codex evaluates whether each proposed link is supported or weak, and Claude reviews vocabulary additions and structural repairs. No agent evaluates its own output.
+- **Separating source data from publication:** Because the course assignments and raw notes remain private, the econometrics graph's underlying data repository stays private. Only the final interactive HTML page is compiled and published to the public viewer site.
+
 ## Evidence and limits
 
 The October 15 status records 331 Python tests, 45 viewer tests, browser checks, and a graph built from actual course materials. These establish different things: the tests exercise the software, while the graph shows what the drafting process produced. Neither establishes a learning benefit.
 
-The same model drafts and critiques the connections, so its review may be lenient. Human review or a second model is still needed to assess the content. The [current status](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-15-concept-graph-status.md) records the open issues; the [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/concept_graph/README.md) explains how the graph is built and reviewed.
+While rotating agents separates drafting from critiquing, no model replaces subject-matter judgment. Every item in both graphs remains proposed until a person accepts or corrects it. The [current status](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-21-econometrics-second-course-status.md) records the open issues; the [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/concept_graph/README.md) explains how the graph is built and reviewed.
