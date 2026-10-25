@@ -1,5 +1,6 @@
 ---
 title: AI Research Assistant
+weight: 50
 summary: "Find relevant papers, make their contents searchable, and look across them alongside personal research notes."
 date: 2026-09-01
 lastmod: 2026-10-16

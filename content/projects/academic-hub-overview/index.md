@@ -1,5 +1,6 @@
 ---
 title: Academic Hub
+weight: 50
 date: 2026-09-01
 lastmod: 2026-10-16
 summary: "A study workspace connecting handwritten notes, textbooks, source-linked answers, and reviewed study materials."

@@ -1,5 +1,6 @@
 ---
 title: Novel Omnibus Normality Test
+weight: 40
 summary: "Detect patterns in how data depart from a bell-shaped distribution, and compare the proposed test with Shapiro–Wilk in small-sample simulations."
 date: 2026-08-22
 lastmod: 2026-10-16

@@ -1,5 +1,6 @@
 ---
 title: Resume Manager
+weight: 30
 date: 2026-09-09
 lastmod: 2026-10-16
 summary: "Tailor a resume from a maintained record of experience, preserving fixed details and saving checks alongside each application."

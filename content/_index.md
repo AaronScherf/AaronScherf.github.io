@@ -51,6 +51,8 @@ sections:
       text: 'These projects show how I approach work across development research and practical software: from testing whether satellite data can help predict wheat yields to building tools that organize and explore information in novel formats.'
       page_type: projects
       count: 6
+      sort_by: Weight
+      order: desc
       filters:
         folders:
           - projects

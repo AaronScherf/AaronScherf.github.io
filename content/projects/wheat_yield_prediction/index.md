@@ -1,5 +1,6 @@
 ---
 title: Predicting Wheat Yields in New Environments
+weight: 60
 summary: "Compare satellite data, field records, and prediction models to investigate which wheat varieties may perform well where trials are limited."
 date: 2026-08-22
 lastmod: 2026-10-16

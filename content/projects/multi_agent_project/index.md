@@ -1,5 +1,6 @@
 ---
 title: Multi-Agent Development Workflow
+weight: 20
 date: 2026-09-27
 lastmod: 2026-10-16
 summary: "Coordinate AI-assisted work through explicit task handoffs, isolated working copies, and human-controlled integration."
