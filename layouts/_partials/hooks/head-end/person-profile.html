@@ -1,0 +1,25 @@
+{{- if .IsHome -}}
+  {{- $profile := partial "functions/get_author_profile" (dict "slug" "me") -}}
+  {{- $sameAs := slice -}}
+  {{- range $profile.links -}}
+    {{- with .url -}}
+      {{- if or (strings.HasPrefix . "https://") (strings.HasPrefix . "http://") -}}
+        {{- $sameAs = $sameAs | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $sameAs -}}
+    {{- $person := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "@id" (printf "%s#person" site.Home.Permalink)
+      "name" $profile.title
+      "url" site.Home.Permalink
+      "sameAs" ($sameAs | uniq)
+    -}}
+    {{- with $profile.avatar -}}
+      {{- $person = merge $person (dict "image" .Permalink) -}}
+    {{- end -}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+  {{- end -}}
+{{- end -}}
