@@ -15,7 +15,7 @@ status:
 #  icon: "☕️"
 role: PhD Student
 bio: |
-  I am a Sustainable Development PhD student at Columbia University and a former USAID Foreign Service Officer. In Ukraine, I led monitoring and evaluation for development projects during the war; in Colombia, I worked on program design. Those experiences taught me to ask how evidence will actually be used, especially when conditions are changing and information is incomplete. I now bring that perspective to research, data analysis, and practical software tools. I am also available for consulting and applied research collaborations.
+  I am a Sustainable Development PhD student at Columbia University and a former USAID Foreign Service Officer. In Ukraine, I led the monitoring and evaluation team for over 50 development projects during the war. Prior to that, I worked on program design and social inclusion in Colombia, as well as budget analysis and knowledge management in Washington. Those experiences taught me how to ensure evidence is trustworthy and actionable, especially in conditions of rapidly changing and incomplete information. I now bring that perspective to research, data analysis, and practical software tools. I am available part-time for consulting and applied research collaborations.
 
 affiliations:
   - name: Columbia University
@@ -116,13 +116,13 @@ experience:
 skills:
   - name: International Development & Assistance Programming
     items:
-      - label: Program Design & Evaluation
-        level: 4
+      - label: Program Design & Implementation
+        level: 5
       - label: Monitoring & Evaluation Frameworks
+        level: 5
+      - label: Funding & Budget Analysis
         level: 4
-      - label: International Development Funding & Budget Analysis
-        level: 3
-      - label: Locally-led and Inclusive Development
+      - label: Locally-led & Inclusive Programs
         level: 3
       - label: Donor Coordination
         level: 3
@@ -146,7 +146,7 @@ skills:
         level: 5
       - label: Conference Presentations
         level: 4
-      - label: Training and Skills Workshops
+      - label: Training & Skills Workshops
         level: 4
       - label: Analytical Report Writing
         level: 4
