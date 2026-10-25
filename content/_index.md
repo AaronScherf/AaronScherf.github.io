@@ -32,11 +32,13 @@ sections:
       title: 'How I Can Help'
       subtitle: ''
       text: |-
-        I am available for consulting and applied research projects that need both technical analysis and an understanding of how decisions get made in practice. My work with USAID and in research has prepared me to help with:
+        I am available for consulting and applied research projects that require advanced technical analysis and practical experience in international development. My background has prepared me to help with:
 
-        - **Program design and evaluation:** Turn a broad goal into a workable plan for measuring results, then make sense of the evidence as conditions change.
-        - **Geospatial and data analysis:** Combine satellite, field, and administrative data to answer questions about places where information is incomplete.
-        - **Research and decision tools:** Build practical workflows that make sources easier to find, check, and use.
+        - **Program design and evaluation:** Turn broad goals and problem statements into actionable plans for implementing programs and measuring results, particularly in rapidly changing conditions.
+        - **Geospatial and data analysis:** Combine satellite, survey, and administrative data to answer questions about places where information is incomplete.
+        - **Research and decision tools:** Build reproducible workflows that fuse diverse data sources to create actionable insights and intuitive visualizations.
+        - **Development Proposal Writing:** Help organizations develop compelling proposals that propose novel solutions to international development challenges.
+        - **Training & Skills Workshops:** Share my experience and expertise via in-person or online workshops, as well as personalized skills development coaching.
 
         If one of these fits a problem you are working on, [email me](mailto:theaaronscherf@gmail.com) to discuss it. You can also [download my CV](/uploads/resume.pdf) and explore the projects below.
     design:
@@ -46,7 +48,7 @@ sections:
     content:
       title: Selected Projects
       subtitle: ''
-      text: 'These projects show how I approach work across development research and practical software: from testing whether satellite data can help predict wheat yields to building tools that keep research and study materials connected to their sources.'
+      text: 'These projects show how I approach work across development research and practical software: from testing whether satellite data can help predict wheat yields to building tools that organize and explore information in novel formats.'
       page_type: projects
       count: 6
       filters:

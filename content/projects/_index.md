@@ -9,7 +9,7 @@ sections:
   - block: collection
     content:
       title: Selected Projects
-      text: 'Academic Hub and AI Research Assistant connect source materials with study and research tools. Resume Manager applies a different approach to job applications. The research projects below cover crop-yield prediction and statistical testing. Open a project for its purpose, the choices behind it, and what has been checked so far.'
+      text: 'These projects are a combination of study and research tools, resume tailoring, crop-yield prediction, and statistical research. Some I just developed to test out new methods of AI-native coding and help with my PhD studies. Open a project to learn more about its purpose and development progress, along with GitHub links.'
       count: 12
       page_type: projects
       filters:
