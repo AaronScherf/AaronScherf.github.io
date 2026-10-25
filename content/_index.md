@@ -68,9 +68,9 @@ sections:
       title: My Research
       subtitle: ''
       text: |-
-        My research asks when detailed information about a place can change a decision, and when it only creates the appearance of certainty. I am especially interested in how climate stress, conflict, and disasters interact, and how satellite observations and statistical models can be checked against evidence from the ground.
+        My research focuses on how communities prepare for and recover from overlapping climate disasters, armed conflict, and economic shocks. I am especially interested in whether social protection and disaster financing, such as index insurance and pre-crisis cash assistance, can protect livelihoods, reduce displacement, and improve long-term recovery. Through planned studies of Somalia and Ukraine, I want to examine how approaches used in natural disaster response can be adapted to conflict settings, and how their effects differ across geographies by measurable context factors.
 
-        In my [wheat-yield project](/projects/wheat_yield_prediction/), I compared satellite measurements with field records to test how well different models predicted crop performance in new environments. That question—what a model can tell us when local data are scarce, and what it cannot—also shapes the work I want to pursue in sustainable development.
+        This agenda builds on my experience combining satellite observations and experimental data to [compare crop-yield prediction models](/projects/wheat_yield_prediction/), applying [advanced quantitative analysis](/projects/math_thesis/) and machine learning, and building [Python tools for processing and organizing diverse datasets](/projects/ai-research-assistant-overview/). I aim to combine methods from economics, climate science, machine learning and software development with my personal experience implementing development programs to better plan and evaluate humanitarian and social protection programs in rapidly changing and information scarce environments.
     design:
       columns: '1'
   - block: resume-experience
