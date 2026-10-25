@@ -22,12 +22,6 @@ hugoblox:
     tagline: ""
     # Site meta description for search engines and social sharing
     description: "Personal website sharing my research projects, reproducible tools, and reflections."
-    # Social accounts (used for meta tags like Twitter Cards)
-    social:
-      bluesky: "aaronscherf"
-      medium: "aaronscherf"
-      linkedin: "aaron-scherf"
-      github: "AaronScherf"
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
