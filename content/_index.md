@@ -82,18 +82,20 @@ sections:
       date_format: 'January 2006'
       # Education or Experience section first?
       is_education_first: false
-  - block: resume-skills
-    content:
-      title: Skills
-      username: me
+  # Hidden for now; the skills remain in data/authors/me.yaml.
+  # - block: resume-skills
+  #   content:
+  #     title: Skills
+  #     username: me
   - block: resume-awards
     content:
       title: Awards
       username: me
-  - block: resume-languages
-    content:
-      title: Languages
-      username: me
+  # Hidden for now; the languages remain in data/authors/me.yaml.
+  # - block: resume-languages
+  #   content:
+  #     title: Languages
+  #     username: me
   # TODO: re-enable once populated with real content (currently template placeholders)
   # - block: collection
   #   id: papers
