@@ -34,8 +34,8 @@ sections:
       text: |-
         I am available for consulting and applied research projects that require advanced technical analysis and practical experience in international development. My background has prepared me to help with:
 
-        - **Program design and evaluation:** Turn broad goals and problem statements into actionable plans for implementing programs and measuring results, particularly in rapidly changing conditions.
-        - **Geospatial and data analysis:** Combine satellite, survey, and administrative data to answer questions about places where information is incomplete.
+        - **Program design and evaluation:** Turn problem statements into actionable plans for implementing programs and measuring results in rapidly changing conditions.
+        - **Geospatial data analysis:** Combine satellite, survey, and administrative data to answer questions about places where information is incomplete.
         - **Research and decision tools:** Build reproducible workflows that fuse diverse data sources to create actionable insights and intuitive visualizations.
         - **Development Proposal Writing:** Help organizations develop compelling proposals that propose novel solutions to international development challenges.
         - **Training & Skills Workshops:** Share my experience and expertise via in-person or online workshops, as well as personalized skills development coaching.
@@ -70,7 +70,7 @@ sections:
       text: |-
         My research focuses on how communities prepare for and recover from overlapping climate disasters, armed conflict, and economic shocks. I am especially interested in whether social protection and disaster financing, such as index insurance and pre-crisis cash assistance, can protect livelihoods, reduce displacement, and improve long-term recovery. Through planned studies of Somalia and Ukraine, I want to examine how approaches used in natural disaster response can be adapted to conflict settings, and how their effects differ across geographies by measurable context factors.
 
-        This agenda builds on my experience combining satellite observations and experimental data to [compare crop-yield prediction models](/projects/wheat_yield_prediction/), applying [advanced quantitative analysis](/projects/math_thesis/) and machine learning, and building [Python tools for processing and organizing diverse datasets](/projects/ai-research-assistant-overview/). I aim to combine methods from economics, climate science, machine learning and software development with my personal experience implementing development programs to better plan and evaluate humanitarian and social protection programs in rapidly changing and information scarce environments.
+        This agenda builds on my experience combining satellite observations and experimental data to [compare crop-yield prediction models](/projects/wheat_yield_prediction/), applying advanced quantitative analysis and machine learning, and building reproducible tools for processing and organizing diverse datasets. I aim to combine methods from economics, climate science, machine learning and software development with my personal experience implementing development programs to better plan and evaluate humanitarian and social protection programs in rapidly changing and information scarce environments.
     design:
       columns: '1'
   - block: resume-experience
