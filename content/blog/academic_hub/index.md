@@ -10,8 +10,8 @@ tags:
   - LLM / RAG
   - Python
 image:
-  caption: "Illustration: The August 2026 plan had textbook conversion working while search and sourced answers were still planned."
-  alt_text: "An August 2026 roadmap shows scattered sources feeding a working textbook converter, followed by search and sourced answers marked as planned."
+  caption: "Illustration: Academic Hub brings course materials into a searchable workspace for source-linked study."
+  alt_text: "Textbooks, notes, slides, problem sets, and video explainers connect to a searchable database of text files that feeds sourced answers, study guides, concept maps, and tutoring tools."
   focal_point: Center
 ---
 
@@ -22,6 +22,8 @@ My solution for my own coursework was the [Academic Hub](https://aaronscherf.git
 <!--more-->
 
 Most of these applications could be replicated with a standard online AI model, but the default agents lacked the context of my specific courses. Retrieval-augmented generation (RAG) models that can train on or incorporate specific files to produce more relevant answers are available, but dropping whole PDFs into a system like a Gemini Notebook is very token expensive, they waste most of their compute just processing inputs. By front-loading the transcription and indexing process, then standardizing it across my courses, I can run any type of LLM agent (subscription based, local, or API) and get highly relevant results based on my exact materials, with citations to source context, at a fraction of the cost. The more source materials I included, the more summaries and problem sets I generated, the better the collection becomes; by the end of the semester, I could just say "looking back at my previous notes and homeworks, help me review this section" and I could create much more useful review materials with far less effort.
+
+{{< figure src="academic-hub-workflow.png" caption="Converted materials provide a shared source collection for several study tools; their outputs still need review." alt="Textbooks, notes, and slides become searchable text; a question retrieves source passages that support separate answer and study-aid drafts for review." >}}
 
 The Academic Hub pipeline is completely reproducible too. Each step is modular, so when I found that my initial transcription approach (using Gemini API credits) was becoming too costly, I was able to switch out specific steps with a subscription-based model (or a local GPU-based model). Applying the entire range of tools to a new course is as simple as dropping in a folder of old notes, slides, and problem sets. Courses can build on each other, so if a topic from Microeconomics I comes up again in Micro II, all of my previous notes can be used to inform the new questions and help me review. Once large PDFs are converted to markdown text files, the storage requirements are minimal--I can [sync my entire notes directory](https://aaronscherf.github.io/projects/academic-hub/obsidian_git_sync/) to my tablet via GitHub and Obsidian.
 
