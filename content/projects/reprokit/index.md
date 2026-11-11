@@ -5,21 +5,9 @@ date: 2026-11-06
 lastmod: 2026-11-06
 summary: "A small framework and project template for reproducible research: documented data sources, checks that catch common mistakes, and a first-run test written so a non-programmer can follow it."
 image:
-  caption: "Illustration: A project template and a handful of checks turn a research folder into something a newcomer can verify in one minute."
-  alt_text: "A project folder passes through three checks (validate, quick check, run summary) and ends with matching checksums that two people can compare."
-# TODO(image): featured.png not generated yet. Gemini brief for a later run (1376 x 768 PNG, same visual style as the other
-# content/projects/*/featured.png illustrations; save as content/projects/reprokit/featured.png):
-#   Left, a project folder icon labelled "Research project" containing small file tiles: "Source descriptors", "Protocol",
-#   "Config", "README for newcomers".
-#   Centre, three short stages in a row connected by arrows, each a labelled box: "validate" (a checklist with a warning
-#   triangle on one line), "quick check" (a small test tube or stopwatch with "PASS" in plain words, caption "made-up data,
-#   under a minute"), "run summary" (a page showing rows, time, memory and a short fingerprint string).
-#   Right, two laptops (one Windows, one Mac or Linux style, drawn generically) each showing the same fingerprint, joined
-#   by an equals sign, with the label "same checksums".
-#   Along the bottom, a thin strip of two small badges: "Linux + Windows tests" and "secret scan".
-#   Must not include: real code, terminal screenshots, logos, real file hashes (use an obviously fake string such as
-#   "a3f9...c21"), or any claim about results beyond "checksums match". Plain light background, readable labels, no dense
-#   paragraphs of text.
+  caption: "Illustration: A standard project format bridges complete machine reproduction with human and agent readable documentation, verifying identical replication between researcher and user."
+  alt_text: "A standard project format holding source descriptors, protocol, config, and README branches into human/agent readable docs and automated rebuilds, verifying exact replication between researcher and user laptops."
+  focal_point: Center
 links:
   - type: site
     icon: brands/github

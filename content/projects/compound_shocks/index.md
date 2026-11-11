@@ -7,20 +7,7 @@ summary: "A reproducible district-month dataset for Somalia and Sudan that puts 
 image:
   caption: "Illustration: Four separate sources are lined up into one district-by-month table, with the restricted raw conflict records kept out of what is shared."
   alt_text: "Four labelled inputs (conflict events, rainfall, food prices, displacement) feed a grid of districts by months. A lock marks the raw conflict records as kept private, and only district-month totals leave the grid."
-# TODO(image): featured.png not generated yet. Gemini brief for a later run (1376 x 768 PNG, same visual style as the other
-# content/projects/*/featured.png illustrations; save as content/projects/compound_shocks/featured.png):
-#   Left, a vertical stack of four small labelled tiles, each with a simple icon: "Conflict events" (a marker or flame),
-#   "Rainfall" (a cloud with drops), "Food prices" (a grain sack or a price tag), "Displacement" (a person with an arrow).
-#   Under the displacement tile, two small tags: "people present (stock)" and "people moving (flow)", kept visibly separate
-#   to show they are not combined.
-#   Centre, arrows from the four tiles converge on one large grid titled "District x month": rows are districts, columns are
-#   months, a few cells hold tiny stacked markers (one per source) and a few cells are left visibly empty to show that
-#   missing stays missing (do not fill them).
-#   Right, a small padlock on a stack of papers labelled "raw conflict records (stay private)", with a single thin arrow
-#   leaving the grid toward a small table labelled "district-month totals (shared)".
-#   Bottom edge, a thin strip with a checkmark and the words "rebuild matches", suggesting identical outputs on a rerun.
-#   Must not include: a real map with values, any real numbers or place names beyond the generic labels above, logos of the
-#   data providers, or any claim of results. Plain light background, readable labels, no dense paragraphs of text.
+  focal_point: Center
 links:
   - type: site
     icon: brands/github
