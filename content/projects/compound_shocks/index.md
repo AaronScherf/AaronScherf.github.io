@@ -2,7 +2,7 @@
 title: Compound Shocks Panel
 weight: 70
 date: 2026-11-06
-lastmod: 2026-11-06
+lastmod: 2026-11-10
 summary: "A reproducible district-month dataset for Somalia and Sudan that puts conflict, rainfall, food prices, and displacement side by side, so overlapping shocks can be studied with data whose every step is documented."
 image:
   caption: "Illustration: Four separate sources are lined up into one district-by-month table, with the restricted raw conflict records kept out of what is shared."
@@ -49,7 +49,7 @@ My motivation is research on how overlapping shocks relate to displacement, but 
 - Counts of people *present* (a stock) and counts of people *moving* (a flow) stay in separate columns. They answer different questions and are not combined.
 - Where a figure is missing, it stays missing. It is never filled with zero, because "no report" and "no events" are different facts.
 
-**Safeguards for restricted data.** The conflict data come from an account-based service that does not allow the raw event records to be shared, so the repository publishes only district-month totals and keeps the raw files out of version control. Each check on those files reports counts and checksums, never records. Some sources limit reuse to non-commercial research; the repository records each source's terms and does not redistribute them.
+**Safeguards for restricted data.** The conflict data come from an account-based service; the project keeps raw event records out of version control and marks only district-month conflict totals for sharing. Each check on those files reports counts and checksums, never records. Reuse terms differ by source; the repository records them and does not redistribute the downloads.
 
 **One command to fetch, one to rebuild.** `fetch` downloads the sources (the conflict data through the provider's API when an account is available) and records a checksum for each file. `reproduce` rebuilds the panel, an audit memo with a missing-data picture, and the figures, skipping steps whose inputs have not changed. Each run writes a plain-language summary of what it made and how long it took.
 
@@ -66,7 +66,7 @@ What it does **not** do yet: it contains no findings. I have built the data, not
 
 ## What comes next
 
-- **Close the known gaps.** Check how the missing Sudan locality is handled, and move the remaining source descriptors to the newer, stricter format.
+- **Close the known gaps.** Review the missing population estimate for one Sudan locality, and move the remaining source descriptors to the newer, stricter format.
 - **Add richer sources.** DTM household needs assessments for Sudan (food consumption, hunger measures, reasons for displacement); cross-border and refugee movement data; and, later, satellite-derived indicators from Google Earth Engine.
 - **Define the questions in advance.** Write down the compound-shock definitions and the checks before looking at any outcome, and have the data and definitions reviewed before the first analysis.
 - **Test the template on other places.** The same structure should carry to other country pairs, so the next step is trying it on a new place.
