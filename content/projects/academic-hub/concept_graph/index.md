@@ -7,16 +7,22 @@ draft: false
 type: academic-hub-project
 links:
   - type: site
-    icon: globe
+    icon: hero/globe-alt
     label: Try the microeconomics graph
     url: https://aaronscherf.github.io/microecon-concept-graph/
   - type: site
-    icon: globe
+    icon: hero/globe-alt
     label: Try the econometrics graph
     url: https://aaronscherf.github.io/econometrics-concept-graph-site/
+  - type: site
+    icon: brands/github
+    label: Concept graph pipeline code
+    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/concept_graph
 tags:
   - Learning Tools
 image:
+  link: https://aaronscherf.github.io/microecon-concept-graph/
+  link_label: Open the live microeconomics concept graph
   caption: "The interactive microeconomics concept graph, with a selected idea and its connections."
   alt_text: "An interactive map of microeconomics concepts connected by lines, with details for a selected concept."
   focal_point: Center

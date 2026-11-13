@@ -1,0 +1,18 @@
+{{ with .Params.image.link }}
+<script data-featured-image-link="{{ . }}" data-featured-image-label="{{ $.Params.image.link_label | default "Open the linked image" }}">
+  (() => {
+    const script = document.currentScript;
+    const image = document.querySelector(".featured-image-wrapper img.featured-image");
+    if (!image || image.closest("a")) return;
+
+    const link = document.createElement("a");
+    link.href = script.dataset.featuredImageLink;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.setAttribute("aria-label", script.dataset.featuredImageLabel);
+    link.style.display = "block";
+    image.before(link);
+    link.append(image);
+  })();
+</script>
+{{ end }}
