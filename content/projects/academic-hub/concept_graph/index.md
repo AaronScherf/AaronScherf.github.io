@@ -1,49 +1,24 @@
 ---
-title: Concept Graph
-summary: "Explore how course ideas connect, including the conditions a theorem needs and the source passages behind each proposed connection."
+title: "Concept Graph"
+summary: "Explore two interactive maps that show how course ideas connect, what those connections depend on, and where to check them in the source material."
 date: 2026-10-11
-lastmod: 2026-10-25
+lastmod: 2026-11-13
 draft: false
 type: academic-hub-project
 links:
   - type: site
-    icon: brands/github
-    label: Source code
-    url: https://github.com/AaronScherf/ai-sandbox-master/tree/main/ai-sandbox/academic-rag-model/agent/concept_graph
-  - type: site
-    icon: brands/github
-    label: Current status
-    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-21-econometrics-second-course-status.md
-  - type: site
-    icon: brands/github
-    label: First-course status (historical)
-    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-15-concept-graph-status.md
-  - type: site
-    icon: brands/github
-    label: Core status (historical)
-    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-09-concept-graph-core-status.md
-  - type: site
-    icon: brands/github
-    label: Drafting and seed-run status (historical)
-    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-10-concept-graph-pipeline-status.md
-  - type: site
-    icon: brands/github
-    label: Reviewer proposals status (historical)
-    url: https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-14-concept-graph-proposals-status.md
-  - type: site
     icon: globe
-    label: Live microeconomics graph
+    label: Try the microeconomics graph
     url: https://aaronscherf.github.io/microecon-concept-graph/
   - type: site
     icon: globe
-    label: Live econometrics graph
+    label: Try the econometrics graph
     url: https://aaronscherf.github.io/econometrics-concept-graph-site/
 tags:
-  - Python
   - Learning Tools
 image:
-  caption: "Screenshot of the interactive Microeconomics concept graph interface, showing concept nodes, connections, and the details panel for a selected concept."
-  alt_text: "Screenshot of the interactive Microeconomics concept graph web viewer showing interconnected nodes and the details panel for Rational preference relation."
+  caption: "The interactive microeconomics concept graph, with a selected idea and its connections."
+  alt_text: "An interactive map of microeconomics concepts connected by lines, with details for a selected concept."
   focal_point: Center
 params:
   subproject:
@@ -79,39 +54,39 @@ params:
     members: []
 ---
 
-Concept Graph maps the ideas in a course and the conditions that connect them. An arrow can say that one idea implies another, but it also records the assumption needed to make that claim. Selecting it gives me a sentence to examine and references to the course material behind it.
+When I study a difficult subject, I often understand the individual ideas before I understand how they fit together. A concept graph gives me a way to explore the relationships between topics in a spatial way, rather than just reviewing lecture slides or long-form notes. Each point is an idea from a course; each connection explains how one idea relates to another. Some connections also spell out a condition that must be true before the relationship holds. I can follow a line back to the course material behind it, rather than taking the map's word for it.
+
+**Try the live maps:**
+
+- [Explore the microeconomics concept graph](https://aaronscherf.github.io/microecon-concept-graph/) — follow ideas through a graduate microeconomic theory course.
+- [Explore the econometrics concept graph](https://aaronscherf.github.io/econometrics-concept-graph-site/) — see how concepts, methods, and assumptions connect in a graduate econometrics course.
+
+Click an idea to read its explanation and see its connections. Click a connection to read what it claims and the condition, if any, that makes it work. If the full map feels crowded, choose a course section to focus on one part at a time.
+
+I started building these as a study tool, but quickly found that the format is useful for breaking down any large body of information into related themes. I built out an interactive web app using Claude to host the graphs on Github, so that my fellow students could explore them and suggest revisions to the maps or propose new concepts. I hope to expand these to not just other academic courses, but as a broader tool for mapping out complex domains of knowledge.
 
 <!--more-->
 
-For example, the package's sample graph connects a **partial order** to a **total order** when every pair can be compared. A partial order can leave two items unranked relative to one another; adding that comparison requirement produces a total order. The condition on the arrow explains what changed, rather than leaving me to infer it from two nearby boxes.
+## A map for studying, not just browsing
 
-The first full graph covers the first half of a graduate microeconomic theory sequence: [open the live microeconomics graph](https://aaronscherf.github.io/microecon-concept-graph/). As of October 15, 2026, it contains 104 concepts and 159 connections across eight course sections. A second graph now covers a graduate econometrics course: [open the live econometrics graph](https://aaronscherf.github.io/econometrics-concept-graph-site/). Completed on October 21, 2026, it contains 112 concepts and 135 connections across eight course sections, all awaiting the owner's review. Those counts describe each draft's scale; every concept and connection remains marked as proposed until reviewed.
+The graph is useful when a new topic or theorem is introduced but it isn't immediately clear how it connects to the rest of the course. I can trace any concept back through the definitions and assumptions it needs, then follow those ideas to see what else they support. In econometrics, for instance, an estimate can depend on assumptions about the data. Seeing those assumptions as distinct ideas makes it easier to ask what might change if one does not hold.
 
-## Following an idea
+The connections matter as much as the concepts. Two terms placed near each other might look related, but proximity does not tell me *how* they are related. A line that says “this result follows when this condition holds” gives me something I can examine, question, and check against the source. These connector arrows are not only useful for visually "connecting the dots", when clicked they pull up a longer description explaining exactly how the concepts are related.
 
-Each box represents an idea, such as a definition, theorem, or example. Selecting it opens an explanation, its mathematical statement, and its connections written out in words. Course-section filters and several layouts help narrow a crowded graph to the part I want to study.
+## Beyond a single course
 
-That makes the graph useful for tracing a result back through the assumptions and definitions it depends on. Section summaries offer another way in, though those summaries are AI drafts and some wording is looser than the underlying theory.
+The same approach could help organize any collection of ideas where relationships matter: a research topic, a set of policy arguments, or a systems map. As long as there are machine readable source documents, this open-source pipeline can produce a concept map using the same infrastructure. So far, I have built live examples for two courses; I hope to keep expanding them as these courses progress, build out examples for new academic disciplines, and see if the approach can be useful for other knowledge domains outside of the classroom.
 
-## Building and reviewing the connections
+If you have an interesting idea for how to apply a concept map to a collection of documents or data, please reach out to me via [LinkedIn](https://www.linkedin.com/in/aaron-scherf) or [by email](mailto:theaaronscherf@gmail.com)!
 
-An AI agent drafts explanations and connections from task cards containing passages found through the [Source Indexer](/projects/academic-hub/source_indexer/). The [transcription](/projects/academic-hub/notes_transcription/) and [textbook conversion](/projects/academic-hub/marker_conversion/) tools prepare the notes, slides, assignments, and books it searches. Code then checks the submitted structure: references must come from the supplied passages, required conditions must be present, and circular definition chains are rejected. A cited passage can still be misinterpreted.
+## How I built it, and what surprised me
 
-The same collection supports the [Study Guide Pipeline](/projects/academic-hub/study_guide_pipeline/). A guide develops a topic through explanations and examples; the graph exposes the relationships and assumptions between ideas. They have separate drafting workflows, so building one does not automatically produce the other.
+The maps grow out of my [Academic Hub](https://aaronscherf.github.io/projects/academic-hub-overview/), where I bring together lecture notes, slides, assignments, and textbooks. [Notes Transcription](https://aaronscherf.github.io/projects/academic-hub/notes_transcription/) and [Textbook Conversion](https://aaronscherf.github.io/projects/academic-hub/marker_conversion/) make those materials searchable; the [Source Indexer](https://aaronscherf.github.io/projects/academic-hub/source_indexer/) helps find the passages behind a proposed connection. The same collection also supports my [Study Guide Pipeline](https://aaronscherf.github.io/projects/academic-hub/study_guide_pipeline/), which generates longer form explanations for a specific set of topics.
 
-The drafts remain marked as proposed until a person accepts or edits them. Reviewers can comment, reject a connection, or suggest a missing idea through the page. Suggestions from several reviewers are combined before the maintainer handles them. Submission through GitHub has not yet been tested from start to finish.
+I used several AI tools and coding pipelines to help read that collection, suggest the ideas and connections worth mapping, and build the interactive web interface. By leveraging my existing corpus of course materials, I was able to ground the initial AI drafts for concepts and connections in the terminology and notation of my own class. With targeted human-in-the-loop review and adversarial agent critique of selected samples, I validated the accuracy of the information against the source files (which stay linked to the summarized claims), then compared the final product with my overall syllabus and lecture notes to confirm it was comprehensive.
 
-## What a second course taught
+Building a second map taught me that a plausible looking draft can still miss important material. The first econometrics pass omitted an entire topic from the syllabus. Comparing the map with the assigned readings revealed the gap and led to more concepts. It also showed me that different subjects need different kinds of connections: a condition required for an estimate is not quite the same as a premise in a mathematical proof.
 
-Applying the drafting pipeline to econometrics revealed where a data-driven statistics course differs from a theory course:
+Another lesson was to make the map inspectable. A source reference helps me check a claim, but it does not guarantee the claim is right; an AI tool can misunderstand a passage. At the latest documented checkpoints, the concepts and connections in both maps were still proposals awaiting human review. Rather than validate the entire knowledge map myself, I built one more tool to let others review the information in a collaborative way.
 
-- **Checking against the syllabus:** Initial drafting from lecture notes and textbook passages missed 21 key concepts, including an entire syllabus topic on dynamic causal effects. Adding an explicit gap check that compares the course syllabus against the drafted concept list caught those omissions before review.
-- **Specialized connection types:** The original vocabulary grouped too many relationships into generic categories. Econometrics required two new connection types—one (`defined_via`) for concepts formally defined in terms of other concepts, and another (`assumption_of`) to separate the conditions an empirical estimator requires from the mathematical premises of a theorem.
-- **Rotating agent roles:** To prevent a model from approving its own blind spots, the pipeline rotates responsibilities: Gemini drafts nodes and connections from source passages, Codex evaluates whether each proposed link is supported or weak, and Claude reviews vocabulary additions and structural repairs. The agent that drafted or corrected an item no longer critiques it.
-- **Separating source data from publication:** The graph's source data and review history stay in a private repository, and only the built interactive page is published to a public site.
-
-## Evidence and limits
-
-The October 15 status records 331 Python tests, 45 viewer tests, browser checks, and a graph built from actual course materials. These establish different things: the tests exercise the software, while the graph shows what the drafting process produced. Neither establishes a learning benefit.
-
-For the microeconomics graph, connections were drafted and critiqued by the same model, and that critic approved almost every connection (154 of 155), so its review may be lenient. The econometrics graph used a separate critic, but no model replaces subject-matter judgment: every item in both graphs remains proposed until a person reviews it. The [current status](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/docs/status/agent/concept_graph/2026-10-21-econometrics-second-course-status.md) records the open issues; the [README](https://github.com/AaronScherf/ai-sandbox-master/blob/main/ai-sandbox/academic-rag-model/agent/concept_graph/README.md) explains how the graph is built and reviewed.
+Anyone viewing the concept graph website can suggest a missing concept, propose a new connection, or comment on something already in the map. The **Submit review** button opens a prepared GitHub issue, which works like an online suggestion form; making the system easier for those without a GitHub account is a work in progress. Then, I can review the submissions (or have another agent go through them first), resolve any conflicting suggestions, and update the published map after deciding which changes to accept. The concept map becomes a living knowledge web that a whole class or team can add to over time!
