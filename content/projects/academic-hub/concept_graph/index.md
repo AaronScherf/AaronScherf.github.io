@@ -54,7 +54,7 @@ params:
     members: []
 ---
 
-When I study a difficult subject, I often understand the individual ideas before I understand how they fit together. A concept graph gives me a way to explore the relationships between topics in a spatial way, rather than just reviewing lecture slides or long-form notes. Each point is an idea from a course; each connection explains how one idea relates to another. Some connections also spell out a condition that must be true before the relationship holds. I can follow a line back to the course material behind it, rather than taking the map's word for it.
+When learning a new subject, we often focus more on the individual concepts rather than how they fit together. To help connect the dots, I built an interactive concept map based on my course notes. It lets me explore the relationships between topics in a spatial way, rather than just reviewing lecture slides or long-form notes. Each topic box is an idea from a course, while each connection explains how one idea relates to another. Some connections also spell out a condition that must be true before the relationship holds, to understand dependency relationships. The topic nodes and connections all reference directly the source material used to build it, to validate the information and in case I want to investigate further.
 
 **Try the live maps:**
 
