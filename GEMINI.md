@@ -6,6 +6,8 @@ Read CLAUDE.md for the content model, commands, and deployment behavior.
 
 ## Editorial workflow
 
+Before drafting or revising a blog post, read [the blog post standards](docs/editorial/blog-post-standards.md).
+
 - Read the requested page and relevant supplied notes, project documentation,
   or research results. Match the user's voice and distinguish completed work
   from plans. Ask for missing facts when necessary; never invent credentials,

@@ -33,6 +33,8 @@ These two files can silently drift (see commit `79931de "Pin CI Hugo version to 
 
 ## Content model
 
+Before drafting or revising a blog post, read [the blog post standards](docs/editorial/blog-post-standards.md) for voice, story, accessibility, and evidence.
+
 Content lives under `content/<section>/`, each section following Hugo page-bundle conventions (a folder per item with `index.md` + any local assets like `cite.bib`, `featured.jpg`):
 
 - `authors/me/` — the single author profile (bio, social links, skills) referenced by `username: me` throughout `params.yaml` and homepage blocks.
