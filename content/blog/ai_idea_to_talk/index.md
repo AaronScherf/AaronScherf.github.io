@@ -8,6 +8,10 @@ authors:
 tags:
   - AI Research Assistant
   - Academic Research
+image:
+  caption: "Illustration: ideas moved through a repeating cycle of brainstorming, evidence checking, critique, and reflection, with each version saved."
+  alt_text: "A circular diagram titled Verified Idea Iteration with AI Agents. Four cards form a clockwise loop: Brainstorm, Check evidence (web search, verify sources, synthesize findings), Critique (combines verified evidence, past ideas, and a fresh adversary), and Reflection (revise supported ideas, consider new questions). A callout on the return arrow reads Document Versioned Outputs."
+  focal_point: Center
 ---
 
 While brainstorming my first research proposal for my PhD, I started with something cool I wanted to build: a way to use evidence from one setting to predict whether a development intervention would have a similar impact in another context. I was sketching a complicated machine learning model using satellite imagery and Bayesian networks, perhaps even a simulation to compare different interventions. The more complex the idea became, however, the more I wondered: who would actually use such an elaborate model, and what decision would it help them make? I had made the classic academic mistake of starting with my interest in a method, then working backward toward a problem it could solve.
@@ -17,8 +21,6 @@ While brainstorming my first research proposal for my PhD, I started with someth
 Rather than start over, I wondered what a development professional would say about it. I didn't want to send my haphazard notes to former colleagues just yet, so I asked an AI agent instead. I asked a Gemini model for three perspectives on my idea: a humanitarian program manager in the field, an evaluation specialist at World Bank headquarters, and an academic development economist. I asked it to cite sources for its critique and to suggest how I could make the project more useful to practitioners. After a few more rounds of literature review and brainstorming, the result was surprisingly helpful.
 
 The AI models I used brought useful challenges and ideas, but also their own biases and mistakes. What helped most was changing my starting question. Rather than asking whether an impact evaluation result would hold up in a new place, I began by asking when a practitioner would realistically seek out that kind of evidence, how they would find it and fold it into their planning, and what a useful set of estimates would look like to them. As I refined the proposal, I kept checking it against research papers and reports from think tanks and development organizations. It is still an early-stage plan, but it points in a much more productive direction than where I started.
-
-{{< figure src="process-overview.png" caption="Verified Idea Iteration with AI Agents: a continuous cycle of brainstorming, evidence checking, adversarial critique, and reflection, with versioned outputs documented at each turn." alt="A circular process diagram titled 'Verified Idea Iteration with AI Agents'. Four cards are arranged in a clockwise loop: Brainstorm (Propose new ideas), Check evidence (Web Search, Verify Sources, Synthesize Findings), Critique (Combines verified evidence, past ideas, fresh adversary), and Reflection (Revise supported ideas, consider new questions). A callout box on the return flow highlights 'Document Versioned Outputs'." >}}
 
 ## Adopting the end user's point of view
 
