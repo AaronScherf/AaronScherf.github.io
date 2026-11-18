@@ -18,24 +18,7 @@ Rather than start over, I wondered what a development professional would say abo
 
 The AI models I used brought useful challenges and ideas, but also their own biases and mistakes. What helped most was changing my starting question. Rather than asking whether an impact evaluation result would hold up in a new place, I began by asking when a practitioner would realistically seek out that kind of evidence, how they would find it and fold it into their planning, and what a useful set of estimates would look like to them. As I refined the proposal, I kept checking it against research papers and reports from think tanks and development organizations. It is still an early-stage plan, but it points in a much more productive direction than where I started.
 
-<!--
-IMAGE PLACEHOLDER (not yet created). Save as content/blog/ai_idea_to_talk/process-overview.png, then replace this comment with:
-{{< figure src="process-overview.png" caption="..." alt="..." >}}
-and consider reusing it as the featured image.
-
-Type: simple left-to-right process diagram, four stages, with a continuous strip underneath. Roles only; no tool names. Keep text minimal.
-
-Stage 1, "Open up": box "Brainstorm". Small side note: "Echo chamber" with an arrow to "Fresh 3-role critique".
-Stage 2, "Rounds": a loop of three boxes: "Brainstorm" -> "Check evidence" -> "Critique" -> back to "Brainstorm".
-  Under "Check evidence": "Search / Synthesize / Review" and "Full audit every few versions".
-  Under "Critique": "Sees verified evidence + past versions".
-Stage 3, "Prep talk": box "Fresh-reader review" with note "Jargon check", leading to "Slides".
-Stage 4, "After": box "Post-Presentation AI Debrief".
-Underneath, spanning all four stages: a strip of document icons "v1 > v2 > v3 > ..." labelled "Every revision saved as a new copy".
-
-Caption: Ideas moved through repeated rounds of brainstorming, evidence checks, and critique, with every revision saved so the path stayed visible.
-Alt text: A process diagram in four stages: brainstorming with a fresh three-role critique after an echo chamber, repeated rounds of brainstorming, evidence checking, and critique, a fresh-reader review before the slides, and a debrief after the presentation. A strip beneath shows each revision saved as a new numbered version.
--->
+{{< figure src="process-overview.png" caption="Ideas moved through repeated rounds of brainstorming, evidence checks, and critique, with every revision saved so the path stayed visible." alt="A process diagram in four stages: brainstorming with a fresh three-role critique after an echo chamber, repeated rounds of brainstorming, evidence checking, and critique, a fresh-reader review before the slides, and a debrief after the presentation. A strip beneath shows each revision saved as a new numbered version." >}}
 
 ## Adopting the end user's point of view
 
