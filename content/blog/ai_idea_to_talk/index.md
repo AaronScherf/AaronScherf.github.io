@@ -2,7 +2,7 @@
 title: "Going from Research Idea to Presentation with AI Assistants"
 summary: "How adversarial critique, source checking, and a paper trail of versions reshaped a research proposal, from a late-night brainstorm to a presentation."
 date: 2026-11-17
-draft: true
+draft: false
 authors:
   - me
 tags:
