@@ -25,6 +25,15 @@ Before drafting or revising a blog post, read [the blog post standards](docs/edi
 - Preview changed pages and run pnpm run build when content changes warrant
   a site check. Report any unavailable tooling or build failure accurately.
 
+## Citing literature
+
+Any page that cites a paper, whether it gives a DOI, a reference list or an author-year claim, follows the monorepo's checker rule. This repo has no landing gate, so the check is part of finishing the draft:
+- Take identifiers and bibliographic details from a registry lookup or the supplied source file, never from memory.
+- Before reporting a draft as ready, run `python -m tools.reference_checker <path to index.md> --format markdown` from the monorepo's `ai-sandbox/academic-rag-model/`.
+- Every DOI must come back CONFIRMED or AUTHOR_YEAR. Fix WRONG_WORK, NOT_FOUND and TITLE_WRONG rows using the registered record.
+- Report anything else (REVIEW, PLAUSIBLE, UNRESOLVED) to the user, and flag it for Claude's review page. Do not publish with an open row.
+- Do not mark citations as verified yourself. A matched DOI does not show that the paper supports the sentence; quote findings only from a paper you have read.
+
 ## Unexpected results and user corrections
 
 Follow [the bug-report and handoff procedure](docs/BUG_HANDOFF.md) whenever
