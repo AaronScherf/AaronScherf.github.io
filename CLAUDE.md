@@ -22,6 +22,10 @@ pnpm run pagefind          # rebuild the pagefind search index over ./public onl
 
 There is no test suite or linter in this repo. Verify changes by running `pnpm run dev` and checking the page in a browser, and/or `pnpm run build` to confirm the production build succeeds.
 
+## Website landing gate
+
+From the monorepo's `ai-sandbox/academic-rag-model/`, run `python -m tools.land_website check <website-worktree>` before landing a website branch. Show the owner its change ID and wait for approval of that ID. Then run `python -m tools.land_website land <website-worktree> --change-id <id>`; the tool fast-forwards and pushes website `main` after rechecking. Do not hand-merge or push a branch to `main`.
+
 ## CI/deploy has two separate, drifting build paths
 
 - `.github/workflows/build.yml` — runs on PRs. Uses **pnpm**, reads the Hugo version dynamically from `hugoblox.yaml` (`build.hugo_version`, currently `0.163.3`), falling back to `0.161.1` if unset.
