@@ -37,7 +37,7 @@ Any page that cites a paper, whether it gives a DOI, a reference list or an auth
 
 ## Landing
 
-From the monorepo's `ai-sandbox/academic-rag-model/`, run `python -m tools.land_website check <website-worktree>`. Show the owner the change ID and wait for approval of that ID. Then run `python -m tools.land_website land <website-worktree> --change-id <id>`. The tool fast-forwards and pushes website `main` after rechecking.
+From the monorepo's `ai-sandbox/academic-rag-model/`, run `python -m tools.land_website check <website-worktree>` and report the change ID. After the owner approves that ID, the designated integrator runs `python -m tools.land_website land <website-worktree> --change-id <id>`. The tool fast-forwards and pushes website `main` after rechecking.
 
 ## Unexpected results and user corrections
 
